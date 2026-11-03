@@ -2,6 +2,7 @@ import { GoogleAuth } from 'google-auth-library';
 import type { Provider, SynthResult } from './types';
 
 const API = 'https://texttospeech.googleapis.com/v1';
+const PREFERRED = ['Laomedeia', 'Alnilam', 'Achird', 'Zubenelgenubi'];
 
 async function call(path: string, init: RequestInit = {}): Promise<any> {
   const headers: Record<string, string> = { 'Content-Type': 'application/json' };
@@ -29,18 +30,22 @@ export const google: Provider = {
     return null;
   },
 
-  /** One female + one male Chirp 3: HD voice that Google lists for lv-LV. */
+  /**
+   * Chirp 3: HD voices the user picked by ear in Google's demo; any that Google
+   * doesn't list for lv-LV are skipped. Falls back to one female + one male.
+   */
   async latvianVoices() {
     const { voices = [] } = await call('voices?languageCode=lv-LV');
     const chirp = voices.filter((v: any) => /Chirp3-HD/i.test(v.name));
-    const pick = (g: string) => chirp.find((v: any) => v.ssmlGender === g);
-    const out = [];
-    const f = pick('FEMALE');
-    const m = pick('MALE');
-    if (f) out.push({ voice: f.name, label: `Google Chirp 3 HD ${f.name.split('-').pop()} (жен.)` });
-    if (m) out.push({ voice: m.name, label: `Google Chirp 3 HD ${m.name.split('-').pop()} (муж.)` });
-    if (!out.length) throw new Error(`Google не вернул голосов Chirp 3 HD для lv-LV (всего голосов: ${voices.length})`);
-    return out;
+    const label = (v: any) =>
+      `Google Chirp 3 HD ${v.name.split('-').pop()} (${v.ssmlGender === 'FEMALE' ? 'жен.' : 'муж.'})`;
+
+    const picked = PREFERRED.map((p) => chirp.find((v: any) => v.name.endsWith(`-${p}`))).filter(Boolean);
+    if (picked.length) return picked.map((v: any) => ({ voice: v.name, label: label(v) }));
+
+    const fallback = ['FEMALE', 'MALE'].map((g) => chirp.find((v: any) => v.ssmlGender === g)).filter(Boolean);
+    if (!fallback.length) throw new Error(`Google не вернул голосов Chirp 3 HD для lv-LV (всего голосов: ${voices.length})`);
+    return fallback.map((v: any) => ({ voice: v.name, label: label(v) }));
   },
 
   async synthesize(text, voice, rate, quality): Promise<SynthResult> {

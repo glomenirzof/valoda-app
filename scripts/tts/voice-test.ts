@@ -23,10 +23,8 @@ interface CacheEntry { file: string; textChars: number; payloadChars: number }
  * Piper was rejected in round 1 and runs only with --only=piper.
  */
 const VARIANTS: Record<ProviderId, { rate: number; quality: Quality }[]> = {
-  azure: [
-    { rate: 1, quality: 'std' },
-    { rate: 1, quality: 'hq' },
-  ],
+  // round 3: Azure HQ only, as the reference against Google Chirp 3 HD
+  azure: [{ rate: 1, quality: 'hq' }],
   google: [{ rate: 1, quality: 'hq' }],
   piper: [{ rate: 1, quality: 'std' }],
 };
