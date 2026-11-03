@@ -124,8 +124,9 @@
       result: null,
       word: null,
       rating: 'good',
-      font: store.get('font-' + opts.fonts, opts.fonts),
+      font: store.get('font-' + opts.title, opts.fonts),
       theme: store.get('theme', 'auto'),
+      accent: opts.accents ? store.get('accent', opts.accents[0][0]) : null,
     };
     let audio = null;
 
@@ -137,6 +138,7 @@
     };
 
     const applyLook = () => {
+      if (st.accent) document.documentElement.dataset.accent = st.accent;
       const f = FONT_PAIRS[st.font];
       document.documentElement.style.setProperty('--font-head', `${f.head}, system-ui, sans-serif`);
       document.documentElement.style.setProperty('--font-body', `${f.body}, system-ui, sans-serif`);
@@ -166,6 +168,7 @@
         </div>
         <button data-font class="review-chip">${icon('type')}${st.font}</button>
         <button data-theme class="review-chip">${icon('sun')}${{ auto: 'авто', light: 'свет', dark: 'тьма' }[st.theme]}</button>
+        ${opts.accents ? `<button data-accent class="review-chip"><i class="dot"></i>${opts.accents.find((a) => a[0] === st.accent)[1]}</button>` : ''}
       </nav>`;
 
     const topBar = (step) => `
@@ -233,7 +236,7 @@
       }[v];
       const errs = r && st.mode === 'type' ? [...new Set(r.words.filter((x) => x.kind !== 'ok' && x.got).map((x) => KIND_RU[x.kind]))] : [];
       const rateButtons = RATINGS.map(
-        (x) => `<button class="rate rate-${x.id} ${opts.rating === 'next' && st.rating === x.id ? 'on' : ''}" data-rate="${x.id}"><b>${x.label}</b><small>${x.hint}</small></button>`,
+        (x) => `<button class="rate rate-${x.id} ${st.rating === x.id && (opts.rating === 'next' || (opts.suggest && r)) ? 'on' : ''}" data-rate="${x.id}"><b>${x.label}</b><small>${x.hint}</small></button>`,
       ).join('');
       return `
         <div class="scrim"></div>
@@ -304,7 +307,8 @@
       if (!b) return;
       const d = b.dataset;
       if (d.go) { st.result = null; go(d.go); }
-      else if ('font' in d) { st.font = { A: 'B', B: 'C', C: 'A' }[st.font]; store.set('font-' + opts.fonts, st.font); render(); }
+      else if ('font' in d) { st.font = { A: 'B', B: 'C', C: 'A' }[st.font]; store.set('font-' + opts.title, st.font); render(); }
+      else if ('accent' in d) { const k = opts.accents.findIndex((a) => a[0] === st.accent); st.accent = opts.accents[(k + 1) % opts.accents.length][0]; store.set('accent', st.accent); render(); }
       else if ('theme' in d) { st.theme = { auto: 'light', light: 'dark', dark: 'auto' }[st.theme]; store.set('theme', st.theme); render(); }
       else if (d.play) play(Number(d.play));
       else if (d.word !== undefined) { st.word = Number(d.word); render(); }
