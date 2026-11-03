@@ -1,5 +1,5 @@
 import type { Phrase, Settings } from '../core/types';
-import { trainable } from './Home';
+import { trainable } from '../core/session';
 
 export function Progress({ phrases, settings }: { phrases: Phrase[]; settings: Settings }) {
   const verified = phrases.filter((p) => p.status === 'tutor').length;

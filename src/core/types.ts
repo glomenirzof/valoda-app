@@ -25,6 +25,8 @@ export interface Phrase {
   ru: string;
   tokens: Token[];
   accept: string[];
+  /** the word whose ending the phrase trains, a wrong-ending trap for tiles, and one-line reasons */
+  key?: { i: number; trap: string; why: string; trapWhy: string };
   audio: string | null;
   image: string | null;
   freqRank: number | null;

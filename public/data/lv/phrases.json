@@ -34,6 +34,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
    "freqRank": 8,
@@ -85,6 +91,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
    "freqRank": 20,
@@ -119,6 +131,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "nezina",
+    "why": "zināt → nezinu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "nezina — 3-е лицо, а здесь 1-е лицо: nezinu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 30,
@@ -160,6 +178,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "dara",
+    "why": "darīt → dari: 2-е лицо, ед. ч., настоящее время",
+    "trapWhy": "dara — 3-е лицо, а здесь 2-е лицо: dari"
+   },
    "audio": null,
    "image": null,
    "freqRank": 32,
@@ -201,6 +225,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "grib",
+    "why": "gribēt → gribi: 2-е лицо, ед. ч., настоящее время",
+    "trapWhy": "grib — 3-е лицо, а здесь 2-е лицо: gribi"
+   },
    "audio": null,
    "image": null,
    "freqRank": 34,
@@ -242,6 +272,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "eju",
+    "why": "iet → iet: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "eju — 1-е лицо, а здесь 3-е лицо: iet"
+   },
    "audio": null,
    "image": null,
    "freqRank": 37,
@@ -283,6 +319,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "eju",
+    "why": "iet → iet: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "eju — 1-е лицо, а здесь 3-е лицо: iet"
+   },
    "audio": null,
    "image": null,
    "freqRank": 37,
@@ -324,6 +366,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "eju",
+    "why": "iet → iet: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "eju — 1-е лицо, а здесь 3-е лицо: iet"
+   },
    "audio": null,
    "image": null,
    "freqRank": 44,
@@ -399,6 +447,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
    "freqRank": 44,
@@ -433,6 +487,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "notiku",
+    "why": "notikt → notika: 3-е лицо, ед. ч., прошедшее время",
+    "trapWhy": "notiku — 1-е лицо, а здесь 3-е лицо: notika"
+   },
    "audio": null,
    "image": null,
    "freqRank": 61,
@@ -560,6 +620,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "nesaprot",
+    "why": "saprast → nesaprotu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "nesaprot — 3-е лицо, а здесь 1-е лицо: nesaprotu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 78,
@@ -594,6 +660,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "saprot",
+    "why": "saprast → saprotu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "saprot — 3-е лицо, а здесь 1-е лицо: saprotu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 78,
@@ -637,6 +709,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "laiks",
+    "why": "кого? чего? — родительный падеж: laiks → laika",
+    "trapWhy": "laiks — именительный («кто? что?»), а здесь кого? чего? — родительный падеж: laika"
+   },
    "audio": null,
    "image": null,
    "freqRank": 81,
@@ -686,6 +764,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "saku",
+    "why": "sacīt → saka: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "saku — 1-е лицо, а здесь 3-е лицо: saka"
+   },
    "audio": null,
    "image": null,
    "freqRank": 87,
@@ -728,6 +812,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "gadi",
+    "why": "кого? чего? — родительный падеж: gads → gadu",
+    "trapWhy": "gadi — именительный («кто? что?»), а здесь кого? чего? — родительный падеж: gadu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 94,
@@ -771,6 +861,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "mājas",
+    "why": "где? — местный падеж: māja → mājās",
+    "trapWhy": "mājas — именительный («кто? что?»), а здесь где? — местный падеж: mājās"
+   },
    "audio": null,
    "image": null,
    "freqRank": 101,
@@ -814,6 +910,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "mājas",
+    "why": "где? — местный падеж: māja → mājās",
+    "trapWhy": "mājas — именительный («кто? что?»), а здесь где? — местный падеж: mājās"
+   },
    "audio": null,
    "image": null,
    "freqRank": 101,
@@ -859,6 +961,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "māja",
+    "why": "где? — местный падеж: māja → mājā",
+    "trapWhy": "māja — именительный («кто? что?»), а здесь где? — местный падеж: mājā"
+   },
    "audio": null,
    "image": null,
    "freqRank": 101,
@@ -909,6 +1017,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "darbs",
+    "why": "после uz — винительный падеж: darbs → darbu",
+    "trapWhy": "darbs — именительный («кто? что?»), а здесь после uz — винительный падеж: darbu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 103,
@@ -952,6 +1066,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "darbs",
+    "why": "где? — местный падеж: darbs → darbā",
+    "trapWhy": "darbs — именительный («кто? что?»), а здесь где? — местный падеж: darbā"
+   },
    "audio": null,
    "image": null,
    "freqRank": 103,
@@ -985,6 +1105,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Lielu",
+    "why": "кто? что? — именительный падеж: Liels",
+    "trapWhy": "Lielu — винительный («кого? что?»), а здесь кто? что? — именительный падеж: Liels"
+   },
    "audio": null,
    "image": null,
    "freqRank": 108,
@@ -1026,6 +1152,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "domā",
+    "why": "domāt → domāju: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "domā — 3-е лицо, а здесь 1-е лицо: domāju"
+   },
    "audio": null,
    "image": null,
    "freqRank": 109,
@@ -1075,6 +1207,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "var",
+    "why": "varēt → varat: 2-е лицо, мн. ч., настоящее время",
+    "trapWhy": "var — 3-е лицо, а здесь 2-е лицо: varat"
+   },
    "audio": null,
    "image": null,
    "freqRank": 120,
@@ -1131,6 +1269,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "var",
+    "why": "varēt → vari: 2-е лицо, ед. ч., настоящее время",
+    "trapWhy": "var — 3-е лицо, а здесь 2-е лицо: vari"
+   },
    "audio": null,
    "image": null,
    "freqRank": 120,
@@ -1202,6 +1346,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "kārtība",
+    "why": "где? — местный падеж: kārtība → kārtībā",
+    "trapWhy": "kārtība — именительный («кто? что?»), а здесь где? — местный падеж: kārtībā"
+   },
    "audio": null,
    "image": null,
    "freqRank": 137,
@@ -1277,6 +1427,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "saucu",
+    "why": "saukt → sauc: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "saucu — 1-е лицо, а здесь 3-е лицо: sauc"
+   },
    "audio": null,
    "image": null,
    "freqRank": 147,
@@ -1318,6 +1474,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "saucu",
+    "why": "saukt → sauc: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "saucu — 1-е лицо, а здесь 3-е лицо: sauc"
+   },
    "audio": null,
    "image": null,
    "freqRank": 147,
@@ -1359,6 +1521,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "skatās",
+    "why": "skatīties → skatos: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "skatās — 3-е лицо, а здесь 1-е лицо: skatos"
+   },
    "audio": null,
    "image": null,
    "freqRank": 162,
@@ -1409,6 +1577,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "mājas",
+    "why": "после no — дательный падеж: māja → mājām",
+    "trapWhy": "mājas — именительный («кто? что?»), а здесь после no — дательный падеж: mājām"
+   },
    "audio": null,
    "image": null,
    "freqRank": 168,
@@ -1463,6 +1637,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "Rīga",
+    "why": "где? — местный падеж: Rīga → Rīgā",
+    "trapWhy": "Rīga — именительный («кто? что?»), а здесь где? — местный падеж: Rīgā"
+   },
    "audio": null,
    "image": null,
    "freqRank": 168,
@@ -1532,6 +1712,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "ņems",
+    "why": "ņemt → ņemšu: 1-е лицо, ед. ч., будущее время",
+    "trapWhy": "ņems — 3-е лицо, а здесь 1-е лицо: ņemšu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 182,
@@ -1575,6 +1761,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "Rīga",
+    "why": "где? — местный падеж: Rīga → Rīgā",
+    "trapWhy": "Rīga — именительный («кто? что?»), а здесь где? — местный падеж: Rīgā"
+   },
    "audio": null,
    "image": null,
    "freqRank": 205,
@@ -1618,6 +1810,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "Latvija",
+    "why": "где? — местный падеж: Latvija → Latvijā",
+    "trapWhy": "Latvija — именительный («кто? что?»), а здесь где? — местный падеж: Latvijā"
+   },
    "audio": null,
    "image": null,
    "freqRank": 205,
@@ -1659,6 +1857,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "dzīvoju",
+    "why": "dzīvot → dzīvo: 2-е лицо, ед. ч., настоящее время",
+    "trapWhy": "dzīvoju — 1-е лицо, а здесь 2-е лицо: dzīvo"
+   },
    "audio": null,
    "image": null,
    "freqRank": 205,
@@ -1716,6 +1920,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "var",
+    "why": "varēt → varu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "var — 3-е лицо, а здесь 1-е лицо: varu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 224,
@@ -1759,9 +1969,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 233,
+   "freqRank": 234,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -1813,6 +2029,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "Rīga",
+    "why": "где? — местный падеж: Rīga → Rīgā",
+    "trapWhy": "Rīga — именительный («кто? что?»), а здесь где? — местный падеж: Rīgā"
+   },
    "audio": null,
    "image": null,
    "freqRank": 240,
@@ -1855,6 +2077,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "reize",
+    "why": "кого? что? — винительный падеж: reize → reizi",
+    "trapWhy": "reize — именительный («кто? что?»), а здесь кого? что? — винительный падеж: reizi"
+   },
    "audio": null,
    "image": null,
    "freqRank": 249,
@@ -1890,6 +2118,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "reižu",
+    "why": "кого? что? — винительный падеж: reize → reizes",
+    "trapWhy": "reižu — родительный («кого? чего?»), а здесь кого? что? — винительный падеж: reizes"
+   },
    "audio": null,
    "image": null,
    "freqRank": 249,
@@ -1926,9 +2160,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "problēmas",
+    "why": "кого? чего? — родительный падеж: problēma → problēmu",
+    "trapWhy": "problēmas — именительный («кто? что?»), а здесь кого? чего? — родительный падеж: problēmu"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 303,
+   "freqRank": 305,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -1961,6 +2201,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "stunda",
+    "why": "после pēc — родительный падеж: stunda → stundas",
+    "trapWhy": "stunda — именительный («кто? что?»), а здесь после pēc — родительный падеж: stundas"
+   },
    "audio": null,
    "image": null,
    "freqRank": 315,
@@ -2011,6 +2257,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
    "freqRank": 318,
@@ -2053,6 +2305,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "grib",
+    "why": "gribēt → gribu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "grib — 3-е лицо, а здесь 1-е лицо: gribu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 320,
@@ -2095,6 +2353,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "nozīmēju",
+    "why": "nozīmēt → nozīmē: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "nozīmēju — 1-е лицо, а здесь 3-е лицо: nozīmē"
+   },
    "audio": null,
    "image": null,
    "freqRank": 328,
@@ -2136,6 +2400,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "piezvanīs",
+    "why": "piezvanīt → piezvanīšu: 1-е лицо, ед. ч., будущее время",
+    "trapWhy": "piezvanīs — 3-е лицо, а здесь 1-е лицо: piezvanīšu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 347,
@@ -2178,6 +2448,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "grib",
+    "why": "gribēt → gribu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "grib — 3-е лицо, а здесь 1-е лицо: gribu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 362,
@@ -2219,6 +2495,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "strādā",
+    "why": "strādāt → strādāju: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "strādā — 3-е лицо, а здесь 1-е лицо: strādāju"
+   },
    "audio": null,
    "image": null,
    "freqRank": 373,
@@ -2253,6 +2535,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Tiekas",
+    "why": "tikties → Tiekamies: 1-е лицо, мн. ч., настоящее время",
+    "trapWhy": "Tiekas — 3-е лицо, а здесь 1-е лицо: Tiekamies"
+   },
    "audio": null,
    "image": null,
    "freqRank": 373,
@@ -2301,6 +2589,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "runā",
+    "why": "runāt → runāju: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "runā — 3-е лицо, а здесь 1-е лицо: runāju"
+   },
    "audio": null,
    "image": null,
    "freqRank": 377,
@@ -2336,6 +2630,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "rīts",
+    "why": "после līdz — дательный падеж: rīts → rītam",
+    "trapWhy": "rīts — именительный («кто? что?»), а здесь после līdz — дательный падеж: rītam"
+   },
    "audio": null,
    "image": null,
    "freqRank": 393,
@@ -2386,6 +2686,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "kuriene",
+    "why": "после no — родительный падеж: kuriene → kurienes",
+    "trapWhy": "kuriene — именительный («кто? что?»), а здесь после no — родительный падеж: kurienes"
+   },
    "audio": null,
    "image": null,
    "freqRank": 442,
@@ -2429,6 +2735,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "birojs",
+    "why": "где? — местный падеж: birojs → birojā",
+    "trapWhy": "birojs — именительный («кто? что?»), а здесь где? — местный падеж: birojā"
+   },
    "audio": null,
    "image": null,
    "freqRank": 465,
@@ -2492,6 +2804,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "telefons",
+    "why": "кого? чего? — родительный падеж: telefons → telefona",
+    "trapWhy": "telefons — именительный («кто? что?»), а здесь кого? чего? — родительный падеж: telefona"
+   },
    "audio": null,
    "image": null,
    "freqRank": 476,
@@ -2534,6 +2852,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "maksāju",
+    "why": "maksāt → maksā: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "maksāju — 1-е лицо, а здесь 3-е лицо: maksā"
+   },
    "audio": null,
    "image": null,
    "freqRank": 482,
@@ -2583,6 +2907,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
    "freqRank": 487,
@@ -2625,9 +2955,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "grib",
+    "why": "gribēt → gribu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "grib — 3-е лицо, а здесь 1-е лицо: gribu"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 490,
+   "freqRank": 489,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -2668,9 +3004,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "ūdens",
+    "why": "кого? что? — винительный падеж: ūdens → ūdeni",
+    "trapWhy": "ūdens — именительный («кто? что?»), а здесь кого? что? — винительный падеж: ūdeni"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 490,
+   "freqRank": 489,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -2717,9 +3059,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 497,
+   "freqRank": 498,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -2751,6 +3099,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "piekrīt",
+    "why": "piekrist → piekrītu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "piekrīt — 3-е лицо, а здесь 1-е лицо: piekrītu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 508,
@@ -2786,6 +3140,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Priecājas",
+    "why": "priecāties → Priecājos: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "Priecājas — 3-е лицо, а здесь 1-е лицо: Priecājos"
+   },
    "audio": null,
    "image": null,
    "freqRank": 514,
@@ -2845,6 +3205,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
    "freqRank": 552,
@@ -2888,6 +3254,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
    "freqRank": 574,
@@ -2929,6 +3301,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "jūtas",
+    "why": "justies → jūtos: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "jūtas — 3-е лицо, а здесь 1-е лицо: jūtos"
+   },
    "audio": null,
    "image": null,
    "freqRank": 598,
@@ -2964,9 +3342,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "tikšanās",
+    "why": "после uz — винительный падеж: tikšanās → tikšanos",
+    "trapWhy": "tikšanās — именительный («кто? что?»), а здесь после uz — винительный падеж: tikšanos"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 615,
+   "freqRank": 616,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -3007,9 +3391,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "kafija",
+    "why": "кого? что? — винительный падеж: kafija → kafiju",
+    "trapWhy": "kafija — именительный («кто? что?»), а здесь кого? что? — винительный падеж: kafiju"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 666,
+   "freqRank": 665,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -3049,9 +3439,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "kafija",
+    "why": "кого? что? — винительный падеж: kafija → kafiju",
+    "trapWhy": "kafija — именительный («кто? что?»), а здесь кого? что? — винительный падеж: kafiju"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 666,
+   "freqRank": 665,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -3092,9 +3488,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "patīku",
+    "why": "patikt → patīk: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "patīku — 1-е лицо, а здесь 3-е лицо: patīk"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 666,
+   "freqRank": 665,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -3134,9 +3536,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 744,
+   "freqRank": 745,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -3184,6 +3592,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "veikals",
+    "why": "после uz — винительный падеж: veikals → veikalu",
+    "trapWhy": "veikals — именительный («кто? что?»), а здесь после uz — винительный падеж: veikalu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 785,
@@ -3234,6 +3648,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "veikals",
+    "why": "после uz — винительный падеж: veikals → veikalu",
+    "trapWhy": "veikals — именительный («кто? что?»), а здесь после uz — винительный падеж: veikalu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 785,
@@ -3277,6 +3697,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "sāpu",
+    "why": "sāpēt → sāp: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "sāpu — 1-е лицо, а здесь 3-е лицо: sāp"
+   },
    "audio": null,
    "image": null,
    "freqRank": 801,
@@ -3320,6 +3746,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "sāpu",
+    "why": "sāpēt → sāp: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "sāpu — 1-е лицо, а здесь 3-е лицо: sāp"
+   },
    "audio": null,
    "image": null,
    "freqRank": 801,
@@ -3362,9 +3794,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "ir",
+    "why": "būt → esmu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "ir — 3-е лицо, а здесь 1-е лицо: esmu"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 827,
+   "freqRank": 826,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -3458,9 +3896,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Veiksme",
+    "why": "кого? что? — винительный падеж: veiksme → Veiksmi",
+    "trapWhy": "Veiksme — именительный («кто? что?»), а здесь кого? что? — винительный падеж: Veiksmi"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 884,
+   "freqRank": 885,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -3499,6 +3943,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "atnāks",
+    "why": "atnākt → atnākšu: 1-е лицо, ед. ч., будущее время",
+    "trapWhy": "atnāks — 3-е лицо, а здесь 1-е лицо: atnākšu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 892,
@@ -3542,9 +3992,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "centrs",
+    "why": "где? — местный падеж: centrs → centrā",
+    "trapWhy": "centrs — именительный («кто? что?»), а здесь где? — местный падеж: centrā"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 903,
+   "freqRank": 900,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -3584,6 +4040,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
    "freqRank": 909,
@@ -3627,9 +4089,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "palīdzība",
+    "why": "кого? что? — винительный падеж: palīdzība → palīdzību",
+    "trapWhy": "palīdzība — именительный («кто? что?»), а здесь кого? что? — винительный падеж: palīdzību"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 942,
+   "freqRank": 940,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -3670,6 +4138,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
    "freqRank": 951,
@@ -3762,6 +4236,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 4,
+    "trap": "ārsts",
+    "why": "после pie — родительный падеж: ārsts → ārsta",
+    "trapWhy": "ārsts — именительный («кто? что?»), а здесь после pie — родительный падеж: ārsta"
+   },
    "audio": null,
    "image": null,
    "freqRank": 1009,
@@ -3805,6 +4285,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
    "freqRank": 1081,
@@ -3905,6 +4391,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "biļete",
+    "why": "кого? что? — винительный падеж: biļete → biļeti",
+    "trapWhy": "biļete — именительный («кто? что?»), а здесь кого? что? — винительный падеж: biļeti"
+   },
    "audio": null,
    "image": null,
    "freqRank": 1220,
@@ -3947,9 +4439,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "tēja",
+    "why": "кого? что? — винительный падеж: tēja → tēju",
+    "trapWhy": "tēja — именительный («кто? что?»), а здесь кого? что? — винительный падеж: tēju"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 1236,
+   "freqRank": 1237,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4005,9 +4503,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 4,
+    "trap": "karte",
+    "why": "после ar — винительный падеж: karte → karti",
+    "trapWhy": "karte — именительный («кто? что?»), а здесь после ar — винительный падеж: karti"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 1263,
+   "freqRank": 1262,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4055,9 +4559,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "autobuss",
+    "why": "после ar — винительный падеж: autobuss → autobusu",
+    "trapWhy": "autobuss — именительный («кто? что?»), а здесь после ar — винительный падеж: autobusu"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 1281,
+   "freqRank": 1277,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4105,9 +4615,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "mājas",
+    "why": "где? — местный падеж: māja → mājās",
+    "trapWhy": "mājas — именительный («кто? что?»), а здесь где? — местный падеж: mājās"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 1295,
+   "freqRank": 1297,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4164,9 +4680,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "trenažieri",
+    "why": "кого? чего? — родительный падеж: trenažieris → trenažieru",
+    "trapWhy": "trenažieri — именительный («кто? что?»), а здесь кого? чего? — родительный падеж: trenažieru"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 1295,
+   "freqRank": 1297,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4207,6 +4729,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
    "freqRank": 1370,
@@ -4250,9 +4778,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "vakariņu",
+    "why": "кого? что? — винительный падеж: vakariņas",
+    "trapWhy": "vakariņu — родительный («кого? чего?»), а здесь кого? что? — винительный падеж: vakariņas"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 1375,
+   "freqRank": 1373,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4307,6 +4841,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 4,
+    "trap": "minūtes",
+    "why": "кому? чему? — дательный падеж: minūte → minūtēm",
+    "trapWhy": "minūtes — именительный («кто? что?»), а здесь кому? чему? — дательный падеж: minūtēm"
+   },
    "audio": null,
    "image": null,
    "freqRank": 1446,
@@ -4366,9 +4906,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "sports",
+    "why": "после uz — родительный падеж: sports → sporta",
+    "trapWhy": "sports — именительный («кто? что?»), а здесь после uz — родительный падеж: sporta"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 1472,
+   "freqRank": 1474,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4408,9 +4954,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "ir",
+    "why": "būt → esmu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "ir — 3-е лицо, а здесь 1-е лицо: esmu"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 1517,
+   "freqRank": 1516,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4443,7 +4995,7 @@
    "accept": [],
    "audio": null,
    "image": null,
-   "freqRank": 1545,
+   "freqRank": 1548,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4482,6 +5034,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "ir",
+    "why": "būt → esmu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "ir — 3-е лицо, а здесь 1-е лицо: esmu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 1558,
@@ -4533,9 +5091,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Kafija",
+    "why": "кого? что? — винительный падеж: kafija → Kafiju",
+    "trapWhy": "Kafija — именительный («кто? что?»), а здесь кого? что? — винительный падеж: Kafiju"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 1693,
+   "freqRank": 1695,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4576,9 +5140,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "nepatīku",
+    "why": "patikt → nepatīk: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "nepatīku — 1-е лицо, а здесь 3-е лицо: nepatīk"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 1693,
+   "freqRank": 1695,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4625,9 +5195,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 1709,
+   "freqRank": 1711,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4668,9 +5244,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 2145,
+   "freqRank": 2146,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4711,9 +5293,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "maksāju",
+    "why": "maksāt → maksā: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "maksāju — 1-е лицо, а здесь 3-е лицо: maksā"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 2145,
+   "freqRank": 2146,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4754,9 +5342,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "maize",
+    "why": "кого? что? — винительный падеж: maize → maizi",
+    "trapWhy": "maize — именительный («кто? что?»), а здесь кого? что? — винительный падеж: maizi"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 2145,
+   "freqRank": 2146,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4788,9 +5382,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "kavē",
+    "why": "kavēt → kavēju: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "kavē — 3-е лицо, а здесь 1-е лицо: kavēju"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 2179,
+   "freqRank": 2178,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4823,9 +5423,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "redzēšanās",
+    "why": "после uz — винительный падеж: redzēšanās → redzēšanos",
+    "trapWhy": "redzēšanās — именительный («кто? что?»), а здесь после uz — винительный падеж: redzēšanos"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 2237,
+   "freqRank": 2243,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4866,6 +5472,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
    "freqRank": 2451,
@@ -4917,9 +5529,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "garšoju",
+    "why": "garšot → garšo: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "garšoju — 1-е лицо, а здесь 3-е лицо: garšo"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 2599,
+   "freqRank": 2608,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -4953,9 +5571,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Līstu",
+    "why": "līt → Līst: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "Līstu — 1-е лицо, а здесь 3-е лицо: Līst"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 2808,
+   "freqRank": 2810,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5053,9 +5677,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "reižu",
+    "why": "кого? что? — винительный падеж: reize → reizes",
+    "trapWhy": "reižu — родительный («кого? чего?»), а здесь кого? что? — винительный падеж: reizes"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 3032,
+   "freqRank": 3034,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5096,9 +5726,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 3257,
+   "freqRank": 3256,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5139,9 +5775,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 3327,
+   "freqRank": 3339,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5189,6 +5831,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
    "freqRank": 3810,
@@ -5232,9 +5880,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 3982,
+   "freqRank": 4000,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5275,9 +5929,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "dvielis",
+    "why": "кого? что? — винительный падеж: dvielis → dvieli",
+    "trapWhy": "dvielis — именительный («кто? что?»), а здесь кого? что? — винительный падеж: dvieli"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 4178,
+   "freqRank": 4122,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5318,9 +5978,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 4211,
+   "freqRank": 4200,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5354,7 +6020,7 @@
    "accept": [],
    "audio": null,
    "image": null,
-   "freqRank": 4421,
+   "freqRank": 4423,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5400,6 +6066,12 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "runā",
+    "why": "runāt → runājat: 2-е лицо, мн. ч., настоящее время",
+    "trapWhy": "runā — 3-е лицо, а здесь 2-е лицо: runājat"
+   },
    "audio": null,
    "image": null,
    "freqRank": 4501,
@@ -5443,9 +6115,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 4690,
+   "freqRank": 4717,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5478,9 +6156,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "apetīte",
+    "why": "кого? что? — винительный падеж: apetīte → apetīti",
+    "trapWhy": "apetīte — именительный («кто? что?»), а здесь кого? что? — винительный падеж: apetīti"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 4876,
+   "freqRank": 4861,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5521,9 +6205,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "ateju",
+    "why": "atiet → atiet: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "ateju — 1-е лицо, а здесь 3-е лицо: atiet"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 4878,
+   "freqRank": 4865,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5573,9 +6263,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "dzelzceļš",
+    "why": "кого? чего? — родительный падеж: dzelzceļš → dzelzceļa",
+    "trapWhy": "dzelzceļš — именительный («кто? что?»), а здесь кого? чего? — родительный падеж: dzelzceļa"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 4971,
+   "freqRank": 4970,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5622,9 +6318,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 5314,
+   "freqRank": 5329,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5665,9 +6367,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "sākos",
+    "why": "sākties → sākas: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "sākos — 1-е лицо, а здесь 3-е лицо: sākas"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 5706,
+   "freqRank": 5708,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5717,9 +6425,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "latvieši",
+    "why": "кого? чего? — родительный падеж: latvietis → latviešu",
+    "trapWhy": "latvieši — именительный («кто? что?»), а здесь кого? чего? — родительный падеж: latviešu"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 5842,
+   "freqRank": 5843,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5765,9 +6479,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 6003,
+   "freqRank": 6002,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5815,9 +6535,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "gadi",
+    "why": "кого? чего? — родительный падеж: gads → gadu",
+    "trapWhy": "gadi — именительный («кто? что?»), а здесь кого? чего? — родительный падеж: gadu"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 6212,
+   "freqRank": 6358,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5858,9 +6584,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 6629,
+   "freqRank": 6601,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5901,9 +6633,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 6823,
+   "freqRank": 6822,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5942,9 +6680,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 6859,
+   "freqRank": 6861,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -5992,9 +6736,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "kāju",
+    "why": "кого? что? — винительный падеж: kāja → kājas",
+    "trapWhy": "kāju — родительный («кого? чего?»), а здесь кого? что? — винительный падеж: kājas"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 8341,
+   "freqRank": 8335,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -6035,9 +6785,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 8408,
+   "freqRank": 8675,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -6076,9 +6832,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "runā",
+    "why": "runāt → runāju: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "runā — 3-е лицо, а здесь 1-е лицо: runāju"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 9915,
+   "freqRank": 10098,
    "status": "unverified",
    "source": "llm",
    "check": {
@@ -6118,9 +6880,15 @@
     }
    ],
    "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "bulciņu",
+    "why": "кого? что? — винительный падеж: bulciņa → bulciņas",
+    "trapWhy": "bulciņu — родительный («кого? чего?»), а здесь кого? что? — винительный падеж: bulciņas"
+   },
    "audio": null,
    "image": null,
-   "freqRank": 11084,
+   "freqRank": 10691,
    "status": "unverified",
    "source": "llm",
    "check": {

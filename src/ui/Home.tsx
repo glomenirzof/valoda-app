@@ -1,3 +1,5 @@
+import { buildQueue, plan } from '../core/session';
+import { whenRu, type StoredCard } from '../core/srs';
 import { TOPIC_RU, type Phrase, type Settings } from '../core/types';
 import { Icon } from './icons';
 
@@ -7,13 +9,18 @@ export const TOPIC_HUE: Record<string, number> = {
   gym: 5, health: 140, home: 25, weather: 195, work: 60, likes: 340,
 };
 
-export const trainable = (phrases: Phrase[], s: Settings) => phrases.filter((p) => p.status === 'tutor' || s.allowUnverified);
-
-export function Home({ phrases, settings, onTopic }: { phrases: Phrase[]; settings: Settings; onTopic: (t: string) => void }) {
-  const ready = trainable(phrases, settings);
-  const newToday = Math.min(settings.newPerDay, ready.length);
-  const reviews = 0; // FSRS reviews arrive with the session step
-  const date = new Date().toLocaleDateString('ru-RU', { weekday: 'long', day: 'numeric', month: 'long' });
+export function Home({ phrases, cards, settings, onTopic, onStart }: {
+  phrases: Phrase[];
+  cards: StoredCard[];
+  settings: Settings;
+  onTopic: (t: string) => void;
+  onStart: () => void;
+}) {
+  const now = new Date();
+  const { due, newLeft, paused, fresh, next } = plan(phrases, cards, settings, now);
+  const newToday = Math.min(newLeft, fresh.length);
+  const canStart = buildQueue(phrases, cards, settings, now).length > 0;
+  const date = now.toLocaleDateString('ru-RU', { weekday: 'long', day: 'numeric', month: 'long' });
   const counts = new Map<string, number>();
   for (const p of phrases) counts.set(p.topic, (counts.get(p.topic) ?? 0) + 1);
 
@@ -24,7 +31,7 @@ export function Home({ phrases, settings, onTopic }: { phrases: Phrase[]; settin
 
       <div class="today">
         <div class="stat">
-          <b>{reviews}</b>
+          <b>{due.length}</b>
           <span>повторений</span>
         </div>
         <div class="stat accent">
@@ -32,7 +39,8 @@ export function Home({ phrases, settings, onTopic }: { phrases: Phrase[]; settin
           <span>новых фраз</span>
         </div>
       </div>
-      {ready.length === 0 && (
+      {paused && <p class="subtitle">Много повторений накопилось — новые фразы на паузе, пока их не станет меньше.</p>}
+      {!paused && fresh.length === 0 && cards.length === 0 && (
         <p class="subtitle">
           Репетитор ещё не проверил фразы. Чтобы учить их уже сейчас, включи «Непроверенные фразы» в настройках.
         </p>
@@ -51,10 +59,10 @@ export function Home({ phrases, settings, onTopic }: { phrases: Phrase[]; settin
       </div>
 
       <div class="start">
-        <button class="btn primary" disabled>
+        <button class="btn primary" disabled={!canStart} onClick={onStart}>
           Начать <Icon name="arrow" />
         </button>
-        <p class="note">Тренировка появится на следующем шаге</p>
+        {!canStart && <p class="note">{next ? `На сегодня всё. Следующее повторение — ${whenRu(next, now)}` : 'Пока нечего учить'}</p>}
       </div>
     </>
   );

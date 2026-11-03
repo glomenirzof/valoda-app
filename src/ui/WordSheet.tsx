@@ -1,21 +1,36 @@
 import { featsLong, paradigmRu, POS_RU } from '../core/grammar-ru';
-import type { Token } from '../core/types';
+import type { Lang, Token } from '../core/types';
+import { playWord, wordKey } from '../data/audio';
+import { Icon } from './icons';
 
-/** Bottom sheet with the analysis of one tapped word. */
-export function WordSheet({ token, onClose }: { token: Token; onClose: () => void }) {
+/** Bottom sheet with the analysis of one tapped word; both the form and the dictionary form can be heard. */
+export function WordSheet({ token, lang, onClose }: { token: Token; lang: Lang; onClose: () => void }) {
   const paradigm = paradigmRu(token);
   const gender = token.gender === 'M' ? 'мужской род' : token.gender === 'F' ? 'женский род' : null;
+  const form = wordKey(token);
   return (
     <>
       <div class="scrim" onClick={onClose} />
       <section class="sheet" role="dialog" aria-label={`Разбор слова ${token.s}`}>
         <div class="grab" />
-        <p class="ws-form">{token.s}</p>
+        <div class="ws-head">
+          <p class="ws-form">{token.s}</p>
+          <button class="a-mini" aria-label={`Слушать ${form}`} onClick={() => playWord(lang, form)}>
+            <Icon name="play" />
+          </button>
+        </div>
         <p class="ws-ru">{token.ru || '—'}</p>
         <dl class="facts">
           <div>
             <dt>Начальная форма</dt>
-            <dd>{token.lemma}</dd>
+            <dd>
+              {token.lemma.toLowerCase() !== form.toLowerCase() && (
+                <button class="a-inline" aria-label={`Слушать ${token.lemma}`} onClick={() => playWord(lang, token.lemma)}>
+                  <Icon name="play" />
+                </button>
+              )}
+              {token.lemma}
+            </dd>
           </div>
           <div>
             <dt>Часть речи</dt>

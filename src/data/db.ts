@@ -1,11 +1,11 @@
 import { openDB, type DBSchema, type IDBPDatabase } from 'idb';
-import { DEFAULT_SETTINGS, type Settings } from '../core/types';
+import type { StoredCard, StoredLog } from '../core/srs';
+import { DEFAULT_SETTINGS, type Lang, type Settings } from '../core/types';
 
 interface ValodaDB extends DBSchema {
   settings: { key: string; value: Settings };
-  // cards and logs are filled from step 4 (FSRS); created now to avoid a migration
-  cards: { key: string; value: { id: string } & Record<string, unknown> };
-  logs: { key: number; value: { cardId: string; ts: number } & Record<string, unknown>; indexes: { byCard: string } };
+  cards: { key: string; value: StoredCard };
+  logs: { key: number; value: StoredLog; indexes: { byCard: string } };
 }
 
 let dbp: Promise<IDBPDatabase<ValodaDB>> | null = null;
@@ -31,6 +31,22 @@ export async function loadSettings(): Promise<Settings> {
 
 export async function saveSettings(s: Settings) {
   await (await db()).put('settings', s, 'main');
+}
+
+export async function loadCards(lang: Lang): Promise<StoredCard[]> {
+  try {
+    return (await (await db()).getAll('cards')).filter((c) => c.lang === lang);
+  } catch {
+    return [];
+  }
+}
+
+/** Saves the card and its review log in one transaction, so they never disagree. */
+export async function saveReview(card: StoredCard, log?: StoredLog) {
+  const tx = (await db()).transaction(['cards', 'logs'], 'readwrite');
+  await tx.objectStore('cards').put(card);
+  if (log) await tx.objectStore('logs').add(log);
+  await tx.done;
 }
 
 /** Ask iOS not to evict IndexedDB under storage pressure (granted for home-screen apps). */

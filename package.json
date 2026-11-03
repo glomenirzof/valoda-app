@@ -15,7 +15,8 @@
     "tezaurs:index": "python -I scripts/tezaurs/build_index.py data-cache/tezaurs/tezaurs_2026_4_wordforms_tei.xml.zip data-cache/tezaurs/lv-forms.sqlite",
     "content:build": "python -I scripts/content/build_phrases.py lv",
     "content:export": "tsx scripts/content/export-review.ts lv",
-    "content:import": "tsx scripts/content/import-review.ts"
+    "content:import": "tsx scripts/content/import-review.ts",
+    "tts:generate": "tsx scripts/tts/generate.ts"
   },
   "type": "module",
   "dependencies": {

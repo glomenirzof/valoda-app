@@ -1,15 +1,17 @@
 import { useMemo, useState } from 'preact/hooks';
-import { TOPIC_RU, type Phrase, type Token } from '../core/types';
+import { TOPIC_RU, type Lang, type Phrase, type Token } from '../core/types';
+import { playPhrase } from '../data/audio';
+import { Icon } from './icons';
 import { WordSheet } from './WordSheet';
 
 /** Latvian text where every word is a button that opens its analysis. */
-export function TappableText({ phrase, onWord }: { phrase: Phrase; onWord: (t: Token) => void }) {
+export function TappableText({ phrase, onWord, cls = 'lv-text' }: { phrase: Phrase; onWord: (t: Token) => void; cls?: string }) {
   // Split on words but keep punctuation/spaces; tokens are matched in order.
   // \p{L}, not \W: in JS \W is ASCII-only even with the u flag, so "ī" would break words.
   const parts = phrase.text.split(/(\p{L}+(?:-\p{L}+)*)/u);
   let i = 0;
   return (
-    <p class="lv-text">
+    <p class={cls}>
       {parts.map((part, k) => {
         if (k % 2 === 0) return part;
         const t = phrase.tokens[i++];
@@ -25,7 +27,7 @@ export function TappableText({ phrase, onWord }: { phrase: Phrase; onWord: (t: T
   );
 }
 
-export function PhraseList({ phrases, topic, onTopic }: { phrases: Phrase[]; topic: string | null; onTopic: (t: string | null) => void }) {
+export function PhraseList({ phrases, lang, topic, onTopic }: { phrases: Phrase[]; lang: Lang; topic: string | null; onTopic: (t: string | null) => void }) {
   const [open, setOpen] = useState<string | null>(null);
   const [word, setWord] = useState<Token | null>(null);
 
@@ -71,14 +73,22 @@ export function PhraseList({ phrases, topic, onTopic }: { phrases: Phrase[]; top
               {open === p.id && (
                 <div onClick={(e) => e.stopPropagation()}>
                   <TappableText phrase={p} onWord={setWord} />
-                  <p class="tap-hint">Нажми на слово — покажу разбор</p>
+                  <div class="phrase-tools">
+                    <button class="a-mini" aria-label="Слушать" onClick={() => playPhrase(lang, p.id)}>
+                      <Icon name="play" />
+                    </button>
+                    <button class="a-mini" aria-label="Медленно" onClick={() => playPhrase(lang, p.id, 0.75)}>
+                      <Icon name="slow" />
+                    </button>
+                    <p class="tap-hint">Нажми на слово — покажу разбор</p>
+                  </div>
                 </div>
               )}
             </article>
           ))}
         </section>
       ))}
-      {word && <WordSheet token={word} onClose={() => setWord(null)} />}
+      {word && <WordSheet token={word} lang={lang} onClose={() => setWord(null)} />}
     </>
   );
 }

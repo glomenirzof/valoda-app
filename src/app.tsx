@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'preact/hooks';
+import { buildQueue, type Step } from './core/session';
+import type { StoredCard } from './core/srs';
 import { DEFAULT_SETTINGS, type Phrase, type Settings as S } from './core/types';
 import { loadPhrases } from './data/content';
-import { loadSettings, requestPersistence, saveSettings } from './data/db';
+import { loadCards, loadSettings, requestPersistence, saveSettings } from './data/db';
 import { Home } from './ui/Home';
 import { Icon, type IconName } from './ui/icons';
 import { applyLook } from './ui/look';
 import { PhraseList } from './ui/PhraseList';
 import { Progress } from './ui/Progress';
+import { Session } from './ui/Session';
 import { Settings } from './ui/Settings';
 
 type Tab = 'learn' | 'phrases' | 'progress' | 'settings';
@@ -25,6 +28,8 @@ export function App() {
   const [phrases, setPhrases] = useState<Phrase[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [online, setOnline] = useState(navigator.onLine);
+  const [cards, setCards] = useState<StoredCard[]>([]);
+  const [session, setSession] = useState<Step[] | null>(null);
 
   useEffect(() => {
     loadSettings().then(setSettings);
@@ -53,6 +58,7 @@ export function App() {
     loadPhrases(settings.lang)
       .then((f) => setPhrases(f.phrases))
       .catch((e) => setError(String(e)));
+    loadCards(settings.lang).then(setCards);
   }, [settings.lang]);
 
   const update = (s: S) => {
@@ -64,6 +70,22 @@ export function App() {
     setTab(t);
     scrollTo(0, 0);
   };
+
+  if (session && phrases) {
+    return (
+      <Session
+        phrases={phrases}
+        cards={cards}
+        queue={session}
+        settings={settings}
+        onExit={(c) => {
+          setCards(c);
+          setSession(null);
+          scrollTo(0, 0);
+        }}
+      />
+    );
+  }
 
   return (
     <>
@@ -81,14 +103,16 @@ export function App() {
         ) : tab === 'learn' ? (
           <Home
             phrases={phrases}
+            cards={cards}
             settings={settings}
+            onStart={() => setSession(buildQueue(phrases, cards, settings, new Date()))}
             onTopic={(t) => {
               setTopic(t);
               go('phrases');
             }}
           />
         ) : tab === 'phrases' ? (
-          <PhraseList phrases={phrases} topic={topic} onTopic={setTopic} />
+          <PhraseList phrases={phrases} lang={settings.lang} topic={topic} onTopic={setTopic} />
         ) : tab === 'progress' ? (
           <Progress phrases={phrases} settings={settings} />
         ) : (

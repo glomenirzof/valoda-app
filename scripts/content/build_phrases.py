@@ -128,6 +128,68 @@ def agree(i: int, toks: list[dict], db: sqlite3.Connection, lexicon: dict[str, s
             return
 
 
+CASE_RU = {"NOM": "именительный", "GEN": "родительный", "DAT": "дательный", "ACC": "винительный", "LOC": "местный"}
+CASE_Q = {"NOM": "кто? что?", "GEN": "кого? чего?", "DAT": "кому? чему?", "ACC": "кого? что?", "LOC": "где?"}
+PERSON_RU = {"1": "1-е лицо", "2": "2-е лицо", "3": "3-е лицо"}
+TENSE_RU = {"PRS": "настоящее время", "PST": "прошедшее время", "FUT": "будущее время"}
+
+
+def same_case(s: str, like: str) -> str:
+    return s[:1].upper() + s[1:] if like[:1].isupper() else s
+
+
+def key_word(tokens: list[dict], db: sqlite3.Connection) -> dict | None:
+    """The word whose ending the phrase trains, a same-lexeme trap with a wrong ending, and one-line reasons.
+
+    Prefers a noun or adjective in an oblique case (the endings learners get wrong), then a finite
+    verb (person ending), then a noun or adjective in the nominative.
+    """
+    def case_of(t):
+        return next((c for c in CASE_RU if c in t["feats"].split(".")), None)
+
+    order = ([i for i, t in enumerate(tokens) if t["pos"] == "NOUN" and case_of(t) not in (None, "NOM")]
+             + [i for i, t in enumerate(tokens) if t["pos"] == "ADJ" and case_of(t) not in (None, "NOM")]
+             + [i for i, t in enumerate(tokens) if t["pos"] == "VERB" and {"PRS", "PST", "FUT"} & set(t["feats"].split("."))]
+             + [i for i, t in enumerate(tokens) if t["pos"] in ("NOUN", "ADJ") and case_of(t) == "NOM"])
+    for i in order:
+        t = tokens[i]
+        feats = set(t["feats"].split("."))
+        forms = db.execute("SELECT f.orth, f.feats FROM form f JOIN lexeme l ON l.id = f.lexeme_id "
+                           "WHERE l.lemma = ? AND l.pos = ?", (t["lemma"], t["pos"])).fetchall()
+        prev = tokens[i - 1] if i else None
+        if t["pos"] == "VERB":
+            person = next((p for p in PERSON_RU if p in feats), None)
+            if not person:
+                continue
+            others = ["3", "1"] if person != "3" else ["1", "2"]
+            for o in others:
+                # 3rd person forms carry no number in Tēzaurs (saprot = IND.PRS.3); 1st/2nd do
+                want = (feats - {person, "SG", "PL"}) | {o} | (set() if o == "3" else {"PL" if "PL" in feats else "SG"})
+                trap = next((f for f, fs in forms if set(fs.split(".")) == want and f.lower() != t["s"].lower()), None)
+                if trap:
+                    num = "мн. ч." if "PL" in feats else "ед. ч."
+                    tense = next((TENSE_RU[x] for x in TENSE_RU if x in feats), "")
+                    return {"i": i, "trap": same_case(trap, t["s"]),
+                            "why": f"{t['lemma']} → {t['s']}: {PERSON_RU[person]}, {num}, {tense}",
+                            "trapWhy": f"{same_case(trap, t['s'])} — {PERSON_RU[o]}, а здесь {PERSON_RU[person]}: {t['s']}"}
+            continue
+        case = case_of(t)
+        for other in ["NOM", "ACC", "GEN", "DAT", "LOC"]:
+            if other == case:
+                continue
+            want = (feats - {case}) | {other}
+            trap = next((f for f, fs in forms if set(fs.split(".")) == want and f.lower() != t["s"].lower()), None)
+            if not trap:
+                continue
+            reason = (f"после {prev['s'].lower()} — {CASE_RU[case]} падеж" if prev and prev["pos"] == "ADP"
+                      else f"{CASE_Q[case]} — {CASE_RU[case]} падеж")
+            arrow = f"{t['lemma']} → {t['s']}" if t["lemma"].lower() != t["s"].lower() else t["s"]
+            return {"i": i, "trap": same_case(trap, t["s"]),
+                    "why": f"{reason}: {arrow}",
+                    "trapWhy": f"{same_case(trap, t['s'])} — {CASE_RU[other]} («{CASE_Q[other]}»), а здесь {reason}: {t['s']}"}
+    return None
+
+
 def load_json(p: Path, default):
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else default
 
@@ -147,7 +209,7 @@ def lemma_freq(db: sqlite3.Connection, freq_path: Path) -> dict[str, int]:
             "WHERE f.orth_lc = ? AND l.proper = 0", (word,))}
         for lem in lemmas:
             counts[lem.lower()] += n / len(lemmas)
-    ranked = sorted(counts.items(), key=lambda kv: -kv[1])
+    ranked = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))  # ties by lemma: stable ranks
     return {lem: i + 1 for i, (lem, _) in enumerate(ranked)}
 
 
@@ -260,6 +322,7 @@ def main() -> int:
             "ru": p["ru"],
             "tokens": tokens,
             "accept": p.get("accept", []),
+            **({"key": key} if (key := key_word(tokens, db)) else {}),
             "audio": None,
             "image": p.get("image"),
             "freqRank": max(content_ranks) if content_ranks else None,
