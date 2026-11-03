@@ -7,6 +7,7 @@
       ru: 'Мы идём в магазин.',
       audio: 'audio/veikalu.mp3',
       key: 'veikalu',
+      trap: ['veikals', 'veikals — это «кто? что?», а после uz нужен винительный: veikalu'],
       why: 'после uz (куда?) — винительный падеж: veikals → veikalu',
       words: [
         { s: 'Mēs', lemma: 'mēs', ru: 'мы', gram: 'местоимение', form: 'именительный · мн. ч.' },
@@ -20,6 +21,7 @@
       ru: 'Вчера я был в тренажёрном зале.',
       audio: 'audio/zale.mp3',
       key: 'zālē',
+      trap: ['zāle', 'zāle — это «кто? что?», а на вопрос «где?» нужен местный: zālē'],
       why: 'где? — местный падеж: zāle → zālē',
       words: [
         { s: 'Vakar', lemma: 'vakar', ru: 'вчера', gram: 'наречие', form: 'не изменяется' },
@@ -34,6 +36,7 @@
       ru: 'Я ем хлеб.',
       audio: 'audio/maizi.mp3',
       key: 'maizi',
+      trap: ['maize', 'maize — это «кто? что?», а «что ем?» — винительный: maizi'],
       why: 'что ем? — винительный падеж: maize → maizi',
       words: [
         { s: 'Es', lemma: 'es', ru: 'я', gram: 'местоимение', form: 'именительный · ед. ч.' },
@@ -54,6 +57,12 @@
   const RATINGS_SIMPLE = [
     { id: 'again', label: 'Не вспомнил', hint: 'повторю скоро' },
     { id: 'good', label: 'Вспомнил', hint: 'через 1 день' },
+  ];
+
+  // With hints the phrase was not recalled on its own: "Hard" at best.
+  const RATINGS_HINTED = [
+    { id: 'again', label: 'Не вспомнил', hint: 'повторю скоро' },
+    { id: 'hard', label: 'С подсказкой', hint: 'повторю сегодня' },
   ];
 
   const FONT_PAIRS = {
@@ -77,6 +86,8 @@
     arrow: '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
     sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>',
     sliders: '<path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/>',
+    bulb: '<path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/>',
+    moon: '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',
     type: '<path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/>',
   };
   const icon = (n, cls = '') => `<svg class="ic ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
@@ -119,13 +130,32 @@
       .join(' ');
   }
 
+  // Simple mode session: meet a phrase, build it from tiles right away, say it yourself a few cards later.
+  const QUEUE = [['new', 0], ['tiles', 0], ['new', 1], ['tiles', 1], ['ex', 0], ['ex', 1], ['new', 2], ['tiles', 2], ['ex', 2]];
+
+  const plural = (n, one, few, many) => {
+    const m10 = n % 10, m100 = n % 100;
+    return m10 === 1 && m100 !== 11 ? one : m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14) ? few : many;
+  };
+
+  const shuffle = (a) => {
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
+  };
+
   const KIND_RU = { root: 'ошибка в корне', ending: 'ошибка в окончании', mark: 'нет долготы или знака' };
 
   function start(opts) {
     const app = document.getElementById('app');
     const st = {
       i: 0,
-      screen: store.get('screen', 'new'),
+      screen: opts.simple ? 'new' : store.get('screen', 'new'),
+      q: 0,
+      known: new Set(),
+      hints: 0,
+      pool: null,
+      picked: [],
+      tiles: null,
       mode: opts.simple ? 'speak' : store.get('mode', 'type'),
       plays: 0,
       typed: '',
@@ -133,7 +163,8 @@
       word: null,
       rating: 'good',
       font: store.get('font-' + opts.title, opts.fonts),
-      theme: store.get('theme', 'auto'),
+      // First visit follows the system; after that the toggle is just light / dark.
+      theme: ['light', 'dark'].includes(store.get('theme')) ? store.get('theme') : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
       reviewOpen: false,
       accent: opts.accents ? store.get('accent', opts.accents[0][0]) : null,
     };
@@ -151,8 +182,7 @@
       const f = FONT_PAIRS[st.font];
       document.documentElement.style.setProperty('--font-head', `${f.head}, system-ui, sans-serif`);
       document.documentElement.style.setProperty('--font-body', `${f.body}, system-ui, sans-serif`);
-      if (st.theme === 'auto') document.documentElement.removeAttribute('data-theme');
-      else document.documentElement.setAttribute('data-theme', st.theme);
+      document.documentElement.setAttribute('data-theme', st.theme);
     };
 
     const tappable = (p) => {
@@ -174,14 +204,19 @@
       ${st.reviewOpen ? `<nav class="review" aria-label="Переключатели для просмотра">
         <span class="review-v">${opts.title}</span>
         <div class="review-seg">
-          ${[['new', 'Новая'], ['ex', 'Упражнение'], ['fb', 'Отклик']].map(([id, l]) => `<button data-go="${id}" class="${st.screen === id ? 'on' : ''}">${l}</button>`).join('')}
+          ${(opts.simple ? [['new', 'Новая'], ['tiles', 'Плитки'], ['ex', 'Скажи'], ['fb', 'Отклик']] : [['new', 'Новая'], ['ex', 'Упражнение'], ['fb', 'Отклик']]).map(([id, l]) => `<button data-go="${id}" class="${st.screen === id ? 'on' : ''}">${l}</button>`).join('')}
         </div>
         <button data-font class="review-chip">${icon('type')}${st.font}</button>
-        <button data-theme class="review-chip">${icon('sun')}${{ auto: 'авто', light: 'свет', dark: 'тьма' }[st.theme]}</button>
+        <button data-theme class="review-chip">${icon(st.theme === 'dark' ? 'moon' : 'sun')}${st.theme === 'dark' ? 'тёмная' : 'светлая'}</button>
         ${opts.accents ? `<button data-accent class="review-chip"><i class="dot"></i>${opts.accents.find((a) => a[0] === st.accent)[1]}</button>` : ''}
       </nav>` : ''}`;
 
-    const topBar = (step) => `
+    const topBar = (step) => opts.simple ? `
+      <header class="top">
+        <button class="icon-btn" aria-label="Закрыть">${icon('x')}</button>
+        <div class="progress"><i style="width:${Math.round(((st.q + 1) / QUEUE.length) * 100)}%"></i></div>
+        <span class="count">${st.q + 1}/${QUEUE.length}</span><span class="fab-gap"></span>
+      </header>` : `
       <header class="top">
         <button class="icon-btn" aria-label="Закрыть">${icon('x')}</button>
         <div class="progress"><i style="width:${step}%"></i></div>
@@ -210,14 +245,74 @@
         <p class="hint">Нажми на слово — покажу разбор</p>
       </main>
       ${opts.simple ? `<footer class="actions">
-        <button class="btn primary" data-to="ex">Дальше ${icon('arrow')}</button>
+        <button class="btn primary" data-advance>Дальше ${icon('arrow')}</button>
         <button class="link" data-next>Уже знаю эту фразу</button>
       </footer>` : `<footer class="actions two">
         <button class="btn ghost" data-next>Уже знаю</button>
         <button class="btn primary" data-to="ex">Дальше ${icon('arrow')}</button>
       </footer>`}`;
 
-    const screenEx = (p) => `
+    const initTiles = (p) => {
+      st.pool = shuffle([...p.words.map((w) => w.s), p.trap[0]].map((t, id) => ({ t, id })));
+      st.picked = [];
+      st.tiles = null;
+    };
+
+    const screenTiles = (p) => {
+      const byId = (id) => st.pool.find((x) => x.id === id);
+      const res = st.tiles;
+      const usedTrap = st.picked.some((id) => byId(id).t === p.trap[0]);
+      return `
+      ${topBar()}
+      <main class="scr scr-tiles">
+        <p class="eyebrow">Собери фразу</p>
+        <h1 class="ru-big">${esc(p.ru)}</h1>
+        <div class="build ${res ? 'b-' + res : ''}">
+          ${st.picked.length ? st.picked.map((id) => `<button class="tile" data-unpick="${id}" ${res ? 'disabled' : ''}>${esc(byId(id).t)}</button>`).join('') : '<span class="build-ph">Нажимай на слова ниже</span>'}
+        </div>
+        ${res === 'ok' ? `<p class="tile-msg ok">${icon('check')}Верно</p>` : ''}
+        ${res === 'bad' ? `<div class="tile-msg bad"><p>Правильно: <b>${highlightKey(p)}</b></p><p>${esc(usedTrap ? p.trap[1] : 'Проверь порядок слов.')}</p></div>` : ''}
+        <div class="pool">
+          ${st.pool.map((x) => `<button class="tile ${st.picked.includes(x.id) ? 'used' : ''}" data-pick="${x.id}" ${st.picked.includes(x.id) || res ? 'disabled' : ''}>${esc(x.t)}</button>`).join('')}
+        </div>
+        <p class="hint">Одно слово лишнее — с неправильным окончанием</p>
+      </main>
+      <footer class="actions">
+        ${res ? `<button class="btn primary" data-advance>Дальше ${icon('arrow')}</button>` : `<button class="btn primary" data-check-tiles ${st.picked.length ? '' : 'disabled'}>Проверить</button>`}
+      </footer>`;
+    };
+
+    // Letter hints: each tap opens the next letter; words with opened letters count as weak.
+    const letterCount = (p) => (p.lv.match(/\p{L}/gu) || []).length;
+    const mask = (p) => {
+      let k = 0;
+      return p.lv.split(/(\p{L}+)/u).map((part, j) => {
+        if (j % 2 === 0) return esc(part);
+        return `<span class="mw">${[...part].map((ch) => (k++ < st.hints ? `<b>${esc(ch)}</b>` : '<i></i>')).join('')}</span>`;
+      }).join('');
+    };
+    const weakWords = (p) => {
+      let k = 0;
+      return p.words.filter((w) => { const start = k; k += [...w.s].length; return start < st.hints; }).map((w) => w.s);
+    };
+
+    const screenSay = (p) => `
+      ${topBar()}
+      <main class="scr scr-ex">
+        <p class="eyebrow">Скажи по-латышски</p>
+        <h1 class="ru-big">${esc(p.ru)}</h1>
+        ${st.hints ? `<p class="mask">${mask(p)}</p>` : ''}
+        <div class="speak-box">
+          <div class="mic-ring">${icon('mic')}</div>
+          <p>Скажи фразу вслух.<br>Не помнишь — открой букву.</p>
+        </div>
+      </main>
+      <footer class="actions two">
+        <button class="btn ghost" data-hint ${st.hints >= letterCount(p) ? 'disabled' : ''}>${icon('bulb')}Буква${st.hints ? ` · ${st.hints}` : ''}</button>
+        <button class="btn primary" data-show>${icon('eye')}Показать</button>
+      </footer>`;
+
+    const screenEx = (p) => opts.simple ? screenSay(p) : `
       ${topBar(30 + st.i * 25)}
       <main class="scr scr-ex">
         <p class="eyebrow">Скажи по-латышски</p>
@@ -252,9 +347,9 @@
         self: [icon('eye'), 'Сравни с образцом'],
       }[v];
       const errs = r && st.mode === 'type' ? [...new Set(r.words.filter((x) => x.kind !== 'ok' && x.got).map((x) => KIND_RU[x.kind]))] : [];
-      const list = opts.simple ? RATINGS_SIMPLE : RATINGS;
+      const list = !opts.simple ? RATINGS : st.hints ? RATINGS_HINTED : RATINGS_SIMPLE;
       const rateButtons = list.map(
-        (x) => `<button class="rate rate-${x.id} ${st.rating === x.id && (opts.rating === 'next' || (opts.suggest && r)) ? 'on' : ''}" data-rate="${x.id}"><b>${x.label}</b><small>${x.hint}</small></button>`,
+        (x) => `<button class="rate rate-${x.id} ${st.rating === x.id && (opts.rating === 'next' || (opts.suggest && r) || (opts.simple && st.hints)) ? 'on' : ''}" data-rate="${x.id}"><b>${x.label}</b><small>${x.hint}</small></button>`,
       ).join('');
       return `
         <div class="scrim"></div>
@@ -268,6 +363,7 @@
           </div>
           ${r && st.mode === 'type' && v !== 'ok' ? `<p class="yours"><span class="lbl">Ты:</span> ${renderDiff(r.words)}${errs.length ? `<span class="tags">${errs.map((e) => `<i>${e}</i>`).join('')}</span>` : ''}</p>` : ''}
           <p class="why"><b>${p.key}</b> — ${esc(p.why)}</p>
+          ${opts.simple && st.hints ? `<p class="hint-note">${icon('bulb')}<span>Ты открыл ${st.hints} ${plural(st.hints, 'букву', 'буквы', 'букв')}. Эти слова вернутся раньше: <b>${weakWords(p).map(esc).join(', ')}</b></span></p>` : ''}
           ${
             opts.rating === 'next'
               ? `<p class="rate-lbl">Оценка — можно поменять</p><div class="rates row">${rateButtons}</div>
@@ -297,7 +393,7 @@
     function render() {
       applyLook();
       const p = PHRASES[st.i];
-      const base = st.screen === 'new' ? screenNew(p) : screenEx(p);
+      const base = st.screen === 'new' ? screenNew(p) : st.screen === 'tiles' ? screenTiles(p) : screenEx(p);
       app.innerHTML =
         reviewBar() +
         `<div class="stage">${base}${st.screen === 'fb' ? sheet(p) : ''}${st.word !== null ? wordSheet(p) : ''}</div>`;
@@ -307,12 +403,34 @@
 
     const go = (screen) => {
       st.screen = screen;
+      if (screen === 'tiles' && !st.pool) initTiles(PHRASES[st.i]);
       store.set('screen', screen === 'fb' ? 'ex' : screen);
       if (screen === 'fb' && !st.result && st.mode === 'type') st.result = check(st.typed, PHRASES[st.i].lv);
       render();
     };
 
+    const reset = () => {
+      st.typed = '';
+      st.result = null;
+      st.rating = 'good';
+      st.plays = 0;
+      st.hints = 0;
+      st.pool = null;
+    };
+
+    const nextInQueue = () => {
+      for (let n = 0; n < QUEUE.length; n++) {
+        st.q = (st.q + 1) % QUEUE.length;
+        if (st.q === 0) st.known.clear();
+        if (!st.known.has(QUEUE[st.q][1])) break;
+      }
+      reset();
+      st.i = QUEUE[st.q][1];
+      go(QUEUE[st.q][0]);
+    };
+
     const next = () => {
+      if (opts.simple) return nextInQueue();
       st.i = (st.i + 1) % PHRASES.length;
       st.typed = '';
       st.result = null;
@@ -329,7 +447,7 @@
       else if (d.go) { st.result = null; st.reviewOpen = false; go(d.go); }
       else if ('font' in d) { st.font = { A: 'B', B: 'C', C: 'A' }[st.font]; store.set('font-' + opts.title, st.font); render(); }
       else if ('accent' in d) { const k = opts.accents.findIndex((a) => a[0] === st.accent); st.accent = opts.accents[(k + 1) % opts.accents.length][0]; store.set('accent', st.accent); render(); }
-      else if ('theme' in d) { st.theme = { auto: 'light', light: 'dark', dark: 'auto' }[st.theme]; store.set('theme', st.theme); render(); }
+      else if ('theme' in d) { st.theme = st.theme === 'dark' ? 'light' : 'dark'; store.set('theme', st.theme); render(); }
       else if (d.play) play(Number(d.play));
       else if ('playToggle' in d) {
         play(slowNext() ? 0.75 : 1);
@@ -339,7 +457,17 @@
       else if (d.word !== undefined) { st.word = Number(d.word); render(); }
       else if ('closeWord' in d) { st.word = null; render(); }
       else if (d.to) go(d.to);
-      else if ('next' in d) next();
+      else if ('next' in d) { if (opts.simple && st.screen === 'new') st.known.add(st.i); next(); }
+      else if ('advance' in d) next();
+      else if (d.pick !== undefined) { st.picked.push(Number(d.pick)); render(); }
+      else if (d.unpick !== undefined) { st.picked = st.picked.filter((id) => id !== Number(d.unpick)); render(); }
+      else if ('checkTiles' in d) {
+        const got = st.picked.map((id) => st.pool.find((x) => x.id === id).t).join(' ');
+        st.tiles = got === PHRASES[st.i].words.map((w) => w.s).join(' ') ? 'ok' : 'bad';
+        play(1);
+        render();
+      }
+      else if ('hint' in d) { st.hints = Math.min(st.hints + 1, letterCount(PHRASES[st.i])); render(); }
       else if (d.mode) { st.mode = d.mode; store.set('mode', d.mode); render(); }
       else if (d.letter) {
         const ta = app.querySelector('#ans');
@@ -351,6 +479,8 @@
       } else if ('show' in d) {
         st.result = st.mode === 'type' ? check(st.typed, PHRASES[st.i].lv) : null;
         st.rating = !st.result ? 'good' : { ok: 'good', almost: 'hard', bad: 'again' }[st.result.verdict];
+        // More than a third of the letters opened means the phrase was not really recalled.
+        if (opts.simple && st.hints) st.rating = st.hints / letterCount(PHRASES[st.i]) > 1 / 3 ? 'again' : 'hard';
         st.plays = 0;
         go('fb');
         play(1);
