@@ -24,20 +24,32 @@ body {
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 .ic { width: 22px; height: 22px; flex: none; }
 
-/* Review strip: only for choosing a design, not part of the app. */
-.review {
-  position: sticky; top: 0; z-index: 30;
-  display: flex; gap: var(--s2); align-items: center; flex-wrap: wrap;
-  padding: calc(env(safe-area-inset-top) + var(--s2)) var(--s3) var(--s2);
-  background: var(--review-bg); color: var(--review-ink);
-  font: 500 12px/1 var(--font-body);
+/* Review controls: one small floating button, opens a panel. Not part of the app. */
+.review-fab {
+  position: fixed; z-index: 60; top: calc(env(safe-area-inset-top) + 12px); right: 12px;
+  width: 40px; height: 40px; border-radius: 999px; display: grid; place-items: center;
+  background: var(--review-bg); color: var(--review-ink); opacity: 0.55;
+  transition: opacity var(--dur);
 }
-.review-v { font-weight: 700; margin-right: auto; }
-.review-seg { display: flex; background: rgba(127, 127, 127, 0.18); border-radius: 999px; padding: 2px; }
-.review-seg button, .review-chip { padding: 6px 10px; border-radius: 999px; display: inline-flex; gap: 4px; align-items: center; }
+.review-fab.on { opacity: 1; }
+.review-fab .ic { width: 18px; height: 18px; }
+.review {
+  position: fixed; z-index: 59; top: calc(env(safe-area-inset-top) + 60px); right: 12px; left: 12px;
+  max-width: 420px; margin-left: auto;
+  display: flex; gap: var(--s2); align-items: center; flex-wrap: wrap;
+  padding: var(--s3); border-radius: 20px;
+  background: var(--review-bg); color: var(--review-ink);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  font: 500 13px/1 var(--font-body);
+  animation: in var(--dur) var(--ease);
+}
+.review-v { font-weight: 700; width: 100%; }
+.review-seg { display: flex; background: rgba(127, 127, 127, 0.22); border-radius: 999px; padding: 2px; }
+.review-seg button, .review-chip { padding: 8px 12px; border-radius: 999px; display: inline-flex; gap: 6px; align-items: center; }
 .review-seg button.on { background: var(--review-ink); color: var(--review-bg); }
-.review-chip { background: rgba(127, 127, 127, 0.18); }
+.review-chip { background: rgba(127, 127, 127, 0.22); }
 .review-chip .ic { width: 14px; height: 14px; }
+.fab-gap { width: 44px; flex: none; }
 
 #app { min-height: 100dvh; display: flex; flex-direction: column; }
 .stage {
@@ -49,7 +61,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   padding: 0 var(--s3) calc(env(safe-area-inset-bottom) + var(--s3));
 }
 
-.top { display: flex; align-items: center; gap: var(--s3); padding: var(--s3) 0; }
+.top { display: flex; align-items: center; gap: var(--s3); padding: calc(env(safe-area-inset-top) + var(--s2)) 0 var(--s3); }
 .icon-btn { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 999px; color: var(--muted); }
 .progress { flex: 1; height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; }
 .progress i { display: block; height: 100%; background: var(--accent); border-radius: inherit; transition: width var(--dur) var(--ease); }

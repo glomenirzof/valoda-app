@@ -49,10 +49,20 @@
   }
   :root[data-theme="dark"][data-accent="amber"] { --accent: #ffc21a; --accent-soft: #3a2e0a; --accent-ink: #ffd35c; --on-accent: #161616; }
 
+  /* More air: wider gutters and bigger gaps between blocks. */
+  .stage { padding-left: var(--s4); padding-right: var(--s4); }
+  .eyebrow { margin: var(--s3) 0 var(--s4); }
+  .actions { padding-top: var(--s4); gap: var(--s3); }
+  .letters { gap: 10px; margin-top: var(--s4); }
+  .sheet { padding: var(--s2) var(--s4) calc(env(safe-area-inset-bottom) + var(--s4)); }
+  .sheet .verdict { margin-bottom: var(--s4); }
+  .sheet .why { margin: var(--s4) 0; }
+  .rates.grid { gap: var(--s3); }
+
   .review-chip .dot { width: 10px; height: 10px; border-radius: 99px; background: var(--accent); }
 
   /* New phrase: one card fills the screen, phrase on top, audio tiles at its bottom under the thumb. */
-  .phrase-card { flex: 1; display: flex; flex-direction: column; background: var(--surface); border-radius: var(--r-card); box-shadow: var(--shadow); padding: var(--s4); }
+  .phrase-card { flex: 1; display: flex; flex-direction: column; background: var(--surface); border-radius: var(--r-card); box-shadow: var(--shadow); padding: var(--s5) var(--s4) var(--s4); }
   .phrase-card .lv { order: 1; font-size: 38px; line-height: 1.1; letter-spacing: -0.03em; }
   .phrase-card .ru { order: 2; font-size: 19px; margin-top: var(--s3); }
   .audio { order: 3; margin-top: auto; padding-top: var(--s4); display: grid; grid-template-columns: 1fr 1fr; gap: var(--s2); }
@@ -65,7 +75,7 @@
 
   /* Exercise: prompt on top, answer field and switch near the thumb. */
   .ru-big { font-size: 36px; line-height: 1.1; letter-spacing: -0.03em; }
-  .scr-ex .seg { align-self: stretch; margin-top: auto; }
+  .scr-ex .seg { align-self: stretch; margin-top: auto; margin-bottom: var(--s4); }
   .scr-ex .seg button { flex: 1; justify-content: center; }
   .type-box textarea { border-color: transparent; box-shadow: var(--shadow); border-radius: 22px; }
   .type-box textarea:focus { box-shadow: 0 0 0 2px var(--ink); }

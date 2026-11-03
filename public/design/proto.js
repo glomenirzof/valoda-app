@@ -70,6 +70,7 @@
     eye: '<path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/>',
     arrow: '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
     sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>',
+    sliders: '<path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/>',
     type: '<path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/>',
   };
   const icon = (n, cls = '') => `<svg class="ic ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
@@ -126,6 +127,7 @@
       rating: 'good',
       font: store.get('font-' + opts.title, opts.fonts),
       theme: store.get('theme', 'auto'),
+      reviewOpen: false,
       accent: opts.accents ? store.get('accent', opts.accents[0][0]) : null,
     };
     let audio = null;
@@ -161,7 +163,8 @@
     const highlightKey = (p) => esc(p.lv).replace(p.key, `<b class="key">${p.key}</b>`);
 
     const reviewBar = () => `
-      <nav class="review" aria-label="Переключатели для просмотра">
+      <button class="review-fab ${st.reviewOpen ? 'on' : ''}" data-review aria-label="Настройки просмотра">${icon('sliders')}</button>
+      ${st.reviewOpen ? `<nav class="review" aria-label="Переключатели для просмотра">
         <span class="review-v">${opts.title}</span>
         <div class="review-seg">
           ${[['new', 'Новая'], ['ex', 'Упражнение'], ['fb', 'Отклик']].map(([id, l]) => `<button data-go="${id}" class="${st.screen === id ? 'on' : ''}">${l}</button>`).join('')}
@@ -169,13 +172,13 @@
         <button data-font class="review-chip">${icon('type')}${st.font}</button>
         <button data-theme class="review-chip">${icon('sun')}${{ auto: 'авто', light: 'свет', dark: 'тьма' }[st.theme]}</button>
         ${opts.accents ? `<button data-accent class="review-chip"><i class="dot"></i>${opts.accents.find((a) => a[0] === st.accent)[1]}</button>` : ''}
-      </nav>`;
+      </nav>` : ''}`;
 
     const topBar = (step) => `
       <header class="top">
         <button class="icon-btn" aria-label="Закрыть">${icon('x')}</button>
         <div class="progress"><i style="width:${step}%"></i></div>
-        <span class="count">${st.i + 1}/12</span>
+        <span class="count">${st.i + 1}/12</span><span class="fab-gap"></span>
       </header>`;
 
     const audioBtns = () => `
@@ -306,7 +309,8 @@
       const b = e.target.closest('button, .scrim');
       if (!b) return;
       const d = b.dataset;
-      if (d.go) { st.result = null; go(d.go); }
+      if ('review' in d) { st.reviewOpen = !st.reviewOpen; render(); }
+      else if (d.go) { st.result = null; st.reviewOpen = false; go(d.go); }
       else if ('font' in d) { st.font = { A: 'B', B: 'C', C: 'A' }[st.font]; store.set('font-' + opts.title, st.font); render(); }
       else if ('accent' in d) { const k = opts.accents.findIndex((a) => a[0] === st.accent); st.accent = opts.accents[(k + 1) % opts.accents.length][0]; store.set('accent', st.accent); render(); }
       else if ('theme' in d) { st.theme = { auto: 'light', light: 'dark', dark: 'auto' }[st.theme]; store.set('theme', st.theme); render(); }
