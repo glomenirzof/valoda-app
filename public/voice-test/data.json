@@ -1,5 +1,5 @@
 {
- "built": "2026-11-03T16:01:08.089Z",
+ "built": "2026-11-03T17:14:29.462Z",
  "phrases": [
   {
    "id": "vt1",
@@ -9,8 +9,28 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/4bc1e541facf.mp3",
+     "src": "a/0dbe0e0db82c.mp3",
+     "label": "Azure Nils (муж.)"
+    },
+    {
+     "letter": "B",
+     "src": "a/e6d4e395b300.mp3",
+     "label": "Azure Everita (жен.), медленно ×0.8"
+    },
+    {
+     "letter": "C",
+     "src": "a/4115afb60cc7.mp3",
      "label": "Piper aivars (муж., офлайн)"
+    },
+    {
+     "letter": "D",
+     "src": "a/f40127ee64e0.mp3",
+     "label": "Azure Everita (жен.)"
+    },
+    {
+     "letter": "E",
+     "src": "a/0d8ca381c250.mp3",
+     "label": "Azure Nils (муж.), медленно ×0.8"
     }
    ]
   },
@@ -22,8 +42,28 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/fdd907318207.mp3",
+     "src": "a/60fc52daa177.mp3",
+     "label": "Azure Nils (муж.)"
+    },
+    {
+     "letter": "B",
+     "src": "a/ac2fafde4653.mp3",
+     "label": "Azure Nils (муж.), медленно ×0.8"
+    },
+    {
+     "letter": "C",
+     "src": "a/5fcbc763de89.mp3",
+     "label": "Azure Everita (жен.)"
+    },
+    {
+     "letter": "D",
+     "src": "a/475f05ef18da.mp3",
      "label": "Piper aivars (муж., офлайн)"
+    },
+    {
+     "letter": "E",
+     "src": "a/acf000e954a6.mp3",
+     "label": "Azure Everita (жен.), медленно ×0.8"
     }
    ]
   },
@@ -35,8 +75,28 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/a8fdf67991ff.mp3",
+     "src": "a/ad23d196a392.mp3",
      "label": "Piper aivars (муж., офлайн)"
+    },
+    {
+     "letter": "B",
+     "src": "a/a311e184091c.mp3",
+     "label": "Azure Everita (жен.), медленно ×0.8"
+    },
+    {
+     "letter": "C",
+     "src": "a/4fbbfd13ec2f.mp3",
+     "label": "Azure Nils (муж.), медленно ×0.8"
+    },
+    {
+     "letter": "D",
+     "src": "a/4d8fe7dedea7.mp3",
+     "label": "Azure Nils (муж.)"
+    },
+    {
+     "letter": "E",
+     "src": "a/1d0417332f67.mp3",
+     "label": "Azure Everita (жен.)"
     }
    ]
   },
@@ -48,8 +108,28 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/655c879a547b.mp3",
+     "src": "a/dc4b1fd93c5e.mp3",
+     "label": "Azure Everita (жен.)"
+    },
+    {
+     "letter": "B",
+     "src": "a/b13d01b53991.mp3",
      "label": "Piper aivars (муж., офлайн)"
+    },
+    {
+     "letter": "C",
+     "src": "a/ff19d234571f.mp3",
+     "label": "Azure Nils (муж.), медленно ×0.8"
+    },
+    {
+     "letter": "D",
+     "src": "a/751dee3bfe4e.mp3",
+     "label": "Azure Nils (муж.)"
+    },
+    {
+     "letter": "E",
+     "src": "a/53553d87d133.mp3",
+     "label": "Azure Everita (жен.), медленно ×0.8"
     }
    ]
   },
@@ -61,7 +141,27 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/6f088960571e.mp3",
+     "src": "a/2839be66b2ee.mp3",
+     "label": "Azure Everita (жен.)"
+    },
+    {
+     "letter": "B",
+     "src": "a/4ba63b91c3a6.mp3",
+     "label": "Azure Nils (муж.), медленно ×0.8"
+    },
+    {
+     "letter": "C",
+     "src": "a/30443cc7baaf.mp3",
+     "label": "Azure Everita (жен.), медленно ×0.8"
+    },
+    {
+     "letter": "D",
+     "src": "a/74f088541bfa.mp3",
+     "label": "Azure Nils (муж.)"
+    },
+    {
+     "letter": "E",
+     "src": "a/0dd31fba4564.mp3",
      "label": "Piper aivars (муж., офлайн)"
     }
    ]
@@ -74,8 +174,28 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/205ccc0f6ec1.mp3",
+     "src": "a/c1e6256a6175.mp3",
+     "label": "Azure Nils (муж.)"
+    },
+    {
+     "letter": "B",
+     "src": "a/410305ce4b16.mp3",
      "label": "Piper aivars (муж., офлайн)"
+    },
+    {
+     "letter": "C",
+     "src": "a/404353d5d2d5.mp3",
+     "label": "Azure Everita (жен.), медленно ×0.8"
+    },
+    {
+     "letter": "D",
+     "src": "a/e4d4d43f5f78.mp3",
+     "label": "Azure Everita (жен.)"
+    },
+    {
+     "letter": "E",
+     "src": "a/eb47fa38490d.mp3",
+     "label": "Azure Nils (муж.), медленно ×0.8"
     }
    ]
   },
@@ -87,8 +207,28 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/7d4b4b95f7bb.mp3",
+     "src": "a/36f53d6fb900.mp3",
+     "label": "Azure Nils (муж.), медленно ×0.8"
+    },
+    {
+     "letter": "B",
+     "src": "a/ded73bcc5f87.mp3",
+     "label": "Azure Everita (жен.)"
+    },
+    {
+     "letter": "C",
+     "src": "a/d1497aed8f4a.mp3",
+     "label": "Azure Everita (жен.), медленно ×0.8"
+    },
+    {
+     "letter": "D",
+     "src": "a/ae7668f3dd14.mp3",
      "label": "Piper aivars (муж., офлайн)"
+    },
+    {
+     "letter": "E",
+     "src": "a/e0b8df46c852.mp3",
+     "label": "Azure Nils (муж.)"
     }
    ]
   },
@@ -100,8 +240,28 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/8df0a95af1d0.mp3",
+     "src": "a/dcdc431ab569.mp3",
      "label": "Piper aivars (муж., офлайн)"
+    },
+    {
+     "letter": "B",
+     "src": "a/4db3530f4a72.mp3",
+     "label": "Azure Everita (жен.), медленно ×0.8"
+    },
+    {
+     "letter": "C",
+     "src": "a/da12c6d25ab5.mp3",
+     "label": "Azure Nils (муж.), медленно ×0.8"
+    },
+    {
+     "letter": "D",
+     "src": "a/5293e7243ebb.mp3",
+     "label": "Azure Everita (жен.)"
+    },
+    {
+     "letter": "E",
+     "src": "a/13e008216616.mp3",
+     "label": "Azure Nils (муж.)"
     }
    ]
   },
@@ -113,7 +273,27 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/b8bc1814fd17.mp3",
+     "src": "a/e7c96baa53bb.mp3",
+     "label": "Azure Everita (жен.)"
+    },
+    {
+     "letter": "B",
+     "src": "a/6d6fd6d61f40.mp3",
+     "label": "Azure Nils (муж.), медленно ×0.8"
+    },
+    {
+     "letter": "C",
+     "src": "a/854faa56b79a.mp3",
+     "label": "Azure Nils (муж.)"
+    },
+    {
+     "letter": "D",
+     "src": "a/86f2d2a6fb4f.mp3",
+     "label": "Azure Everita (жен.), медленно ×0.8"
+    },
+    {
+     "letter": "E",
+     "src": "a/be89dce96692.mp3",
      "label": "Piper aivars (муж., офлайн)"
     }
    ]
