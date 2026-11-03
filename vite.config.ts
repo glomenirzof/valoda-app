@@ -29,11 +29,11 @@ export default defineConfig({
       },
       workbox: {
         // App shell + content + audio are precached so sessions work fully offline.
-        // voice-test/ is a one-off comparison page and stays out of the cache.
+        // voice-test/ and design/ are one-off comparison pages and stay out of the cache.
         globPatterns: ['**/*.{js,css,html,png,svg,webmanifest,json,mp3}'],
-        globIgnores: ['voice-test/**'],
+        globIgnores: ['voice-test/**', 'design/**'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
-        navigateFallbackDenylist: [/\/voice-test\//],
+        navigateFallbackDenylist: [/\/voice-test\//, /\/design\//],
       },
     }),
   ],

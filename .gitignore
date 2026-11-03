@@ -14,3 +14,6 @@ data-cache/
 
 # TTS scratch output (only selected files are copied into public/)
 tts-out/
+
+# Reference screenshots contain personal data (name, email, card digits); keep them local.
+design/refs/

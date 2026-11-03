@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Вариант 1 — Воздух</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;600;700;800&family=Golos+Text:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700;800&family=Onest:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* Вариант 1 «Воздух»: белый фон, фраза в карточке с мягкой тенью, терракотовый акцент. */
+  :root {
+    --bg: #ffffff; --surface: #ffffff; --surface-2: #f4f4f2;
+    --ink: #1a1a1a; --ink-2: #3d3d3d; --muted: #737373;
+    --line: #ececea; --line-strong: #d6d6d2;
+    --primary: #1a1a1a; --on-primary: #ffffff;
+    --accent: #e0562f; --accent-soft: #fdeae3; --accent-ink: #b8401d;
+    --good: #1f8a4c; --warn: #b7791f; --bad: #d63b3b;
+    --review-bg: #1a1a1a; --review-ink: #ffffff;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.08); --shadow: 0 6px 24px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+    --r-card: 24px; --r-btn: 16px; --r-sheet: 28px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e0e10; --surface: #1a1a1d; --surface-2: #242428;
+      --ink: #f5f5f4; --ink-2: #d4d4d2; --muted: #9a9a98;
+      --line: #2a2a2e; --line-strong: #3a3a3f;
+      --primary: #f5f5f4; --on-primary: #0e0e10;
+      --accent: #f07a55; --accent-soft: #3a2119; --accent-ink: #ff9a7a;
+      --good: #4cc27f; --warn: #e0a84a; --bad: #ff6b6b;
+      --review-bg: #f5f5f4; --review-ink: #0e0e10;
+      --shadow: 0 0 0 1px #2a2a2e;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e0e10; --surface: #1a1a1d; --surface-2: #242428;
+    --ink: #f5f5f4; --ink-2: #d4d4d2; --muted: #9a9a98;
+    --line: #2a2a2e; --line-strong: #3a3a3f;
+    --primary: #f5f5f4; --on-primary: #0e0e10;
+    --accent: #f07a55; --accent-soft: #3a2119; --accent-ink: #ff9a7a;
+    --good: #4cc27f; --warn: #e0a84a; --bad: #ff6b6b;
+    --review-bg: #f5f5f4; --review-ink: #0e0e10;
+    --shadow: 0 0 0 1px #2a2a2e;
+  }
+
+  .phrase-card { background: var(--surface); border-radius: var(--r-card); box-shadow: var(--shadow); padding: var(--s4); }
+  .phrase-card .lv { font-size: 34px; line-height: 1.15; margin-top: var(--s4); }
+  .phrase-card .ru { font-size: 18px; }
+  .audio { display: flex; gap: var(--s2); }
+  .audio button { display: inline-flex; gap: var(--s2); align-items: center; height: 44px; padding: 0 var(--s3); border-radius: 999px; border: 1.5px solid var(--line-strong); font-weight: 600; transition: transform var(--dur) var(--ease); }
+  .audio button:active { transform: scale(.96); }
+  .audio .a-play { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .scr-new .hint { margin-top: var(--s3); }
+  .ru-big { font-size: 32px; line-height: 1.15; }
+  .scr-ex .eyebrow { color: var(--accent-ink); }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="proto.js"></script>
+<script>Proto.start({ title: '1 · Воздух', fonts: 'A', rating: 'grid' });</script>
+</body>
+</html>

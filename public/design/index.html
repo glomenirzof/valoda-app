@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Valoda — выбор дизайна</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;600;700;800&family=Golos+Text:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700;800&family=Onest:wght@400;500;600;700;800&display=swap">
+<style>
+  :root { --bg: #f6f6f3; --surface: #fff; --ink: #141414; --muted: #707070; --line: #e4e4de; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0c0c0d; --surface: #18181a; --ink: #f4f4f0; --muted: #98988f; --line: #2a2a2d; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.45 'Inter', system-ui, sans-serif; }
+  main { max-width: 560px; margin: 0 auto; padding: calc(env(safe-area-inset-top) + 32px) 16px 48px; }
+  h1 { font: 800 36px/1.05 'Onest', sans-serif; letter-spacing: -0.02em; margin: 0 0 8px; }
+  h2 { font: 700 20px/1.2 'Onest', sans-serif; margin: 32px 0 16px; }
+  .lead { color: var(--muted); margin: 0; }
+  a.v { display: flex; gap: 16px; align-items: center; padding: 16px; margin-bottom: 8px; border-radius: 24px; background: var(--surface); color: inherit; text-decoration: none; border: 1px solid var(--line); }
+  .sw { width: 56px; height: 56px; border-radius: 18px; flex: none; display: grid; place-items: center; font: 800 22px/1 'Onest', sans-serif; }
+  a.v b { display: block; font: 700 18px/1.2 'Onest', sans-serif; }
+  a.v span { color: var(--muted); font-size: 14px; }
+  .arrow { margin-left: auto; color: var(--muted); font-size: 22px; }
+  .pair { padding: 16px; margin-bottom: 8px; border-radius: 24px; background: var(--surface); border: 1px solid var(--line); }
+  .pair .name { font-size: 13px; color: var(--muted); margin: 0 0 8px; }
+  .pair .h { font-size: 30px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 8px; }
+  .pair .t { margin: 0; font-size: 16px; }
+  .pair .abc { margin: 8px 0 0; font-size: 15px; color: var(--muted); word-break: break-all; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Выбор дизайна</h1>
+  <p class="lead">Три варианта экранов «Новая фраза → Упражнение → Отклик». Всё нажимается: звук, слова, ввод, оценки. Сверху полоска для просмотра: переключение экранов, шрифта (A/B/C) и темы.</p>
+
+  <h2>Варианты</h2>
+  <a class="v" href="v1.html"><div class="sw" style="background:#e0562f;color:#fff">1</div><div><b>Воздух</b><span>Карточка с тенью, кнопки звука-пилюли, оценки сеткой 2×2. Терракотовый акцент.</span></div><span class="arrow">›</span></a>
+  <a class="v" href="v2.html"><div class="sw" style="background:#14946a;color:#fff">2</div><div><b>Пилюли</b><span>Всё по центру, большая круглая кнопка звука, плавающая панель действий. Оценка выбрана заранее, плюс «Дальше». Зелёный акцент.</span></div><span class="arrow">›</span></a>
+  <a class="v" href="v3.html"><div class="sw" style="background:#f2b200;color:#111">3</div><div><b>Контраст</b><span>Без карточек, огромная фраза, звук и кнопки внизу под пальцем, оценки в ряд с цветной меткой. Янтарный акцент.</span></div><span class="arrow">›</span></a>
+
+  <h2>Пары шрифтов</h2>
+  <div class="pair"><p class="name">A · Onest (заголовки) + Inter (текст)</p><p class="h" style="font-family:'Onest'">Vakar es biju zālē</p><p class="t" style="font-family:'Inter'">Вчера я был в тренажёрном зале. Ķirsis, ģimene, ļoti, ņemt, šodien, žurnāls, čau.</p><p class="abc" style="font-family:'Inter'">ā ē ī ū č ģ ķ ļ ņ š ž · Ā Ē Ī Ū Č Ģ Ķ Ļ Ņ Š Ž · ё й щ ъ</p></div>
+  <div class="pair"><p class="name">B · Manrope (заголовки) + Golos Text (текст)</p><p class="h" style="font-family:'Manrope'">Vakar es biju zālē</p><p class="t" style="font-family:'Golos Text'">Вчера я был в тренажёрном зале. Ķirsis, ģimene, ļoti, ņemt, šodien, žurnāls, čau.</p><p class="abc" style="font-family:'Golos Text'">ā ē ī ū č ģ ķ ļ ņ š ž · Ā Ē Ī Ū Č Ģ Ķ Ļ Ņ Š Ž · ё й щ ъ</p></div>
+  <div class="pair"><p class="name">C · Geologica (заголовки) + Noto Sans (текст)</p><p class="h" style="font-family:'Geologica'">Vakar es biju zālē</p><p class="t" style="font-family:'Noto Sans'">Вчера я был в тренажёрном зале. Ķirsis, ģimene, ļoti, ņemt, šodien, žurnāls, čau.</p><p class="abc" style="font-family:'Noto Sans'">ā ē ī ū č ģ ķ ļ ņ š ž · Ā Ē Ī Ū Č Ģ Ķ Ļ Ņ Š Ž · ё й щ ъ</p></div>
+</main>
+</body>
+</html>
