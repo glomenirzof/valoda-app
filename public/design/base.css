@@ -200,3 +200,4 @@ h1 { margin: 0; font-family: var(--font-head); }
 .btn[disabled] { opacity: 0.4; cursor: default; }
 .pool .tile[disabled]:not(.used) { opacity: 0.6; }
 .btn { white-space: nowrap; }
+.scr-type .type-box { margin-top: auto; }

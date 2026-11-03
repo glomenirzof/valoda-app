@@ -130,8 +130,8 @@
       .join(' ');
   }
 
-  // Simple mode session: meet a phrase, build it from tiles right away, say it yourself a few cards later.
-  const QUEUE = [['new', 0], ['tiles', 0], ['new', 1], ['tiles', 1], ['ex', 0], ['ex', 1], ['new', 2], ['tiles', 2], ['ex', 2]];
+  // Simple mode session: meet a phrase, build it from tiles, later type it and say it.
+  const QUEUE = [['new', 0], ['tiles', 0], ['new', 1], ['tiles', 1], ['type', 0], ['type', 1], ['new', 2], ['tiles', 2], ['ex', 0], ['type', 2], ['ex', 1], ['ex', 2]];
 
   const plural = (n, one, few, many) => {
     const m10 = n % 10, m100 = n % 100;
@@ -153,6 +153,8 @@
       q: 0,
       known: new Set(),
       hints: 0,
+      weak: new Set(),
+      from: 'new',
       pool: null,
       picked: [],
       tiles: null,
@@ -204,7 +206,7 @@
       ${st.reviewOpen ? `<nav class="review" aria-label="Переключатели для просмотра">
         <span class="review-v">${opts.title}</span>
         <div class="review-seg">
-          ${(opts.simple ? [['new', 'Новая'], ['tiles', 'Плитки'], ['ex', 'Скажи'], ['fb', 'Отклик']] : [['new', 'Новая'], ['ex', 'Упражнение'], ['fb', 'Отклик']]).map(([id, l]) => `<button data-go="${id}" class="${st.screen === id ? 'on' : ''}">${l}</button>`).join('')}
+          ${(opts.simple ? [['new', 'Новая'], ['tiles', 'Плитки'], ['type', 'Пишу'], ['ex', 'Скажи'], ['fb', 'Отклик']] : [['new', 'Новая'], ['ex', 'Упражнение'], ['fb', 'Отклик']]).map(([id, l]) => `<button data-go="${id}" class="${st.screen === id ? 'on' : ''}">${l}</button>`).join('')}
         </div>
         <button data-font class="review-chip">${icon('type')}${st.font}</button>
         <button data-theme class="review-chip">${icon(st.theme === 'dark' ? 'moon' : 'sun')}${st.theme === 'dark' ? 'тёмная' : 'светлая'}</button>
@@ -292,6 +294,7 @@
       }).join('');
     };
     const weakWords = (p) => {
+      if (st.weak.size) return [...st.weak].sort((a, b) => a - b).map((k) => p.words[k].s);
       let k = 0;
       return p.words.filter((w) => { const start = k; k += [...w.s].length; return start < st.hints; }).map((w) => w.s);
     };
@@ -310,6 +313,23 @@
       <footer class="actions two">
         <button class="btn ghost" data-hint ${st.hints >= letterCount(p) ? 'disabled' : ''}>${icon('bulb')}Буква${st.hints ? ` · ${st.hints}` : ''}</button>
         <button class="btn primary" data-show>${icon('eye')}Показать</button>
+      </footer>`;
+
+    const hintLabel = () => `${icon('bulb')}Буква${st.hints ? ` · ${st.hints}` : ''}`;
+
+    const screenType = (p) => `
+      ${topBar()}
+      <main class="scr scr-ex scr-type">
+        <p class="eyebrow">Напиши по-латышски</p>
+        <h1 class="ru-big">${esc(p.ru)}</h1>
+        <div class="type-box">
+          <textarea id="ans" rows="2" placeholder="Пиши здесь…" autocapitalize="sentences" autocomplete="off" autocorrect="off" spellcheck="false" lang="lv">${esc(st.typed)}</textarea>
+          <div class="letters">${LETTERS.map((l) => `<button data-letter="${l}">${l}</button>`).join('')}</div>
+        </div>
+      </main>
+      <footer class="actions two">
+        <button class="btn ghost" data-hint>${hintLabel()}</button>
+        <button class="btn primary" data-show>${icon('check')}Проверить</button>
       </footer>`;
 
     const screenEx = (p) => opts.simple ? screenSay(p) : `
@@ -347,9 +367,12 @@
         self: [icon('eye'), 'Сравни с образцом'],
       }[v];
       const errs = r && st.mode === 'type' ? [...new Set(r.words.filter((x) => x.kind !== 'ok' && x.got).map((x) => KIND_RU[x.kind]))] : [];
-      const list = !opts.simple ? RATINGS : st.hints ? RATINGS_HINTED : RATINGS_SIMPLE;
+      const list = !opts.simple ? RATINGS
+        : st.hints ? RATINGS_HINTED
+        : st.rating === 'hard' ? [RATINGS_SIMPLE[0], { id: 'hard', label: 'Почти', hint: 'повторю сегодня' }]
+        : RATINGS_SIMPLE;
       const rateButtons = list.map(
-        (x) => `<button class="rate rate-${x.id} ${st.rating === x.id && (opts.rating === 'next' || (opts.suggest && r) || (opts.simple && st.hints)) ? 'on' : ''}" data-rate="${x.id}"><b>${x.label}</b><small>${x.hint}</small></button>`,
+        (x) => `<button class="rate rate-${x.id} ${st.rating === x.id && (opts.rating === 'next' || (opts.suggest && r) || (opts.simple && (st.hints || r))) ? 'on' : ''}" data-rate="${x.id}"><b>${x.label}</b><small>${x.hint}</small></button>`,
       ).join('');
       return `
         <div class="scrim"></div>
@@ -393,7 +416,8 @@
     function render() {
       applyLook();
       const p = PHRASES[st.i];
-      const base = st.screen === 'new' ? screenNew(p) : st.screen === 'tiles' ? screenTiles(p) : screenEx(p);
+      const shown = st.screen === 'fb' ? st.from : st.screen;
+      const base = shown === 'new' ? screenNew(p) : shown === 'tiles' ? screenTiles(p) : shown === 'type' ? screenType(p) : screenEx(p);
       app.innerHTML =
         reviewBar() +
         `<div class="stage">${base}${st.screen === 'fb' ? sheet(p) : ''}${st.word !== null ? wordSheet(p) : ''}</div>`;
@@ -402,11 +426,14 @@
     }
 
     const go = (screen) => {
+      if (screen !== 'fb') st.from = screen;
+      if (opts.simple) st.mode = st.from === 'type' ? 'type' : 'speak';
       st.screen = screen;
       if (screen === 'tiles' && !st.pool) initTiles(PHRASES[st.i]);
       store.set('screen', screen === 'fb' ? 'ex' : screen);
       if (screen === 'fb' && !st.result && st.mode === 'type') st.result = check(st.typed, PHRASES[st.i].lv);
       render();
+      if (screen === 'type') app.querySelector('#ans')?.focus();
     };
 
     const reset = () => {
@@ -415,6 +442,7 @@
       st.rating = 'good';
       st.plays = 0;
       st.hints = 0;
+      st.weak = new Set();
       st.pool = null;
     };
 
@@ -467,6 +495,26 @@
         play(1);
         render();
       }
+      else if ('hint' in d && st.screen === 'type') {
+        // Keep the correct beginning, then write the next correct letter (spaces and punctuation come for free).
+        const t = PHRASES[st.i].lv;
+        const ta = app.querySelector('#ans');
+        const typed = ta.value;
+        let i = 0;
+        while (i < typed.length && i < t.length && typed[i].toLowerCase() === t[i].toLowerCase()) i++;
+        let j = i;
+        while (j < t.length && !/\p{L}/u.test(t[j])) j++;
+        if (j < t.length) {
+          st.weak.add((t.slice(0, j + 1).match(/\p{L}+/gu) || []).length - 1);
+          st.hints++;
+          j++;
+        }
+        ta.value = t.slice(0, j);
+        st.typed = ta.value;
+        ta.focus();
+        ta.setSelectionRange(j, j);
+        b.innerHTML = hintLabel();
+      }
       else if ('hint' in d) { st.hints = Math.min(st.hints + 1, letterCount(PHRASES[st.i])); render(); }
       else if (d.mode) { st.mode = d.mode; store.set('mode', d.mode); render(); }
       else if (d.letter) {
@@ -480,7 +528,11 @@
         st.result = st.mode === 'type' ? check(st.typed, PHRASES[st.i].lv) : null;
         st.rating = !st.result ? 'good' : { ok: 'good', almost: 'hard', bad: 'again' }[st.result.verdict];
         // More than a third of the letters opened means the phrase was not really recalled.
-        if (opts.simple && st.hints) st.rating = st.hints / letterCount(PHRASES[st.i]) > 1 / 3 ? 'again' : 'hard';
+        if (opts.simple && st.hints) {
+          const byHints = st.hints / letterCount(PHRASES[st.i]) > 1 / 3 ? 'again' : 'hard';
+          const order = ['again', 'hard', 'good'];
+          st.rating = order[Math.min(order.indexOf(st.rating), order.indexOf(byHints))];
+        }
         st.plays = 0;
         go('fb');
         play(1);
