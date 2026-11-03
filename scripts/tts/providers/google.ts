@@ -43,12 +43,12 @@ export const google: Provider = {
     return out;
   },
 
-  async synthesize(text, voice, rate): Promise<SynthResult> {
+  async synthesize(text, voice, rate, quality): Promise<SynthResult> {
     const body = JSON.stringify({
       input: { text },
       voice: { languageCode: 'lv-LV', name: voice },
       // Chirp 3: HD takes no SSML; speed goes through speakingRate (0.25–2.0)
-      audioConfig: { audioEncoding: 'MP3', speakingRate: rate },
+      audioConfig: { audioEncoding: 'MP3', speakingRate: rate, ...(quality === 'hq' && { sampleRateHertz: 48000 }) },
     });
     const { audioContent } = await call('text:synthesize', { method: 'POST', body });
     return { mp3: Buffer.from(audioContent, 'base64'), textChars: [...text].length, payloadChars: [...body].length };

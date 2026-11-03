@@ -12,13 +12,26 @@ import 'dotenv/config';
 import { randomBytes, randomInt } from 'node:crypto';
 import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { providers, type ProviderId, type VoiceSpec } from './providers';
+import { providers, type ProviderId, type Quality, type VoiceSpec } from './providers';
 
 interface TestPhrase { id: string; text: string; ru: string; focus: string }
 interface CacheEntry { file: string; textChars: number; payloadChars: number }
 
-/** Speeds per provider: the user asked for a slow (≈0.8) variant on Azure only. */
-const RATES: Record<ProviderId, number[]> = { azure: [1, 0.8], google: [1], piper: [1] };
+/**
+ * Variants per provider. Round 1 compared speeds; round 2 compares audio quality
+ * (the app slows playback itself, so slow files are no longer generated).
+ * Piper was rejected in round 1 and runs only with --only=piper.
+ */
+const VARIANTS: Record<ProviderId, { rate: number; quality: Quality }[]> = {
+  azure: [
+    { rate: 1, quality: 'std' },
+    { rate: 1, quality: 'hq' },
+  ],
+  google: [{ rate: 1, quality: 'hq' }],
+  piper: [{ rate: 1, quality: 'std' }],
+};
+const DEFAULT_PROVIDERS: ProviderId[] = ['azure', 'google'];
+const QUALITY_LABEL: Record<Quality, string> = { std: '24 кГц / 48 кбит/с', hq: '48 кГц / 192 кбит/с' };
 
 /** USD per 1M characters, for the estimate only — confirm on the vendor pricing pages. */
 const PRICE_PER_M: Record<ProviderId, { usd: number; note: string }> = {
@@ -31,17 +44,19 @@ const CACHE_DIR = 'tts-out/voice-test';
 const CACHE_INDEX = join(CACHE_DIR, 'index.json');
 const OUT_DIR = 'public/voice-test';
 
-const only = process.argv.find((a) => a.startsWith('--only='))?.slice(7).split(',') as ProviderId[] | undefined;
+const only = (process.argv.find((a) => a.startsWith('--only='))?.slice(7).split(',') ?? DEFAULT_PROVIDERS) as ProviderId[];
 const phrases: TestPhrase[] = JSON.parse(readFileSync('content/lv/voice-test.json', 'utf8'));
 
 mkdirSync(CACHE_DIR, { recursive: true });
 const cache: Record<string, CacheEntry> = existsSync(CACHE_INDEX) ? JSON.parse(readFileSync(CACHE_INDEX, 'utf8')) : {};
-const cacheKey = (v: VoiceSpec, p: TestPhrase) => `${v.provider}|${v.voice}|${v.rate}|${p.text}`;
+// std keeps the round-1 key format so already generated files are reused
+const cacheKey = (v: VoiceSpec, p: TestPhrase) =>
+  `${v.provider}|${v.voice}|${v.rate}${v.quality === 'std' ? '' : `|${v.quality}`}|${p.text}`;
 
 // 1. Collect voices from providers that can run
 const specs: VoiceSpec[] = [];
 for (const p of Object.values(providers)) {
-  if (only && !only.includes(p.id)) continue;
+  if (!only.includes(p.id)) continue;
   const why = p.unavailable();
   if (why) {
     console.log(`– ${p.id}: пропущен (${why})`);
@@ -49,8 +64,9 @@ for (const p of Object.values(providers)) {
   }
   try {
     for (const v of await p.latvianVoices()) {
-      for (const rate of RATES[p.id]) {
-        specs.push({ provider: p.id, voice: v.voice, rate, label: rate === 1 ? v.label : `${v.label}, медленно ×${rate}` });
+      for (const { rate, quality } of VARIANTS[p.id]) {
+        const speed = rate === 1 ? '' : `, медленно ×${rate}`;
+        specs.push({ provider: p.id, voice: v.voice, rate, quality, label: `${v.label}${speed}, ${QUALITY_LABEL[quality]}` });
       }
     }
   } catch (e) {
@@ -64,7 +80,7 @@ for (const v of specs) {
   for (const ph of phrases) {
     const key = cacheKey(v, ph);
     if (cache[key] && existsSync(join(CACHE_DIR, cache[key].file))) continue;
-    const r = await providers[v.provider].synthesize(ph.text, v.voice, v.rate);
+    const r = await providers[v.provider].synthesize(ph.text, v.voice, v.rate, v.quality);
     const file = `${v.provider}-${randomBytes(4).toString('hex')}.mp3`;
     writeFileSync(join(CACHE_DIR, file), r.mp3);
     cache[key] = { file, textChars: r.textChars, payloadChars: r.payloadChars };

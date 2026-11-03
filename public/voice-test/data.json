@@ -1,5 +1,5 @@
 {
- "built": "2026-11-03T17:14:29.462Z",
+ "built": "2026-11-03T17:24:40.035Z",
  "phrases": [
   {
    "id": "vt1",
@@ -9,28 +9,23 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/0dbe0e0db82c.mp3",
-     "label": "Azure Nils (муж.)"
+     "src": "a/996bd0eb1cfb.mp3",
+     "label": "Azure Nils (муж.), 48 кГц / 192 кбит/с"
     },
     {
      "letter": "B",
-     "src": "a/e6d4e395b300.mp3",
-     "label": "Azure Everita (жен.), медленно ×0.8"
+     "src": "a/091d9862d5db.mp3",
+     "label": "Azure Nils (муж.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "C",
-     "src": "a/4115afb60cc7.mp3",
-     "label": "Piper aivars (муж., офлайн)"
+     "src": "a/1db34de99344.mp3",
+     "label": "Azure Everita (жен.), 48 кГц / 192 кбит/с"
     },
     {
      "letter": "D",
-     "src": "a/f40127ee64e0.mp3",
-     "label": "Azure Everita (жен.)"
-    },
-    {
-     "letter": "E",
-     "src": "a/0d8ca381c250.mp3",
-     "label": "Azure Nils (муж.), медленно ×0.8"
+     "src": "a/14d293e25d91.mp3",
+     "label": "Azure Everita (жен.), 24 кГц / 48 кбит/с"
     }
    ]
   },
@@ -42,28 +37,23 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/60fc52daa177.mp3",
-     "label": "Azure Nils (муж.)"
+     "src": "a/e3f3575381b1.mp3",
+     "label": "Azure Everita (жен.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "B",
-     "src": "a/ac2fafde4653.mp3",
-     "label": "Azure Nils (муж.), медленно ×0.8"
+     "src": "a/9030538e88aa.mp3",
+     "label": "Azure Nils (муж.), 48 кГц / 192 кбит/с"
     },
     {
      "letter": "C",
-     "src": "a/5fcbc763de89.mp3",
-     "label": "Azure Everita (жен.)"
+     "src": "a/3db9d0659033.mp3",
+     "label": "Azure Nils (муж.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "D",
-     "src": "a/475f05ef18da.mp3",
-     "label": "Piper aivars (муж., офлайн)"
-    },
-    {
-     "letter": "E",
-     "src": "a/acf000e954a6.mp3",
-     "label": "Azure Everita (жен.), медленно ×0.8"
+     "src": "a/51259ffc62c3.mp3",
+     "label": "Azure Everita (жен.), 48 кГц / 192 кбит/с"
     }
    ]
   },
@@ -75,28 +65,23 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/ad23d196a392.mp3",
-     "label": "Piper aivars (муж., офлайн)"
+     "src": "a/28926da5bd69.mp3",
+     "label": "Azure Everita (жен.), 48 кГц / 192 кбит/с"
     },
     {
      "letter": "B",
-     "src": "a/a311e184091c.mp3",
-     "label": "Azure Everita (жен.), медленно ×0.8"
+     "src": "a/0c737f6bc7fd.mp3",
+     "label": "Azure Nils (муж.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "C",
-     "src": "a/4fbbfd13ec2f.mp3",
-     "label": "Azure Nils (муж.), медленно ×0.8"
+     "src": "a/38db28fe089c.mp3",
+     "label": "Azure Nils (муж.), 48 кГц / 192 кбит/с"
     },
     {
      "letter": "D",
-     "src": "a/4d8fe7dedea7.mp3",
-     "label": "Azure Nils (муж.)"
-    },
-    {
-     "letter": "E",
-     "src": "a/1d0417332f67.mp3",
-     "label": "Azure Everita (жен.)"
+     "src": "a/0168f3f7bfdc.mp3",
+     "label": "Azure Everita (жен.), 24 кГц / 48 кбит/с"
     }
    ]
   },
@@ -108,28 +93,23 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/dc4b1fd93c5e.mp3",
-     "label": "Azure Everita (жен.)"
+     "src": "a/2cd5f1e147c9.mp3",
+     "label": "Azure Everita (жен.), 48 кГц / 192 кбит/с"
     },
     {
      "letter": "B",
-     "src": "a/b13d01b53991.mp3",
-     "label": "Piper aivars (муж., офлайн)"
+     "src": "a/17d6271c0c7e.mp3",
+     "label": "Azure Nils (муж.), 48 кГц / 192 кбит/с"
     },
     {
      "letter": "C",
-     "src": "a/ff19d234571f.mp3",
-     "label": "Azure Nils (муж.), медленно ×0.8"
+     "src": "a/23f2d5867865.mp3",
+     "label": "Azure Everita (жен.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "D",
-     "src": "a/751dee3bfe4e.mp3",
-     "label": "Azure Nils (муж.)"
-    },
-    {
-     "letter": "E",
-     "src": "a/53553d87d133.mp3",
-     "label": "Azure Everita (жен.), медленно ×0.8"
+     "src": "a/d2fbd2969325.mp3",
+     "label": "Azure Nils (муж.), 24 кГц / 48 кбит/с"
     }
    ]
   },
@@ -141,28 +121,23 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/2839be66b2ee.mp3",
-     "label": "Azure Everita (жен.)"
+     "src": "a/75d02547feec.mp3",
+     "label": "Azure Everita (жен.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "B",
-     "src": "a/4ba63b91c3a6.mp3",
-     "label": "Azure Nils (муж.), медленно ×0.8"
+     "src": "a/fdca45872671.mp3",
+     "label": "Azure Nils (муж.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "C",
-     "src": "a/30443cc7baaf.mp3",
-     "label": "Azure Everita (жен.), медленно ×0.8"
+     "src": "a/f1507067147f.mp3",
+     "label": "Azure Nils (муж.), 48 кГц / 192 кбит/с"
     },
     {
      "letter": "D",
-     "src": "a/74f088541bfa.mp3",
-     "label": "Azure Nils (муж.)"
-    },
-    {
-     "letter": "E",
-     "src": "a/0dd31fba4564.mp3",
-     "label": "Piper aivars (муж., офлайн)"
+     "src": "a/588e0dcb562a.mp3",
+     "label": "Azure Everita (жен.), 48 кГц / 192 кбит/с"
     }
    ]
   },
@@ -174,28 +149,23 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/c1e6256a6175.mp3",
-     "label": "Azure Nils (муж.)"
+     "src": "a/e80dbfc501fb.mp3",
+     "label": "Azure Everita (жен.), 48 кГц / 192 кбит/с"
     },
     {
      "letter": "B",
-     "src": "a/410305ce4b16.mp3",
-     "label": "Piper aivars (муж., офлайн)"
+     "src": "a/7b0c1bb3e829.mp3",
+     "label": "Azure Everita (жен.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "C",
-     "src": "a/404353d5d2d5.mp3",
-     "label": "Azure Everita (жен.), медленно ×0.8"
+     "src": "a/f93e3a60f18c.mp3",
+     "label": "Azure Nils (муж.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "D",
-     "src": "a/e4d4d43f5f78.mp3",
-     "label": "Azure Everita (жен.)"
-    },
-    {
-     "letter": "E",
-     "src": "a/eb47fa38490d.mp3",
-     "label": "Azure Nils (муж.), медленно ×0.8"
+     "src": "a/34eea016a0f5.mp3",
+     "label": "Azure Nils (муж.), 48 кГц / 192 кбит/с"
     }
    ]
   },
@@ -207,28 +177,23 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/36f53d6fb900.mp3",
-     "label": "Azure Nils (муж.), медленно ×0.8"
+     "src": "a/30d4041ee5e6.mp3",
+     "label": "Azure Nils (муж.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "B",
-     "src": "a/ded73bcc5f87.mp3",
-     "label": "Azure Everita (жен.)"
+     "src": "a/99fb969d85bc.mp3",
+     "label": "Azure Nils (муж.), 48 кГц / 192 кбит/с"
     },
     {
      "letter": "C",
-     "src": "a/d1497aed8f4a.mp3",
-     "label": "Azure Everita (жен.), медленно ×0.8"
+     "src": "a/06be16dbd3b2.mp3",
+     "label": "Azure Everita (жен.), 48 кГц / 192 кбит/с"
     },
     {
      "letter": "D",
-     "src": "a/ae7668f3dd14.mp3",
-     "label": "Piper aivars (муж., офлайн)"
-    },
-    {
-     "letter": "E",
-     "src": "a/e0b8df46c852.mp3",
-     "label": "Azure Nils (муж.)"
+     "src": "a/03c860054e40.mp3",
+     "label": "Azure Everita (жен.), 24 кГц / 48 кбит/с"
     }
    ]
   },
@@ -240,28 +205,23 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/dcdc431ab569.mp3",
-     "label": "Piper aivars (муж., офлайн)"
+     "src": "a/e68c2aa49af9.mp3",
+     "label": "Azure Everita (жен.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "B",
-     "src": "a/4db3530f4a72.mp3",
-     "label": "Azure Everita (жен.), медленно ×0.8"
+     "src": "a/9e96c8aae208.mp3",
+     "label": "Azure Nils (муж.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "C",
-     "src": "a/da12c6d25ab5.mp3",
-     "label": "Azure Nils (муж.), медленно ×0.8"
+     "src": "a/ec4de4ec227c.mp3",
+     "label": "Azure Nils (муж.), 48 кГц / 192 кбит/с"
     },
     {
      "letter": "D",
-     "src": "a/5293e7243ebb.mp3",
-     "label": "Azure Everita (жен.)"
-    },
-    {
-     "letter": "E",
-     "src": "a/13e008216616.mp3",
-     "label": "Azure Nils (муж.)"
+     "src": "a/4e28460b908f.mp3",
+     "label": "Azure Everita (жен.), 48 кГц / 192 кбит/с"
     }
    ]
   },
@@ -273,28 +233,23 @@
    "variants": [
     {
      "letter": "A",
-     "src": "a/e7c96baa53bb.mp3",
-     "label": "Azure Everita (жен.)"
+     "src": "a/aee8b2336947.mp3",
+     "label": "Azure Everita (жен.), 48 кГц / 192 кбит/с"
     },
     {
      "letter": "B",
-     "src": "a/6d6fd6d61f40.mp3",
-     "label": "Azure Nils (муж.), медленно ×0.8"
+     "src": "a/ca99768d9395.mp3",
+     "label": "Azure Nils (муж.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "C",
-     "src": "a/854faa56b79a.mp3",
-     "label": "Azure Nils (муж.)"
+     "src": "a/5588fd897538.mp3",
+     "label": "Azure Everita (жен.), 24 кГц / 48 кбит/с"
     },
     {
      "letter": "D",
-     "src": "a/86f2d2a6fb4f.mp3",
-     "label": "Azure Everita (жен.), медленно ×0.8"
-    },
-    {
-     "letter": "E",
-     "src": "a/be89dce96692.mp3",
-     "label": "Piper aivars (муж., офлайн)"
+     "src": "a/e44c0611869f.mp3",
+     "label": "Azure Nils (муж.), 48 кГц / 192 кбит/с"
     }
    ]
   }

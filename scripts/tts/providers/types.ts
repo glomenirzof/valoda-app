@@ -8,7 +8,11 @@ export interface VoiceSpec {
   label: string;
   /** 1 = normal; 0.8 = slower */
   rate: number;
+  quality: Quality;
 }
+
+/** std = small files (24 kHz / 48 kbit/s); hq = 48 kHz / 192 kbit/s where the vendor offers it */
+export type Quality = 'std' | 'hq';
 
 export interface SynthResult {
   mp3: Buffer;
@@ -24,5 +28,5 @@ export interface Provider {
   unavailable(): string | null;
   /** Voices to use for Latvian; may query the vendor */
   latvianVoices(): Promise<{ voice: string; label: string }[]>;
-  synthesize(text: string, voice: string, rate: number): Promise<SynthResult>;
+  synthesize(text: string, voice: string, rate: number, quality: Quality): Promise<SynthResult>;
 }

@@ -20,7 +20,7 @@ export const azure: Provider = {
     ];
   },
 
-  async synthesize(text, voice, rate): Promise<SynthResult> {
+  async synthesize(text, voice, rate, quality): Promise<SynthResult> {
     const region = process.env.AZURE_SPEECH_REGION!;
     const pct = Math.round((rate - 1) * 100);
     const prosody = pct === 0 ? escapeXml(text) : `<prosody rate="${pct}%">${escapeXml(text)}</prosody>`;
@@ -33,7 +33,7 @@ export const azure: Provider = {
       headers: {
         'Ocp-Apim-Subscription-Key': process.env.AZURE_SPEECH_KEY!,
         'Content-Type': 'application/ssml+xml',
-        'X-Microsoft-OutputFormat': 'audio-24khz-48kbitrate-mono-mp3',
+        'X-Microsoft-OutputFormat': quality === 'hq' ? 'audio-48khz-192kbitrate-mono-mp3' : 'audio-24khz-48kbitrate-mono-mp3',
         'User-Agent': 'valoda-app-tts',
       },
       body: ssml,

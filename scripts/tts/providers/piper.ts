@@ -28,7 +28,7 @@ export const piper: Provider = {
     return [{ voice: 'lv_LV-aivars-medium', label: 'Piper aivars (муж., офлайн)' }];
   },
 
-  async synthesize(text, voice, rate): Promise<SynthResult> {
+  async synthesize(text, voice, rate, quality): Promise<SynthResult> {
     const dir = mkdtempSync(join(tmpdir(), 'piper-'));
     try {
       const wav = join(dir, 'out.wav');
@@ -37,7 +37,7 @@ export const piper: Provider = {
       await run(python(), ['-m', 'piper', '-m', model(voice), '-f', wav, '--length-scale', String(1 / rate), '--', text], {
         env: { ...process.env, PYTHONIOENCODING: 'utf-8', PYTHONUTF8: '1' },
       });
-      await run(ffmpegPath!, ['-y', '-loglevel', 'error', '-i', wav, '-codec:a', 'libmp3lame', '-b:a', '48k', '-ac', '1', mp3]);
+      await run(ffmpegPath!, ['-y', '-loglevel', 'error', '-i', wav, '-codec:a', 'libmp3lame', '-b:a', quality === 'hq' ? '128k' : '48k', '-ac', '1', mp3]);
       return { mp3: readFileSync(mp3), textChars: [...text].length, payloadChars: [...text].length };
     } finally {
       rmSync(dir, { recursive: true, force: true });

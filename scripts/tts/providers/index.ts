@@ -4,4 +4,4 @@ import { piper } from './piper';
 import type { Provider, ProviderId } from './types';
 
 export const providers: Record<ProviderId, Provider> = { azure, google, piper };
-export type { Provider, ProviderId, SynthResult, VoiceSpec } from './types';
+export type { Provider, ProviderId, Quality, SynthResult, VoiceSpec } from './types';
