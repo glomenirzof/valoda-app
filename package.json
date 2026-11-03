@@ -11,7 +11,11 @@
     "test": "vitest run",
     "icons": "node scripts/make-icons.mjs",
     "tezaurs:check": "python -I scripts/tezaurs/check_forms.py",
-    "tts:voicetest": "tsx scripts/tts/voice-test.ts"
+    "tts:voicetest": "tsx scripts/tts/voice-test.ts",
+    "tezaurs:index": "python -I scripts/tezaurs/build_index.py data-cache/tezaurs/tezaurs_2026_4_wordforms_tei.xml.zip data-cache/tezaurs/lv-forms.sqlite",
+    "content:build": "python -I scripts/content/build_phrases.py lv",
+    "content:export": "tsx scripts/content/export-review.ts lv",
+    "content:import": "tsx scripts/content/import-review.ts"
   },
   "type": "module",
   "dependencies": {
@@ -23,6 +27,7 @@
     "@preact/preset-vite": "^2.10.6",
     "@types/node": "^26.6.6",
     "dotenv": "^18.0.9",
+    "exceljs": "^4.4.0",
     "ffmpeg-static": "^5.3.0",
     "google-auth-library": "^11.3.2",
     "tsx": "^4.23.15",

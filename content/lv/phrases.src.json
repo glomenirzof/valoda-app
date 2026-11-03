@@ -1,0 +1,1105 @@
+{
+  "lang": "lv",
+  "note": "Source phrases. lemmas = one lemma per word, in order (punctuation ignored). hints = surface → feats, only where Tēzaurs gives several readings. All phrases are LLM-written → status unverified until the tutor checks them.",
+  "phrases": [
+    {
+      "id": "lv-0001",
+      "topic": "polite",
+      "lv": "Labdien!",
+      "ru": "Добрый день!",
+      "lemmas": "labdien"
+    },
+    {
+      "id": "lv-0002",
+      "topic": "polite",
+      "lv": "Labrīt!",
+      "ru": "Доброе утро!",
+      "lemmas": "labrīt"
+    },
+    {
+      "id": "lv-0003",
+      "topic": "polite",
+      "lv": "Labvakar!",
+      "ru": "Добрый вечер!",
+      "lemmas": "labvakar"
+    },
+    {
+      "id": "lv-0004",
+      "topic": "polite",
+      "lv": "Sveiki!",
+      "ru": "Привет! / Здравствуйте!",
+      "lemmas": "sveiki"
+    },
+    {
+      "id": "lv-0005",
+      "topic": "polite",
+      "lv": "Uz redzēšanos!",
+      "ru": "До свидания!",
+      "lemmas": "uz redzēšanās"
+    },
+    {
+      "id": "lv-0006",
+      "topic": "polite",
+      "lv": "Paldies!",
+      "ru": "Спасибо!",
+      "lemmas": "paldies"
+    },
+    {
+      "id": "lv-0007",
+      "topic": "polite",
+      "lv": "Liels paldies!",
+      "ru": "Большое спасибо!",
+      "lemmas": "liels/ADJ paldies"
+    },
+    {
+      "id": "lv-0008",
+      "topic": "polite",
+      "lv": "Lūdzu!",
+      "ru": "Пожалуйста!",
+      "lemmas": "lūdzu"
+    },
+    {
+      "id": "lv-0009",
+      "topic": "polite",
+      "lv": "Atvainojiet!",
+      "ru": "Извините!",
+      "lemmas": "atvainot"
+    },
+    {
+      "id": "lv-0010",
+      "topic": "polite",
+      "lv": "Nekas.",
+      "ru": "Ничего. / Не за что.",
+      "lemmas": "nekas"
+    },
+    {
+      "id": "lv-0011",
+      "topic": "polite",
+      "lv": "Viss kārtībā.",
+      "ru": "Всё в порядке.",
+      "lemmas": "viss kārtība"
+    },
+    {
+      "id": "lv-0012",
+      "topic": "polite",
+      "lv": "Kā jums iet?",
+      "ru": "Как у вас дела?",
+      "lemmas": "kā jūs iet"
+    },
+    {
+      "id": "lv-0013",
+      "topic": "polite",
+      "lv": "Kā tev iet?",
+      "ru": "Как у тебя дела?",
+      "lemmas": "kā tu iet"
+    },
+    {
+      "id": "lv-0014",
+      "topic": "polite",
+      "lv": "Man iet labi.",
+      "ru": "У меня всё хорошо.",
+      "lemmas": "es iet labi"
+    },
+    {
+      "id": "lv-0015",
+      "topic": "polite",
+      "lv": "Priecājos iepazīties!",
+      "ru": "Рад познакомиться!",
+      "lemmas": "priecāties iepazīties"
+    },
+    {
+      "id": "lv-0016",
+      "topic": "polite",
+      "lv": "Jā, protams.",
+      "ru": "Да, конечно.",
+      "lemmas": "jā protams"
+    },
+    {
+      "id": "lv-0017",
+      "topic": "polite",
+      "lv": "Nē, paldies.",
+      "ru": "Нет, спасибо.",
+      "lemmas": "nē paldies"
+    },
+    {
+      "id": "lv-0018",
+      "topic": "polite",
+      "lv": "Labu apetīti!",
+      "ru": "Приятного аппетита!",
+      "lemmas": "labs apetīte"
+    },
+    {
+      "id": "lv-0019",
+      "topic": "polite",
+      "lv": "Veiksmi!",
+      "ru": "Удачи!",
+      "lemmas": "veiksme"
+    },
+    {
+      "id": "lv-0020",
+      "topic": "polite",
+      "lv": "Uz tikšanos!",
+      "ru": "До встречи!",
+      "lemmas": "uz tikšanās"
+    },
+    {
+      "id": "lv-0021",
+      "topic": "me",
+      "lv": "Kā jūs sauc?",
+      "ru": "Как вас зовут?",
+      "lemmas": "kā jūs saukt",
+      "hints": {
+        "jūs": "ACC"
+      }
+    },
+    {
+      "id": "lv-0022",
+      "topic": "me",
+      "lv": "Kā tevi sauc?",
+      "ru": "Как тебя зовут?",
+      "lemmas": "kā tu saukt"
+    },
+    {
+      "id": "lv-0023",
+      "topic": "me",
+      "lv": "Es dzīvoju Rīgā.",
+      "ru": "Я живу в Риге.",
+      "lemmas": "es dzīvot Rīga"
+    },
+    {
+      "id": "lv-0024",
+      "topic": "me",
+      "lv": "Es dzīvoju Latvijā.",
+      "ru": "Я живу в Латвии.",
+      "lemmas": "es dzīvot Latvija"
+    },
+    {
+      "id": "lv-0025",
+      "topic": "me",
+      "lv": "Es runāju krieviski.",
+      "ru": "Я говорю по-русски.",
+      "lemmas": "es runāt krieviski"
+    },
+    {
+      "id": "lv-0026",
+      "topic": "me",
+      "lv": "Es mazliet runāju latviski.",
+      "ru": "Я немного говорю по-латышски.",
+      "lemmas": "es mazliet runāt latviski"
+    },
+    {
+      "id": "lv-0027",
+      "topic": "me",
+      "lv": "Es mācos latviešu valodu.",
+      "ru": "Я учу латышский язык.",
+      "lemmas": "es mācīties latvietis valoda",
+      "hints": {
+        "latviešu": "GEN.PL"
+      }
+    },
+    {
+      "id": "lv-0028",
+      "topic": "me",
+      "lv": "Es strādāju birojā.",
+      "ru": "Я работаю в офисе.",
+      "lemmas": "es strādāt birojs"
+    },
+    {
+      "id": "lv-0029",
+      "topic": "me",
+      "lv": "Es strādāju no mājām.",
+      "ru": "Я работаю из дома.",
+      "lemmas": "es strādāt no māja"
+    },
+    {
+      "id": "lv-0030",
+      "topic": "me",
+      "lv": "Man ir trīsdesmit gadu.",
+      "ru": "Мне тридцать лет.",
+      "lemmas": "es būt trīsdesmit gads",
+      "hints": {
+        "gadu": "GEN.PL"
+      }
+    },
+    {
+      "id": "lv-0031",
+      "topic": "me",
+      "lv": "Cik tev gadu?",
+      "ru": "Сколько тебе лет?",
+      "lemmas": "cik tu gads",
+      "hints": {
+        "gadu": "GEN.PL"
+      }
+    },
+    {
+      "id": "lv-0032",
+      "topic": "me",
+      "lv": "Man ir brālis un māsa.",
+      "ru": "У меня есть брат и сестра.",
+      "lemmas": "es būt brālis un māsa"
+    },
+    {
+      "id": "lv-0033",
+      "topic": "me",
+      "lv": "Mana ģimene dzīvo Rīgā.",
+      "ru": "Моя семья живёт в Риге.",
+      "lemmas": "mans ģimene dzīvot Rīga"
+    },
+    {
+      "id": "lv-0034",
+      "topic": "me",
+      "lv": "Kur tu dzīvo?",
+      "ru": "Где ты живёшь?",
+      "lemmas": "kur tu dzīvot"
+    },
+    {
+      "id": "lv-0035",
+      "topic": "me",
+      "lv": "Es dzīvoju centrā.",
+      "ru": "Я живу в центре.",
+      "lemmas": "es dzīvot centrs"
+    },
+    {
+      "id": "lv-0036",
+      "topic": "me",
+      "lv": "No kurienes jūs esat?",
+      "ru": "Откуда вы?",
+      "lemmas": "no kuriene jūs būt"
+    },
+    {
+      "id": "lv-0037",
+      "topic": "understand",
+      "lv": "Es nesaprotu.",
+      "ru": "Я не понимаю.",
+      "lemmas": "es saprast"
+    },
+    {
+      "id": "lv-0038",
+      "topic": "understand",
+      "lv": "Es saprotu.",
+      "ru": "Я понимаю.",
+      "lemmas": "es saprast"
+    },
+    {
+      "id": "lv-0039",
+      "topic": "understand",
+      "lv": "Lūdzu, runājiet lēnāk.",
+      "ru": "Пожалуйста, говорите медленнее.",
+      "lemmas": "lūdzu runāt lēni"
+    },
+    {
+      "id": "lv-0040",
+      "topic": "understand",
+      "lv": "Lūdzu, atkārtojiet.",
+      "ru": "Пожалуйста, повторите.",
+      "lemmas": "lūdzu atkārtot"
+    },
+    {
+      "id": "lv-0041",
+      "topic": "understand",
+      "lv": "Ko tas nozīmē?",
+      "ru": "Что это значит?",
+      "lemmas": "kas tas nozīmēt"
+    },
+    {
+      "id": "lv-0042",
+      "topic": "understand",
+      "lv": "Kā to saka latviski?",
+      "ru": "Как это сказать по-латышски?",
+      "lemmas": "kā tas sacīt latviski"
+    },
+    {
+      "id": "lv-0043",
+      "topic": "understand",
+      "lv": "Vai jūs runājat angliski?",
+      "ru": "Вы говорите по-английски?",
+      "lemmas": "vai jūs runāt angliski"
+    },
+    {
+      "id": "lv-0044",
+      "topic": "understand",
+      "lv": "Es nezinu.",
+      "ru": "Я не знаю.",
+      "lemmas": "es zināt"
+    },
+    {
+      "id": "lv-0045",
+      "topic": "understand",
+      "lv": "Vai jūs varat palīdzēt?",
+      "ru": "Вы можете помочь?",
+      "lemmas": "vai jūs varēt palīdzēt"
+    },
+    {
+      "id": "lv-0046",
+      "topic": "understand",
+      "lv": "Vai tu vari man palīdzēt?",
+      "ru": "Ты можешь мне помочь?",
+      "lemmas": "vai tu varēt es palīdzēt"
+    },
+    {
+      "id": "lv-0047",
+      "topic": "understand",
+      "lv": "Uzrakstiet, lūdzu!",
+      "ru": "Напишите, пожалуйста!",
+      "lemmas": "uzrakstīt lūdzu"
+    },
+    {
+      "id": "lv-0048",
+      "topic": "understand",
+      "lv": "Kas tas ir?",
+      "ru": "Что это?",
+      "lemmas": "kas tas būt"
+    },
+    {
+      "id": "lv-0049",
+      "topic": "shop",
+      "lv": "Cik tas maksā?",
+      "ru": "Сколько это стоит?",
+      "lemmas": "cik tas maksāt"
+    },
+    {
+      "id": "lv-0050",
+      "topic": "shop",
+      "lv": "Es gribu kafiju.",
+      "ru": "Я хочу кофе.",
+      "lemmas": "es gribēt kafija"
+    },
+    {
+      "id": "lv-0051",
+      "topic": "shop",
+      "lv": "Vienu kafiju, lūdzu.",
+      "ru": "Один кофе, пожалуйста.",
+      "lemmas": "viens kafija lūdzu"
+    },
+    {
+      "id": "lv-0052",
+      "topic": "shop",
+      "lv": "Melnu tēju, lūdzu.",
+      "ru": "Чёрный чай, пожалуйста.",
+      "lemmas": "melns tēja lūdzu"
+    },
+    {
+      "id": "lv-0053",
+      "topic": "shop",
+      "lv": "Kafiju ar pienu, lūdzu.",
+      "ru": "Кофе с молоком, пожалуйста.",
+      "lemmas": "kafija ar piens lūdzu"
+    },
+    {
+      "id": "lv-0054",
+      "topic": "shop",
+      "lv": "Vai var maksāt ar karti?",
+      "ru": "Можно заплатить картой?",
+      "lemmas": "vai varēt maksāt ar karte"
+    },
+    {
+      "id": "lv-0055",
+      "topic": "shop",
+      "lv": "Kur ir maize?",
+      "ru": "Где хлеб?",
+      "lemmas": "kur būt maize"
+    },
+    {
+      "id": "lv-0056",
+      "topic": "shop",
+      "lv": "Tas ir pārāk dārgi.",
+      "ru": "Это слишком дорого.",
+      "lemmas": "tas būt pārāk dārgi"
+    },
+    {
+      "id": "lv-0057",
+      "topic": "shop",
+      "lv": "Vai jums ir ūdens?",
+      "ru": "У вас есть вода?",
+      "lemmas": "vai jūs būt ūdens"
+    },
+    {
+      "id": "lv-0058",
+      "topic": "shop",
+      "lv": "Es ņemšu šo.",
+      "ru": "Я возьму это.",
+      "lemmas": "es ņemt šis"
+    },
+    {
+      "id": "lv-0059",
+      "topic": "shop",
+      "lv": "Kur ir kase?",
+      "ru": "Где касса?",
+      "lemmas": "kur būt kase"
+    },
+    {
+      "id": "lv-0060",
+      "topic": "shop",
+      "lv": "Es tikai skatos.",
+      "ru": "Я просто смотрю.",
+      "lemmas": "es tikai skatīties"
+    },
+    {
+      "id": "lv-0061",
+      "topic": "shop",
+      "lv": "Vai šis ir svaigs?",
+      "ru": "Это свежее?",
+      "lemmas": "vai šis būt svaigs"
+    },
+    {
+      "id": "lv-0062",
+      "topic": "shop",
+      "lv": "Divas bulciņas, lūdzu.",
+      "ru": "Две булочки, пожалуйста.",
+      "lemmas": "divi bulciņa lūdzu",
+      "hints": {
+        "Divas": "ACC",
+        "bulciņas": "ACC.PL"
+      }
+    },
+    {
+      "id": "lv-0063",
+      "topic": "shop",
+      "lv": "Tas ir viss, paldies.",
+      "ru": "Это всё, спасибо.",
+      "lemmas": "tas būt viss paldies"
+    },
+    {
+      "id": "lv-0064",
+      "topic": "shop",
+      "lv": "Es gribu ēst.",
+      "ru": "Я хочу есть.",
+      "lemmas": "es gribēt ēst"
+    },
+    {
+      "id": "lv-0065",
+      "topic": "shop",
+      "lv": "Es gribu dzert.",
+      "ru": "Я хочу пить.",
+      "lemmas": "es gribēt dzert"
+    },
+    {
+      "id": "lv-0066",
+      "topic": "shop",
+      "lv": "Man garšo šī zupa.",
+      "ru": "Мне нравится (на вкус) этот суп.",
+      "lemmas": "es garšot šī zupa"
+    },
+    {
+      "id": "lv-0067",
+      "topic": "shop",
+      "lv": "Vai jums ir maisiņš?",
+      "ru": "У вас есть пакет?",
+      "lemmas": "vai jūs būt maisiņš"
+    },
+    {
+      "id": "lv-0068",
+      "topic": "shop",
+      "lv": "Cik maksā maize?",
+      "ru": "Сколько стоит хлеб?",
+      "lemmas": "cik maksāt maize"
+    },
+    {
+      "id": "lv-0069",
+      "topic": "city",
+      "lv": "Kur ir stacija?",
+      "ru": "Где вокзал?",
+      "lemmas": "kur būt stacija"
+    },
+    {
+      "id": "lv-0070",
+      "topic": "city",
+      "lv": "Kur ir tualete?",
+      "ru": "Где туалет?",
+      "lemmas": "kur būt tualete"
+    },
+    {
+      "id": "lv-0071",
+      "topic": "city",
+      "lv": "Es eju uz darbu.",
+      "ru": "Я иду на работу.",
+      "lemmas": "es iet uz darbs"
+    },
+    {
+      "id": "lv-0072",
+      "topic": "city",
+      "lv": "Es eju mājās.",
+      "ru": "Я иду домой.",
+      "lemmas": "es iet māja",
+      "hints": {
+        "mājās": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0073",
+      "topic": "city",
+      "lv": "Es braucu ar autobusu.",
+      "ru": "Я еду на автобусе.",
+      "lemmas": "es braukt ar autobuss"
+    },
+    {
+      "id": "lv-0074",
+      "topic": "city",
+      "lv": "Kad atiet vilciens?",
+      "ru": "Когда отходит поезд?",
+      "lemmas": "kad atiet vilciens"
+    },
+    {
+      "id": "lv-0075",
+      "topic": "city",
+      "lv": "Ejiet taisni.",
+      "ru": "Идите прямо.",
+      "lemmas": "iet taisni"
+    },
+    {
+      "id": "lv-0076",
+      "topic": "city",
+      "lv": "Pa labi.",
+      "ru": "Направо.",
+      "lemmas": "pa labi"
+    },
+    {
+      "id": "lv-0077",
+      "topic": "city",
+      "lv": "Pa kreisi.",
+      "ru": "Налево.",
+      "lemmas": "pa kreisi"
+    },
+    {
+      "id": "lv-0078",
+      "topic": "city",
+      "lv": "Vai tas ir tālu?",
+      "ru": "Это далеко?",
+      "lemmas": "vai tas būt tālu"
+    },
+    {
+      "id": "lv-0079",
+      "topic": "city",
+      "lv": "Tas ir tuvu.",
+      "ru": "Это близко.",
+      "lemmas": "tas būt tuvu"
+    },
+    {
+      "id": "lv-0080",
+      "topic": "city",
+      "lv": "Kur ir pietura?",
+      "ru": "Где остановка?",
+      "lemmas": "kur būt pietura"
+    },
+    {
+      "id": "lv-0081",
+      "topic": "city",
+      "lv": "Vienu biļeti uz Jūrmalu, lūdzu.",
+      "ru": "Один билет в Юрмалу, пожалуйста.",
+      "lemmas": "viens biļete uz Jūrmala lūdzu"
+    },
+    {
+      "id": "lv-0082",
+      "topic": "city",
+      "lv": "Es kavēju.",
+      "ru": "Я опаздываю.",
+      "lemmas": "es kavēt"
+    },
+    {
+      "id": "lv-0083",
+      "topic": "city",
+      "lv": "Es būšu pēc desmit minūtēm.",
+      "ru": "Я буду через десять минут.",
+      "lemmas": "es būt pēc desmit minūte"
+    },
+    {
+      "id": "lv-0084",
+      "topic": "city",
+      "lv": "Es braucu uz veikalu.",
+      "ru": "Я еду в магазин.",
+      "lemmas": "es braukt uz veikals"
+    },
+    {
+      "id": "lv-0085",
+      "topic": "city",
+      "lv": "Mēs ejam uz veikalu.",
+      "ru": "Мы идём в магазин.",
+      "lemmas": "mēs iet uz veikals"
+    },
+    {
+      "id": "lv-0086",
+      "topic": "city",
+      "lv": "Kur ir dzelzceļa stacija?",
+      "ru": "Где железнодорожный вокзал?",
+      "lemmas": "kur būt dzelzceļš stacija"
+    },
+    {
+      "id": "lv-0087",
+      "topic": "time",
+      "lv": "Cik ir pulkstenis?",
+      "ru": "Который час?",
+      "lemmas": "cik būt pulkstenis"
+    },
+    {
+      "id": "lv-0088",
+      "topic": "time",
+      "lv": "Šodien ir pirmdiena.",
+      "ru": "Сегодня понедельник.",
+      "lemmas": "šodien būt pirmdiena"
+    },
+    {
+      "id": "lv-0089",
+      "topic": "time",
+      "lv": "Rīt es strādāju.",
+      "ru": "Завтра я работаю.",
+      "lemmas": "rīt/ADV es strādāt"
+    },
+    {
+      "id": "lv-0090",
+      "topic": "time",
+      "lv": "Vakar es biju mājās.",
+      "ru": "Вчера я был дома.",
+      "lemmas": "vakar es būt māja",
+      "hints": {
+        "mājās": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0091",
+      "topic": "time",
+      "lv": "Man nav laika.",
+      "ru": "У меня нет времени.",
+      "lemmas": "es būt laiks"
+    },
+    {
+      "id": "lv-0092",
+      "topic": "time",
+      "lv": "Ne tagad.",
+      "ru": "Не сейчас.",
+      "lemmas": "ne tagad"
+    },
+    {
+      "id": "lv-0093",
+      "topic": "time",
+      "lv": "Līdz rītam!",
+      "ru": "До завтра! (до утра)",
+      "lemmas": "līdz rīts"
+    },
+    {
+      "id": "lv-0094",
+      "topic": "time",
+      "lv": "Tiekamies rīt!",
+      "ru": "Увидимся завтра!",
+      "lemmas": "tikties rīt/ADV"
+    },
+    {
+      "id": "lv-0095",
+      "topic": "time",
+      "lv": "Pēc stundas.",
+      "ru": "Через час.",
+      "lemmas": "pēc stunda"
+    },
+    {
+      "id": "lv-0096",
+      "topic": "time",
+      "lv": "Es atnākšu vēlāk.",
+      "ru": "Я приду позже.",
+      "lemmas": "es atnākt vēlu"
+    },
+    {
+      "id": "lv-0097",
+      "topic": "time",
+      "lv": "Cikos sākas treniņš?",
+      "ru": "Во сколько начинается тренировка?",
+      "lemmas": "cikos sākties treniņš"
+    },
+    {
+      "id": "lv-0098",
+      "topic": "time",
+      "lv": "Šodien ir svētdiena.",
+      "ru": "Сегодня воскресенье.",
+      "lemmas": "šodien būt svētdiena"
+    },
+    {
+      "id": "lv-0099",
+      "topic": "time",
+      "lv": "Es esmu aizņemts.",
+      "ru": "Я занят.",
+      "lemmas": "es būt aizņemt"
+    },
+    {
+      "id": "lv-0100",
+      "topic": "gym",
+      "lv": "Es eju uz sporta zāli.",
+      "ru": "Я иду в спортзал.",
+      "lemmas": "es iet uz sports zāle",
+      "hints": {
+        "sporta": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0101",
+      "topic": "gym",
+      "lv": "Vakar es biju trenažieru zālē.",
+      "ru": "Вчера я был в тренажёрном зале.",
+      "lemmas": "vakar es būt trenažieris zāle",
+      "hints": {
+        "trenažieru": "GEN.PL"
+      }
+    },
+    {
+      "id": "lv-0102",
+      "topic": "gym",
+      "lv": "Vai šis ir brīvs?",
+      "ru": "Это свободно?",
+      "lemmas": "vai šis būt brīvs"
+    },
+    {
+      "id": "lv-0103",
+      "topic": "gym",
+      "lv": "Vai es varu izmantot šo?",
+      "ru": "Можно мне воспользоваться этим?",
+      "lemmas": "vai es varēt izmantot šis"
+    },
+    {
+      "id": "lv-0104",
+      "topic": "gym",
+      "lv": "Vēl vienu reizi!",
+      "ru": "Ещё один раз!",
+      "lemmas": "vēl viens reize"
+    },
+    {
+      "id": "lv-0105",
+      "topic": "gym",
+      "lv": "Cik reizes?",
+      "ru": "Сколько раз?",
+      "lemmas": "cik reize",
+      "hints": {
+        "reizes": "ACC.PL"
+      }
+    },
+    {
+      "id": "lv-0106",
+      "topic": "gym",
+      "lv": "Es trenējos trīs reizes nedēļā.",
+      "ru": "Я тренируюсь три раза в неделю.",
+      "lemmas": "es trenēties trīs reize nedēļa",
+      "hints": {
+        "reizes": "ACC.PL"
+      }
+    },
+    {
+      "id": "lv-0107",
+      "topic": "gym",
+      "lv": "Man sāp mugura.",
+      "ru": "У меня болит спина.",
+      "lemmas": "es sāpēt mugura"
+    },
+    {
+      "id": "lv-0108",
+      "topic": "gym",
+      "lv": "Es esmu noguris.",
+      "ru": "Я устал.",
+      "lemmas": "es būt nogurt"
+    },
+    {
+      "id": "lv-0109",
+      "topic": "gym",
+      "lv": "Man vajag atpūsties.",
+      "ru": "Мне нужно отдохнуть.",
+      "lemmas": "es vajadzēt atpūsties"
+    },
+    {
+      "id": "lv-0110",
+      "topic": "gym",
+      "lv": "Kur ir ģērbtuve?",
+      "ru": "Где раздевалка?",
+      "lemmas": "kur būt ģērbtuve"
+    },
+    {
+      "id": "lv-0111",
+      "topic": "gym",
+      "lv": "Es aizmirsu dvieli.",
+      "ru": "Я забыл полотенце.",
+      "lemmas": "es aizmirst dvielis"
+    },
+    {
+      "id": "lv-0112",
+      "topic": "gym",
+      "lv": "Šodien mēs trenējam kājas.",
+      "ru": "Сегодня мы тренируем ноги.",
+      "lemmas": "šodien mēs trenēt kāja",
+      "hints": {
+        "kājas": "ACC.PL"
+      }
+    },
+    {
+      "id": "lv-0113",
+      "topic": "gym",
+      "lv": "Tas ir smags.",
+      "ru": "Это тяжёлое.",
+      "lemmas": "tas būt smags"
+    },
+    {
+      "id": "lv-0114",
+      "topic": "gym",
+      "lv": "Es dzeru ūdeni.",
+      "ru": "Я пью воду.",
+      "lemmas": "es dzert ūdens"
+    },
+    {
+      "id": "lv-0115",
+      "topic": "gym",
+      "lv": "Palīdziet, lūdzu!",
+      "ru": "Помогите, пожалуйста!",
+      "lemmas": "palīdzēt lūdzu"
+    },
+    {
+      "id": "lv-0116",
+      "topic": "health",
+      "lv": "Man sāp galva.",
+      "ru": "У меня болит голова.",
+      "lemmas": "es sāpēt galva",
+      "hints": {
+        "galva": "F"
+      }
+    },
+    {
+      "id": "lv-0117",
+      "topic": "health",
+      "lv": "Es jūtos slikti.",
+      "ru": "Я плохо себя чувствую.",
+      "lemmas": "es justies slikti"
+    },
+    {
+      "id": "lv-0118",
+      "topic": "health",
+      "lv": "Es gribu pierakstīties pie ārsta.",
+      "ru": "Я хочу записаться к врачу.",
+      "lemmas": "es gribēt pierakstīties pie ārsts"
+    },
+    {
+      "id": "lv-0119",
+      "topic": "health",
+      "lv": "Izsauciet ātro palīdzību!",
+      "ru": "Вызовите скорую помощь!",
+      "lemmas": "izsaukt ātrs palīdzība"
+    },
+    {
+      "id": "lv-0120",
+      "topic": "health",
+      "lv": "Kur ir aptieka?",
+      "ru": "Где аптека?",
+      "lemmas": "kur būt aptieka"
+    },
+    {
+      "id": "lv-0121",
+      "topic": "health",
+      "lv": "Es esmu slims.",
+      "ru": "Я болен.",
+      "lemmas": "es būt slims"
+    },
+    {
+      "id": "lv-0122",
+      "topic": "health",
+      "lv": "Man ir temperatūra.",
+      "ru": "У меня температура.",
+      "lemmas": "es būt temperatūra"
+    },
+    {
+      "id": "lv-0123",
+      "topic": "health",
+      "lv": "Man ir alerģija.",
+      "ru": "У меня аллергия.",
+      "lemmas": "es būt alerģija"
+    },
+    {
+      "id": "lv-0124",
+      "topic": "home",
+      "lv": "Es esmu mājās.",
+      "ru": "Я дома.",
+      "lemmas": "es būt māja",
+      "hints": {
+        "mājās": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0125",
+      "topic": "home",
+      "lv": "Viņš ir mājā.",
+      "ru": "Он в доме.",
+      "lemmas": "viņš būt māja"
+    },
+    {
+      "id": "lv-0126",
+      "topic": "home",
+      "lv": "Mans draugs strādā Rīgā.",
+      "ru": "Мой друг работает в Риге.",
+      "lemmas": "mans draugs strādāt Rīga"
+    },
+    {
+      "id": "lv-0127",
+      "topic": "home",
+      "lv": "Mums ir suns.",
+      "ru": "У нас есть собака.",
+      "lemmas": "mēs būt suns"
+    },
+    {
+      "id": "lv-0128",
+      "topic": "home",
+      "lv": "Nāc šeit!",
+      "ru": "Иди сюда!",
+      "lemmas": "nākt šeit"
+    },
+    {
+      "id": "lv-0129",
+      "topic": "home",
+      "lv": "Es gatavoju vakariņas.",
+      "ru": "Я готовлю ужин.",
+      "lemmas": "es gatavot vakariņas",
+      "hints": {
+        "vakariņas": "ACC"
+      }
+    },
+    {
+      "id": "lv-0130",
+      "topic": "home",
+      "lv": "Es ēdu maizi.",
+      "ru": "Я ем хлеб.",
+      "lemmas": "es ēst maize"
+    },
+    {
+      "id": "lv-0131",
+      "topic": "home",
+      "lv": "Es gribu gulēt.",
+      "ru": "Я хочу спать.",
+      "lemmas": "es gribēt gulēt"
+    },
+    {
+      "id": "lv-0132",
+      "topic": "weather",
+      "lv": "Šodien ir ļoti auksti.",
+      "ru": "Сегодня очень холодно.",
+      "lemmas": "šodien būt ļoti auksti"
+    },
+    {
+      "id": "lv-0133",
+      "topic": "weather",
+      "lv": "Šodien ir silti.",
+      "ru": "Сегодня тепло.",
+      "lemmas": "šodien būt silti"
+    },
+    {
+      "id": "lv-0134",
+      "topic": "weather",
+      "lv": "Līst lietus.",
+      "ru": "Идёт дождь.",
+      "lemmas": "līt lietus"
+    },
+    {
+      "id": "lv-0135",
+      "topic": "weather",
+      "lv": "Laiks ir jauks.",
+      "ru": "Погода хорошая.",
+      "lemmas": "laiks būt jauks"
+    },
+    {
+      "id": "lv-0136",
+      "topic": "work",
+      "lv": "Es esmu darbā.",
+      "ru": "Я на работе.",
+      "lemmas": "es būt darbs"
+    },
+    {
+      "id": "lv-0137",
+      "topic": "work",
+      "lv": "Man ir sapulce.",
+      "ru": "У меня совещание.",
+      "lemmas": "es būt sapulce"
+    },
+    {
+      "id": "lv-0138",
+      "topic": "work",
+      "lv": "Es tev piezvanīšu.",
+      "ru": "Я тебе позвоню.",
+      "lemmas": "es tu piezvanīt"
+    },
+    {
+      "id": "lv-0139",
+      "topic": "work",
+      "lv": "Uzraksti man!",
+      "ru": "Напиши мне!",
+      "lemmas": "uzrakstīt es"
+    },
+    {
+      "id": "lv-0140",
+      "topic": "work",
+      "lv": "Kāds ir tavs telefona numurs?",
+      "ru": "Какой у тебя номер телефона?",
+      "lemmas": "kāds būt tavs telefons numurs"
+    },
+    {
+      "id": "lv-0141",
+      "topic": "work",
+      "lv": "Es piekrītu.",
+      "ru": "Я согласен.",
+      "lemmas": "es piekrist"
+    },
+    {
+      "id": "lv-0142",
+      "topic": "work",
+      "lv": "Tas ir labi.",
+      "ru": "Это хорошо.",
+      "lemmas": "tas būt labi"
+    },
+    {
+      "id": "lv-0143",
+      "topic": "work",
+      "lv": "Nav problēmu.",
+      "ru": "Нет проблем.",
+      "lemmas": "būt problēma",
+      "hints": {
+        "problēmu": "GEN.PL"
+      }
+    },
+    {
+      "id": "lv-0144",
+      "topic": "work",
+      "lv": "Es vēl domāju.",
+      "ru": "Я ещё думаю.",
+      "lemmas": "es vēl domāt"
+    },
+    {
+      "id": "lv-0145",
+      "topic": "likes",
+      "lv": "Man patīk kafija.",
+      "ru": "Мне нравится кофе.",
+      "lemmas": "es patikt kafija"
+    },
+    {
+      "id": "lv-0146",
+      "topic": "likes",
+      "lv": "Man nepatīk piens.",
+      "ru": "Мне не нравится молоко.",
+      "lemmas": "es patikt piens"
+    },
+    {
+      "id": "lv-0147",
+      "topic": "likes",
+      "lv": "Ko tu dari?",
+      "ru": "Что ты делаешь?",
+      "lemmas": "kas tu darīt"
+    },
+    {
+      "id": "lv-0148",
+      "topic": "likes",
+      "lv": "Ko tu gribi?",
+      "ru": "Чего ты хочешь?",
+      "lemmas": "kas tu gribēt"
+    },
+    {
+      "id": "lv-0149",
+      "topic": "likes",
+      "lv": "Kas notika?",
+      "ru": "Что случилось?",
+      "lemmas": "kas notikt"
+    },
+    {
+      "id": "lv-0150",
+      "topic": "likes",
+      "lv": "Pagaidiet, lūdzu!",
+      "ru": "Подождите, пожалуйста!",
+      "lemmas": "pagaidīt lūdzu"
+    }
+  ]
+}

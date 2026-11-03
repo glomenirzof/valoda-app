@@ -1,0 +1,6354 @@
+{
+ "lang": "lv",
+ "edition": "2026_4",
+ "phrases": [
+  {
+   "id": "lv-0048",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Kas tas ir?",
+   "ru": "Что это?",
+   "tokens": [
+    {
+     "s": "Kas",
+     "lemma": "kas",
+     "pos": "PRON",
+     "feats": "NOM",
+     "ru": "что; кто"
+    },
+    {
+     "s": "tas",
+     "lemma": "tas",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.M",
+     "gender": "M",
+     "ru": "тот, это"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 8,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0063",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Tas ir viss, paldies.",
+   "ru": "Это всё, спасибо.",
+   "tokens": [
+    {
+     "s": "Tas",
+     "lemma": "tas",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.M",
+     "gender": "M",
+     "ru": "тот, это"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "viss",
+     "lemma": "viss",
+     "pos": "PRON",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "весь, всё"
+    },
+    {
+     "s": "paldies",
+     "lemma": "paldies",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "спасибо"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 20,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0044",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Es nezinu.",
+   "ru": "Я не знаю.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "nezinu",
+     "lemma": "zināt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG.NEG",
+     "conj": "3",
+     "ru": "знать"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 30,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0147",
+   "lang": "lv",
+   "topic": "likes",
+   "text": "Ko tu dari?",
+   "ru": "Что ты делаешь?",
+   "tokens": [
+    {
+     "s": "Ko",
+     "lemma": "kas",
+     "pos": "PRON",
+     "feats": "ACC",
+     "ru": "что; кто"
+    },
+    {
+     "s": "tu",
+     "lemma": "tu",
+     "pos": "PRON",
+     "feats": "2.NOM.SG",
+     "ru": "ты"
+    },
+    {
+     "s": "dari",
+     "lemma": "darīt",
+     "pos": "VERB",
+     "feats": "IND.PRS.2.SG",
+     "conj": "3",
+     "ru": "делать"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 32,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0148",
+   "lang": "lv",
+   "topic": "likes",
+   "text": "Ko tu gribi?",
+   "ru": "Чего ты хочешь?",
+   "tokens": [
+    {
+     "s": "Ko",
+     "lemma": "kas",
+     "pos": "PRON",
+     "feats": "ACC",
+     "ru": "что; кто"
+    },
+    {
+     "s": "tu",
+     "lemma": "tu",
+     "pos": "PRON",
+     "feats": "2.NOM.SG",
+     "ru": "ты"
+    },
+    {
+     "s": "gribi",
+     "lemma": "gribēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.2.SG",
+     "conj": "3",
+     "ru": "хотеть"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 34,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0012",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Kā jums iet?",
+   "ru": "Как у вас дела?",
+   "tokens": [
+    {
+     "s": "Kā",
+     "lemma": "kā",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "как"
+    },
+    {
+     "s": "jums",
+     "lemma": "jūs",
+     "pos": "PRON",
+     "feats": "2.DAT.PL",
+     "ru": "вы"
+    },
+    {
+     "s": "iet",
+     "lemma": "iet",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "идти; (о делах) обстоять"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 37,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0013",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Kā tev iet?",
+   "ru": "Как у тебя дела?",
+   "tokens": [
+    {
+     "s": "Kā",
+     "lemma": "kā",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "как"
+    },
+    {
+     "s": "tev",
+     "lemma": "tu",
+     "pos": "PRON",
+     "feats": "2.DAT.SG",
+     "ru": "ты"
+    },
+    {
+     "s": "iet",
+     "lemma": "iet",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "идти; (о делах) обстоять"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 37,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0014",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Man iet labi.",
+   "ru": "У меня всё хорошо.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "iet",
+     "lemma": "iet",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "идти; (о делах) обстоять"
+    },
+    {
+     "s": "labi",
+     "lemma": "labi",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "хорошо"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 44,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0076",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Pa labi.",
+   "ru": "Направо.",
+   "tokens": [
+    {
+     "s": "Pa",
+     "lemma": "pa",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "по"
+    },
+    {
+     "s": "labi",
+     "lemma": "labi",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "хорошо"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 44,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0142",
+   "lang": "lv",
+   "topic": "work",
+   "text": "Tas ir labi.",
+   "ru": "Это хорошо.",
+   "tokens": [
+    {
+     "s": "Tas",
+     "lemma": "tas",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.M",
+     "gender": "M",
+     "ru": "тот, это"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "labi",
+     "lemma": "labi",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "хорошо"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 44,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0149",
+   "lang": "lv",
+   "topic": "likes",
+   "text": "Kas notika?",
+   "ru": "Что случилось?",
+   "tokens": [
+    {
+     "s": "Kas",
+     "lemma": "kas",
+     "pos": "PRON",
+     "feats": "NOM",
+     "ru": "что; кто"
+    },
+    {
+     "s": "notika",
+     "lemma": "notikt",
+     "pos": "VERB",
+     "feats": "IND.PST.3",
+     "conj": "1",
+     "ru": "случиться, происходить"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 61,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0092",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Ne tagad.",
+   "ru": "Не сейчас.",
+   "tokens": [
+    {
+     "s": "Ne",
+     "lemma": "ne",
+     "pos": "CCONJ",
+     "feats": "",
+     "ru": "не"
+    },
+    {
+     "s": "tagad",
+     "lemma": "tagad",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сейчас"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 64,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0128",
+   "lang": "lv",
+   "topic": "home",
+   "text": "Nāc šeit!",
+   "ru": "Иди сюда!",
+   "tokens": [
+    {
+     "s": "Nāc",
+     "lemma": "nākt",
+     "pos": "VERB",
+     "feats": "IMP.2.SG",
+     "conj": "1",
+     "ru": "идти (сюда), приходить"
+    },
+    {
+     "s": "šeit",
+     "lemma": "šeit",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "здесь, сюда"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 67,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0010",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Nekas.",
+   "ru": "Ничего. / Не за что.",
+   "tokens": [
+    {
+     "s": "Nekas",
+     "lemma": "nekas",
+     "pos": "PRON",
+     "feats": "NOM.NEG",
+     "ru": "ничего, ничто"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 77,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0037",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Es nesaprotu.",
+   "ru": "Я не понимаю.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "nesaprotu",
+     "lemma": "saprast",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG.NEG",
+     "conj": "1",
+     "ru": "понимать, понять"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 78,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0038",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Es saprotu.",
+   "ru": "Я понимаю.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "saprotu",
+     "lemma": "saprast",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "1",
+     "ru": "понимать, понять"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 78,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0091",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Man nav laika.",
+   "ru": "У меня нет времени.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "nav",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3.NEG",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "laika",
+     "lemma": "laiks",
+     "pos": "NOUN",
+     "feats": "GEN.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "время; погода"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 81,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0042",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Kā to saka latviski?",
+   "ru": "Как это сказать по-латышски?",
+   "tokens": [
+    {
+     "s": "Kā",
+     "lemma": "kā",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "как"
+    },
+    {
+     "s": "to",
+     "lemma": "tas",
+     "pos": "PRON",
+     "feats": "3.ACC.SG.M",
+     "gender": "M",
+     "ru": "тот, это"
+    },
+    {
+     "s": "saka",
+     "lemma": "sacīt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "3",
+     "ru": "говорить, сказать"
+    },
+    {
+     "s": "latviski",
+     "lemma": "latviski",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "по-латышски"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 87,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0031",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Cik tev gadu?",
+   "ru": "Сколько тебе лет?",
+   "tokens": [
+    {
+     "s": "Cik",
+     "lemma": "cik",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сколько"
+    },
+    {
+     "s": "tev",
+     "lemma": "tu",
+     "pos": "PRON",
+     "feats": "2.DAT.SG",
+     "ru": "ты"
+    },
+    {
+     "s": "gadu",
+     "lemma": "gads",
+     "pos": "NOUN",
+     "feats": "GEN.PL.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "год"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 94,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0072",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Es eju mājās.",
+   "ru": "Я иду домой.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "eju",
+     "lemma": "iet",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "Nekārtns",
+     "ru": "идти; (о делах) обстоять"
+    },
+    {
+     "s": "mājās",
+     "lemma": "māja",
+     "pos": "NOUN",
+     "feats": "LOC.PL.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "дом (mājās — дома / домой)"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 101,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0124",
+   "lang": "lv",
+   "topic": "home",
+   "text": "Es esmu mājās.",
+   "ru": "Я дома.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "esmu",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "mājās",
+     "lemma": "māja",
+     "pos": "NOUN",
+     "feats": "LOC.PL.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "дом (mājās — дома / домой)"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 101,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0125",
+   "lang": "lv",
+   "topic": "home",
+   "text": "Viņš ir mājā.",
+   "ru": "Он в доме.",
+   "tokens": [
+    {
+     "s": "Viņš",
+     "lemma": "viņš",
+     "pos": "PRON",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "он"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "mājā",
+     "lemma": "māja",
+     "pos": "NOUN",
+     "feats": "LOC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "дом (mājās — дома / домой)"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 101,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0071",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Es eju uz darbu.",
+   "ru": "Я иду на работу.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "eju",
+     "lemma": "iet",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "Nekārtns",
+     "ru": "идти; (о делах) обстоять"
+    },
+    {
+     "s": "uz",
+     "lemma": "uz",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "на, в (куда); к"
+    },
+    {
+     "s": "darbu",
+     "lemma": "darbs",
+     "pos": "NOUN",
+     "feats": "ACC.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "работа"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 103,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0136",
+   "lang": "lv",
+   "topic": "work",
+   "text": "Es esmu darbā.",
+   "ru": "Я на работе.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "esmu",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "darbā",
+     "lemma": "darbs",
+     "pos": "NOUN",
+     "feats": "LOC.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "работа"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 103,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0007",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Liels paldies!",
+   "ru": "Большое спасибо!",
+   "tokens": [
+    {
+     "s": "Liels",
+     "lemma": "liels",
+     "pos": "ADJ",
+     "feats": "NOM.SG.M.INDEF",
+     "ru": "большой"
+    },
+    {
+     "s": "paldies",
+     "lemma": "paldies",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "спасибо"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 108,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0144",
+   "lang": "lv",
+   "topic": "work",
+   "text": "Es vēl domāju.",
+   "ru": "Я ещё думаю.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "vēl",
+     "lemma": "vēl",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "ещё"
+    },
+    {
+     "s": "domāju",
+     "lemma": "domāt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "думать"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 109,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0045",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Vai jūs varat palīdzēt?",
+   "ru": "Вы можете помочь?",
+   "tokens": [
+    {
+     "s": "Vai",
+     "lemma": "vai",
+     "pos": "CCONJ",
+     "feats": "",
+     "ru": "ли (вопрос); или"
+    },
+    {
+     "s": "jūs",
+     "lemma": "jūs",
+     "pos": "PRON",
+     "feats": "2.NOM.PL",
+     "ru": "вы"
+    },
+    {
+     "s": "varat",
+     "lemma": "varēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.2.PL",
+     "conj": "3",
+     "ru": "мочь"
+    },
+    {
+     "s": "palīdzēt",
+     "lemma": "palīdzēt",
+     "pos": "VERB",
+     "feats": "INF",
+     "conj": "3",
+     "ru": "помочь"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 120,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0046",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Vai tu vari man palīdzēt?",
+   "ru": "Ты можешь мне помочь?",
+   "tokens": [
+    {
+     "s": "Vai",
+     "lemma": "vai",
+     "pos": "CCONJ",
+     "feats": "",
+     "ru": "ли (вопрос); или"
+    },
+    {
+     "s": "tu",
+     "lemma": "tu",
+     "pos": "PRON",
+     "feats": "2.NOM.SG",
+     "ru": "ты"
+    },
+    {
+     "s": "vari",
+     "lemma": "varēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.2.SG",
+     "conj": "3",
+     "ru": "мочь"
+    },
+    {
+     "s": "man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "palīdzēt",
+     "lemma": "palīdzēt",
+     "pos": "VERB",
+     "feats": "INF",
+     "conj": "3",
+     "ru": "помочь"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 120,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0115",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Palīdziet, lūdzu!",
+   "ru": "Помогите, пожалуйста!",
+   "tokens": [
+    {
+     "s": "Palīdziet",
+     "lemma": "palīdzēt",
+     "pos": "VERB",
+     "feats": "IMP.2.PL",
+     "conj": "3",
+     "ru": "помочь"
+    },
+    {
+     "s": "lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 120,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0011",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Viss kārtībā.",
+   "ru": "Всё в порядке.",
+   "tokens": [
+    {
+     "s": "Viss",
+     "lemma": "viss",
+     "pos": "PRON",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "весь, всё"
+    },
+    {
+     "s": "kārtībā",
+     "lemma": "kārtība",
+     "pos": "NOUN",
+     "feats": "LOC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "порядок"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 137,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0150",
+   "lang": "lv",
+   "topic": "likes",
+   "text": "Pagaidiet, lūdzu!",
+   "ru": "Подождите, пожалуйста!",
+   "tokens": [
+    {
+     "s": "Pagaidiet",
+     "lemma": "pagaidīt",
+     "pos": "VERB",
+     "feats": "IMP.2.PL",
+     "conj": "3",
+     "ru": "подождать"
+    },
+    {
+     "s": "lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 144,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0021",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Kā jūs sauc?",
+   "ru": "Как вас зовут?",
+   "tokens": [
+    {
+     "s": "Kā",
+     "lemma": "kā",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "как"
+    },
+    {
+     "s": "jūs",
+     "lemma": "jūs",
+     "pos": "PRON",
+     "feats": "2.ACC.PL",
+     "ru": "вы"
+    },
+    {
+     "s": "sauc",
+     "lemma": "saukt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "1",
+     "ru": "звать, называть"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 147,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0022",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Kā tevi sauc?",
+   "ru": "Как тебя зовут?",
+   "tokens": [
+    {
+     "s": "Kā",
+     "lemma": "kā",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "как"
+    },
+    {
+     "s": "tevi",
+     "lemma": "tu",
+     "pos": "PRON",
+     "feats": "2.ACC.SG",
+     "ru": "ты"
+    },
+    {
+     "s": "sauc",
+     "lemma": "saukt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "1",
+     "ru": "звать, называть"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 147,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0060",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Es tikai skatos.",
+   "ru": "Я просто смотрю.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "tikai",
+     "lemma": "tikai",
+     "pos": "PART",
+     "feats": "",
+     "ru": "только, просто"
+    },
+    {
+     "s": "skatos",
+     "lemma": "skatīties",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "3",
+     "ru": "смотреть"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 162,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0029",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Es strādāju no mājām.",
+   "ru": "Я работаю из дома.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "strādāju",
+     "lemma": "strādāt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "работать"
+    },
+    {
+     "s": "no",
+     "lemma": "no",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "из, от, с"
+    },
+    {
+     "s": "mājām",
+     "lemma": "māja",
+     "pos": "NOUN",
+     "feats": "DAT.PL.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "дом (mājās — дома / домой)"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 168,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0126",
+   "lang": "lv",
+   "topic": "home",
+   "text": "Mans draugs strādā Rīgā.",
+   "ru": "Мой друг работает в Риге.",
+   "tokens": [
+    {
+     "s": "Mans",
+     "lemma": "mans",
+     "pos": "PRON",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "мой"
+    },
+    {
+     "s": "draugs",
+     "lemma": "draugs",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "друг"
+    },
+    {
+     "s": "strādā",
+     "lemma": "strādāt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "2",
+     "ru": "работать"
+    },
+    {
+     "s": "Rīgā",
+     "lemma": "Rīga",
+     "pos": "NOUN",
+     "feats": "LOC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "Рига"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 168,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0009",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Atvainojiet!",
+   "ru": "Извините!",
+   "tokens": [
+    {
+     "s": "Atvainojiet",
+     "lemma": "atvainot",
+     "pos": "VERB",
+     "feats": "IMP.2.PL",
+     "conj": "2",
+     "ru": "извинить, простить"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 171,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0058",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Es ņemšu šo.",
+   "ru": "Я возьму это.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "ņemšu",
+     "lemma": "ņemt",
+     "pos": "VERB",
+     "feats": "IND.FUT.1.SG",
+     "conj": "1",
+     "ru": "брать, взять"
+    },
+    {
+     "s": "šo",
+     "lemma": "šis",
+     "pos": "PRON",
+     "feats": "3.ACC.SG.M",
+     "gender": "M",
+     "ru": "этот"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 182,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0023",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Es dzīvoju Rīgā.",
+   "ru": "Я живу в Риге.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "dzīvoju",
+     "lemma": "dzīvot",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "жить"
+    },
+    {
+     "s": "Rīgā",
+     "lemma": "Rīga",
+     "pos": "NOUN",
+     "feats": "LOC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "Рига"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 205,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0024",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Es dzīvoju Latvijā.",
+   "ru": "Я живу в Латвии.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "dzīvoju",
+     "lemma": "dzīvot",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "жить"
+    },
+    {
+     "s": "Latvijā",
+     "lemma": "Latvija",
+     "pos": "NOUN",
+     "feats": "LOC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "Латвия"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 205,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0034",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Kur tu dzīvo?",
+   "ru": "Где ты живёшь?",
+   "tokens": [
+    {
+     "s": "Kur",
+     "lemma": "kur",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "где, куда"
+    },
+    {
+     "s": "tu",
+     "lemma": "tu",
+     "pos": "PRON",
+     "feats": "2.NOM.SG",
+     "ru": "ты"
+    },
+    {
+     "s": "dzīvo",
+     "lemma": "dzīvot",
+     "pos": "VERB",
+     "feats": "IND.PRS.2.SG",
+     "conj": "2",
+     "ru": "жить"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 205,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0103",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Vai es varu izmantot šo?",
+   "ru": "Можно мне воспользоваться этим?",
+   "tokens": [
+    {
+     "s": "Vai",
+     "lemma": "vai",
+     "pos": "CCONJ",
+     "feats": "",
+     "ru": "ли (вопрос); или"
+    },
+    {
+     "s": "es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "varu",
+     "lemma": "varēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "3",
+     "ru": "мочь"
+    },
+    {
+     "s": "izmantot",
+     "lemma": "izmantot",
+     "pos": "VERB",
+     "feats": "INF",
+     "conj": "2",
+     "ru": "использовать, воспользоваться"
+    },
+    {
+     "s": "šo",
+     "lemma": "šis",
+     "pos": "PRON",
+     "feats": "3.ACC.SG.M",
+     "gender": "M",
+     "ru": "этот"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 224,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0135",
+   "lang": "lv",
+   "topic": "weather",
+   "text": "Laiks ir jauks.",
+   "ru": "Погода хорошая.",
+   "tokens": [
+    {
+     "s": "Laiks",
+     "lemma": "laiks",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "время; погода"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "jauks",
+     "lemma": "jauks",
+     "pos": "ADJ",
+     "feats": "NOM.SG.M.INDEF",
+     "ru": "приятный, хороший"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 233,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0033",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Mana ģimene dzīvo Rīgā.",
+   "ru": "Моя семья живёт в Риге.",
+   "tokens": [
+    {
+     "s": "Mana",
+     "lemma": "mana",
+     "pos": "PRON",
+     "feats": "NOM.SG.F",
+     "decl": "1",
+     "gender": "M",
+     "ru": "моя"
+    },
+    {
+     "s": "ģimene",
+     "lemma": "ģimene",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "семья"
+    },
+    {
+     "s": "dzīvo",
+     "lemma": "dzīvot",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "2",
+     "ru": "жить"
+    },
+    {
+     "s": "Rīgā",
+     "lemma": "Rīga",
+     "pos": "NOUN",
+     "feats": "LOC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "Рига"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 240,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0104",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Vēl vienu reizi!",
+   "ru": "Ещё один раз!",
+   "tokens": [
+    {
+     "s": "Vēl",
+     "lemma": "vēl",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "ещё"
+    },
+    {
+     "s": "vienu",
+     "lemma": "viens",
+     "pos": "NUM",
+     "feats": "ACC.SG.F.INDEF",
+     "ru": "один"
+    },
+    {
+     "s": "reizi",
+     "lemma": "reize",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "раз"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 249,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0105",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Cik reizes?",
+   "ru": "Сколько раз?",
+   "tokens": [
+    {
+     "s": "Cik",
+     "lemma": "cik",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сколько"
+    },
+    {
+     "s": "reizes",
+     "lemma": "reize",
+     "pos": "NOUN",
+     "feats": "ACC.PL.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "раз"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 249,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0143",
+   "lang": "lv",
+   "topic": "work",
+   "text": "Nav problēmu.",
+   "ru": "Нет проблем.",
+   "tokens": [
+    {
+     "s": "Nav",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3.NEG",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "problēmu",
+     "lemma": "problēma",
+     "pos": "NOUN",
+     "feats": "GEN.PL.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "проблема"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 303,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0095",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Pēc stundas.",
+   "ru": "Через час.",
+   "tokens": [
+    {
+     "s": "Pēc",
+     "lemma": "pēc",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "через, после"
+    },
+    {
+     "s": "stundas",
+     "lemma": "stunda",
+     "pos": "NOUN",
+     "feats": "GEN.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "час"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 315,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0057",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Vai jums ir ūdens?",
+   "ru": "У вас есть вода?",
+   "tokens": [
+    {
+     "s": "Vai",
+     "lemma": "vai",
+     "pos": "CCONJ",
+     "feats": "",
+     "ru": "ли (вопрос); или"
+    },
+    {
+     "s": "jums",
+     "lemma": "jūs",
+     "pos": "PRON",
+     "feats": "2.DAT.PL",
+     "ru": "вы"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "ūdens",
+     "lemma": "ūdens",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "2",
+     "gender": "M",
+     "ru": "вода"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 318,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0131",
+   "lang": "lv",
+   "topic": "home",
+   "text": "Es gribu gulēt.",
+   "ru": "Я хочу спать.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "gribu",
+     "lemma": "gribēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "3",
+     "ru": "хотеть"
+    },
+    {
+     "s": "gulēt",
+     "lemma": "gulēt",
+     "pos": "VERB",
+     "feats": "INF",
+     "conj": "3",
+     "ru": "спать"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 320,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0041",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Ko tas nozīmē?",
+   "ru": "Что это значит?",
+   "tokens": [
+    {
+     "s": "Ko",
+     "lemma": "kas",
+     "pos": "PRON",
+     "feats": "ACC",
+     "ru": "что; кто"
+    },
+    {
+     "s": "tas",
+     "lemma": "tas",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.M",
+     "gender": "M",
+     "ru": "тот, это"
+    },
+    {
+     "s": "nozīmē",
+     "lemma": "nozīmēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "2",
+     "ru": "значить, означать"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 328,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0138",
+   "lang": "lv",
+   "topic": "work",
+   "text": "Es tev piezvanīšu.",
+   "ru": "Я тебе позвоню.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "tev",
+     "lemma": "tu",
+     "pos": "PRON",
+     "feats": "2.DAT.SG",
+     "ru": "ты"
+    },
+    {
+     "s": "piezvanīšu",
+     "lemma": "piezvanīt",
+     "pos": "VERB",
+     "feats": "IND.FUT.1.SG",
+     "conj": "3",
+     "ru": "позвонить"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 347,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0064",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Es gribu ēst.",
+   "ru": "Я хочу есть.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "gribu",
+     "lemma": "gribēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "3",
+     "ru": "хотеть"
+    },
+    {
+     "s": "ēst",
+     "lemma": "ēst",
+     "pos": "VERB",
+     "feats": "INF",
+     "conj": "1",
+     "ru": "есть, кушать"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 362,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0089",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Rīt es strādāju.",
+   "ru": "Завтра я работаю.",
+   "tokens": [
+    {
+     "s": "Rīt",
+     "lemma": "rīt",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "завтра"
+    },
+    {
+     "s": "es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "strādāju",
+     "lemma": "strādāt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "работать"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 373,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0094",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Tiekamies rīt!",
+   "ru": "Увидимся завтра!",
+   "tokens": [
+    {
+     "s": "Tiekamies",
+     "lemma": "tikties",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.PL",
+     "conj": "1",
+     "ru": "встречаться"
+    },
+    {
+     "s": "rīt",
+     "lemma": "rīt",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "завтра"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 373,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0026",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Es mazliet runāju latviski.",
+   "ru": "Я немного говорю по-латышски.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "mazliet",
+     "lemma": "mazliet",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "немного"
+    },
+    {
+     "s": "runāju",
+     "lemma": "runāt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "говорить"
+    },
+    {
+     "s": "latviski",
+     "lemma": "latviski",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "по-латышски"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 377,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0093",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Līdz rītam!",
+   "ru": "До завтра! (до утра)",
+   "tokens": [
+    {
+     "s": "Līdz",
+     "lemma": "līdz",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "до"
+    },
+    {
+     "s": "rītam",
+     "lemma": "rīts",
+     "pos": "NOUN",
+     "feats": "DAT.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "утро"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 393,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0036",
+   "lang": "lv",
+   "topic": "me",
+   "text": "No kurienes jūs esat?",
+   "ru": "Откуда вы?",
+   "tokens": [
+    {
+     "s": "No",
+     "lemma": "no",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "из, от, с"
+    },
+    {
+     "s": "kurienes",
+     "lemma": "kuriene",
+     "pos": "NOUN",
+     "feats": "GEN.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "откуда (no kurienes)"
+    },
+    {
+     "s": "jūs",
+     "lemma": "jūs",
+     "pos": "PRON",
+     "feats": "2.NOM.PL",
+     "ru": "вы"
+    },
+    {
+     "s": "esat",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.2.PL",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 442,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0028",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Es strādāju birojā.",
+   "ru": "Я работаю в офисе.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "strādāju",
+     "lemma": "strādāt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "работать"
+    },
+    {
+     "s": "birojā",
+     "lemma": "birojs",
+     "pos": "NOUN",
+     "feats": "LOC.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "офис, бюро"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 465,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0140",
+   "lang": "lv",
+   "topic": "work",
+   "text": "Kāds ir tavs telefona numurs?",
+   "ru": "Какой у тебя номер телефона?",
+   "tokens": [
+    {
+     "s": "Kāds",
+     "lemma": "kāds",
+     "pos": "PRON",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "какой"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "tavs",
+     "lemma": "tavs",
+     "pos": "PRON",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "твой"
+    },
+    {
+     "s": "telefona",
+     "lemma": "telefons",
+     "pos": "NOUN",
+     "feats": "GEN.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "телефон"
+    },
+    {
+     "s": "numurs",
+     "lemma": "numurs",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "номер"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 476,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0049",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Cik tas maksā?",
+   "ru": "Сколько это стоит?",
+   "tokens": [
+    {
+     "s": "Cik",
+     "lemma": "cik",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сколько"
+    },
+    {
+     "s": "tas",
+     "lemma": "tas",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.M",
+     "gender": "M",
+     "ru": "тот, это"
+    },
+    {
+     "s": "maksā",
+     "lemma": "maksāt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "2",
+     "ru": "платить; стоить"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 482,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0102",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Vai šis ir brīvs?",
+   "ru": "Это свободно?",
+   "tokens": [
+    {
+     "s": "Vai",
+     "lemma": "vai",
+     "pos": "CCONJ",
+     "feats": "",
+     "ru": "ли (вопрос); или"
+    },
+    {
+     "s": "šis",
+     "lemma": "šis",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.M",
+     "gender": "M",
+     "ru": "этот"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "brīvs",
+     "lemma": "brīvs",
+     "pos": "ADJ",
+     "feats": "NOM.SG.M.INDEF",
+     "ru": "свободный"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 487,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0065",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Es gribu dzert.",
+   "ru": "Я хочу пить.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "gribu",
+     "lemma": "gribēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "3",
+     "ru": "хотеть"
+    },
+    {
+     "s": "dzert",
+     "lemma": "dzert",
+     "pos": "VERB",
+     "feats": "INF",
+     "conj": "1",
+     "ru": "пить"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 490,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0114",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Es dzeru ūdeni.",
+   "ru": "Я пью воду.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "dzeru",
+     "lemma": "dzert",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "1",
+     "ru": "пить"
+    },
+    {
+     "s": "ūdeni",
+     "lemma": "ūdens",
+     "pos": "NOUN",
+     "feats": "ACC.SG.M",
+     "decl": "2",
+     "gender": "M",
+     "ru": "вода"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 490,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0078",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Vai tas ir tālu?",
+   "ru": "Это далеко?",
+   "tokens": [
+    {
+     "s": "Vai",
+     "lemma": "vai",
+     "pos": "CCONJ",
+     "feats": "",
+     "ru": "ли (вопрос); или"
+    },
+    {
+     "s": "tas",
+     "lemma": "tas",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.M",
+     "gender": "M",
+     "ru": "тот, это"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "tālu",
+     "lemma": "tālu",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "далеко"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 497,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0141",
+   "lang": "lv",
+   "topic": "work",
+   "text": "Es piekrītu.",
+   "ru": "Я согласен.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "piekrītu",
+     "lemma": "piekrist",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "1",
+     "ru": "согласиться"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 508,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0015",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Priecājos iepazīties!",
+   "ru": "Рад познакомиться!",
+   "tokens": [
+    {
+     "s": "Priecājos",
+     "lemma": "priecāties",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "радоваться"
+    },
+    {
+     "s": "iepazīties",
+     "lemma": "iepazīties",
+     "pos": "VERB",
+     "feats": "INF",
+     "conj": "1",
+     "ru": "познакомиться"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 514,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0032",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Man ir brālis un māsa.",
+   "ru": "У меня есть брат и сестра.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "brālis",
+     "lemma": "brālis",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "2",
+     "gender": "M",
+     "ru": "брат"
+    },
+    {
+     "s": "un",
+     "lemma": "un",
+     "pos": "CCONJ",
+     "feats": "",
+     "ru": "и"
+    },
+    {
+     "s": "māsa",
+     "lemma": "māsa",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "сестра"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 552,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0127",
+   "lang": "lv",
+   "topic": "home",
+   "text": "Mums ir suns.",
+   "ru": "У нас есть собака.",
+   "tokens": [
+    {
+     "s": "Mums",
+     "lemma": "mēs",
+     "pos": "PRON",
+     "feats": "1.DAT.PL",
+     "ru": "мы"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "suns",
+     "lemma": "suns",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "2",
+     "gender": "M",
+     "ru": "собака"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 574,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0117",
+   "lang": "lv",
+   "topic": "health",
+   "text": "Es jūtos slikti.",
+   "ru": "Я плохо себя чувствую.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "jūtos",
+     "lemma": "justies",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "1",
+     "ru": "чувствовать себя"
+    },
+    {
+     "s": "slikti",
+     "lemma": "slikti",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "плохо"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 598,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0020",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Uz tikšanos!",
+   "ru": "До встречи!",
+   "tokens": [
+    {
+     "s": "Uz",
+     "lemma": "uz",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "на, в (куда); к"
+    },
+    {
+     "s": "tikšanos",
+     "lemma": "tikšanās",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "Atgriezenisks",
+     "gender": "F",
+     "ru": "встреча"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 615,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0050",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Es gribu kafiju.",
+   "ru": "Я хочу кофе.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "gribu",
+     "lemma": "gribēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "3",
+     "ru": "хотеть"
+    },
+    {
+     "s": "kafiju",
+     "lemma": "kafija",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "кофе"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 666,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0051",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Vienu kafiju, lūdzu.",
+   "ru": "Один кофе, пожалуйста.",
+   "tokens": [
+    {
+     "s": "Vienu",
+     "lemma": "viens",
+     "pos": "NUM",
+     "feats": "ACC.SG.F.INDEF",
+     "ru": "один"
+    },
+    {
+     "s": "kafiju",
+     "lemma": "kafija",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "кофе"
+    },
+    {
+     "s": "lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 666,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0145",
+   "lang": "lv",
+   "topic": "likes",
+   "text": "Man patīk kafija.",
+   "ru": "Мне нравится кофе.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "patīk",
+     "lemma": "patikt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "1",
+     "ru": "нравиться"
+    },
+    {
+     "s": "kafija",
+     "lemma": "kafija",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "кофе"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 666,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0113",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Tas ir smags.",
+   "ru": "Это тяжёлое.",
+   "tokens": [
+    {
+     "s": "Tas",
+     "lemma": "tas",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.M",
+     "gender": "M",
+     "ru": "тот, это"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "smags",
+     "lemma": "smags",
+     "pos": "ADJ",
+     "feats": "NOM.SG.M.INDEF",
+     "ru": "тяжёлый"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 744,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0084",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Es braucu uz veikalu.",
+   "ru": "Я еду в магазин.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "braucu",
+     "lemma": "braukt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "1",
+     "ru": "ехать"
+    },
+    {
+     "s": "uz",
+     "lemma": "uz",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "на, в (куда); к"
+    },
+    {
+     "s": "veikalu",
+     "lemma": "veikals",
+     "pos": "NOUN",
+     "feats": "ACC.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "магазин"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 785,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0085",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Mēs ejam uz veikalu.",
+   "ru": "Мы идём в магазин.",
+   "tokens": [
+    {
+     "s": "Mēs",
+     "lemma": "mēs",
+     "pos": "PRON",
+     "feats": "1.NOM.PL",
+     "ru": "мы"
+    },
+    {
+     "s": "ejam",
+     "lemma": "iet",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.PL",
+     "conj": "Nekārtns",
+     "ru": "идти; (о делах) обстоять"
+    },
+    {
+     "s": "uz",
+     "lemma": "uz",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "на, в (куда); к"
+    },
+    {
+     "s": "veikalu",
+     "lemma": "veikals",
+     "pos": "NOUN",
+     "feats": "ACC.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "магазин"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 785,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0107",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Man sāp mugura.",
+   "ru": "У меня болит спина.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "sāp",
+     "lemma": "sāpēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "3",
+     "ru": "болеть"
+    },
+    {
+     "s": "mugura",
+     "lemma": "mugura",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "спина"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 801,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0116",
+   "lang": "lv",
+   "topic": "health",
+   "text": "Man sāp galva.",
+   "ru": "У меня болит голова.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "sāp",
+     "lemma": "sāpēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "3",
+     "ru": "болеть"
+    },
+    {
+     "s": "galva",
+     "lemma": "galva",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "голова"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 801,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0099",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Es esmu aizņemts.",
+   "ru": "Я занят.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "esmu",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "aizņemts",
+     "lemma": "aizņemt",
+     "pos": "VERB",
+     "feats": "PTCP.PST.NOM.SG.M.INDEF.PASS",
+     "conj": "1",
+     "ru": "занять (aizņemts — занят)"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 827,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0047",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Uzrakstiet, lūdzu!",
+   "ru": "Напишите, пожалуйста!",
+   "tokens": [
+    {
+     "s": "Uzrakstiet",
+     "lemma": "uzrakstīt",
+     "pos": "VERB",
+     "feats": "IMP.2.PL",
+     "conj": "3",
+     "ru": "написать"
+    },
+    {
+     "s": "lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 865,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0139",
+   "lang": "lv",
+   "topic": "work",
+   "text": "Uzraksti man!",
+   "ru": "Напиши мне!",
+   "tokens": [
+    {
+     "s": "Uzraksti",
+     "lemma": "uzrakstīt",
+     "pos": "VERB",
+     "feats": "IMP.2.SG",
+     "conj": "3",
+     "ru": "написать"
+    },
+    {
+     "s": "man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 865,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0019",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Veiksmi!",
+   "ru": "Удачи!",
+   "tokens": [
+    {
+     "s": "Veiksmi",
+     "lemma": "veiksme",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "удача"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 884,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0096",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Es atnākšu vēlāk.",
+   "ru": "Я приду позже.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "atnākšu",
+     "lemma": "atnākt",
+     "pos": "VERB",
+     "feats": "IND.FUT.1.SG",
+     "conj": "1",
+     "ru": "прийти"
+    },
+    {
+     "s": "vēlāk",
+     "lemma": "vēlu",
+     "pos": "ADV",
+     "feats": "CMP",
+     "ru": "поздно (vēlāk — позже)"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 892,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0035",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Es dzīvoju centrā.",
+   "ru": "Я живу в центре.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "dzīvoju",
+     "lemma": "dzīvot",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "жить"
+    },
+    {
+     "s": "centrā",
+     "lemma": "centrs",
+     "pos": "NOUN",
+     "feats": "LOC.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "центр"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 903,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0079",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Tas ir tuvu.",
+   "ru": "Это близко.",
+   "tokens": [
+    {
+     "s": "Tas",
+     "lemma": "tas",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.M",
+     "gender": "M",
+     "ru": "тот, это"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "tuvu",
+     "lemma": "tuvu",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "близко"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 909,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0119",
+   "lang": "lv",
+   "topic": "health",
+   "text": "Izsauciet ātro palīdzību!",
+   "ru": "Вызовите скорую помощь!",
+   "tokens": [
+    {
+     "s": "Izsauciet",
+     "lemma": "izsaukt",
+     "pos": "VERB",
+     "feats": "IMP.2.PL",
+     "conj": "1",
+     "ru": "вызвать"
+    },
+    {
+     "s": "ātro",
+     "lemma": "ātrs",
+     "pos": "ADJ",
+     "feats": "ACC.SG.F.DEF",
+     "ru": "быстрый (ātrā palīdzība — скорая помощь)"
+    },
+    {
+     "s": "palīdzību",
+     "lemma": "palīdzība",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "помощь"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 942,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0087",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Cik ir pulkstenis?",
+   "ru": "Который час?",
+   "tokens": [
+    {
+     "s": "Cik",
+     "lemma": "cik",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сколько"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "pulkstenis",
+     "lemma": "pulkstenis",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "2",
+     "gender": "M",
+     "ru": "часы (который час)"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 951,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0040",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Lūdzu, atkārtojiet.",
+   "ru": "Пожалуйста, повторите.",
+   "tokens": [
+    {
+     "s": "Lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    },
+    {
+     "s": "atkārtojiet",
+     "lemma": "atkārtot",
+     "pos": "VERB",
+     "feats": "IMP.2.PL",
+     "conj": "2",
+     "ru": "повторить"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 966,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0118",
+   "lang": "lv",
+   "topic": "health",
+   "text": "Es gribu pierakstīties pie ārsta.",
+   "ru": "Я хочу записаться к врачу.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "gribu",
+     "lemma": "gribēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "3",
+     "ru": "хотеть"
+    },
+    {
+     "s": "pierakstīties",
+     "lemma": "pierakstīties",
+     "pos": "VERB",
+     "feats": "INF",
+     "conj": "3",
+     "ru": "записаться"
+    },
+    {
+     "s": "pie",
+     "lemma": "pie",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "у, к"
+    },
+    {
+     "s": "ārsta",
+     "lemma": "ārsts",
+     "pos": "NOUN",
+     "feats": "GEN.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "врач"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1009,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0070",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Kur ir tualete?",
+   "ru": "Где туалет?",
+   "tokens": [
+    {
+     "s": "Kur",
+     "lemma": "kur",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "где, куда"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "tualete",
+     "lemma": "tualete",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "туалет"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1081,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0109",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Man vajag atpūsties.",
+   "ru": "Мне нужно отдохнуть.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "vajag",
+     "lemma": "vajadzēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "3",
+     "ru": "быть нужным (man vajag — мне нужно)"
+    },
+    {
+     "s": "atpūsties",
+     "lemma": "atpūsties",
+     "pos": "VERB",
+     "feats": "INF",
+     "conj": "1",
+     "ru": "отдохнуть"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1180,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0081",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Vienu biļeti uz Jūrmalu, lūdzu.",
+   "ru": "Один билет в Юрмалу, пожалуйста.",
+   "tokens": [
+    {
+     "s": "Vienu",
+     "lemma": "viens",
+     "pos": "NUM",
+     "feats": "ACC.SG.F.INDEF",
+     "ru": "один"
+    },
+    {
+     "s": "biļeti",
+     "lemma": "biļete",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "билет"
+    },
+    {
+     "s": "uz",
+     "lemma": "uz",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "на, в (куда); к"
+    },
+    {
+     "s": "Jūrmalu",
+     "lemma": "jūrmala",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "Юрмала"
+    },
+    {
+     "s": "lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1220,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0052",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Melnu tēju, lūdzu.",
+   "ru": "Чёрный чай, пожалуйста.",
+   "tokens": [
+    {
+     "s": "Melnu",
+     "lemma": "melns",
+     "pos": "ADJ",
+     "feats": "ACC.SG.F.INDEF",
+     "ru": "чёрный"
+    },
+    {
+     "s": "tēju",
+     "lemma": "tēja",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "чай"
+    },
+    {
+     "s": "lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1236,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0054",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Vai var maksāt ar karti?",
+   "ru": "Можно заплатить картой?",
+   "tokens": [
+    {
+     "s": "Vai",
+     "lemma": "vai",
+     "pos": "CCONJ",
+     "feats": "",
+     "ru": "ли (вопрос); или"
+    },
+    {
+     "s": "var",
+     "lemma": "varēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "3",
+     "ru": "мочь"
+    },
+    {
+     "s": "maksāt",
+     "lemma": "maksāt",
+     "pos": "VERB",
+     "feats": "INF",
+     "conj": "2",
+     "ru": "платить; стоить"
+    },
+    {
+     "s": "ar",
+     "lemma": "ar",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "с, (чем) на"
+    },
+    {
+     "s": "karti",
+     "lemma": "karte",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "карта (банковская)"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1263,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0073",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Es braucu ar autobusu.",
+   "ru": "Я еду на автобусе.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "braucu",
+     "lemma": "braukt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "1",
+     "ru": "ехать"
+    },
+    {
+     "s": "ar",
+     "lemma": "ar",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "с, (чем) на"
+    },
+    {
+     "s": "autobusu",
+     "lemma": "autobuss",
+     "pos": "NOUN",
+     "feats": "ACC.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "автобус"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1281,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0090",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Vakar es biju mājās.",
+   "ru": "Вчера я был дома.",
+   "tokens": [
+    {
+     "s": "Vakar",
+     "lemma": "vakar",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "вчера"
+    },
+    {
+     "s": "es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "biju",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PST.1.SG",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "mājās",
+     "lemma": "māja",
+     "pos": "NOUN",
+     "feats": "LOC.PL.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "дом (mājās — дома / домой)"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1295,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0101",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Vakar es biju trenažieru zālē.",
+   "ru": "Вчера я был в тренажёрном зале.",
+   "tokens": [
+    {
+     "s": "Vakar",
+     "lemma": "vakar",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "вчера"
+    },
+    {
+     "s": "es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "biju",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PST.1.SG",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "trenažieru",
+     "lemma": "trenažieris",
+     "pos": "NOUN",
+     "feats": "GEN.PL.M",
+     "decl": "2",
+     "gender": "M",
+     "ru": "тренажёр"
+    },
+    {
+     "s": "zālē",
+     "lemma": "zāle",
+     "pos": "NOUN",
+     "feats": "LOC.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "зал"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1295,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0069",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Kur ir stacija?",
+   "ru": "Где вокзал?",
+   "tokens": [
+    {
+     "s": "Kur",
+     "lemma": "kur",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "где, куда"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "stacija",
+     "lemma": "stacija",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "вокзал, станция"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1370,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0129",
+   "lang": "lv",
+   "topic": "home",
+   "text": "Es gatavoju vakariņas.",
+   "ru": "Я готовлю ужин.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "gatavoju",
+     "lemma": "gatavot",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "готовить"
+    },
+    {
+     "s": "vakariņas",
+     "lemma": "vakariņas",
+     "pos": "NOUN",
+     "feats": "ACC.PL.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "ужин"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1375,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0083",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Es būšu pēc desmit minūtēm.",
+   "ru": "Я буду через десять минут.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "būšu",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.FUT.1.SG",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "pēc",
+     "lemma": "pēc",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "через, после"
+    },
+    {
+     "s": "desmit",
+     "lemma": "desmit",
+     "pos": "NUM",
+     "feats": "PL.INDEF",
+     "ru": "десять"
+    },
+    {
+     "s": "minūtēm",
+     "lemma": "minūte",
+     "pos": "NOUN",
+     "feats": "DAT.PL.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "минута"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1446,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0100",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Es eju uz sporta zāli.",
+   "ru": "Я иду в спортзал.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "eju",
+     "lemma": "iet",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "Nekārtns",
+     "ru": "идти; (о делах) обстоять"
+    },
+    {
+     "s": "uz",
+     "lemma": "uz",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "на, в (куда); к"
+    },
+    {
+     "s": "sporta",
+     "lemma": "sports",
+     "pos": "NOUN",
+     "feats": "GEN.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "спорт"
+    },
+    {
+     "s": "zāli",
+     "lemma": "zāle",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "зал"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1472,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0108",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Es esmu noguris.",
+   "ru": "Я устал.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "esmu",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "noguris",
+     "lemma": "nogurt",
+     "pos": "VERB",
+     "feats": "PTCP.PST.NOM.SG.M.INDEF",
+     "conj": "1",
+     "ru": "устать (noguris — уставший)"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1517,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0077",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Pa kreisi.",
+   "ru": "Налево.",
+   "tokens": [
+    {
+     "s": "Pa",
+     "lemma": "pa",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "по"
+    },
+    {
+     "s": "kreisi",
+     "lemma": "kreisi",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "налево (pa kreisi)"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1545,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0121",
+   "lang": "lv",
+   "topic": "health",
+   "text": "Es esmu slims.",
+   "ru": "Я болен.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "esmu",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "slims",
+     "lemma": "slims",
+     "pos": "ADJ",
+     "feats": "NOM.SG.M.INDEF",
+     "ru": "больной"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1558,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0053",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Kafiju ar pienu, lūdzu.",
+   "ru": "Кофе с молоком, пожалуйста.",
+   "tokens": [
+    {
+     "s": "Kafiju",
+     "lemma": "kafija",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "кофе"
+    },
+    {
+     "s": "ar",
+     "lemma": "ar",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "с, (чем) на"
+    },
+    {
+     "s": "pienu",
+     "lemma": "piens",
+     "pos": "NOUN",
+     "feats": "ACC.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "молоко"
+    },
+    {
+     "s": "lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1693,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0146",
+   "lang": "lv",
+   "topic": "likes",
+   "text": "Man nepatīk piens.",
+   "ru": "Мне не нравится молоко.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "nepatīk",
+     "lemma": "patikt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3.NEG",
+     "conj": "1",
+     "ru": "нравиться"
+    },
+    {
+     "s": "piens",
+     "lemma": "piens",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "молоко"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1693,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0061",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Vai šis ir svaigs?",
+   "ru": "Это свежее?",
+   "tokens": [
+    {
+     "s": "Vai",
+     "lemma": "vai",
+     "pos": "CCONJ",
+     "feats": "",
+     "ru": "ли (вопрос); или"
+    },
+    {
+     "s": "šis",
+     "lemma": "šis",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.M",
+     "gender": "M",
+     "ru": "этот"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "svaigs",
+     "lemma": "svaigs",
+     "pos": "ADJ",
+     "feats": "NOM.SG.M.INDEF",
+     "ru": "свежий"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 1709,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0055",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Kur ir maize?",
+   "ru": "Где хлеб?",
+   "tokens": [
+    {
+     "s": "Kur",
+     "lemma": "kur",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "где, куда"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "maize",
+     "lemma": "maize",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "хлеб"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 2145,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0068",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Cik maksā maize?",
+   "ru": "Сколько стоит хлеб?",
+   "tokens": [
+    {
+     "s": "Cik",
+     "lemma": "cik",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сколько"
+    },
+    {
+     "s": "maksā",
+     "lemma": "maksāt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "2",
+     "ru": "платить; стоить"
+    },
+    {
+     "s": "maize",
+     "lemma": "maize",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "хлеб"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 2145,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0130",
+   "lang": "lv",
+   "topic": "home",
+   "text": "Es ēdu maizi.",
+   "ru": "Я ем хлеб.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "ēdu",
+     "lemma": "ēst",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "1",
+     "ru": "есть, кушать"
+    },
+    {
+     "s": "maizi",
+     "lemma": "maize",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "хлеб"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 2145,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0082",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Es kavēju.",
+   "ru": "Я опаздываю.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "kavēju",
+     "lemma": "kavēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "опаздывать"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 2179,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0005",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Uz redzēšanos!",
+   "ru": "До свидания!",
+   "tokens": [
+    {
+     "s": "Uz",
+     "lemma": "uz",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "на, в (куда); к"
+    },
+    {
+     "s": "redzēšanos",
+     "lemma": "redzēšanās",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "Atgriezenisks",
+     "gender": "F",
+     "ru": "свидание, встреча (в «uz redzēšanos»)"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 2237,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0098",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Šodien ir svētdiena.",
+   "ru": "Сегодня воскресенье.",
+   "tokens": [
+    {
+     "s": "Šodien",
+     "lemma": "šodien",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сегодня"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "svētdiena",
+     "lemma": "svētdiena",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "воскресенье"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 2451,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0066",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Man garšo šī zupa.",
+   "ru": "Мне нравится (на вкус) этот суп.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "garšo",
+     "lemma": "garšot",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "2",
+     "ru": "нравиться на вкус"
+    },
+    {
+     "s": "šī",
+     "lemma": "šī",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.F",
+     "gender": "F",
+     "ru": "эта"
+    },
+    {
+     "s": "zupa",
+     "lemma": "zupa",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "суп"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 2599,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0134",
+   "lang": "lv",
+   "topic": "weather",
+   "text": "Līst lietus.",
+   "ru": "Идёт дождь.",
+   "tokens": [
+    {
+     "s": "Līst",
+     "lemma": "līt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "1",
+     "ru": "лить (о дожде)"
+    },
+    {
+     "s": "lietus",
+     "lemma": "lietus",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "3",
+     "gender": "M",
+     "ru": "дождь"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 2808,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0039",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Lūdzu, runājiet lēnāk.",
+   "ru": "Пожалуйста, говорите медленнее.",
+   "tokens": [
+    {
+     "s": "Lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    },
+    {
+     "s": "runājiet",
+     "lemma": "runāt",
+     "pos": "VERB",
+     "feats": "IMP.2.PL",
+     "conj": "2",
+     "ru": "говорить"
+    },
+    {
+     "s": "lēnāk",
+     "lemma": "lēni",
+     "pos": "ADV",
+     "feats": "CMP",
+     "ru": "медленно"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 2844,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0106",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Es trenējos trīs reizes nedēļā.",
+   "ru": "Я тренируюсь три раза в неделю.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "trenējos",
+     "lemma": "trenēties",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "тренироваться"
+    },
+    {
+     "s": "trīs",
+     "lemma": "trīs",
+     "pos": "NUM",
+     "feats": "ACC.PL.F.INDEF",
+     "ru": "три"
+    },
+    {
+     "s": "reizes",
+     "lemma": "reize",
+     "pos": "NOUN",
+     "feats": "ACC.PL.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "раз"
+    },
+    {
+     "s": "nedēļā",
+     "lemma": "nedēļa",
+     "pos": "NOUN",
+     "feats": "LOC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "неделя"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 3032,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0088",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Šodien ir pirmdiena.",
+   "ru": "Сегодня понедельник.",
+   "tokens": [
+    {
+     "s": "Šodien",
+     "lemma": "šodien",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сегодня"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "pirmdiena",
+     "lemma": "pirmdiena",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "понедельник"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 3257,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0122",
+   "lang": "lv",
+   "topic": "health",
+   "text": "Man ir temperatūra.",
+   "ru": "У меня температура.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "temperatūra",
+     "lemma": "temperatūra",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "температура"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 3327,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0067",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Vai jums ir maisiņš?",
+   "ru": "У вас есть пакет?",
+   "tokens": [
+    {
+     "s": "Vai",
+     "lemma": "vai",
+     "pos": "CCONJ",
+     "feats": "",
+     "ru": "ли (вопрос); или"
+    },
+    {
+     "s": "jums",
+     "lemma": "jūs",
+     "pos": "PRON",
+     "feats": "2.DAT.PL",
+     "ru": "вы"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "maisiņš",
+     "lemma": "maisiņš",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "пакет, мешочек"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 3810,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0137",
+   "lang": "lv",
+   "topic": "work",
+   "text": "Man ir sapulce.",
+   "ru": "У меня совещание.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "sapulce",
+     "lemma": "sapulce",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "собрание, совещание"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 3982,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0111",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Es aizmirsu dvieli.",
+   "ru": "Я забыл полотенце.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "aizmirsu",
+     "lemma": "aizmirst",
+     "pos": "VERB",
+     "feats": "IND.PST.1.SG",
+     "conj": "1",
+     "ru": "забыть"
+    },
+    {
+     "s": "dvieli",
+     "lemma": "dvielis",
+     "pos": "NOUN",
+     "feats": "ACC.SG.M",
+     "decl": "2",
+     "gender": "M",
+     "ru": "полотенце"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 4178,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0123",
+   "lang": "lv",
+   "topic": "health",
+   "text": "Man ir alerģija.",
+   "ru": "У меня аллергия.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "alerģija",
+     "lemma": "alerģija",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "аллергия"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 4211,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0075",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Ejiet taisni.",
+   "ru": "Идите прямо.",
+   "tokens": [
+    {
+     "s": "Ejiet",
+     "lemma": "iet",
+     "pos": "VERB",
+     "feats": "IMP.2.PL",
+     "conj": "Nekārtns",
+     "ru": "идти; (о делах) обстоять"
+    },
+    {
+     "s": "taisni",
+     "lemma": "taisni",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "прямо"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 4421,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0043",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Vai jūs runājat angliski?",
+   "ru": "Вы говорите по-английски?",
+   "tokens": [
+    {
+     "s": "Vai",
+     "lemma": "vai",
+     "pos": "CCONJ",
+     "feats": "",
+     "ru": "ли (вопрос); или"
+    },
+    {
+     "s": "jūs",
+     "lemma": "jūs",
+     "pos": "PRON",
+     "feats": "2.NOM.PL",
+     "ru": "вы"
+    },
+    {
+     "s": "runājat",
+     "lemma": "runāt",
+     "pos": "VERB",
+     "feats": "IND.PRS.2.PL",
+     "conj": "2",
+     "ru": "говорить"
+    },
+    {
+     "s": "angliski",
+     "lemma": "angliski",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "по-английски"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 4501,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0080",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Kur ir pietura?",
+   "ru": "Где остановка?",
+   "tokens": [
+    {
+     "s": "Kur",
+     "lemma": "kur",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "где, куда"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "pietura",
+     "lemma": "pietura",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "остановка"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 4690,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0018",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Labu apetīti!",
+   "ru": "Приятного аппетита!",
+   "tokens": [
+    {
+     "s": "Labu",
+     "lemma": "labs",
+     "pos": "ADJ",
+     "feats": "ACC.SG.F.INDEF",
+     "ru": "хороший"
+    },
+    {
+     "s": "apetīti",
+     "lemma": "apetīte",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "аппетит"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 4876,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0074",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Kad atiet vilciens?",
+   "ru": "Когда отходит поезд?",
+   "tokens": [
+    {
+     "s": "Kad",
+     "lemma": "kad",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "когда"
+    },
+    {
+     "s": "atiet",
+     "lemma": "atiet",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "отходить, отправляться"
+    },
+    {
+     "s": "vilciens",
+     "lemma": "vilciens",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "поезд"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 4878,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0086",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Kur ir dzelzceļa stacija?",
+   "ru": "Где железнодорожный вокзал?",
+   "tokens": [
+    {
+     "s": "Kur",
+     "lemma": "kur",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "где, куда"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "dzelzceļa",
+     "lemma": "dzelzceļš",
+     "pos": "NOUN",
+     "feats": "GEN.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "железная дорога"
+    },
+    {
+     "s": "stacija",
+     "lemma": "stacija",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "вокзал, станция"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 4971,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0056",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Tas ir pārāk dārgi.",
+   "ru": "Это слишком дорого.",
+   "tokens": [
+    {
+     "s": "Tas",
+     "lemma": "tas",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.M",
+     "gender": "M",
+     "ru": "тот, это"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "pārāk",
+     "lemma": "pārāk",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "слишком"
+    },
+    {
+     "s": "dārgi",
+     "lemma": "dārgi",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "дорого"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 5314,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0097",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Cikos sākas treniņš?",
+   "ru": "Во сколько начинается тренировка?",
+   "tokens": [
+    {
+     "s": "Cikos",
+     "lemma": "cikos",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "во сколько"
+    },
+    {
+     "s": "sākas",
+     "lemma": "sākties",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "1",
+     "ru": "начинаться"
+    },
+    {
+     "s": "treniņš",
+     "lemma": "treniņš",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "тренировка"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 5706,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0027",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Es mācos latviešu valodu.",
+   "ru": "Я учу латышский язык.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "mācos",
+     "lemma": "mācīties",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "3",
+     "ru": "учиться, учить"
+    },
+    {
+     "s": "latviešu",
+     "lemma": "latvietis",
+     "pos": "NOUN",
+     "feats": "GEN.PL.M",
+     "decl": "2",
+     "gender": "M",
+     "ru": "латыш (latviešu — латышский)"
+    },
+    {
+     "s": "valodu",
+     "lemma": "valoda",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "язык"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 5842,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0132",
+   "lang": "lv",
+   "topic": "weather",
+   "text": "Šodien ir ļoti auksti.",
+   "ru": "Сегодня очень холодно.",
+   "tokens": [
+    {
+     "s": "Šodien",
+     "lemma": "šodien",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сегодня"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "ļoti",
+     "lemma": "ļoti",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "очень"
+    },
+    {
+     "s": "auksti",
+     "lemma": "auksti",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "холодно"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 6003,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0030",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Man ir trīsdesmit gadu.",
+   "ru": "Мне тридцать лет.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "trīsdesmit",
+     "lemma": "trīsdesmit",
+     "pos": "NUM",
+     "feats": "PL.INDEF",
+     "ru": "тридцать"
+    },
+    {
+     "s": "gadu",
+     "lemma": "gads",
+     "pos": "NOUN",
+     "feats": "GEN.PL.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "год"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 6212,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0120",
+   "lang": "lv",
+   "topic": "health",
+   "text": "Kur ir aptieka?",
+   "ru": "Где аптека?",
+   "tokens": [
+    {
+     "s": "Kur",
+     "lemma": "kur",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "где, куда"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "aptieka",
+     "lemma": "aptieka",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "аптека"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 6629,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0059",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Kur ir kase?",
+   "ru": "Где касса?",
+   "tokens": [
+    {
+     "s": "Kur",
+     "lemma": "kur",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "где, куда"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "kase",
+     "lemma": "kase",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "касса"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 6823,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0133",
+   "lang": "lv",
+   "topic": "weather",
+   "text": "Šodien ir silti.",
+   "ru": "Сегодня тепло.",
+   "tokens": [
+    {
+     "s": "Šodien",
+     "lemma": "šodien",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сегодня"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "silti",
+     "lemma": "silti",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "тепло"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 6859,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0112",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Šodien mēs trenējam kājas.",
+   "ru": "Сегодня мы тренируем ноги.",
+   "tokens": [
+    {
+     "s": "Šodien",
+     "lemma": "šodien",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сегодня"
+    },
+    {
+     "s": "mēs",
+     "lemma": "mēs",
+     "pos": "PRON",
+     "feats": "1.NOM.PL",
+     "ru": "мы"
+    },
+    {
+     "s": "trenējam",
+     "lemma": "trenēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.PL",
+     "conj": "2",
+     "ru": "тренировать"
+    },
+    {
+     "s": "kājas",
+     "lemma": "kāja",
+     "pos": "NOUN",
+     "feats": "ACC.PL.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "нога"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 8341,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0110",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Kur ir ģērbtuve?",
+   "ru": "Где раздевалка?",
+   "tokens": [
+    {
+     "s": "Kur",
+     "lemma": "kur",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "где, куда"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "ģērbtuve",
+     "lemma": "ģērbtuve",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "раздевалка"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 8408,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0025",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Es runāju krieviski.",
+   "ru": "Я говорю по-русски.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "runāju",
+     "lemma": "runāt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "говорить"
+    },
+    {
+     "s": "krieviski",
+     "lemma": "krieviski",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "по-русски"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 9915,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0062",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Divas bulciņas, lūdzu.",
+   "ru": "Две булочки, пожалуйста.",
+   "tokens": [
+    {
+     "s": "Divas",
+     "lemma": "divi",
+     "pos": "NUM",
+     "feats": "ACC.PL.F.INDEF",
+     "ru": "два"
+    },
+    {
+     "s": "bulciņas",
+     "lemma": "bulciņa",
+     "pos": "NOUN",
+     "feats": "ACC.PL.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "булочка"
+    },
+    {
+     "s": "lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 11084,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0001",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Labdien!",
+   "ru": "Добрый день!",
+   "tokens": [
+    {
+     "s": "Labdien",
+     "lemma": "labdien",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "добрый день"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": null,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0002",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Labrīt!",
+   "ru": "Доброе утро!",
+   "tokens": [
+    {
+     "s": "Labrīt",
+     "lemma": "labrīt",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "доброе утро"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": null,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0003",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Labvakar!",
+   "ru": "Добрый вечер!",
+   "tokens": [
+    {
+     "s": "Labvakar",
+     "lemma": "labvakar",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "добрый вечер"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": null,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0004",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Sveiki!",
+   "ru": "Привет! / Здравствуйте!",
+   "tokens": [
+    {
+     "s": "Sveiki",
+     "lemma": "sveiki",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "привет, здравствуйте"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": null,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0006",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Paldies!",
+   "ru": "Спасибо!",
+   "tokens": [
+    {
+     "s": "Paldies",
+     "lemma": "paldies",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "спасибо"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": null,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0008",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Lūdzu!",
+   "ru": "Пожалуйста!",
+   "tokens": [
+    {
+     "s": "Lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": null,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0016",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Jā, protams.",
+   "ru": "Да, конечно.",
+   "tokens": [
+    {
+     "s": "Jā",
+     "lemma": "jā",
+     "pos": "PART",
+     "feats": "",
+     "ru": "да"
+    },
+    {
+     "s": "protams",
+     "lemma": "protams",
+     "pos": "PART",
+     "feats": "",
+     "ru": "конечно"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": null,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
+   "id": "lv-0017",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Nē, paldies.",
+   "ru": "Нет, спасибо.",
+   "tokens": [
+    {
+     "s": "Nē",
+     "lemma": "nē",
+     "pos": "PART",
+     "feats": "",
+     "ru": "нет"
+    },
+    {
+     "s": "paldies",
+     "lemma": "paldies",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "спасибо"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": null,
+   "status": "unverified",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  }
+ ]
+}
