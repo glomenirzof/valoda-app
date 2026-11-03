@@ -50,6 +50,12 @@
     { id: 'easy', label: 'Легко', hint: '4 дня' },
   ];
 
+  // Two buttons are enough for FSRS: Again and Good.
+  const RATINGS_SIMPLE = [
+    { id: 'again', label: 'Не вспомнил', hint: 'повторю скоро' },
+    { id: 'good', label: 'Вспомнил', hint: 'через 1 день' },
+  ];
+
   const FONT_PAIRS = {
     A: { name: 'Onest + Inter', head: "'Onest'", body: "'Inter'" },
     B: { name: 'Manrope + Golos', head: "'Manrope'", body: "'Golos Text'" },
@@ -120,7 +126,8 @@
     const st = {
       i: 0,
       screen: store.get('screen', 'new'),
-      mode: store.get('mode', 'type'),
+      mode: opts.simple ? 'speak' : store.get('mode', 'type'),
+      plays: 0,
       typed: '',
       result: null,
       word: null,
@@ -181,7 +188,11 @@
         <span class="count">${st.i + 1}/12</span><span class="fab-gap"></span>
       </header>`;
 
-    const audioBtns = () => `
+    // Simple mode: one sound button; every second tap plays slower.
+    const slowNext = () => st.plays % 2 === 1;
+    const oneAudio = (cls) => `<button class="${cls}" data-play-toggle aria-label="Слушать">${icon(slowNext() ? 'slow' : 'play')}<span>${slowNext() ? 'Ещё раз медленно' : 'Слушать'}</span></button>`;
+
+    const audioBtns = () => opts.simple ? `<div class="audio one">${oneAudio('a-play')}</div>` : `
       <div class="audio">
         <button class="a-play" data-play="1" aria-label="Слушать">${icon('play')}<span>Слушать</span></button>
         <button class="a-slow" data-play="0.75" aria-label="Медленно">${icon('slow')}<span>Медленно</span></button>
@@ -198,20 +209,23 @@
         </div>
         <p class="hint">Нажми на слово — покажу разбор</p>
       </main>
-      <footer class="actions two">
+      ${opts.simple ? `<footer class="actions">
+        <button class="btn primary" data-to="ex">Дальше ${icon('arrow')}</button>
+        <button class="link" data-next>Уже знаю эту фразу</button>
+      </footer>` : `<footer class="actions two">
         <button class="btn ghost" data-next>Уже знаю</button>
         <button class="btn primary" data-to="ex">Дальше ${icon('arrow')}</button>
-      </footer>`;
+      </footer>`}`;
 
     const screenEx = (p) => `
       ${topBar(30 + st.i * 25)}
       <main class="scr scr-ex">
         <p class="eyebrow">Скажи по-латышски</p>
         <h1 class="ru-big">${esc(p.ru)}</h1>
-        <div class="seg" role="tablist">
+        ${opts.simple ? '' : `<div class="seg" role="tablist">
           <button role="tab" data-mode="speak" class="${st.mode === 'speak' ? 'on' : ''}">${icon('mic')}Говорю</button>
           <button role="tab" data-mode="type" class="${st.mode === 'type' ? 'on' : ''}">${icon('keyboard')}Пишу</button>
-        </div>
+        </div>`}
         ${
           st.mode === 'type'
             ? `<div class="type-box">
@@ -238,7 +252,8 @@
         self: [icon('eye'), 'Сравни с образцом'],
       }[v];
       const errs = r && st.mode === 'type' ? [...new Set(r.words.filter((x) => x.kind !== 'ok' && x.got).map((x) => KIND_RU[x.kind]))] : [];
-      const rateButtons = RATINGS.map(
+      const list = opts.simple ? RATINGS_SIMPLE : RATINGS;
+      const rateButtons = list.map(
         (x) => `<button class="rate rate-${x.id} ${st.rating === x.id && (opts.rating === 'next' || (opts.suggest && r)) ? 'on' : ''}" data-rate="${x.id}"><b>${x.label}</b><small>${x.hint}</small></button>`,
       ).join('');
       return `
@@ -247,8 +262,8 @@
           <div class="grab"></div>
           <p class="verdict">${head[0]}<span>${head[1]}</span></p>
           <div class="right">
-            <button class="a-mini" data-play="1" aria-label="Слушать">${icon('play')}</button>
-            <button class="a-mini" data-play="0.75" aria-label="Медленно">${icon('slow')}</button>
+            ${opts.simple ? oneAudio('a-mini') : `<button class="a-mini" data-play="1" aria-label="Слушать">${icon('play')}</button>
+            <button class="a-mini" data-play="0.75" aria-label="Медленно">${icon('slow')}</button>`}
             <p class="right-lv">${highlightKey(p)}</p>
           </div>
           ${r && st.mode === 'type' && v !== 'ok' ? `<p class="yours"><span class="lbl">Ты:</span> ${renderDiff(r.words)}${errs.length ? `<span class="tags">${errs.map((e) => `<i>${e}</i>`).join('')}</span>` : ''}</p>` : ''}
@@ -257,7 +272,7 @@
             opts.rating === 'next'
               ? `<p class="rate-lbl">Оценка — можно поменять</p><div class="rates row">${rateButtons}</div>
                  <button class="btn primary wide" data-rated>Дальше ${icon('arrow')}</button>`
-              : `<div class="rates ${opts.rating}">${rateButtons}</div>`
+              : `<div class="rates ${opts.simple ? 'two' : opts.rating}">${rateButtons}</div>`
           }
         </section>`;
     };
@@ -302,6 +317,7 @@
       st.typed = '';
       st.result = null;
       st.rating = 'good';
+      st.plays = 0;
       go('new');
     };
 
@@ -315,6 +331,11 @@
       else if ('accent' in d) { const k = opts.accents.findIndex((a) => a[0] === st.accent); st.accent = opts.accents[(k + 1) % opts.accents.length][0]; store.set('accent', st.accent); render(); }
       else if ('theme' in d) { st.theme = { auto: 'light', light: 'dark', dark: 'auto' }[st.theme]; store.set('theme', st.theme); render(); }
       else if (d.play) play(Number(d.play));
+      else if ('playToggle' in d) {
+        play(slowNext() ? 0.75 : 1);
+        st.plays++;
+        app.querySelectorAll('[data-play-toggle]').forEach((el) => { el.outerHTML = oneAudio(el.className); });
+      }
       else if (d.word !== undefined) { st.word = Number(d.word); render(); }
       else if ('closeWord' in d) { st.word = null; render(); }
       else if (d.to) go(d.to);
@@ -330,8 +351,11 @@
       } else if ('show' in d) {
         st.result = st.mode === 'type' ? check(st.typed, PHRASES[st.i].lv) : null;
         st.rating = !st.result ? 'good' : { ok: 'good', almost: 'hard', bad: 'again' }[st.result.verdict];
+        st.plays = 0;
         go('fb');
         play(1);
+        st.plays = 1;
+        app.querySelectorAll('[data-play-toggle]').forEach((el) => { el.outerHTML = oneAudio(el.className); });
       } else if (d.rate) {
         if (opts.rating === 'next') { st.rating = d.rate; render(); }
         else next();

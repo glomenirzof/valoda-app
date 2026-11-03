@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Вариант 5 — Просто</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;600;700;800&family=Golos+Text:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700;800&family=Onest:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* Вариант 5 «Просто»: гибрид 4, но на каждом экране одно главное действие.
+     Одна кнопка звука (второе нажатие — медленно), без переключателя режима, две оценки. */
+  :root {
+    --bg: #f7f7f4; --surface: #ffffff; --surface-2: #f0efea;
+    --ink: #161616; --ink-2: #383838; --muted: #74736d;
+    --line: #e8e6df; --line-strong: #d4d1c7;
+    --primary: #161616; --on-primary: #ffffff;
+    --good: #1f8a4c; --warn: #b7791f; --bad: #d63b3b;
+    --review-bg: #161616; --review-ink: #ffffff;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.08); --shadow: 0 8px 28px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.05);
+    --r-card: 28px; --r-btn: 18px; --r-sheet: 28px;
+    --accent: #d24e28; --accent-soft: #fbe6dd; --accent-ink: #ad3e1b; --on-accent: #ffffff;
+  }
+  :root[data-accent="amber"] { --accent: #f2b200; --accent-soft: #fff1c2; --accent-ink: #7a5600; --on-accent: #161616; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c0c0d; --surface: #19191b; --surface-2: #242427;
+      --ink: #f5f4f0; --ink-2: #d5d3cd; --muted: #9a988f;
+      --line: #28282b; --line-strong: #3b3b3f;
+      --primary: #f5f4f0; --on-primary: #0c0c0d;
+      --good: #4cc27f; --warn: #e0a84a; --bad: #ff6b6b;
+      --review-bg: #f5f4f0; --review-ink: #0c0c0d;
+      --shadow: 0 0 0 1px #28282b;
+      --accent: #f07a55; --accent-soft: #3a2119; --accent-ink: #ff9a7a; --on-accent: #1a0d08;
+    }
+    :root:not([data-theme="light"])[data-accent="amber"] { --accent: #ffc21a; --accent-soft: #3a2e0a; --accent-ink: #ffd35c; --on-accent: #161616; }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c0c0d; --surface: #19191b; --surface-2: #242427;
+    --ink: #f5f4f0; --ink-2: #d5d3cd; --muted: #9a988f;
+    --line: #28282b; --line-strong: #3b3b3f;
+    --primary: #f5f4f0; --on-primary: #0c0c0d;
+    --good: #4cc27f; --warn: #e0a84a; --bad: #ff6b6b;
+    --review-bg: #f5f4f0; --review-ink: #0c0c0d;
+    --shadow: 0 0 0 1px #28282b;
+    --accent: #f07a55; --accent-soft: #3a2119; --accent-ink: #ff9a7a; --on-accent: #1a0d08;
+  }
+  :root[data-theme="dark"][data-accent="amber"] { --accent: #ffc21a; --accent-soft: #3a2e0a; --accent-ink: #ffd35c; --on-accent: #161616; }
+
+  /* More air: wider gutters and bigger gaps between blocks. */
+  .stage { padding-left: var(--s4); padding-right: var(--s4); }
+  .eyebrow { margin: var(--s3) 0 var(--s4); }
+  .actions { padding-top: var(--s4); gap: var(--s3); }
+  .letters { gap: 10px; margin-top: var(--s4); }
+  .sheet { padding: var(--s2) var(--s4) calc(env(safe-area-inset-bottom) + var(--s4)); }
+  .sheet .verdict { margin-bottom: var(--s4); }
+  .sheet .why { margin: var(--s4) 0; }
+  .rates.grid { gap: var(--s3); }
+
+  .audio.one { grid-template-columns: 1fr; }
+  .audio.one button { height: 72px; font-size: 17px; }
+  .link { min-height: 44px; color: var(--muted); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--line-strong); }
+  .scr-ex .speak-box { margin-top: auto; }
+  .rates.two { grid-template-columns: 1fr 1fr; gap: var(--s3); }
+  .rates.two .rate { min-height: 84px; }
+  .rates.two .rate b { font-size: 18px; }
+  .rates.two .rate-good { background: var(--primary); color: var(--on-primary); }
+  .rates.two .rate-good small { color: inherit; opacity: .7; }
+
+  .review-chip .dot { width: 10px; height: 10px; border-radius: 99px; background: var(--accent); }
+
+  /* New phrase: one card fills the screen, phrase on top, audio tiles at its bottom under the thumb. */
+  .phrase-card { flex: 1; display: flex; flex-direction: column; background: var(--surface); border-radius: var(--r-card); box-shadow: var(--shadow); padding: var(--s5) var(--s4) var(--s4); }
+  .phrase-card .lv { order: 1; font-size: 38px; line-height: 1.1; letter-spacing: -0.03em; }
+  .phrase-card .ru { order: 2; font-size: 19px; margin-top: var(--s3); }
+  .audio { order: 3; margin-top: auto; padding-top: var(--s4); display: grid; grid-template-columns: 1fr 1fr; gap: var(--s2); }
+  .audio button { height: 68px; border-radius: 20px; display: flex; gap: var(--s2); align-items: center; justify-content: center; background: var(--surface-2); font-weight: 600; transition: transform var(--dur) var(--ease); }
+  .audio button:active { transform: scale(.97); }
+  .audio .a-play { background: var(--accent); color: var(--on-accent); }
+  .scr-new .hint { text-align: center; margin: var(--s3) 0 0; }
+  .eyebrow { color: var(--ink-2); }
+  .eyebrow::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 99px; background: var(--accent); margin-right: var(--s2); vertical-align: 1px; }
+
+  /* Exercise: prompt on top, answer field and switch near the thumb. */
+  .ru-big { font-size: 36px; line-height: 1.1; letter-spacing: -0.03em; }
+  .scr-ex .seg { align-self: stretch; margin-top: auto; margin-bottom: var(--s4); }
+  .scr-ex .seg button { flex: 1; justify-content: center; }
+  .type-box textarea { border-color: transparent; box-shadow: var(--shadow); border-radius: 22px; }
+  .type-box textarea:focus { box-shadow: 0 0 0 2px var(--ink); }
+  .letters button { background: var(--surface); box-shadow: var(--shadow-sm); }
+  .speak-box { flex: 0; padding: var(--s4) 0; }
+
+  /* Feedback: 2×2 rating grid, suggested grade is filled. */
+  .rates.grid .rate { min-height: 68px; grid-template-columns: auto; }
+  .rate b::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 99px; background: var(--c); margin-right: 6px; vertical-align: 2px; }
+  .rate-again { --c: var(--bad); } .rate-hard { --c: var(--warn); } .rate-good { --c: var(--good); } .rate-easy { --c: var(--accent); }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="proto.js"></script>
+<script>Proto.start({ title: '5 · Просто', fonts: 'B', rating: 'grid', simple: true, accents: [['terra', 'терракота'], ['amber', 'янтарь']] });</script>
+</body>
+</html>
