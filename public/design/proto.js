@@ -88,6 +88,7 @@
     sliders: '<path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/>',
     bulb: '<path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/>',
     moon: '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',
+    del: '<path d="M10 5a2 2 0 0 0-1.344.519l-6.328 5.74a1 1 0 0 0 0 1.481l6.328 5.741A2 2 0 0 0 10 19h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"/><path d="m12 9 6 6"/><path d="m18 9-6 6"/>',
     type: '<path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/>',
   };
   const icon = (n, cls = '') => `<svg class="ic ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
@@ -143,6 +144,17 @@
     return a;
   };
 
+  // Phrase keyboard, Memrise style: only the letters of the answer, plus the plain/long twin of
+  // every vowel and every letter with a mark, so the keyboard never gives the marks away.
+  const TWIN = { a: 'ā', ā: 'a', e: 'ē', ē: 'e', i: 'ī', ī: 'i', u: 'ū', ū: 'u', č: 'c', š: 's', ž: 'z', ļ: 'l', ņ: 'n', ķ: 'k', ģ: 'g' };
+  const phraseKeys = (lv) => {
+    const set = new Set((lv.toLowerCase().match(/\p{L}/gu) || []));
+    for (const ch of [...set]) if (TWIN[ch]) set.add(TWIN[ch]);
+    // Latvian alphabet order keeps each twin next to its pair (a ā, e ē), so the choice is only about the mark.
+    const ABC = 'aābcčdeēfgģhiījkķlļmnņoprsštuūvzž';
+    return [...set].sort((x, y) => ABC.indexOf(x) - ABC.indexOf(y));
+  };
+
   const KIND_RU = { root: 'ошибка в корне', ending: 'ошибка в окончании', mark: 'нет долготы или знака' };
 
   function start(opts) {
@@ -153,6 +165,8 @@
       q: 0,
       known: new Set(),
       hints: 0,
+      keys: null,
+      kb: store.get('kb', 'phrase'),
       weak: new Set(),
       from: 'new',
       pool: null,
@@ -323,8 +337,16 @@
         <p class="eyebrow">Напиши по-латышски</p>
         <h1 class="ru-big">${esc(p.ru)}</h1>
         <div class="type-box">
-          <textarea id="ans" rows="2" placeholder="Пиши здесь…" autocapitalize="sentences" autocomplete="off" autocorrect="off" spellcheck="false" lang="lv">${esc(st.typed)}</textarea>
-          <div class="letters">${LETTERS.map((l) => `<button data-letter="${l}">${l}</button>`).join('')}</div>
+          <textarea id="ans" rows="2" placeholder="${st.kb === 'phrase' ? 'Нажимай буквы ниже…' : 'Пиши здесь…'}" ${st.kb === 'phrase' ? 'inputmode="none"' : ''} autocapitalize="sentences" autocomplete="off" autocorrect="off" spellcheck="false" lang="lv">${esc(st.typed)}</textarea>
+          ${st.kb === 'phrase'
+            ? `<div class="keys">${(st.keys ||= phraseKeys(p.lv)).map((l) => `<button data-letter="${l}">${l}</button>`).join('')}</div>
+               <div class="keys-row">
+                 <button class="k-wide" data-kb aria-label="Клавиатура телефона">${icon('keyboard')}</button>
+                 <button class="k-space" data-letter=" ">пробел</button>
+                 <button class="k-wide" data-back aria-label="Стереть">${icon('del')}</button>
+               </div>`
+            : `<div class="letters">${LETTERS.map((l) => `<button data-letter="${l}">${l}</button>`).join('')}</div>
+               <button class="link kb-back" data-kb>Буквы фразы</button>`}
         </div>
       </main>
       <footer class="actions two">
@@ -433,7 +455,7 @@
       store.set('screen', screen === 'fb' ? 'ex' : screen);
       if (screen === 'fb' && !st.result && st.mode === 'type') st.result = check(st.typed, PHRASES[st.i].lv);
       render();
-      if (screen === 'type') app.querySelector('#ans')?.focus();
+      if (screen === 'type' && st.kb === 'system') app.querySelector('#ans')?.focus();
     };
 
     const reset = () => {
@@ -443,6 +465,7 @@
       st.plays = 0;
       st.hints = 0;
       st.weak = new Set();
+      st.keys = null;
       st.pool = null;
     };
 
@@ -511,12 +534,22 @@
         }
         ta.value = t.slice(0, j);
         st.typed = ta.value;
-        ta.focus();
-        ta.setSelectionRange(j, j);
+        if (st.kb === 'system') { ta.focus(); ta.setSelectionRange(j, j); }
         b.innerHTML = hintLabel();
       }
       else if ('hint' in d) { st.hints = Math.min(st.hints + 1, letterCount(PHRASES[st.i])); render(); }
+      else if ('kb' in d) { st.kb = st.kb === 'phrase' ? 'system' : 'phrase'; store.set('kb', st.kb); render(); if (st.kb === 'system') app.querySelector('#ans').focus(); }
+      else if ('back' in d) {
+        const ta = app.querySelector('#ans');
+        ta.value = ta.value.slice(0, -1);
+        st.typed = ta.value;
+      }
       else if (d.mode) { st.mode = d.mode; store.set('mode', d.mode); render(); }
+      else if (d.letter && st.kb === 'phrase' && st.screen === 'type') {
+        const ta = app.querySelector('#ans');
+        ta.value += d.letter;
+        st.typed = ta.value;
+      }
       else if (d.letter) {
         const ta = app.querySelector('#ans');
         const s = ta.selectionStart ?? ta.value.length;
@@ -545,7 +578,7 @@
     });
 
     // Keep focus on the textarea when a letter button is pressed (iOS would otherwise close the keyboard).
-    app.addEventListener('pointerdown', (e) => { if (e.target.closest('[data-letter]')) e.preventDefault(); });
+    app.addEventListener('pointerdown', (e) => { if (e.target.closest('[data-letter], [data-back], [data-hint]')) e.preventDefault(); });
 
     render();
   }

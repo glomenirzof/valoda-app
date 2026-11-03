@@ -201,3 +201,15 @@ h1 { margin: 0; font-family: var(--font-head); }
 .pool .tile[disabled]:not(.used) { opacity: 0.6; }
 .btn { white-space: nowrap; }
 .scr-type .type-box { margin-top: auto; }
+
+/* Phrase keyboard: letters of the answer plus their plain/long twins. */
+.keys { display: grid; grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)); gap: 6px; margin-top: var(--s3); }
+.keys button, .keys-row button {
+  height: 50px; border-radius: 12px; background: var(--surface-2); color: var(--ink);
+  font: 600 20px/1 var(--font-body); display: grid; place-items: center;
+  transition: transform 120ms var(--ease), background 120ms;
+}
+.keys button:active, .keys-row button:active { transform: scale(0.94); background: var(--line-strong); }
+.keys-row { display: grid; grid-template-columns: 56px 1fr 56px; gap: 6px; margin-top: 6px; }
+.keys-row .k-space { font-size: 15px; color: var(--muted); }
+.kb-back { display: block; margin: var(--s2) auto 0; }
