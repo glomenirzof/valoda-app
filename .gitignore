@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.venv-tts/
+
+# secrets — never commit
+.env
+.env.*
+!.env.example
+*service-account*.json
+gcp-*.json
+
+# Tēzaurs dump and derived indexes (large, re-downloadable)
+data-cache/
+
+# TTS scratch output (only selected files are copied into public/)
+tts-out/

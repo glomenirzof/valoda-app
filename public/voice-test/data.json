@@ -1,0 +1,122 @@
+{
+ "built": "2026-11-03T16:01:08.089Z",
+ "phrases": [
+  {
+   "id": "vt1",
+   "text": "Es ēdu maizi.",
+   "ru": "Я ем хлеб.",
+   "focus": "долгое ē (широкое), ai",
+   "variants": [
+    {
+     "letter": "A",
+     "src": "a/4bc1e541facf.mp3",
+     "label": "Piper aivars (муж., офлайн)"
+    }
+   ]
+  },
+  {
+   "id": "vt2",
+   "text": "Viņš ir mājā.",
+   "ru": "Он дома.",
+   "focus": "ņ, долгие ā",
+   "variants": [
+    {
+     "letter": "A",
+     "src": "a/fdd907318207.mp3",
+     "label": "Piper aivars (муж., офлайн)"
+    }
+   ]
+  },
+  {
+   "id": "vt3",
+   "text": "Mēs ejam uz veikalu.",
+   "ru": "Мы идём в магазин.",
+   "focus": "узкое ē, ei",
+   "variants": [
+    {
+     "letter": "A",
+     "src": "a/a8fdf67991ff.mp3",
+     "label": "Piper aivars (муж., офлайн)"
+    }
+   ]
+  },
+  {
+   "id": "vt4",
+   "text": "Šodien ir ļoti auksti.",
+   "ru": "Сегодня очень холодно.",
+   "focus": "ļ, ie, au",
+   "variants": [
+    {
+     "letter": "A",
+     "src": "a/655c879a547b.mp3",
+     "label": "Piper aivars (муж., офлайн)"
+    }
+   ]
+  },
+  {
+   "id": "vt5",
+   "text": "Kur ir dzelzceļa stacija?",
+   "ru": "Где железнодорожный вокзал?",
+   "focus": "dz, ļ, длинное слово, вопрос",
+   "variants": [
+    {
+     "letter": "A",
+     "src": "a/6f088960571e.mp3",
+     "label": "Piper aivars (муж., офлайн)"
+    }
+   ]
+  },
+  {
+   "id": "vt6",
+   "text": "Es nesaprotu, lūdzu, atkārtojiet.",
+   "ru": "Я не понимаю, пожалуйста, повторите.",
+   "focus": "ū, ā, длинный глагол",
+   "variants": [
+    {
+     "letter": "A",
+     "src": "a/205ccc0f6ec1.mp3",
+     "label": "Piper aivars (муж., офлайн)"
+    }
+   ]
+  },
+  {
+   "id": "vt7",
+   "text": "Vakar es biju trenažieru zālē.",
+   "ru": "Вчера я был в тренажёрном зале.",
+   "focus": "ž, ie, долгие ā/ē",
+   "variants": [
+    {
+     "letter": "A",
+     "src": "a/7d4b4b95f7bb.mp3",
+     "label": "Piper aivars (муж., офлайн)"
+    }
+   ]
+  },
+  {
+   "id": "vt8",
+   "text": "Cik tas maksā?",
+   "ru": "Сколько это стоит?",
+   "focus": "c, вопросительная интонация",
+   "variants": [
+    {
+     "letter": "A",
+     "src": "a/8df0a95af1d0.mp3",
+     "label": "Piper aivars (муж., офлайн)"
+    }
+   ]
+  },
+  {
+   "id": "vt9",
+   "text": "Mana ģimene dzīvo ķieģeļu mājā.",
+   "ru": "Моя семья живёт в кирпичном доме.",
+   "focus": "ģ, ķ, ļ, долгое ī — в исходном списке ķ/ģ не было",
+   "variants": [
+    {
+     "letter": "A",
+     "src": "a/b8bc1814fd17.mp3",
+     "label": "Piper aivars (муж., офлайн)"
+    }
+   ]
+  }
+ ]
+}

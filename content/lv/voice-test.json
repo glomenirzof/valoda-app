@@ -1,0 +1,11 @@
+[
+  { "id": "vt1", "text": "Es ēdu maizi.", "ru": "Я ем хлеб.", "focus": "долгое ē (широкое), ai" },
+  { "id": "vt2", "text": "Viņš ir mājā.", "ru": "Он дома.", "focus": "ņ, долгие ā" },
+  { "id": "vt3", "text": "Mēs ejam uz veikalu.", "ru": "Мы идём в магазин.", "focus": "узкое ē, ei" },
+  { "id": "vt4", "text": "Šodien ir ļoti auksti.", "ru": "Сегодня очень холодно.", "focus": "ļ, ie, au" },
+  { "id": "vt5", "text": "Kur ir dzelzceļa stacija?", "ru": "Где железнодорожный вокзал?", "focus": "dz, ļ, длинное слово, вопрос" },
+  { "id": "vt6", "text": "Es nesaprotu, lūdzu, atkārtojiet.", "ru": "Я не понимаю, пожалуйста, повторите.", "focus": "ū, ā, длинный глагол" },
+  { "id": "vt7", "text": "Vakar es biju trenažieru zālē.", "ru": "Вчера я был в тренажёрном зале.", "focus": "ž, ie, долгие ā/ē" },
+  { "id": "vt8", "text": "Cik tas maksā?", "ru": "Сколько это стоит?", "focus": "c, вопросительная интонация" },
+  { "id": "vt9", "text": "Mana ģimene dzīvo ķieģeļu mājā.", "ru": "Моя семья живёт в кирпичном доме.", "focus": "ģ, ķ, ļ, долгое ī — в исходном списке ķ/ģ не было" }
+]

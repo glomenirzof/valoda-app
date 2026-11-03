@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0f1115" />
+<title>Слепой тест голосов</title>
+<style>
+  :root { --bg:#0f1115; --surface:#181b22; --line:#262a33; --text:#e8eaf0; --muted:#9aa1b2; --accent:#5b9dff; --ok:#3ccf8e; color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:17px/1.45 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; -webkit-text-size-adjust:100%; }
+  main { max-width:640px; margin:0 auto; padding:calc(env(safe-area-inset-top) + 16px) 16px calc(env(safe-area-inset-bottom) + 120px); }
+  h1 { font-size:24px; margin:0 0 4px; }
+  .muted { color:var(--muted); font-size:15px; margin:0 0 16px; }
+  .card { background:var(--surface); border-radius:16px; padding:16px; margin-bottom:16px; }
+  .lv { font-size:22px; font-weight:600; margin:0; }
+  .ru { color:var(--muted); margin:2px 0 0; font-size:15px; }
+  .focus { color:var(--muted); font-size:13px; margin:2px 0 10px; }
+  .row { display:flex; align-items:center; gap:10px; padding:8px 0; border-top:1px solid var(--line); flex-wrap:wrap; }
+  .play { min-width:64px; height:48px; border:0; border-radius:12px; background:#253350; color:#fff; font-size:18px; font-weight:700; }
+  .play.on { background:var(--accent); }
+  .stars { display:flex; gap:4px; }
+  .stars button { width:40px; height:44px; border:0; border-radius:10px; background:#22262f; color:var(--muted); font-size:16px; font-weight:600; }
+  .stars button.sel { background:var(--ok); color:#06210f; }
+  .label { flex-basis:100%; font-size:14px; color:var(--ok); display:none; }
+  body.reveal .label { display:block; }
+  .bar { position:fixed; left:0; right:0; bottom:0; padding:12px 16px calc(env(safe-area-inset-bottom) + 12px); background:linear-gradient(transparent, var(--bg) 30%); display:flex; gap:10px; max-width:640px; margin:0 auto; }
+  .bar button { flex:1; height:56px; border:0; border-radius:14px; font-size:17px; font-weight:600; }
+  #reveal { background:var(--accent); color:#fff; }
+  #copy { background:#22262f; color:var(--text); }
+  #summary { display:none; }
+  body.reveal #summary { display:block; }
+  table { width:100%; border-collapse:collapse; font-size:15px; }
+  td, th { padding:6px 4px; border-top:1px solid var(--line); text-align:left; }
+  td.num { text-align:right; font-variant-numeric:tabular-nums; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Слепой тест голосов</h1>
+  <p class="muted">Под каждой буквой — разный голос и сервис, порядок свой для каждой фразы. Слушай в наушниках, ставь оценку 1–5. Оценки сохраняются в этом браузере.</p>
+  <div id="list"></div>
+  <div id="summary" class="card"></div>
+</main>
+<div class="bar">
+  <button id="copy">Скопировать оценки</button>
+  <button id="reveal">Показать ответы</button>
+</div>
+<script>
+(async () => {
+  const KEY = 'voice-test-ratings';
+  const load = () => { try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch { return {}; } };
+  const save = (r) => { try { localStorage.setItem(KEY, JSON.stringify(r)); } catch {} };
+
+  const data = await (await fetch('data.json', { cache: 'no-store' })).json();
+  let ratings = load();
+  // Ratings belong to one build (letters reshuffle on every rebuild)
+  if (ratings._built !== data.built) ratings = { _built: data.built };
+
+  const audio = new Audio();
+  let playingBtn = null;
+  audio.onended = () => { playingBtn?.classList.remove('on'); playingBtn = null; };
+
+  const list = document.getElementById('list');
+  for (const ph of data.phrases) {
+    const card = document.createElement('section');
+    card.className = 'card';
+    card.innerHTML = `<p class="lv"></p><p class="ru"></p><p class="focus"></p>`;
+    card.querySelector('.lv').textContent = ph.text;
+    card.querySelector('.ru').textContent = ph.ru;
+    card.querySelector('.focus').textContent = 'Проверяем: ' + ph.focus;
+    for (const v of ph.variants) {
+      const key = ph.id + ':' + v.letter;
+      const row = document.createElement('div');
+      row.className = 'row';
+      const play = document.createElement('button');
+      play.className = 'play';
+      play.textContent = '▶ ' + v.letter;
+      play.onclick = () => {
+        playingBtn?.classList.remove('on');
+        audio.src = v.src;
+        audio.play();
+        play.classList.add('on');
+        playingBtn = play;
+      };
+      const stars = document.createElement('div');
+      stars.className = 'stars';
+      for (let n = 1; n <= 5; n++) {
+        const b = document.createElement('button');
+        b.textContent = n;
+        if (ratings[key] === n) b.classList.add('sel');
+        b.onclick = () => {
+          ratings[key] = n;
+          save(ratings);
+          stars.querySelectorAll('button').forEach((x, i) => x.classList.toggle('sel', i + 1 === n));
+        };
+        stars.append(b);
+      }
+      const label = document.createElement('div');
+      label.className = 'label';
+      label.textContent = v.label;
+      row.append(play, stars, label);
+      card.append(row);
+    }
+    list.append(card);
+  }
+
+  function summary() {
+    const by = {};
+    for (const ph of data.phrases) for (const v of ph.variants) {
+      const r = ratings[ph.id + ':' + v.letter];
+      by[v.label] ??= { sum: 0, n: 0 };
+      if (r) { by[v.label].sum += r; by[v.label].n++; }
+    }
+    return Object.entries(by)
+      .map(([label, s]) => ({ label, avg: s.n ? s.sum / s.n : 0, n: s.n }))
+      .sort((a, b) => b.avg - a.avg);
+  }
+
+  document.getElementById('reveal').onclick = () => {
+    document.body.classList.add('reveal');
+    const rows = summary().map((s) => `<tr><td>${s.label}</td><td class="num">${s.n ? s.avg.toFixed(2) : '—'}</td><td class="num">${s.n}</td></tr>`).join('');
+    const box = document.getElementById('summary');
+    box.innerHTML = `<h2 style="margin:0 0 8px;font-size:20px">Итог</h2><table><tr><th>Голос</th><th class="num">Средняя</th><th class="num">Оценок</th></tr>${rows}</table>`;
+    box.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  document.getElementById('copy').onclick = async () => {
+    const lines = ['Оценки слепого теста (' + data.built + '):'];
+    for (const ph of data.phrases) for (const v of ph.variants) {
+      const r = ratings[ph.id + ':' + v.letter];
+      if (r) lines.push(`${ph.id} ${v.letter}=${r} [${v.label}]`);
+    }
+    lines.push('', 'Средние:', ...summary().map((s) => `${s.label}: ${s.n ? s.avg.toFixed(2) : '—'} (${s.n})`));
+    const text = lines.join('\n');
+    try { await navigator.clipboard.writeText(text); alert('Скопировано — вставь в чат'); }
+    catch { prompt('Скопируй текст:', text); }
+  };
+})();
+</script>
+</body>
+</html>

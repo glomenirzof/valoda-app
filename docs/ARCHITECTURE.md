@@ -1,0 +1,148 @@
+# Архитектура MVP (PWA, латышский)
+
+Основа решений: [research/lang-app-research.md](../research/lang-app-research.md).
+
+## Ключевые решения
+
+| Решение | Выбор | Почему |
+|---|---|---|
+| Сборка | Vite + TypeScript + Preact | Малый бандл (~10 КБ рантайм), быстрый старт на iPhone |
+| PWA / офлайн | `vite-plugin-pwa` (Workbox), precache всего: код, JSON-контент, аудио | Сессия в зале без сети; 150 фраз × ~20 КБ mp3 ≈ 3–4 МБ |
+| Хранилище | IndexedDB через `idb`; `navigator.storage.persist()`; экспорт/импорт прогресса в JSON | Бэкенда нет; бэкап на случай очистки хранилища |
+| Повторения | `ts-fsrs@5.4.2` (стабильная, FSRS-6, 21 вес). 6.0.0 — свежий мажор, не берём | Проверено `npm view` + `FSRSVersion` |
+| Аудио | mp3 (работает в Safari везде), файлы генерируются заранее скриптом | Провайдер переключается: azure / google-chirp3 / piper |
+| Словарь | Tēzaurs.lv 2026 (Autumn Edition), CC BY-SA 4.0, CLARIN-LV handle 20.500.12574/162 — `wordforms_tei.xml.zip` (12 ГБ в распакованном виде; читаем потоком из zip, без распаковки) | Проверка форм и тегов падежа |
+| Хостинг | статический HTTPS (вариант выбирает пользователь) | Service worker на iPhone работает только по HTTPS |
+
+## Поток данных
+
+```
+content/lv/phrases.src.json   ← авторский источник (пишу я / репетитор / жизнь)
+content/lv/templates.json     ← шаблоны «предлог/глагол + падеж»
+content/lv/lexicon.src.json   ← леммы: перевод RU, частотность, семантич. теги
+        │
+        ▼  scripts/tezaurs/build-index.py  (поток из zip → только нужные леммы)
+data-cache/tezaurs/lv-forms.json   (лемма → [форма, теги]), в git не кладём
+        │
+        ▼  scripts/content/validate.ts   (каждый токен: форма есть у леммы? теги совпадают?)
+        ▼  scripts/content/build.ts      → public/data/lv/{phrases,lexicon,templates}.json
+        ▼  scripts/tts/generate.ts --provider=azure|google|piper  → public/audio/lv/<hash>.mp3
+        ▼  scripts/content/export-review.ts → review/lv-unverified.xlsx  (для репетитора)
+        ▲  scripts/content/import-review.ts ← review/*.xlsx с отметками ✓/✗/исправление
+```
+
+Статус фразы: `unverified` (сгенерировано, словарная проверка пройдена) → `tutor` (подтвердил репетитор). Если словарная проверка не пройдена, фраза в сборку не попадает. В режимы «Говори» и «Тихий» идут только фразы со статусом `tutor`.
+
+## Формат данных (сокращённо)
+
+```jsonc
+// public/data/lv/phrases.json
+{
+  "lang": "lv",
+  "phrases": [{
+    "id": "lv-0001",
+    "text": "Es eju uz darbu.",
+    "ru": "Я иду на работу.",
+    "tokens": [
+      { "s": "Es",    "lemma": "es",    "pos": "PRON", "feats": "NOM.SG.1", "ru": "я" },
+      { "s": "eju",   "lemma": "iet",   "pos": "VERB", "feats": "PRS.1SG",  "ru": "идти" },
+      { "s": "uz",    "lemma": "uz",    "pos": "ADP",  "ru": "на, в (куда)" },
+      { "s": "darbu", "lemma": "darbs", "pos": "NOUN", "feats": "ACC.SG",   "ru": "работа",
+        "gender": "m", "decl": 1 }
+    ],
+    "accept": ["Eju uz darbu."],          // допустимые варианты
+    "audio": "audio/lv/3f9a1c.mp3",
+    "image": null,
+    "freqRank": 12,                        // ранг самой редкой леммы фразы
+    "status": "unverified",                // unverified | tutor
+    "source": "llm",                       // llm | tutor | life | tatoeba
+    "check": { "tezaurs": "ok", "edition": "2026_4" }
+  }]
+}
+```
+
+Мультиязычность: `lang` у каждой сущности, пути `content/{lang}/`, `public/data/{lang}/`, `public/audio/{lang}/`; теги форм — в стиле UD (NOM/GEN/DAT/ACC/LOC/VOC, SG/PL), общие для lv и de.
+
+## Модель карточек и FSRS
+
+| Тип карточки | Источник | Режимы | Retention |
+|---|---|---|---|
+| `produce` (RU → LV фраза) | phrase | «Говори» (вслух + самооценка 4 кнопки), «Тихий» (ввод + авто-оценка) | 0.90 |
+| `ending` (шаблон × лемма: «Es eju uz ___ (darbs)») | template + lemma + форма из Tēzaurs | оба режима | 0.90 |
+
+- Один ID карточки на (тип, объект); режим ответа пишется в журнал повторов, на расписание не влияет.
+- Новые: 10/день (настройка 8–12). **Автопауза**: если к повтору накопилось больше 1.5× средней дневной нагрузки за 7 дней (минимум 40 карточек), новые не выдаются; в шапке видна причина.
+- В «Тихом» режиме оценка ставится автоматически по двум уровням (отчёт, §2.12):
+  - корень не совпал или нет ответа → Again;
+  - корень верный, окончание неверное → Again для карточки `ending`, Hard для `produce`;
+  - ошибка только в диакритике → Hard;
+  - всё верно → Good.
+  - Можно исправить оценку одной кнопкой.
+- Граница дня — 04:00 по местному времени.
+
+## Сессия (1–3 мин)
+
+Сразу после открытия — первая карточка. Очередь: созревшие шаги обучения → карточки к повтору (`produce` раньше `ending`) → новые (не больше 2 за сессию, не из одной темы). Сессия заканчивается после 12 карточек или 150 секунд, дальше «Ещё 1 минуту?». Каждый ответ сразу записывается в IndexedDB.
+
+## UI
+
+- Тёмная тема, крупные кнопки в нижней трети экрана (зона большого пальца), 4 кнопки оценки шириной во весь экран.
+- Учтены вырезы экрана (safe-area-inset); после «Показать» срабатывает вибрация (где поддерживается).
+- Тап по латышскому слову открывает нижнюю шторку: форма → лемма, перевод, падеж/число/лицо по-русски, склонение/спряжение.
+- Экранные кнопки ā č ē ģ ī ķ ļ ņ š ū ž в «Тихом» режиме.
+- Нет: жизней, лиг, XP. Есть: «сегодня: N фраз сказано», прогноз нагрузки, причина паузы новых.
+
+## Структура файлов
+
+```
+Apps Learn/
+├─ research/lang-app-research.md
+├─ docs/ARCHITECTURE.md
+├─ package.json  vite.config.ts  tsconfig.json  index.html
+├─ src/
+│  ├─ main.tsx  app.tsx  styles.css
+│  ├─ core/                 # без UI, покрыто тестами
+│  │  ├─ types.ts           # Lang, Phrase, Token, Template, CardRef, ReviewLog
+│  │  ├─ scheduler.ts       # обёртка ts-fsrs, новые/день, автопауза, граница дня
+│  │  ├─ queue.ts           # сборка микросессии
+│  │  ├─ grade.ts           # сравнение ввода: корень / окончание / диакритика → Rating
+│  │  ├─ endings.ts         # генерация карточек «шаблон × лемма»
+│  │  └─ i18n-grammar.ts    # теги → «винительный, ед. ч.»
+│  ├─ data/
+│  │  ├─ db.ts              # IndexedDB (idb): cards, logs, settings
+│  │  ├─ content.ts         # загрузка public/data/{lang}/*.json
+│  │  └─ backup.ts          # экспорт/импорт прогресса
+│  └─ ui/
+│     ├─ Home.tsx  Session.tsx  SpeakCard.tsx  TypeCard.tsx
+│     ├─ WordSheet.tsx  DiacriticKeys.tsx  RatingBar.tsx  Stats.tsx  Settings.tsx
+├─ public/
+│  ├─ manifest.webmanifest  icons/
+│  ├─ data/lv/phrases.json  lexicon.json  templates.json
+│  └─ audio/lv/*.mp3
+├─ content/lv/phrases.src.json  lexicon.src.json  templates.json
+├─ scripts/
+│  ├─ tezaurs/download.ps1  build-index.py
+│  ├─ content/validate.ts  build.ts  export-review.ts  import-review.ts
+│  └─ tts/generate.ts  providers/{azure,google,piper}.ts  .env.example
+├─ review/                  # таблицы для репетитора
+├─ data-cache/              # дамп Tēzaurs и индекс (.gitignore)
+└─ tests/  (vitest: grade, scheduler, queue, endings)
+```
+
+## Шаги (после каждого — проверка на iPhone)
+
+1. **Каркас PWA + хостинг.** Тёмный экран-заглушка, иконка, работа офлайн. Проверка: «На экран Домой» → авиарежим → приложение открывается.
+2. **Контент.** Индекс Tēzaurs, формат JSON, валидатор, 150 фраз, таблица для репетитора. Проверка: список фраз и шторка по тапу на слово.
+3. **Аудио.** Скрипт генерации с тремя провайдерами, озвучка 150 фраз. Проверка: звук работает офлайн.
+4. **FSRS + IndexedDB + режим «Говори».** Проверка: короткая сессия, после перезапуска прогресс на месте.
+5. **«Тихий» режим.** Ввод, подсветка ошибки в корне и в окончании, кнопки с диакритикой.
+6. **Карточки на окончания.** 4 шаблона.
+7. **Статистика, бэкап, настройки.**
+
+## Риски и ограничения
+
+- Все 150 фраз пишу я (LLM), поэтому стартуют со статусом `unverified`. По правилу «непроверенные не попадают в режимы» до ревью репетитора тренироваться будет не на чем.
+- Tēzaurs — одноязычный словарь, русских переводов в нём нет. Переводы слов пишу я, они проверяются вместе с фразой.
+- Tēzaurs подтверждает, что форма существует и соответствует лемме, но не проверяет смысл и естественность фразы. Это остаётся за репетитором.
+- Обработка `wordforms_tei.xml` (12 ГБ, потоком) займёт несколько минут. Скачивается 214 МБ.
+- На iOS IndexedDB может быть очищен при нехватке места. Защита — `storage.persist()` и экспорт бэкапа.
