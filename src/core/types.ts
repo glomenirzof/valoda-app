@@ -44,9 +44,16 @@ export interface Settings {
   /** let unverified phrases into Speak / Silent training (marked) */
   allowUnverified: boolean;
   newPerDay: number;
+  /** null until the user picks one: then the system theme is used */
+  theme: 'light' | 'dark' | null;
+  accent: Accent;
+  font: FontPair;
 }
 
-export const DEFAULT_SETTINGS: Settings = { lang: 'lv', allowUnverified: false, newPerDay: 10 };
+export type Accent = 'terra' | 'amber';
+export type FontPair = 'A' | 'B' | 'C';
+
+export const DEFAULT_SETTINGS: Settings = { lang: 'lv', allowUnverified: false, newPerDay: 10, theme: null, accent: 'terra', font: 'B' };
 
 export const TOPIC_RU: Record<string, string> = {
   polite: 'Вежливость',

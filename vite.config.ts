@@ -19,8 +19,8 @@ export default defineConfig({
         scope: base,
         display: 'standalone',
         orientation: 'portrait',
-        background_color: '#0f1115',
-        theme_color: '#0f1115',
+        background_color: '#0c0c0d',
+        theme_color: '#0c0c0d',
         icons: [
           { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'icons/icon-512.png', sizes: '512x512', type: 'image/png' },
@@ -30,10 +30,18 @@ export default defineConfig({
       workbox: {
         // App shell + content + audio are precached so sessions work fully offline.
         // voice-test/ and design/ are one-off comparison pages and stay out of the cache.
-        globPatterns: ['**/*.{js,css,html,png,svg,webmanifest,json,mp3}'],
+        globPatterns: ['**/*.{js,css,html,png,svg,webmanifest,json,mp3,woff2}'],
         globIgnores: ['voice-test/**', 'design/**'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         navigateFallbackDenylist: [/\/voice-test\//, /\/design\//],
+        // Optional font pairs A and C come from Google Fonts; keep them once loaded.
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/fonts\.(googleapis|gstatic)\.com\//,
+            handler: 'CacheFirst',
+            options: { cacheName: 'google-fonts', expiration: { maxEntries: 30, maxAgeSeconds: 60 * 60 * 24 * 365 }, cacheableResponse: { statuses: [0, 200] } },
+          },
+        ],
       },
     }),
   ],

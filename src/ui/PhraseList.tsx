@@ -25,38 +25,53 @@ export function TappableText({ phrase, onWord }: { phrase: Phrase; onWord: (t: T
   );
 }
 
-export function PhraseList({ phrases }: { phrases: Phrase[] }) {
+export function PhraseList({ phrases, topic, onTopic }: { phrases: Phrase[]; topic: string | null; onTopic: (t: string | null) => void }) {
   const [open, setOpen] = useState<string | null>(null);
   const [word, setWord] = useState<Token | null>(null);
 
   const groups = useMemo(() => {
     const m = new Map<string, Phrase[]>();
-    for (const p of phrases) m.set(p.topic, [...(m.get(p.topic) ?? []), p]);
+    for (const p of phrases) if (!topic || p.topic === topic) m.set(p.topic, [...(m.get(p.topic) ?? []), p]);
     const order = Object.keys(TOPIC_RU);
     const rank = (t: string) => (order.includes(t) ? order.indexOf(t) : order.length);
     return [...m.entries()].sort(([a], [b]) => rank(a) - rank(b));
-  }, [phrases]);
+  }, [phrases, topic]);
 
+  const topics = useMemo(() => Object.keys(TOPIC_RU).filter((t) => phrases.some((p) => p.topic === t)), [phrases]);
   const verified = phrases.filter((p) => p.status === 'tutor').length;
 
   return (
-    <div class="list">
-      <p class="muted">
-        {phrases.length} фраз · проверено репетитором: {verified}. Нажми на фразу, потом на слово — увидишь разбор.
+    <>
+      <h1 class="title">Фразы</h1>
+      <p class="subtitle">
+        {phrases.length} фраз · проверено репетитором: {verified}
       </p>
-      {groups.map(([topic, items]) => (
-        <section key={topic}>
-          <h2 class="group-title">{TOPIC_RU[topic] ?? topic}</h2>
+
+      <div class="chips">
+        <button class={`chip ${topic ? '' : 'on'}`} onClick={() => onTopic(null)}>
+          Все
+        </button>
+        {topics.map((t) => (
+          <button key={t} class={`chip ${topic === t ? 'on' : ''}`} onClick={() => onTopic(t)}>
+            {TOPIC_RU[t]}
+          </button>
+        ))}
+      </div>
+
+      {groups.map(([t, items]) => (
+        <section key={t}>
+          {!topic && <h2 class="group-title">{TOPIC_RU[t] ?? t}</h2>}
           {items.map((p) => (
-            <article key={p.id} class={`phrase ${open === p.id ? 'open' : ''}`} onClick={() => setOpen(open === p.id ? null : p.id)}>
+            <article key={p.id} class="phrase" onClick={() => setOpen(open === p.id ? null : p.id)}>
               <div class="phrase-head">
                 <span class="phrase-lv">{p.text}</span>
-                {p.status !== 'tutor' && <span class="tag warn">не проверено</span>}
+                {p.status !== 'tutor' && <span class="tag">не проверено</span>}
               </div>
               <p class="phrase-ru">{p.ru}</p>
               {open === p.id && (
                 <div onClick={(e) => e.stopPropagation()}>
                   <TappableText phrase={p} onWord={setWord} />
+                  <p class="tap-hint">Нажми на слово — покажу разбор</p>
                 </div>
               )}
             </article>
@@ -64,6 +79,6 @@ export function PhraseList({ phrases }: { phrases: Phrase[] }) {
         </section>
       ))}
       {word && <WordSheet token={word} onClose={() => setWord(null)} />}
-    </div>
+    </>
   );
 }
