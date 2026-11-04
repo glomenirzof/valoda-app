@@ -294,6 +294,18 @@ h1, h2, h3 { font-family: var(--font-head); margin: 0; }
 .summary { justify-content: center; }
 .stat small { font-size: 20px; color: var(--muted); }
 
+/* ladder: S1 hear it and pick the meaning, S3 first letters given */
+.s-audio.listen { margin: 0 0 var(--s4); padding-top: 0; }
+.choices { display: grid; gap: var(--s2); margin-top: var(--s3); }
+.choice { min-height: 60px; padding: var(--s3); border-radius: var(--r-btn); background: var(--surface); box-shadow: var(--shadow); text-align: left; font: 600 18px/1.3 var(--font-body); transition: transform var(--dur) var(--ease), background var(--dur); }
+.choice:active { transform: scale(0.98); }
+.choice[disabled] { cursor: default; }
+.choice.c-ok { background: var(--good); color: var(--on-primary); }
+.choice.c-bad { background: var(--bad); color: var(--on-primary); }
+.choice-lv { margin: var(--s3) 0 0; font: 700 22px/1.3 var(--font-head); text-align: center; }
+.mask.cue { margin: var(--s3) 0 0; }
+.stage-note { margin: 0 0 var(--s3); color: var(--ink-2); }
+
 /* word sheet audio + phrase list tools */
 .ws-head { display: flex; align-items: center; justify-content: space-between; gap: var(--s3); }
 .a-inline { display: inline-grid; place-items: center; width: 28px; height: 28px; margin-right: 6px; vertical-align: middle; border-radius: 999px; background: var(--surface-2); }

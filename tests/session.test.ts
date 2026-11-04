@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { BACKLOG_PAUSE, buildQueue, plan } from '../src/core/session';
-import { newCard, review } from '../src/core/srs';
+import { BACKLOG_PAUSE, lessonInput, MAX_NEW_PER_SESSION, plan, type Acquaintance } from '../src/core/session';
+import { FSRS_PARAMS, graduationGrade, newCard, review } from '../src/core/srs';
 import { DEFAULT_SETTINGS, type Phrase } from '../src/core/types';
 
 const phrase = (n: number, status: Phrase['status'] = 'tutor', auto: Phrase['auto'] = 'unchecked'): Phrase => ({
@@ -9,35 +9,60 @@ const phrase = (n: number, status: Phrase['status'] = 'tutor', auto: Phrase['aut
 });
 const now = new Date('2026-11-04T10:00:00');
 const S = { ...DEFAULT_SETTINGS, newPerDay: 10 };
+const meet = (n: number, started = now.getTime()): Acquaintance => ({ id: `lv-${n}`, lang: 'lv', started, stage: 1 });
 
-describe('buildQueue', () => {
-  it('shows each new phrase as intro, tiles and a later typed recall', () => {
-    const q = buildQueue([1, 2, 3, 4].map((n) => phrase(n)), [], S, now);
-    expect(q.filter((s) => s.kind === 'intro').map((s) => s.id)).toEqual(['lv-1', 'lv-2', 'lv-3']);
-    for (const id of ['lv-1', 'lv-2', 'lv-3']) {
-      const kinds = q.filter((s) => s.id === id).map((s) => s.kind);
-      expect(kinds).toEqual(['intro', 'tiles', 'type']);
-      // recall is never right after the tiles of the same phrase
-      const t = q.findIndex((s) => s.id === id && s.kind === 'tiles');
-      expect(q[t + 1]?.id === id).toBe(false);
-    }
+describe('lessonInput', () => {
+  it('takes up to five new phrases', () => {
+    const i = lessonInput(Array.from({ length: 20 }, (_, k) => phrase(k + 1)), [], S, now);
+    expect(i.fresh).toHaveLength(MAX_NEW_PER_SESSION);
+    expect(i.fresh[0]).toBe('lv-1');
   });
 
   it('trains only phrases checked by the tutor or passed by the automatic check', () => {
     const ps = [phrase(1, 'unverified', 'doubtful'), phrase(2), phrase(3, 'unverified', 'ok'), phrase(4, 'unverified')];
-    expect(buildQueue(ps, [], S, now).filter((s) => s.kind === 'intro').map((s) => s.id)).toEqual(['lv-2', 'lv-3']);
+    expect(lessonInput(ps, [], S, now).fresh).toEqual(['lv-2', 'lv-3']);
   });
 
-  it('counts phrases introduced today against the daily limit', () => {
-    const cards = Array.from({ length: 10 }, (_, i) => newCard(`lv-${100 + i}`, 'lv', now));
-    expect(buildQueue([phrase(1)], cards, S, now)).toEqual([]);
+  it('resumes «знакомлюсь» phrases first and fills the rest with fresh ones', () => {
+    const ps = Array.from({ length: 10 }, (_, k) => phrase(k + 1));
+    const i = lessonInput(ps, [], S, now, [meet(7), meet(8)]);
+    expect(i.acquainted).toEqual(['lv-7', 'lv-8']);
+    expect(i.fresh).toEqual(['lv-1', 'lv-2', 'lv-3']);
+  });
+
+  it('counts phrases started today against the daily limit, graduated or not', () => {
+    const cards = Array.from({ length: 6 }, (_, k) => newCard(`lv-${100 + k}`, 'lv', now));
+    const meeting = [meet(200), meet(201), meet(202), meet(203)];
+    const ps = [phrase(1), phrase(2)];
+    expect(plan(ps, cards, S, now, meeting).newLeft).toBe(0);
+    expect(lessonInput(ps, cards, S, now, meeting).fresh).toEqual([]);
   });
 
   it('pauses new phrases when the review backlog is large', () => {
     const past = new Date('2026-10-01T10:00:00');
-    const cards = Array.from({ length: BACKLOG_PAUSE }, (_, i) => review(newCard(`lv-${100 + i}`, 'lv', past), 'good', past).card);
+    const cards = Array.from({ length: BACKLOG_PAUSE }, (_, k) => review(newCard(`lv-${100 + k}`, 'lv', past), 'good', past).card);
     const p = plan([phrase(1)], cards, S, now);
     expect(p.paused).toBe(true);
-    expect(p.newLeft).toBe(0);
+    expect(lessonInput([phrase(1)], cards, S, now, [meet(1)]).acquainted).toEqual([]);
+  });
+});
+
+describe('FSRS after the ladder', () => {
+  it('uses learning steps 10m, 1d and relearning 10m', () => {
+    expect([...FSRS_PARAMS.learning_steps]).toEqual(['10m', '1d']);
+    expect([...FSRS_PARAMS.relearning_steps]).toEqual(['10m']);
+  });
+
+  it('grades the first review Good when typed clean, Hard with hints or missing marks, never Easy', () => {
+    expect(graduationGrade({ verdict: 'ok', hints: 0 })).toBe('good');
+    expect(graduationGrade({ verdict: 'ok', hints: 2 })).toBe('hard');
+    expect(graduationGrade({ verdict: 'almost', hints: 0 })).toBe('hard');
+  });
+
+  it('a Good first grade schedules the next review a day later (second learning step)', () => {
+    const { card } = review(newCard('lv-1', 'lv', now), 'good', now);
+    const hours = (card.fsrs.due.getTime() - now.getTime()) / 3600000;
+    expect(hours).toBeGreaterThanOrEqual(23);
+    expect(hours).toBeLessThanOrEqual(26);
   });
 });

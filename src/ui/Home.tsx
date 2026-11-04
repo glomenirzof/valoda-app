@@ -1,4 +1,4 @@
-import { buildQueue, plan } from '../core/session';
+import { lessonInput, lessonSize, plan, type Acquaintance } from '../core/session';
 import { whenRu, type StoredCard } from '../core/srs';
 import { TOPIC_RU, type Phrase, type Settings } from '../core/types';
 import { Icon } from './icons';
@@ -9,17 +9,18 @@ export const TOPIC_HUE: Record<string, number> = {
   gym: 5, health: 140, home: 25, weather: 195, work: 60, likes: 340,
 };
 
-export function Home({ phrases, cards, settings, onTopic, onStart }: {
+export function Home({ phrases, cards, acquainted, settings, onTopic, onStart }: {
   phrases: Phrase[];
   cards: StoredCard[];
+  acquainted: Acquaintance[];
   settings: Settings;
   onTopic: (t: string) => void;
   onStart: () => void;
 }) {
   const now = new Date();
-  const { due, newLeft, paused, fresh, next } = plan(phrases, cards, settings, now);
+  const { due, newLeft, paused, fresh, resume, next } = plan(phrases, cards, settings, now, acquainted);
   const newToday = Math.min(newLeft, fresh.length);
-  const canStart = buildQueue(phrases, cards, settings, now).length > 0;
+  const canStart = lessonSize(lessonInput(phrases, cards, settings, now, acquainted)) > 0;
   const date = now.toLocaleDateString('ru-RU', { weekday: 'long', day: 'numeric', month: 'long' });
   const counts = new Map<string, number>();
   for (const p of phrases) counts.set(p.topic, (counts.get(p.topic) ?? 0) + 1);
@@ -40,6 +41,7 @@ export function Home({ phrases, cards, settings, onTopic, onStart }: {
         </div>
       </div>
       {paused && <p class="subtitle">Много повторений накопилось — новые фразы на паузе, пока их не станет меньше.</p>}
+      {resume.length > 0 && <p class="subtitle">Знакомлюсь: {resume.length} — продолжим со сборки из слов</p>}
       {!paused && fresh.length === 0 && cards.length === 0 && (
         <p class="subtitle">Пока нет проверенных фраз: учим только те, что прошли проверку по корпусу и переводчикам или у репетитора</p>
       )}

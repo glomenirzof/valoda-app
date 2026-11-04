@@ -1,4 +1,5 @@
 import { openDB, type DBSchema, type IDBPDatabase } from 'idb';
+import type { Acquaintance } from '../core/session';
 import type { StoredCard, StoredLog } from '../core/srs';
 import { DEFAULT_SETTINGS, type Lang, type Settings } from '../core/types';
 
@@ -6,16 +7,21 @@ interface ValodaDB extends DBSchema {
   settings: { key: string; value: Settings };
   cards: { key: string; value: StoredCard };
   logs: { key: number; value: StoredLog; indexes: { byCard: string } };
+  /** v2: phrases met in a lesson but not yet passed to FSRS («знакомлюсь») */
+  acquaint: { key: string; value: Acquaintance };
 }
 
 let dbp: Promise<IDBPDatabase<ValodaDB>> | null = null;
 
 export function db() {
-  dbp ??= openDB<ValodaDB>('valoda', 1, {
-    upgrade(d) {
-      d.createObjectStore('settings');
-      d.createObjectStore('cards', { keyPath: 'id' });
-      d.createObjectStore('logs', { autoIncrement: true }).createIndex('byCard', 'cardId');
+  dbp ??= openDB<ValodaDB>('valoda', 2, {
+    upgrade(d, oldVersion) {
+      if (oldVersion < 1) {
+        d.createObjectStore('settings');
+        d.createObjectStore('cards', { keyPath: 'id' });
+        d.createObjectStore('logs', { autoIncrement: true }).createIndex('byCard', 'cardId');
+      }
+      if (oldVersion < 2) d.createObjectStore('acquaint', { keyPath: 'id' });
     },
   });
   return dbp;
@@ -46,6 +52,27 @@ export async function saveReview(card: StoredCard, log?: StoredLog) {
   const tx = (await db()).transaction(['cards', 'logs'], 'readwrite');
   await tx.objectStore('cards').put(card);
   if (log) await tx.objectStore('logs').add(log);
+  await tx.done;
+}
+
+export async function loadAcquaint(lang: Lang): Promise<Acquaintance[]> {
+  try {
+    return (await (await db()).getAll('acquaint')).filter((a) => a.lang === lang);
+  } catch {
+    return [];
+  }
+}
+
+export async function saveAcquaint(a: Acquaintance) {
+  await (await db()).put('acquaint', a);
+}
+
+/** A phrase passed the last ladder stage: its FSRS card and first log are stored and it stops being «знакомлюсь». */
+export async function graduate(card: StoredCard, log: StoredLog) {
+  const tx = (await db()).transaction(['cards', 'logs', 'acquaint'], 'readwrite');
+  await tx.objectStore('cards').put(card);
+  await tx.objectStore('logs').add(log);
+  await tx.objectStore('acquaint').delete(card.id);
   await tx.done;
 }
 

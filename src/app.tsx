@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'preact/hooks';
-import { buildQueue, type Step } from './core/session';
+import type { LessonInput } from './core/ladder';
+import { lessonInput, type Acquaintance } from './core/session';
 import type { StoredCard } from './core/srs';
 import { DEFAULT_SETTINGS, type Phrase, type Settings as S } from './core/types';
 import { loadPhrases } from './data/content';
-import { loadCards, loadSettings, requestPersistence, saveSettings } from './data/db';
+import { loadAcquaint, loadCards, loadSettings, requestPersistence, saveSettings } from './data/db';
 import { Home } from './ui/Home';
 import { Icon, type IconName } from './ui/icons';
 import { applyLook } from './ui/look';
@@ -29,7 +30,8 @@ export function App() {
   const [error, setError] = useState<string | null>(null);
   const [online, setOnline] = useState(navigator.onLine);
   const [cards, setCards] = useState<StoredCard[]>([]);
-  const [session, setSession] = useState<Step[] | null>(null);
+  const [acquaint, setAcquaint] = useState<Acquaintance[]>([]);
+  const [session, setSession] = useState<LessonInput | null>(null);
 
   useEffect(() => {
     loadSettings().then(setSettings);
@@ -59,6 +61,7 @@ export function App() {
       .then((f) => setPhrases(f.phrases))
       .catch((e) => setError(String(e)));
     loadCards(settings.lang).then(setCards);
+    loadAcquaint(settings.lang).then(setAcquaint);
   }, [settings.lang]);
 
   const update = (s: S) => {
@@ -76,10 +79,13 @@ export function App() {
       <Session
         phrases={phrases}
         cards={cards}
-        queue={session}
+        acquainted={acquaint}
+        input={session}
         settings={settings}
-        onExit={(c) => {
-          setCards(c);
+        onExit={() => {
+          // everything was saved as it happened; reload what the lesson changed
+          loadCards(settings.lang).then(setCards);
+          loadAcquaint(settings.lang).then(setAcquaint);
           setSession(null);
           scrollTo(0, 0);
         }}
@@ -104,8 +110,9 @@ export function App() {
           <Home
             phrases={phrases}
             cards={cards}
+            acquainted={acquaint}
             settings={settings}
-            onStart={() => setSession(buildQueue(phrases, cards, settings, new Date()))}
+            onStart={() => setSession(lessonInput(phrases, cards, settings, new Date(), acquaint))}
             onTopic={(t) => {
               setTopic(t);
               go('phrases');

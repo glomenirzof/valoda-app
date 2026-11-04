@@ -2,7 +2,16 @@ import { createEmptyCard, fsrs, Rating, State, type Card, type ReviewLog } from 
 import type { Lang } from './types';
 
 // FSRS-6 via ts-fsrs 5.4.2 (pinned). Target retention 90 %; fuzz spreads due dates of cards learned together.
-const scheduler = fsrs({ request_retention: 0.9, enable_fuzz: true });
+// Learning steps 10 min and 1 day, relearning 10 min (research §3.4): a phrase that graduated from the
+// lesson ladder comes back in the next micro-session and again the next day before long intervals start.
+export const FSRS_PARAMS = {
+  request_retention: 0.9,
+  enable_fuzz: true,
+  enable_short_term: true,
+  learning_steps: ['10m', '1d'] as const,
+  relearning_steps: ['10m'] as const,
+};
+const scheduler = fsrs({ ...FSRS_PARAMS, learning_steps: [...FSRS_PARAMS.learning_steps], relearning_steps: [...FSRS_PARAMS.relearning_steps] });
 
 export type Grade = 'again' | 'hard' | 'good' | 'easy';
 const RATING = { again: Rating.Again, hard: Rating.Hard, good: Rating.Good, easy: Rating.Easy } as const;
@@ -22,19 +31,23 @@ export interface StoredLog {
   cardId: string;
   ts: number;
   grade: Grade;
-  /** which card type produced the grade */
-  mode: 'type' | 'say' | 'known';
+  /** which card type produced the grade; 'ladder' = the first grade, when a new phrase passes S4 */
+  mode: 'type' | 'say' | 'known' | 'ladder';
   hints: number;
   log: ReviewLog;
 }
 
-export const newCard = (id: string, lang: Lang, now: Date): StoredCard => ({
+export const newCard = (id: string, lang: Lang, now: Date, introduced = now.getTime()): StoredCard => ({
   id,
   lang,
   fsrs: createEmptyCard(now),
-  introduced: now.getTime(),
+  introduced,
   weak: {},
 });
+
+/** First FSRS grade of a phrase that passed the ladder: Good when typed clean, Hard with hints or missing marks. Never Easy. */
+export const graduationGrade = (o: { verdict: 'ok' | 'almost' | 'bad'; hints: number }): Grade =>
+  o.verdict === 'ok' && o.hints === 0 ? 'good' : 'hard';
 
 export function review(c: StoredCard, g: Grade, now: Date): { card: StoredCard; log: ReviewLog } {
   const { card, log } = scheduler.next(c.fsrs, now, RATING[g]);

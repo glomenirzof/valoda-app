@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { checkAnswer, MISTAKE_RU, type CheckResult } from '../core/check';
-import type { Step } from '../core/session';
-import { newCard, review, whenRu, type Grade, type StoredCard } from '../core/srs';
+import { answerReview, answerStage, current, startLesson, unfinished, type Answer, type Item, type Lesson, type LessonInput } from '../core/ladder';
+import { lessonSize, type Acquaintance } from '../core/session';
+import { graduationGrade, newCard, review, whenRu, type Grade, type StoredCard } from '../core/srs';
 import type { Phrase, Settings, Token } from '../core/types';
-import { saveReview } from '../data/db';
+import { graduate, saveAcquaint, saveReview } from '../data/db';
 import { playPhrase } from '../data/audio';
 import { Icon } from './icons';
 import { TappableText } from './PhraseList';
@@ -141,15 +142,16 @@ function Intro({ p, settings, onNext, onKnown }: { p: Phrase; settings: Settings
   );
 }
 
-function Tiles({ p, settings, onNext }: { p: Phrase; settings: Settings; onNext: () => void }) {
+function Tiles({ p, settings, trap = true, onNext }: { p: Phrase; settings: Settings; trap?: boolean; onNext: (pass: boolean) => void }) {
+  const withTrap = trap && !!p.key;
   const pool = useMemo(
-    () => shuffle([...p.tokens.map((t) => t.s), ...(p.key ? [p.key.trap] : [])]).map((t, id) => ({ t, id })),
+    () => shuffle([...p.tokens.map((t) => t.s), ...(withTrap ? [p.key!.trap] : [])]).map((t, id) => ({ t, id })),
     [p.id],
   );
   const [picked, setPicked] = useState<number[]>([]);
   const [res, setRes] = useState<'ok' | 'bad' | null>(null);
   const text = (id: number) => pool.find((x) => x.id === id)!.t;
-  const usedTrap = !!p.key && picked.some((id) => text(id) === p.key!.trap);
+  const usedTrap = withTrap && picked.some((id) => text(id) === p.key!.trap);
 
   return (
     <>
@@ -193,11 +195,11 @@ function Tiles({ p, settings, onNext }: { p: Phrase; settings: Settings; onNext:
             </button>
           ))}
         </div>
-        {p.key && !res && <p class="s-hint">Одно слово лишнее — с неправильным окончанием</p>}
+        {withTrap && !res && <p class="s-hint">Одно слово лишнее — с неправильным окончанием</p>}
       </main>
       <footer class="s-actions">
         {res ? (
-          <button class="btn primary" onClick={onNext}>
+          <button class="btn primary" onClick={() => onNext(res === 'ok')}>
             Дальше <Icon name="arrow" />
           </button>
         ) : (
@@ -219,7 +221,7 @@ function Tiles({ p, settings, onNext }: { p: Phrase; settings: Settings; onNext:
 
 interface Outcome { mode: 'type' | 'say'; result: CheckResult | null; hints: number; weak: number[] }
 
-function TypeCard({ p, onDone }: { p: Phrase; onDone: (o: Outcome) => void }) {
+function TypeCard({ p, cue = false, onDone }: { p: Phrase; cue?: boolean; onDone: (o: Outcome) => void }) {
   const [text, setText] = useState('');
   const [hints, setHints] = useState(0);
   const [weak, setWeak] = useState<Set<number>>(new Set());
@@ -251,8 +253,19 @@ function TypeCard({ p, onDone }: { p: Phrase; onDone: (o: Outcome) => void }) {
   return (
     <>
       <main class="s-main">
-        <p class="eyebrow">Напиши по-латышски</p>
+        <p class="eyebrow">{cue ? 'Напиши по первым буквам' : 'Напиши по-латышски'}</p>
         <h1 class="ru-big">{p.ru}</h1>
+        {cue && (
+          <p class="mask cue">
+            {p.text.split(/(\p{L}+)/u).map((part, j) =>
+              j % 2 === 0 ? part : (
+                <span key={j} class="mw">
+                  {[...part].map((ch, n) => (n === 0 ? <b key={n}>{ch}</b> : <i key={n} />))}
+                </span>
+              ),
+            )}
+          </p>
+        )}
         <div class="type-box">
           <textarea
             ref={ta}
@@ -469,57 +482,196 @@ function Feedback({ p, card, o, settings, onGrade }: { p: Phrase; card: StoredCa
   );
 }
 
+/* ---------- ladder cards (S1 hear it, S3/S4 feedback) ---------- */
+
+/** S1: the phrase sounds, the learner picks its meaning from three Russian translations (others from other topics). */
+function ListenChoose({ p, options, settings, onDone }: { p: Phrase; options: string[]; settings: Settings; onDone: (pass: boolean) => void }) {
+  const [picked, setPicked] = useState<string | null>(null);
+  const right = picked === p.ru;
+  return (
+    <>
+      <main class="s-main">
+        <p class="eyebrow">Узнай на слух</p>
+        <div class="s-audio listen">
+          <SoundButton p={p} settings={settings} cls="s-play" autoplay />
+        </div>
+        <p class="s-hint">Что значит эта фраза?</p>
+        <div class="choices">
+          {options.map((o) => (
+            <button
+              key={o}
+              class={`choice ${picked && o === p.ru ? 'c-ok' : ''} ${picked === o && !right ? 'c-bad' : ''}`}
+              disabled={!!picked}
+              onClick={() => setPicked(o)}
+            >
+              {o}
+            </button>
+          ))}
+        </div>
+        {picked && <p class="choice-lv">{p.text}</p>}
+      </main>
+      <footer class="s-actions">
+        <button class="btn primary" disabled={!picked} onClick={() => onDone(right)}>
+          Дальше <Icon name="arrow" />
+        </button>
+      </footer>
+    </>
+  );
+}
+
+/** Feedback after S3/S4: the answer is checked automatically, one button goes on. */
+function StageFeedback({ p, o, stage, settings, nextReview, onNext }: {
+  p: Phrase;
+  o: Outcome;
+  stage: 3 | 4;
+  settings: Settings;
+  /** for a passed S4: when FSRS brings the phrase back */
+  nextReview?: string;
+  onNext: () => void;
+}) {
+  const verdict = o.result!.verdict;
+  const pass = verdict !== 'bad';
+  const head = { ok: ['check', 'Верно'], almost: ['alert', 'Почти — проверь знаки'], bad: ['alert', 'Не совсем'] } as const;
+  const errors = [...new Set(o.result!.words.filter((w) => w.kind !== 'ok').map((w) => MISTAKE_RU[w.kind as keyof typeof MISTAKE_RU]))];
+  return (
+    <>
+      <div class="scrim" />
+      <section class={`sheet fb v-${verdict}`} role="dialog" aria-label="Ответ">
+        <div class="grab" />
+        <p class="verdict">
+          <Icon name={head[verdict][0]} />
+          <span>{head[verdict][1]}</span>
+        </p>
+        <div class="right">
+          <SoundButton p={p} settings={settings} cls="a-mini" label={false} autoplay />
+          <p class="right-lv">
+            <KeyText p={p} />
+          </p>
+        </div>
+        {verdict !== 'ok' && (
+          <p class="yours">
+            <span class="muted">Ты: </span>
+            {o.result!.words.map((w, i) => (
+              <span key={i}>
+                {i > 0 && ' '}
+                {w.kind === 'ok' ? w.got : w.kind === 'missing' ? <span class="d-err">…</span> : w.kind === 'mark' ? <span class="d-err d-mark">{w.got}</span> : (
+                  <>
+                    {w.got.slice(0, w.p)}
+                    <span class="d-err">{w.got.slice(w.p) || '∅'}</span>
+                  </>
+                )}
+              </span>
+            ))}
+            {errors.length > 0 && <span class="tags">{errors.map((e) => <i key={e}>{e}</i>)}</span>}
+          </p>
+        )}
+        {p.key && <p class="why">{p.key.why}</p>}
+        <p class="stage-note">
+          {pass && stage === 4
+            ? `Фраза выучена — дальше в повторениях${nextReview ? `, следующее ${nextReview}` : ''}`
+            : pass
+              ? 'Скоро напишешь её целиком, без подсказки'
+              : stage === 4
+                ? 'Вернёмся к ней с подсказкой первых букв через пару карточек'
+                : 'Ещё раз соберём её из слов через пару карточек'}
+        </p>
+        <button class="btn primary" onClick={onNext}>
+          Дальше <Icon name="arrow" />
+        </button>
+      </section>
+    </>
+  );
+}
+
 /* ---------- session ---------- */
 
-export function Session({ phrases, cards, queue: initial, settings, onExit }: {
+const stageKey = (it: Item | undefined) => (it ? `${it.id}:${it.kind === 'stage' ? `S${it.stage}` : it.mode}` : 'end');
+
+export function Session({ phrases, cards, acquainted, input, settings, onExit }: {
   phrases: Phrase[];
   cards: StoredCard[];
-  queue: Step[];
+  acquainted: Acquaintance[];
+  input: LessonInput;
   settings: Settings;
-  onExit: (cards: StoredCard[]) => void;
+  onExit: () => void;
 }) {
   const byId = useMemo(() => new Map(phrases.map((p) => [p.id, p])), [phrases]);
+  const [lesson, setLesson] = useState<Lesson>(() => startLesson(input));
   const [deck, setDeck] = useState(() => new Map(cards.map((c) => [c.id, c])));
-  const [queue, setQueue] = useState(initial);
-  const [pos, setPos] = useState(0);
+  const [meet, setMeet] = useState(() => new Map(acquainted.map((a) => [a.id, a])));
   const [outcome, setOutcome] = useState<Outcome | null>(null);
+  const [nextReview, setNextReview] = useState<string | undefined>();
   const [graded, setGraded] = useState<{ id: string; g: Grade }[]>([]);
-  const [retried, setRetried] = useState<Set<string>>(new Set());
-  const [finished, setFinished] = useState(initial.length === 0);
+  const [stopped, setStopped] = useState(false);
 
-  const step = queue[pos];
-  const p = step && byId.get(step.id);
+  const item = current(lesson);
+  const p = item && byId.get(item.id);
   const now = () => new Date();
+  const lang = settings.lang;
 
-  const put = (c: StoredCard) => setDeck((d) => new Map(d).set(c.id, c));
-  const advance = (q = queue) => {
-    setOutcome(null);
-    if (pos + 1 >= q.length) setFinished(true);
-    else setPos(pos + 1);
-  };
+  // S1 options: the right meaning and two from phrases of other topics, in random order (fixed per card).
+  const options = useMemo(() => {
+    if (!p || item?.kind !== 'stage' || item.stage !== 1) return [];
+    const others = shuffle(phrases.filter((x) => x.topic !== p.topic && x.ru !== p.ru).map((x) => x.ru));
+    return shuffle([p.ru, ...[...new Set(others)].slice(0, 2)]);
+  }, [stageKey(item), lesson.shown.length]);
 
-  // A new phrase becomes a card when it is first shown (it then counts against today's limit).
+  // A phrase becomes «знакомлюсь» the moment it is first shown: it then counts against today's limit
+  // and resumes at S2 if the lesson is left before it passes S4.
   useEffect(() => {
-    if (step?.kind === 'intro' && !deck.has(step.id)) {
-      const c = newCard(step.id, settings.lang, now());
-      put(c);
-      saveReview(c);
-    }
-  }, [pos]);
+    if (item?.kind !== 'stage' || meet.has(item.id) || deck.has(item.id)) return;
+    const a: Acquaintance = { id: item.id, lang, started: Date.now(), stage: -1 };
+    setMeet((m) => new Map(m).set(a.id, a));
+    saveAcquaint(a);
+  }, [stageKey(item), lesson.shown.length]);
 
-  const known = () => {
-    const c = deck.get(step.id)!;
-    const t = now();
-    const { card, log } = review(c, 'easy', t);
-    put(card);
-    saveReview(card, { cardId: c.id, ts: t.getTime(), grade: 'easy', mode: 'known', hints: 0, log });
-    const rest = queue.filter((s, i) => i <= pos || s.id !== step.id);
-    setQueue(rest);
-    advance(rest);
+  const stageStep = (answer: Answer) => {
+    const it = item as Extract<Item, { kind: 'stage' }>;
+    const step = answerStage(lesson, answer);
+    setOutcome(null);
+    setNextReview(undefined);
+    setLesson(step.lesson);
+    if ('pass' in answer && answer.pass && it.stage < 4) {
+      const a = meet.get(it.id);
+      if (a && a.stage < it.stage) {
+        const upd = { ...a, stage: it.stage };
+        setMeet((m) => new Map(m).set(a.id, upd));
+        saveAcquaint(upd);
+      }
+    }
   };
 
-  const grade = (g: Grade) => {
-    const c = deck.get(step.id)!;
+  /** S4 passed: the phrase gets its FSRS card with the first grade (Good clean, Hard with hints or marks). */
+  const graduateNow = (o: Outcome) => {
+    const t = now();
+    const a = meet.get(item!.id);
+    const g = graduationGrade({ verdict: o.result!.verdict, hints: o.hints });
+    const { card, log } = review(newCard(item!.id, lang, t, a?.started ?? t.getTime()), g, t);
+    const weak: Record<string, number> = {};
+    const bad = new Set(o.weak);
+    o.result!.words.forEach((w, i) => w.kind !== 'ok' && bad.add(i));
+    for (const i of bad) {
+      const lemma = p!.tokens[i]?.lemma;
+      if (lemma) weak[lemma] = (weak[lemma] ?? 0) + 1;
+    }
+    const c = { ...card, weak };
+    setDeck((d) => new Map(d).set(c.id, c));
+    setMeet((m) => {
+      const n = new Map(m);
+      n.delete(c.id);
+      return n;
+    });
+    graduate(c, { cardId: c.id, ts: t.getTime(), grade: g, mode: 'ladder', hints: o.hints, log });
+    setNextReview(whenRu(c.fsrs.due, t));
+  };
+
+  const typedDone = (o: Outcome) => {
+    setOutcome(o);
+    if (item?.kind === 'stage' && item.stage === 4 && o.result!.verdict !== 'bad') graduateNow(o);
+  };
+
+  const gradeReview = (g: Grade) => {
+    const c = deck.get(item!.id)!;
     const o = outcome!;
     const t = now();
     const { card, log } = review(c, g, t);
@@ -532,49 +684,43 @@ export function Session({ phrases, cards, queue: initial, settings, onExit }: {
       if (lemma) weak[lemma] = (weak[lemma] ?? 0) + 1;
     }
     const next = { ...card, weak };
-    put(next);
+    setDeck((d) => new Map(d).set(next.id, next));
     saveReview(next, { cardId: c.id, ts: t.getTime(), grade: g, mode: o.mode, hints: o.hints, log });
     setGraded([...graded, { id: c.id, g }]);
-    // Forgotten in this session: one more try at the end, said aloud this time.
-    let q = queue;
-    if (g === 'again' && !retried.has(c.id)) {
-      q = [...queue, { kind: 'say', id: c.id }];
-      setQueue(q);
-      setRetried(new Set(retried).add(c.id));
-    }
-    advance(q);
+    setOutcome(null);
+    setLesson(answerReview(lesson, g === 'again').lesson);
   };
 
-  const exit = () => onExit([...deck.values()]);
-
-  if (finished || !p) {
-    const ids = new Set(queue.slice(0, pos + 1).map((s) => s.id));
+  if (stopped || !item || !p) {
+    const total = lessonSize(input);
     const right = graded.filter((x) => x.g === 'good' || x.g === 'easy').length;
+    const meeting = unfinished(lesson).length;
     const t = now();
     const nextDue = [...deck.values()].map((c) => c.fsrs.due).filter((d) => d.getTime() > t.getTime()).sort((a, b) => a.getTime() - b.getTime())[0];
     return (
       <div class="session">
         <main class="s-main summary">
-          <h1 class="title">{initial.length ? 'Готово' : 'На сегодня всё'}</h1>
-          {initial.length > 0 && (
+          <h1 class="title">{total ? 'Готово' : 'На сегодня всё'}</h1>
+          {total > 0 && (
             <div class="today">
-              <div class="stat">
-                <b>{ids.size}</b>
-                <span>{plural(ids.size, 'фраза', 'фразы', 'фраз')}</span>
-              </div>
               <div class="stat accent">
+                <b>{lesson.graduated.length}</b>
+                <span>{plural(lesson.graduated.length, 'новая фраза выучена', 'новые фразы выучены', 'новых фраз выучено')}</span>
+              </div>
+              <div class="stat">
                 <b>
                   {right}
                   <small>/{graded.length}</small>
                 </b>
-                <span>вспомнил сам</span>
+                <span>повторений вспомнил сам</span>
               </div>
             </div>
           )}
+          {meeting > 0 && <p class="subtitle">Ещё знакомлюсь: {meeting} — в следующий раз начнём со сборки из слов</p>}
           {nextDue && <p class="subtitle">Следующее повторение — {whenRu(nextDue, t)}</p>}
         </main>
         <footer class="s-actions">
-          <button class="btn primary" onClick={exit}>
+          <button class="btn primary" onClick={onExit}>
             Закончить
           </button>
         </footer>
@@ -582,14 +728,29 @@ export function Session({ phrases, cards, queue: initial, settings, onExit }: {
     );
   }
 
+  const shown = lesson.shown.length;
   return (
-    <div class="session" key={`${pos}-${step.kind}`}>
-      <TopBar pos={pos} total={queue.length} onClose={() => (graded.length ? setFinished(true) : exit())} />
-      {step.kind === 'intro' && <Intro p={p} settings={settings} onNext={() => advance()} onKnown={known} />}
-      {step.kind === 'tiles' && <Tiles p={p} settings={settings} onNext={() => advance()} />}
-      {step.kind === 'type' && <TypeCard p={p} onDone={setOutcome} />}
-      {step.kind === 'say' && <SayCard p={p} onDone={setOutcome} />}
-      {outcome && deck.get(p.id) && <Feedback p={p} card={deck.get(p.id)!} o={outcome} settings={settings} onGrade={grade} />}
+    <div class="session" key={`${shown}-${stageKey(item)}`}>
+      <TopBar pos={shown} total={shown + lesson.queue.length} onClose={() => (shown ? setStopped(true) : onExit())} />
+      {item.kind === 'stage' && item.stage === 0 && (
+        <Intro p={p} settings={settings} onNext={() => stageStep({ pass: true })} onKnown={() => stageStep({ known: true })} />
+      )}
+      {item.kind === 'stage' && item.stage === 1 && <ListenChoose p={p} options={options} settings={settings} onDone={(pass) => stageStep(pass ? { pass: true } : { pass: false })} />}
+      {item.kind === 'stage' && item.stage === 2 && <Tiles p={p} settings={settings} trap={false} onNext={(pass) => stageStep(pass ? { pass: true } : { pass: false })} />}
+      {item.kind === 'stage' && item.stage >= 3 && <TypeCard p={p} cue={item.stage === 3} onDone={typedDone} />}
+      {item.kind === 'review' && item.mode === 'type' && <TypeCard p={p} onDone={setOutcome} />}
+      {item.kind === 'review' && item.mode === 'say' && <SayCard p={p} onDone={setOutcome} />}
+      {outcome && item.kind === 'stage' && (
+        <StageFeedback
+          p={p}
+          o={outcome}
+          stage={item.stage as 3 | 4}
+          settings={settings}
+          nextReview={nextReview}
+          onNext={() => stageStep(outcome.result!.verdict !== 'bad' ? { pass: true } : { pass: false })}
+        />
+      )}
+      {outcome && item.kind === 'review' && deck.get(p.id) && <Feedback p={p} card={deck.get(p.id)!} o={outcome} settings={settings} onGrade={gradeReview} />}
     </div>
   );
 }
