@@ -31,11 +31,17 @@ export default defineConfig({
         // App shell + content + audio are precached so sessions work fully offline.
         // voice-test/ and design/ are one-off comparison pages and stay out of the cache.
         globPatterns: ['**/*.{js,css,html,png,svg,webmanifest,json,mp3,woff2}'],
-        globIgnores: ['voice-test/**', 'design/**'],
+        // single-word audio (audio/<lang>/w/) is cached on first play, below, to keep the first download small
+        globIgnores: ['voice-test/**', 'design/**', 'audio/*/w/**'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         navigateFallbackDenylist: [/\/voice-test\//, /\/design\//],
         // Optional font pairs A and C come from Google Fonts; keep them once loaded.
         runtimeCaching: [
+          {
+            urlPattern: /\/audio\/[a-z]+\/w\/[0-9a-f]+\.mp3$/,
+            handler: 'CacheFirst',
+            options: { cacheName: 'word-audio', expiration: { maxEntries: 3000 }, cacheableResponse: { statuses: [0, 200] }, rangeRequests: true },
+          },
           {
             urlPattern: /^https:\/\/fonts\.(googleapis|gstatic)\.com\//,
             handler: 'CacheFirst',

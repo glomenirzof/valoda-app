@@ -10,7 +10,7 @@
  */
 import 'dotenv/config';
 import { createHash } from 'node:crypto';
-import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { providers, type ProviderId, type Quality } from './providers';
 
@@ -35,13 +35,26 @@ const wordKey = (form: string, lemma: string) => (/^\p{Lu}/u.test(lemma) ? form 
 const words = new Set<string>();
 for (const p of phrases) for (const t of p.tokens) words.add(wordKey(t.s, t.lemma)).add(t.lemma);
 
-const fileFor = (text: string) =>
+const hashFile = (text: string) =>
   `${createHash('sha1').update(`${VOICE.provider}|${VOICE.voice}|${VOICE.quality}|${text}`).digest('hex').slice(0, 16)}.mp3`;
+// Phrase audio sits in audio/<lang>/ and is precached for offline training; single words live in
+// audio/<lang>/w/ and are cached the first time they are played (keeps the first download small).
+type Kind = 'phrase' | 'word';
+const fileFor = (text: string, kind: Kind) => (kind === 'word' ? `w/${hashFile(text)}` : hashFile(text));
 
-const items = [...phrases.map((p) => p.text), ...words];
-const todo = [...new Set(items)].filter((t) => !existsSync(join(outDir, fileFor(t))));
-const chars = todo.reduce((n, t) => n + [...t].length, 0);
-console.log(`фраз: ${phrases.length}, слов: ${words.size}, уже есть: ${new Set(items).size - todo.length}, озвучить: ${todo.length} (${chars} симв.)`);
+const phraseTexts = new Set(phrases.map((p) => p.text));
+mkdirSync(join(outDir, 'w'), { recursive: true });
+// Word files made before the split were in the root folder: move (or copy, if a phrase shares the text) instead of re-voicing.
+for (const w of words) {
+  const old = join(outDir, hashFile(w));
+  const now = join(outDir, fileFor(w, 'word'));
+  if (existsSync(old) && !existsSync(now)) (phraseTexts.has(w) ? copyFileSync : renameSync)(old, now);
+}
+
+const items: [string, Kind][] = [...[...phraseTexts].map((t) => [t, 'phrase'] as [string, Kind]), ...[...words].map((t) => [t, 'word'] as [string, Kind])];
+const todo = items.filter(([t, k]) => !existsSync(join(outDir, fileFor(t, k))));
+const chars = todo.reduce((n, [t]) => n + [...t].length, 0);
+console.log(`фраз: ${phrases.length}, слов: ${words.size}, уже есть: ${items.length - todo.length}, озвучить: ${todo.length} (${chars} симв.)`);
 if (dry) process.exit(0);
 
 const provider = providers[VOICE.provider];
@@ -51,11 +64,11 @@ if (why && todo.length) throw new Error(`${VOICE.provider}: ${why}`);
 mkdirSync(outDir, { recursive: true });
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 let billed = 0;
-for (const [n, text] of todo.entries()) {
+for (const [n, [text, kind]] of todo.entries()) {
   for (let attempt = 1; ; attempt++) {
     try {
       const r = await provider.synthesize(text, VOICE.voice, 1, VOICE.quality);
-      writeFileSync(join(outDir, fileFor(text)), r.mp3);
+      writeFileSync(join(outDir, fileFor(text, kind)), r.mp3);
       billed += r.textChars;
       break;
     } catch (e) {
@@ -73,12 +86,15 @@ for (const [n, text] of todo.entries()) {
 
 const index = {
   voice: `${VOICE.provider} ${VOICE.voice} ${VOICE.quality}`,
-  phrases: Object.fromEntries(phrases.map((p) => [p.id, fileFor(p.text)])),
-  words: Object.fromEntries([...words].sort().map((w) => [w, fileFor(w)])),
+  phrases: Object.fromEntries(phrases.map((p) => [p.id, fileFor(p.text, 'phrase')])),
+  words: Object.fromEntries([...words].sort().map((w) => [w, fileFor(w, 'word')])),
 };
 writeFileSync(indexPath, JSON.stringify(index, null, 1) + '\n');
 
 const used = new Set([...Object.values(index.phrases), ...Object.values(index.words)]);
-const stale = readdirSync(outDir).filter((f) => f.endsWith('.mp3') && !used.has(f));
+const stale = [
+  ...readdirSync(outDir).filter((f) => f.endsWith('.mp3')),
+  ...readdirSync(join(outDir, 'w')).filter((f) => f.endsWith('.mp3')).map((f) => `w/${f}`),
+].filter((f) => !used.has(f));
 for (const f of stale) rmSync(join(outDir, f));
 console.log(`готово: ${indexPath}; новых символов: ${billed}; удалено старых файлов: ${stale.length}`);
