@@ -2696,7 +2696,7 @@
    "image": null,
    "freqRank": 393,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
