@@ -14,6 +14,7 @@ dropped automatically when another reading exists).
 """
 import json
 import re
+import hashlib
 import sqlite3
 import sys
 from collections import defaultdict
@@ -219,6 +220,8 @@ def main() -> int:
     src = load_json(Path(f"content/{lang}/phrases.src.json"), None)
     lexicon: dict[str, str] = load_json(Path(f"content/{lang}/lexicon.src.json"), {})
     review: dict[str, dict] = load_json(Path(f"content/{lang}/review.json"), {})
+    # npm run content:check results; a status counts only for the exact text and translation it was checked for
+    auto: dict[str, dict] = load_json(Path(f"content/{lang}/auto-check.json"), {})
     db = sqlite3.connect(DB)
     edition = "2026_4"
     ranks = lemma_freq(db, Path(f"data-cache/freq/{lang}_50k.txt"))
@@ -308,6 +311,10 @@ def main() -> int:
         rv = review.get(pid, {})
         if rv.get("status") == "drop":
             continue
+        ac = auto.get(pid, {})
+        checked = ac.get("hash") == hashlib.sha1(f"{p['lv']}|{p['ru']}".encode()).hexdigest()[:12]
+        if checked and ac.get("status") == "drop":
+            continue
         if rv.get("status") == "fix":
             warnings.append(f"{pid}: репетитор исправил → «{rv.get('lv', p['lv'])}» / «{rv.get('ru', p['ru'])}»"
                             f"{' — ' + rv['comment'] if rv.get('comment') else ''}: обнови phrases.src.json")
@@ -327,6 +334,7 @@ def main() -> int:
             "image": p.get("image"),
             "freqRank": max(content_ranks) if content_ranks else None,
             "status": "tutor" if rv.get("status") == "ok" else "unverified",
+            "auto": ac.get("status", "unchecked") if checked else "unchecked",
             "source": p.get("source", "llm"),
             "check": {"tezaurs": "ok", "edition": edition},
         })

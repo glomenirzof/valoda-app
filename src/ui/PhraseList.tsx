@@ -2,6 +2,7 @@ import { useMemo, useState } from 'preact/hooks';
 import { TOPIC_RU, type Lang, type Phrase, type Token } from '../core/types';
 import { playPhrase } from '../data/audio';
 import { Icon } from './icons';
+import { StatusTag } from './StatusTag';
 import { WordSheet } from './WordSheet';
 
 /** Latvian text where every word is a button that opens its analysis. */
@@ -40,13 +41,14 @@ export function PhraseList({ phrases, lang, topic, onTopic }: { phrases: Phrase[
   }, [phrases, topic]);
 
   const topics = useMemo(() => Object.keys(TOPIC_RU).filter((t) => phrases.some((p) => p.topic === t)), [phrases]);
-  const verified = phrases.filter((p) => p.status === 'tutor').length;
+  const tutor = phrases.filter((p) => p.status === 'tutor').length;
+  const auto = phrases.filter((p) => p.status !== 'tutor' && p.auto === 'ok').length;
 
   return (
     <>
       <h1 class="title">Фразы</h1>
       <p class="subtitle">
-        {phrases.length} фраз · проверено репетитором: {verified}
+        {phrases.length} фраз · проверено автоматически: {auto} · репетитором: {tutor}
       </p>
 
       <div class="chips">
@@ -67,7 +69,7 @@ export function PhraseList({ phrases, lang, topic, onTopic }: { phrases: Phrase[
             <article key={p.id} class="phrase" onClick={() => setOpen(open === p.id ? null : p.id)}>
               <div class="phrase-head">
                 <span class="phrase-lv">{p.text}</span>
-                {p.status !== 'tutor' && <span class="tag">не проверено</span>}
+                <StatusTag p={p} />
               </div>
               <p class="phrase-ru">{p.ru}</p>
               {open === p.id && (

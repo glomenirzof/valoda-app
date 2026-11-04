@@ -136,6 +136,8 @@ h1, h2, h3 { font-family: var(--font-head); margin: 0; }
 .phrase-lv { font: 700 19px/1.3 var(--font-head); }
 .phrase-ru { margin: var(--s1) 0 0; color: var(--muted); font-size: 15px; }
 .tag { flex: none; font-size: 12px; padding: 3px 8px; border-radius: 999px; background: var(--surface-2); color: var(--muted); }
+.tag.t-tutor, .tag.t-auto { color: var(--good); }
+.tag.t-doubt { color: var(--warn); }
 .lv-text { margin: var(--s3) 0 0; padding-top: var(--s3); border-top: 1px solid var(--line); font: 800 28px/1.25 var(--font-head); letter-spacing: -0.02em; }
 .word { font: inherit; letter-spacing: inherit; border-bottom: 2px dotted var(--line-strong); }
 .word:active { color: var(--accent-ink); border-color: var(--accent); }

@@ -24,8 +24,10 @@ const outDir = `public/audio/${LANG}`;
 const indexPath = `public/data/${LANG}/audio.json`;
 
 interface Token { s: string; lemma: string }
-interface Phrase { id: string; text: string; tokens: Token[] }
-const { phrases } = JSON.parse(readFileSync(`public/data/${LANG}/phrases.json`, 'utf8')) as { phrases: Phrase[] };
+interface Phrase { id: string; text: string; tokens: Token[]; status: string; auto?: string }
+// Only phrases that may be trained are voiced: checked by the tutor or passed by npm run content:check.
+const phrases = (JSON.parse(readFileSync(`public/data/${LANG}/phrases.json`, 'utf8')) as { phrases: Phrase[] }).phrases
+  .filter((p) => p.status === 'tutor' || p.auto === 'ok');
 
 // Proper nouns keep their capital (Rīga, Rīgā); other words are voiced in lower case.
 const wordKey = (form: string, lemma: string) => (/^\p{Lu}/u.test(lemma) ? form : form.toLowerCase());

@@ -16,6 +16,8 @@ export interface Token {
 }
 
 export type PhraseStatus = 'unverified' | 'tutor';
+/** result of npm run content:check (sources + two translators); only 'ok' goes into training */
+export type AutoStatus = 'ok' | 'doubtful' | 'unchecked';
 
 export interface Phrase {
   id: string;
@@ -31,6 +33,7 @@ export interface Phrase {
   image: string | null;
   freqRank: number | null;
   status: PhraseStatus;
+  auto: AutoStatus;
   source: 'llm' | 'tutor' | 'life' | 'tatoeba';
   check: { tezaurs: 'ok'; edition: string };
 }
@@ -43,8 +46,6 @@ export interface PhraseFile {
 
 export interface Settings {
   lang: Lang;
-  /** let unverified phrases into Speak / Silent training (marked) */
-  allowUnverified: boolean;
   newPerDay: number;
   /** null until the user picks one: then the system theme is used */
   theme: 'light' | 'dark' | null;
@@ -55,7 +56,7 @@ export interface Settings {
 export type Accent = 'terra' | 'amber';
 export type FontPair = 'A' | 'B' | 'C';
 
-export const DEFAULT_SETTINGS: Settings = { lang: 'lv', allowUnverified: false, newPerDay: 10, theme: null, accent: 'terra', font: 'B' };
+export const DEFAULT_SETTINGS: Settings = { lang: 'lv', newPerDay: 10, theme: null, accent: 'terra', font: 'B' };
 
 export const TOPIC_RU: Record<string, string> = {
   polite: 'Вежливость',

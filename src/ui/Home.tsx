@@ -41,9 +41,7 @@ export function Home({ phrases, cards, settings, onTopic, onStart }: {
       </div>
       {paused && <p class="subtitle">Много повторений накопилось — новые фразы на паузе, пока их не станет меньше.</p>}
       {!paused && fresh.length === 0 && cards.length === 0 && (
-        <p class="subtitle">
-          Репетитор ещё не проверил фразы. Чтобы учить их уже сейчас, включи «Непроверенные фразы» в настройках.
-        </p>
+        <p class="subtitle">Пока нет проверенных фраз: учим только те, что прошли проверку по корпусу и переводчикам или у репетитора</p>
       )}
 
       <h2 class="section-title">Темы</h2>

@@ -63,15 +63,7 @@ export function Settings({ value, onChange }: { value: S; onChange: (s: S) => vo
       <h2 class="section-title">Обучение</h2>
       <div class="rows">
         <Row icon="plus" title="Новых фраз в день" hint="При большом долге повторений новые встают на паузу сами" value={value.newPerDay} onClick={() => setPicker('newPerDay')} />
-        <Row icon="shield" title="Непроверенные фразы" hint="Ещё не проверены репетитором; в тренировке будут с пометкой">
-          <input
-            type="checkbox"
-            class="switch"
-            aria-label="Непроверенные фразы в тренировках"
-            checked={value.allowUnverified}
-            onChange={(e) => set({ allowUnverified: (e.target as HTMLInputElement).checked })}
-          />
-        </Row>
+        <Row icon="shield" title="Какие фразы учим" hint="Проверенные автоматически (корпус и два переводчика) или репетитором" />
       </div>
 
       <h2 class="section-title">Вид</h2>
@@ -97,7 +89,7 @@ export function Settings({ value, onChange }: { value: S; onChange: (s: S) => vo
         <Row icon="info" title="Словарь форм" hint="Tēzaurs.lv 2026, CLARIN-LV, лицензия CC BY-SA 4.0" />
         <Row icon="play" title="Голос" hint="Azure, Everita (латышский)" />
       </div>
-      <p class="foot">Всё хранится на этом телефоне и работает без интернета.</p>
+      <p class="foot">Всё хранится на этом телефоне и работает без интернета</p>
 
       {open && (
         <>

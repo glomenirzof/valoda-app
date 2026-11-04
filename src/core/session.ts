@@ -16,7 +16,9 @@ export const MAX_REVIEWS_PER_SESSION = 10;
 /** With this many reviews waiting, new phrases pause until the backlog shrinks. */
 export const BACKLOG_PAUSE = 30;
 
-export const trainable = (phrases: Phrase[], s: Settings) => phrases.filter((p) => p.status === 'tutor' || s.allowUnverified);
+/** Only phrases checked by the tutor or passed by content:check go into training. */
+export const isTrainable = (p: Phrase) => p.status === 'tutor' || p.auto === 'ok';
+export const trainable = (phrases: Phrase[], _s?: Settings) => phrases.filter(isTrainable);
 
 const startOfDay = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
 

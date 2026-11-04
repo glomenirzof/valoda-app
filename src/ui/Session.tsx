@@ -7,6 +7,7 @@ import { saveReview } from '../data/db';
 import { playPhrase } from '../data/audio';
 import { Icon } from './icons';
 import { TappableText } from './PhraseList';
+import { StatusTag } from './StatusTag';
 import { WordSheet } from './WordSheet';
 
 /* ---------- helpers ---------- */
@@ -116,7 +117,7 @@ function Intro({ p, settings, onNext, onKnown }: { p: Phrase; settings: Settings
     <>
       <main class="s-main">
         <p class="eyebrow">
-          Новая фраза {p.status !== 'tutor' && <span class="tag">не проверено</span>}
+          Новая фраза <StatusTag p={p} />
         </p>
         <div class="phrase-card">
           <TappableText phrase={p} onWord={setWord} cls="s-lv" />
@@ -177,7 +178,7 @@ function Tiles({ p, settings, onNext }: { p: Phrase; settings: Settings; onNext:
             <p>
               Правильно: <b><KeyText p={p} /></b>
             </p>
-            <p>{usedTrap ? p.key!.trapWhy : 'Проверь порядок слов.'}</p>
+            <p>{usedTrap ? p.key!.trapWhy : 'Проверь порядок слов'}</p>
           </div>
         )}
         <div class="pool">
@@ -355,9 +356,9 @@ function SayCard({ p, onDone }: { p: Phrase; onDone: (o: Outcome) => void }) {
             <Icon name="mic" />
           </div>
           <p>
-            Скажи фразу вслух.
+            Скажи фразу вслух
             <br />
-            Не помнишь — открой букву.
+            Не помнишь — открой букву
           </p>
         </div>
       </main>
@@ -570,7 +571,7 @@ export function Session({ phrases, cards, queue: initial, settings, onExit }: {
               </div>
             </div>
           )}
-          {nextDue && <p class="subtitle">Следующее повторение — {whenRu(nextDue, t)}.</p>}
+          {nextDue && <p class="subtitle">Следующее повторение — {whenRu(nextDue, t)}</p>}
         </main>
         <footer class="s-actions">
           <button class="btn primary" onClick={exit}>

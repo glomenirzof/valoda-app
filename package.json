@@ -16,7 +16,8 @@
     "content:build": "python -I scripts/content/build_phrases.py lv",
     "content:export": "tsx scripts/content/export-review.ts lv",
     "content:import": "tsx scripts/content/import-review.ts",
-    "tts:generate": "tsx scripts/tts/generate.ts"
+    "tts:generate": "tsx scripts/tts/generate.ts",
+    "content:check": "python -I scripts/content/build_phrases.py lv && tsx scripts/content/check.ts lv && python -I scripts/content/build_phrases.py lv"
   },
   "type": "module",
   "dependencies": {

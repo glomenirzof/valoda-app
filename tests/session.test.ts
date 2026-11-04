@@ -3,9 +3,9 @@ import { BACKLOG_PAUSE, buildQueue, plan } from '../src/core/session';
 import { newCard, review } from '../src/core/srs';
 import { DEFAULT_SETTINGS, type Phrase } from '../src/core/types';
 
-const phrase = (n: number, status: Phrase['status'] = 'tutor'): Phrase => ({
+const phrase = (n: number, status: Phrase['status'] = 'tutor', auto: Phrase['auto'] = 'unchecked'): Phrase => ({
   id: `lv-${n}`, lang: 'lv', topic: 'me', text: `Teksts ${n}.`, ru: `Текст ${n}.`, tokens: [], accept: [],
-  audio: null, image: null, freqRank: n, status, source: 'llm', check: { tezaurs: 'ok', edition: 'x' },
+  audio: null, image: null, freqRank: n, status, auto, source: 'llm', check: { tezaurs: 'ok', edition: 'x' },
 });
 const now = new Date('2026-11-04T10:00:00');
 const S = { ...DEFAULT_SETTINGS, newPerDay: 10 };
@@ -23,10 +23,9 @@ describe('buildQueue', () => {
     }
   });
 
-  it('skips unverified phrases unless allowed', () => {
-    const ps = [phrase(1, 'unverified'), phrase(2)];
-    expect(buildQueue(ps, [], S, now).filter((s) => s.kind === 'intro').map((s) => s.id)).toEqual(['lv-2']);
-    expect(buildQueue(ps, [], { ...S, allowUnverified: true }, now).filter((s) => s.kind === 'intro')).toHaveLength(2);
+  it('trains only phrases checked by the tutor or passed by the automatic check', () => {
+    const ps = [phrase(1, 'unverified', 'doubtful'), phrase(2), phrase(3, 'unverified', 'ok'), phrase(4, 'unverified')];
+    expect(buildQueue(ps, [], S, now).filter((s) => s.kind === 'intro').map((s) => s.id)).toEqual(['lv-2', 'lv-3']);
   });
 
   it('counts phrases introduced today against the daily limit', () => {
