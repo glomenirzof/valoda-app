@@ -290,9 +290,9 @@
     {
       "id": "lv-0040",
       "topic": "understand",
-      "lv": "Lūdzu, atkārtojiet.",
-      "ru": "Пожалуйста, повторите.",
-      "lemmas": "lūdzu atkārtot"
+      "lv": "Atkārtojiet, lūdzu!",
+      "ru": "Повторите, пожалуйста!",
+      "lemmas": "atkārtot lūdzu"
     },
     {
       "id": "lv-0041",
@@ -339,9 +339,9 @@
     {
       "id": "lv-0047",
       "topic": "understand",
-      "lv": "Uzrakstiet, lūdzu!",
-      "ru": "Напишите, пожалуйста!",
-      "lemmas": "uzrakstīt lūdzu"
+      "lv": "Lūdzu, uzrakstiet!",
+      "ru": "Пожалуйста, напишите!",
+      "lemmas": "lūdzu uzrakstīt"
     },
     {
       "id": "lv-0048",
@@ -477,7 +477,7 @@
       "id": "lv-0066",
       "topic": "shop",
       "lv": "Man garšo šī zupa.",
-      "ru": "Мне нравится (на вкус) этот суп.",
+      "ru": "Мне нравится этот суп (на вкус). / Вкусный суп.",
       "lemmas": "es garšot šī zupa"
     },
     {
@@ -535,16 +535,16 @@
     {
       "id": "lv-0074",
       "topic": "city",
-      "lv": "Kad atiet vilciens?",
-      "ru": "Когда отходит поезд?",
-      "lemmas": "kad atiet vilciens"
+      "lv": "Cikos atiet vilciens?",
+      "ru": "Во сколько отходит поезд?",
+      "lemmas": "cikos atiet vilciens"
     },
     {
       "id": "lv-0075",
       "topic": "city",
-      "lv": "Ejiet taisni.",
-      "ru": "Идите прямо.",
-      "lemmas": "iet taisni"
+      "lv": "Ejiet taisni uz priekšu.",
+      "ru": "Идите прямо (вперёд).",
+      "lemmas": "iet taisni uz priekša"
     },
     {
       "id": "lv-0076",
@@ -816,11 +816,12 @@
     {
       "id": "lv-0112",
       "topic": "gym",
-      "lv": "Šodien mēs trenējam kājas.",
-      "ru": "Сегодня мы тренируем ноги.",
-      "lemmas": "šodien mēs trenēt kāja",
+      "lv": "Šodien mēs trenējam kāju muskuļus.",
+      "ru": "Сегодня мы тренируем мышцы ног.",
+      "lemmas": "šodien mēs trenēt kāja muskulis",
       "hints": {
-        "kājas": "ACC.PL"
+        "kāju": "GEN.PL",
+        "muskuļus": "ACC.PL"
       }
     },
     {
@@ -916,9 +917,12 @@
     {
       "id": "lv-0125",
       "topic": "home",
-      "lv": "Viņš ir mājā.",
-      "ru": "Он в доме.",
-      "lemmas": "viņš būt māja"
+      "lv": "Viņš ir mājās.",
+      "ru": "Он дома.",
+      "lemmas": "viņš būt māja",
+      "hints": {
+        "mājās": "LOC.PL"
+      }
     },
     {
       "id": "lv-0126",
@@ -1003,9 +1007,9 @@
     {
       "id": "lv-0137",
       "topic": "work",
-      "lv": "Man ir sapulce.",
-      "ru": "У меня совещание.",
-      "lemmas": "es būt sapulce"
+      "lv": "Man ir tikšanās.",
+      "ru": "У меня встреча.",
+      "lemmas": "es būt tikšanās"
     },
     {
       "id": "lv-0138",
@@ -1063,14 +1067,14 @@
       "id": "lv-0145",
       "topic": "likes",
       "lv": "Man patīk kafija.",
-      "ru": "Мне нравится кофе.",
+      "ru": "Мне нравится кофе. / Я люблю кофе.",
       "lemmas": "es patikt kafija"
     },
     {
       "id": "lv-0146",
       "topic": "likes",
       "lv": "Man nepatīk piens.",
-      "ru": "Мне не нравится молоко.",
+      "ru": "Мне не нравится молоко. / Я не люблю молоко.",
       "lemmas": "es patikt piens"
     },
     {

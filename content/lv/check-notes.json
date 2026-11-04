@@ -1,15 +1,196 @@
 {
- "lv-0147": { "status": "ok", "reason": "фраза в корпусе 263 раза и в Tatoeba; Tilde даёт тот же перевод, Microsoft — «Чем вы занимаетесь?» (то же значение, вежливая форма)" },
- "lv-0013": { "status": "ok", "reason": "в корпусе 58 раз; «Как ты?» / «Как дела?» у переводчиков — синонимы «Как у тебя дела?»" },
- "lv-0076": { "status": "ok", "reason": "в корпусе 1335 раз; «pa labi» значит и «направо», и «справа» — оба переводчика дают «Справа»" },
- "lv-0077": { "status": "ok", "reason": "в корпусе 1325 раз; «pa kreisi» — «налево» и «слева», переводчики дают «Слева»" },
- "lv-0010": { "status": "ok", "reason": "в корпусе 17132 раза; оба переводчика — «Ничего», наш перевод «Ничего. / Не за что» включает это значение" },
- "lv-0034": { "status": "ok", "reason": "в корпусе 23 раза и в Tatoeba; Tilde совпадает, Microsoft перевёл на «вы» — то же значение" },
- "lv-0087": { "status": "ok", "reason": "в корпусе 32 раза и в Tatoeba; Microsoft совпадает, Tilde «Сколько времени?» — синоним «Который час?»" },
- "lv-0086": { "status": "ok", "reason": "в корпусе 2 раза; переводчики: «Где ж/д станция?», «Где расположена железнодорожная станция?» — то же значение" },
- "lv-0001": { "status": "ok", "reason": "в корпусе 3151 раз и в Tatoeba; «Здравствуйте» у переводчиков — синоним «Добрый день»" },
- "lv-0061": { "status": "ok", "reason": "все пары слов есть в корпусе (659, 7492, 65); Microsoft совпадает, Tilde «Он свежий?» — то же значение" },
- "lv-0069": { "status": "ok", "reason": "пары слов есть в корпусе (5207, 12); stacija — и «станция», и «вокзал» (решение пользователя 2026-11-04), переводчики дают «станция» — синоним" },
- "lv-0093": { "status": "ok", "reason": "в корпусе 253 раза; при прощании «līdz rītam» — «до завтра», о ночи — «до утра» (решение пользователя 2026-11-04); переводчики дали «до утра» — второе значение, оно есть в нашем переводе" },
- "lv-0103": { "status": "ok", "reason": "все пары слов есть в корпусе (1773, 2930, 45, 457), «Es varu izmantot …» встречается у носителей; оба переводчика — «Могу ли я это использовать / воспользоваться этим», то же значение" }
+ "lv-0147": {
+  "status": "ok",
+  "reason": "фраза в корпусе 263 раза и в Tatoeba; Tilde даёт тот же перевод, Microsoft — «Чем вы занимаетесь?» (то же значение, вежливая форма)"
+ },
+ "lv-0013": {
+  "status": "ok",
+  "reason": "в корпусе 58 раз; «Как ты?» / «Как дела?» у переводчиков — синонимы «Как у тебя дела?»"
+ },
+ "lv-0076": {
+  "status": "ok",
+  "reason": "в корпусе 1335 раз; «pa labi» значит и «направо», и «справа» — оба переводчика дают «Справа»"
+ },
+ "lv-0077": {
+  "status": "ok",
+  "reason": "в корпусе 1325 раз; «pa kreisi» — «налево» и «слева», переводчики дают «Слева»"
+ },
+ "lv-0010": {
+  "status": "ok",
+  "reason": "в корпусе 17132 раза; оба переводчика — «Ничего», наш перевод «Ничего. / Не за что» включает это значение"
+ },
+ "lv-0034": {
+  "status": "ok",
+  "reason": "в корпусе 23 раза и в Tatoeba; Tilde совпадает, Microsoft перевёл на «вы» — то же значение"
+ },
+ "lv-0087": {
+  "status": "ok",
+  "reason": "в корпусе 32 раза и в Tatoeba; Microsoft совпадает, Tilde «Сколько времени?» — синоним «Который час?»"
+ },
+ "lv-0086": {
+  "status": "ok",
+  "reason": "в корпусе 2 раза; переводчики: «Где ж/д станция?», «Где расположена железнодорожная станция?» — то же значение"
+ },
+ "lv-0001": {
+  "status": "ok",
+  "reason": "в корпусе 3151 раз и в Tatoeba; «Здравствуйте» у переводчиков — синоним «Добрый день»"
+ },
+ "lv-0061": {
+  "status": "ok",
+  "reason": "все пары слов есть в корпусе (659, 7492, 65); Microsoft совпадает, Tilde «Он свежий?» — то же значение"
+ },
+ "lv-0069": {
+  "status": "ok",
+  "reason": "пары слов есть в корпусе (5207, 12); stacija — и «станция», и «вокзал» (решение пользователя 2026-11-04), переводчики дают «станция» — синоним"
+ },
+ "lv-0093": {
+  "status": "ok",
+  "reason": "в корпусе 253 раза; при прощании «līdz rītam» — «до завтра», о ночи — «до утра» (решение пользователя 2026-11-04); переводчики дали «до утра» — второе значение, оно есть в нашем переводе"
+ },
+ "lv-0103": {
+  "status": "ok",
+  "reason": "все пары слов есть в корпусе (1773, 2930, 45, 457), «Es varu izmantot …» встречается у носителей; оба переводчика — «Могу ли я это использовать / воспользоваться этим», то же значение"
+ },
+ "lv-0028": {
+  "status": "ok",
+  "reason": "бытовая фраза; та же конструкция у носителей",
+  "evidence": [
+   "korpuss.lv LVK2022: «strādā birojā» — 14",
+   "korpuss.lv LVK2022: «es strādāju» — 565"
+  ]
+ },
+ "lv-0035": {
+  "status": "ok",
+  "reason": "та же конструкция у носителей",
+  "evidence": [
+   "korpuss.lv LVK2022: «dzīvo centrā» — 3",
+   "korpuss.lv LVK2022: «es dzīvoju» — 555"
+  ]
+ },
+ "lv-0118": {
+  "status": "ok",
+  "reason": "«pierakstīties pie ārsta» — обычное выражение (lsm.lv, lvportals.lv о записи к врачу)",
+  "evidence": [
+   "korpuss.lv LVK2022: «pierakstīties pie ārsta» — 4",
+   "korpuss.lv LVK2022: «es gribu» — 3109",
+   "https://lvportals.lv/e-konsultacijas/19068-vai-var-pierakstities-pie-arsta-elektroniski-2020"
+  ]
+ },
+ "lv-0101": {
+  "status": "ok",
+  "reason": "«trenažieru zālē» — обычное место; «biju sporta zālē» у носителей",
+  "evidence": [
+   "korpuss.lv LVK2022: «trenažieru zālē» — 108",
+   "korpuss.lv LVK2022: «biju sporta zālē» — 1",
+   "korpuss.lv LVK2022: «es biju» — 3405"
+  ]
+ },
+ "lv-0106": {
+  "status": "ok",
+  "reason": "обе части фразы частые у носителей",
+  "evidence": [
+   "korpuss.lv LVK2022: «es trenējos» — 23",
+   "korpuss.lv LVK2022: «trīs reizes nedēļā» — 281"
+  ]
+ },
+ "lv-0052": {
+  "status": "ok",
+  "reason": "заказ по образцу «Vienu kafiju, lūdzu»",
+  "evidence": [
+   "korpuss.lv LVK2022: «melnu tēju» — 2",
+   "korpuss.lv LVK2022: «melnā tēja» — 35"
+  ]
+ },
+ "lv-0145": {
+  "status": "ok",
+  "reason": "patikt + именительный: «Man patīk Rīga» у носителей; перевод с обоими значениями",
+  "evidence": [
+   "korpuss.lv LVK2022: «man patīk» — 3055",
+   "korpuss.lv LVK2022: «patīk kafija» — 1"
+  ]
+ },
+ "lv-0066": {
+  "status": "ok",
+  "reason": "garšot = «нравится на вкус»; учебник: «Man garšo dārzeņu zupa», твит: «Man ļoti garšo …»",
+  "evidence": [
+   "korpuss.lv LVK2022: «man garšo» — 80",
+   "korpuss.lv LVK2022: «šī zupa» — 20",
+   "https://sublearn.com/ar/learn/lv/vocabulary/zupa"
+  ]
+ },
+ "lv-0097": {
+  "status": "ok",
+  "reason": "«Desmitos sākas treniņš» у носителей; cikos — «во сколько»",
+  "evidence": [
+   "korpuss.lv LVK2022: «cikos sākas» — 2",
+   "korpuss.lv LVK2022: «sākas treniņš» — 1"
+  ]
+ },
+ "lv-0058": {
+  "status": "ok",
+  "reason": "фраза в магазине; конструкция «es ņemšu» + указательное у носителей",
+  "evidence": [
+   "korpuss.lv LVK2022: «es ņemšu» — 44",
+   "korpuss.lv LVK2022: «ņemšu šo» — 1",
+   "korpuss.lv LVK2022: «ņemšu to» — 3"
+  ]
+ },
+ "lv-0146": {
+  "status": "ok",
+  "reason": "отрицание nepatīk + именительный: «Nē, man nepatīk Rīga» у носителей; перевод с обоими значениями",
+  "evidence": [
+   "korpuss.lv LVK2022: «man nepatīk» — 619"
+  ]
+ },
+ "lv-0111": {
+  "status": "ok",
+  "reason": "обычная бытовая фраза; глагол и форма слова у носителей",
+  "evidence": [
+   "korpuss.lv LVK2022: «aizmirsu» — 320",
+   "korpuss.lv LVK2022: «dvieli» (вин. п.) — 469",
+   "korpuss.lv LVK2022: «es aizmirsu» — 71"
+  ]
+ },
+ "lv-0110": {
+  "status": "ok",
+  "reason": "«Kur ir …?» + место; ģērbtuve — раздевалка в зале/бассейне",
+  "evidence": [
+   "korpuss.lv LVK2022: «kur ir» — 5207",
+   "korpuss.lv LVK2022: «ģērbtuvē» — 176",
+   "korpuss.lv LVK2022: «ģērbtuves» — 190"
+  ]
+ },
+ "lv-0062": {
+  "status": "ok",
+  "reason": "заказ по образцу «divas kafijas»",
+  "evidence": [
+   "korpuss.lv LVK2022: «divas kafijas» — 12",
+   "korpuss.lv LVK2022: «bulciņu» — 70"
+  ]
+ },
+ "lv-0074": {
+  "status": "ok",
+  "reason": "так спрашивают в разговорниках: «Cikos atiet vilciens?»",
+  "evidence": [
+   "https://www.goethe-verlag.com/book2/EN/ENLV/ENLV037.HTM",
+   "https://polyglotclub.com/wiki/Language%2FStandard-latvian%2FVocabulary%2FUsing-public-transport",
+   "korpuss.lv LVK2022: «atiet vilciens» — 1"
+  ]
+ },
+ "lv-0075": {
+  "status": "ok",
+  "reason": "указание дороги; «taisni uz priekšu» и «ejiet uz» у носителей",
+  "evidence": [
+   "korpuss.lv LVK2022: «taisni uz priekšu» — 9",
+   "korpuss.lv LVK2022: «ejiet uz» — 15"
+  ]
+ },
+ "lv-0112": {
+  "status": "ok",
+  "reason": "«kāju muskuļus» у носителей; «mēs trenējam» у носителей",
+  "evidence": [
+   "korpuss.lv LVK2022: «kāju muskuļus» — 15",
+   "korpuss.lv LVK2022: «mēs trenējam» — 4"
+  ]
+ }
 }

@@ -951,8 +951,8 @@
    "id": "lv-0125",
    "lang": "lv",
    "topic": "home",
-   "text": "Viņš ir mājā.",
-   "ru": "Он в доме.",
+   "text": "Viņš ir mājās.",
+   "ru": "Он дома.",
    "tokens": [
     {
      "s": "Viņš",
@@ -972,10 +972,10 @@
      "ru": "быть; (man ir) иметь"
     },
     {
-     "s": "mājā",
+     "s": "mājās",
      "lemma": "māja",
      "pos": "NOUN",
-     "feats": "LOC.SG.F",
+     "feats": "LOC.PL.F",
      "decl": "4",
      "gender": "F",
      "ru": "дом (mājās — дома / домой)"
@@ -984,15 +984,15 @@
    "accept": [],
    "key": {
     "i": 2,
-    "trap": "māja",
-    "why": "где? — местный падеж: māja → mājā",
-    "trapWhy": "māja — именительный («кто? что?»), а здесь где? — местный падеж: mājā"
+    "trap": "mājas",
+    "why": "где? — местный падеж: māja → mājās",
+    "trapWhy": "mājas — именительный («кто? что?»), а здесь где? — местный падеж: mājās"
    },
    "audio": null,
    "image": null,
    "freqRank": 101,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1759,7 +1759,7 @@
    "image": null,
    "freqRank": 182,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2803,7 +2803,7 @@
    "image": null,
    "freqRank": 465,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3430,6 +3430,56 @@
    }
   },
   {
+   "id": "lv-0137",
+   "lang": "lv",
+   "topic": "work",
+   "text": "Man ir tikšanās.",
+   "ru": "У меня встреча.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "tikšanās",
+     "lemma": "tikšanās",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "Atgriezenisks",
+     "gender": "F",
+     "ru": "встреча"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 616,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
    "id": "lv-0050",
    "lang": "lv",
    "topic": "shop",
@@ -3533,7 +3583,7 @@
    "lang": "lv",
    "topic": "likes",
    "text": "Man patīk kafija.",
-   "ru": "Мне нравится кофе.",
+   "ru": "Мне нравится кофе. / Я люблю кофе.",
    "tokens": [
     {
      "s": "Man",
@@ -3571,7 +3621,7 @@
    "image": null,
    "freqRank": 665,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3894,23 +3944,23 @@
    "id": "lv-0047",
    "lang": "lv",
    "topic": "understand",
-   "text": "Uzrakstiet, lūdzu!",
-   "ru": "Напишите, пожалуйста!",
+   "text": "Lūdzu, uzrakstiet!",
+   "ru": "Пожалуйста, напишите!",
    "tokens": [
     {
-     "s": "Uzrakstiet",
+     "s": "Lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    },
+    {
+     "s": "uzrakstiet",
      "lemma": "uzrakstīt",
      "pos": "VERB",
      "feats": "IMP.2.PL",
      "conj": "3",
      "ru": "написать"
-    },
-    {
-     "s": "lūdzu",
-     "lemma": "lūdzu",
-     "pos": "INTJ",
-     "feats": "",
-     "ru": "пожалуйста"
     }
    ],
    "accept": [],
@@ -3918,7 +3968,7 @@
    "image": null,
    "freqRank": 865,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4086,7 +4136,7 @@
    "image": null,
    "freqRank": 900,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4246,23 +4296,23 @@
    "id": "lv-0040",
    "lang": "lv",
    "topic": "understand",
-   "text": "Lūdzu, atkārtojiet.",
-   "ru": "Пожалуйста, повторите.",
+   "text": "Atkārtojiet, lūdzu!",
+   "ru": "Повторите, пожалуйста!",
    "tokens": [
     {
-     "s": "Lūdzu",
-     "lemma": "lūdzu",
-     "pos": "INTJ",
-     "feats": "",
-     "ru": "пожалуйста"
-    },
-    {
-     "s": "atkārtojiet",
+     "s": "Atkārtojiet",
      "lemma": "atkārtot",
      "pos": "VERB",
      "feats": "IMP.2.PL",
      "conj": "2",
      "ru": "повторить"
+    },
+    {
+     "s": "lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
     }
    ],
    "accept": [],
@@ -4270,7 +4320,7 @@
    "image": null,
    "freqRank": 966,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4335,7 +4385,7 @@
    "image": null,
    "freqRank": 1009,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4542,7 +4592,7 @@
    "image": null,
    "freqRank": 1237,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4787,7 +4837,7 @@
    "image": null,
    "freqRank": 1297,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5218,7 +5268,7 @@
    "lang": "lv",
    "topic": "likes",
    "text": "Man nepatīk piens.",
-   "ru": "Мне не нравится молоко.",
+   "ru": "Мне не нравится молоко. / Я не люблю молоко.",
    "tokens": [
     {
      "s": "Man",
@@ -5256,7 +5306,7 @@
    "image": null,
    "freqRank": 1695,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5607,7 +5657,7 @@
    "lang": "lv",
    "topic": "shop",
    "text": "Man garšo šī zupa.",
-   "ru": "Мне нравится (на вкус) этот суп.",
+   "ru": "Мне нравится этот суп (на вкус). / Вкусный суп.",
    "tokens": [
     {
      "s": "Man",
@@ -5653,7 +5703,7 @@
    "image": null,
    "freqRank": 2608,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5804,7 +5854,7 @@
    "image": null,
    "freqRank": 3034,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5969,56 +6019,6 @@
    }
   },
   {
-   "id": "lv-0137",
-   "lang": "lv",
-   "topic": "work",
-   "text": "Man ir sapulce.",
-   "ru": "У меня совещание.",
-   "tokens": [
-    {
-     "s": "Man",
-     "lemma": "es",
-     "pos": "PRON",
-     "feats": "1.DAT.SG",
-     "ru": "я"
-    },
-    {
-     "s": "ir",
-     "lemma": "būt",
-     "pos": "VERB",
-     "feats": "IND.PRS.3",
-     "conj": "Nekārtns",
-     "ru": "быть; (man ir) иметь"
-    },
-    {
-     "s": "sapulce",
-     "lemma": "sapulce",
-     "pos": "NOUN",
-     "feats": "NOM.SG.F",
-     "decl": "5",
-     "gender": "F",
-     "ru": "собрание, совещание"
-    }
-   ],
-   "accept": [],
-   "key": {
-    "i": 1,
-    "trap": "esmu",
-    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
-    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
-   },
-   "audio": null,
-   "image": null,
-   "freqRank": 4000,
-   "status": "unverified",
-   "auto": "doubtful",
-   "source": "llm",
-   "check": {
-    "tezaurs": "ok",
-    "edition": "2026_4"
-   }
-  },
-  {
    "id": "lv-0111",
    "lang": "lv",
    "topic": "gym",
@@ -6061,7 +6061,7 @@
    "image": null,
    "freqRank": 4122,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6122,8 +6122,8 @@
    "id": "lv-0075",
    "lang": "lv",
    "topic": "city",
-   "text": "Ejiet taisni.",
-   "ru": "Идите прямо.",
+   "text": "Ejiet taisni uz priekšu.",
+   "ru": "Идите прямо (вперёд).",
    "tokens": [
     {
      "s": "Ejiet",
@@ -6139,14 +6139,36 @@
      "pos": "ADV",
      "feats": "",
      "ru": "прямо"
+    },
+    {
+     "s": "uz",
+     "lemma": "uz",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "на, в (куда); к"
+    },
+    {
+     "s": "priekšu",
+     "lemma": "priekša",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "перед (uz priekšu — вперёд)"
     }
    ],
    "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "priekša",
+    "why": "после uz — винительный падеж: priekša → priekšu",
+    "trapWhy": "priekša — именительный («кто? что?»), а здесь после uz — винительный падеж: priekšu"
+   },
    "audio": null,
    "image": null,
    "freqRank": 4423,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6301,56 +6323,6 @@
    }
   },
   {
-   "id": "lv-0074",
-   "lang": "lv",
-   "topic": "city",
-   "text": "Kad atiet vilciens?",
-   "ru": "Когда отходит поезд?",
-   "tokens": [
-    {
-     "s": "Kad",
-     "lemma": "kad",
-     "pos": "ADV",
-     "feats": "",
-     "ru": "когда"
-    },
-    {
-     "s": "atiet",
-     "lemma": "atiet",
-     "pos": "VERB",
-     "feats": "IND.PRS.3",
-     "conj": "Nekārtns",
-     "ru": "отходить, отправляться"
-    },
-    {
-     "s": "vilciens",
-     "lemma": "vilciens",
-     "pos": "NOUN",
-     "feats": "NOM.SG.M",
-     "decl": "1",
-     "gender": "M",
-     "ru": "поезд"
-    }
-   ],
-   "accept": [],
-   "key": {
-    "i": 1,
-    "trap": "ateju",
-    "why": "atiet → atiet: 3-е лицо, ед. ч., настоящее время",
-    "trapWhy": "ateju — 1-е лицо, а здесь 3-е лицо: atiet"
-   },
-   "audio": null,
-   "image": null,
-   "freqRank": 4865,
-   "status": "unverified",
-   "auto": "doubtful",
-   "source": "llm",
-   "check": {
-    "tezaurs": "ok",
-    "edition": "2026_4"
-   }
-  },
-  {
    "id": "lv-0086",
    "lang": "lv",
    "topic": "city",
@@ -6466,6 +6438,56 @@
    }
   },
   {
+   "id": "lv-0074",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Cikos atiet vilciens?",
+   "ru": "Во сколько отходит поезд?",
+   "tokens": [
+    {
+     "s": "Cikos",
+     "lemma": "cikos",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "во сколько"
+    },
+    {
+     "s": "atiet",
+     "lemma": "atiet",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "отходить, отправляться"
+    },
+    {
+     "s": "vilciens",
+     "lemma": "vilciens",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "поезд"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "ateju",
+    "why": "atiet → atiet: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "ateju — 1-е лицо, а здесь 3-е лицо: atiet"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 5708,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   }
+  },
+  {
    "id": "lv-0097",
    "lang": "lv",
    "topic": "time",
@@ -6508,7 +6530,7 @@
    "image": null,
    "freqRank": 5708,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6838,8 +6860,8 @@
    "id": "lv-0112",
    "lang": "lv",
    "topic": "gym",
-   "text": "Šodien mēs trenējam kājas.",
-   "ru": "Сегодня мы тренируем ноги.",
+   "text": "Šodien mēs trenējam kāju muskuļus.",
+   "ru": "Сегодня мы тренируем мышцы ног.",
    "tokens": [
     {
      "s": "Šodien",
@@ -6864,27 +6886,36 @@
      "ru": "тренировать"
     },
     {
-     "s": "kājas",
+     "s": "kāju",
      "lemma": "kāja",
      "pos": "NOUN",
-     "feats": "ACC.PL.F",
+     "feats": "GEN.PL.F",
      "decl": "4",
      "gender": "F",
      "ru": "нога"
+    },
+    {
+     "s": "muskuļus",
+     "lemma": "muskulis",
+     "pos": "NOUN",
+     "feats": "ACC.PL.M",
+     "decl": "2",
+     "gender": "M",
+     "ru": "мышца"
     }
    ],
    "accept": [],
    "key": {
     "i": 3,
-    "trap": "kāju",
-    "why": "кого? что? — винительный падеж: kāja → kājas",
-    "trapWhy": "kāju — родительный («кого? чего?»), а здесь кого? что? — винительный падеж: kājas"
+    "trap": "kājas",
+    "why": "кого? чего? — родительный падеж: kāja → kāju",
+    "trapWhy": "kājas — именительный («кто? что?»), а здесь кого? чего? — родительный падеж: kāju"
    },
    "audio": null,
    "image": null,
    "freqRank": 8335,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6934,7 +6965,7 @@
    "image": null,
    "freqRank": 8675,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -7031,7 +7062,7 @@
    "image": null,
    "freqRank": 10691,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",

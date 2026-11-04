@@ -1,5 +1,5 @@
 {
- "_source": "hugo.gov.lv (Tilde MT), lv→ru, веб-интерфейс, 2026-11-04",
+ "_source": "hugo.gov.lv (Tilde MT), lv→ru, веб-интерфейс, 2026-11-04; добавлено 2026-11-04 (7 исправленных фраз)",
  "byText": {
   "Kas tas ir?": "Что это?",
   "Tas ir viss, paldies.": "Это все, спасибо.",
@@ -150,6 +150,13 @@
   "Paldies!": "Спасибо!",
   "Lūdzu!": "Пожалуйста!",
   "Jā, protams.": "Да, конечно.",
-  "Nē, paldies.": "Нет, спасибо."
+  "Nē, paldies.": "Нет, спасибо.",
+  "Viņš ir mājās.": "Он дома.",
+  "Lūdzu, uzrakstiet!": "Пожалуйста, напишите.",
+  "Atkārtojiet, lūdzu!": "Повторите, пожалуйста.",
+  "Cikos atiet vilciens?": "Когда отправляется поезд?",
+  "Man ir tikšanās.": "У меня встреча.",
+  "Ejiet taisni uz priekšu.": "Идите прямо вперед.",
+  "Šodien mēs trenējam kāju muskuļus.": "Сегодня мы тренируем мышцы ног."
  }
 }

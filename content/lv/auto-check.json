@@ -562,41 +562,6 @@
   "flags": [],
   "checkedAt": "2026-11-04T00:22:53.379Z"
  },
- "lv-0125": {
-  "text": "Viņš ir mājā.",
-  "hash": "fe81fa9fd83a",
-  "status": "doubtful",
-  "reasons": [
-   "Microsoft переводит иначе: «Он дома.»"
-  ],
-  "corpus": {
-   "exact": 0,
-   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22vi%C5%86%C5%A1%22%5D%5Blc%3D%22ir%22%5D%5Blc%3D%22m%C4%81j%C4%81%22%5D",
-   "pairs": [
-    {
-     "pair": "Viņš ir",
-     "hits": 13978,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22vi%C5%86%C5%A1%22%5D%5Blc%3D%22ir%22%5D"
-    },
-    {
-     "pair": "ir mājā",
-     "hits": 7,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22ir%22%5D%5Blc%3D%22m%C4%81j%C4%81%22%5D"
-    }
-   ]
-  },
-  "tatoeba": [],
-  "mt": {
-   "microsoft": "Он дома.",
-   "agree": {
-    "microsoft": false,
-    "tilde": true
-   },
-   "tilde": "Он в доме."
-  },
-  "flags": [],
-  "checkedAt": "2026-11-04T00:22:58.319Z"
- },
  "lv-0071": {
   "text": "Es eju uz darbu.",
   "hash": "b792c691bb67",
@@ -1017,7 +982,7 @@
  "lv-0058": {
   "text": "Es ņemšu šo.",
   "hash": "4bf022ba19f4",
-  "status": "doubtful",
+  "status": "ok",
   "reasons": [
    "в корпусе не нашлось фразы, редкие сочетания: «ņemšu šo» (1)"
   ],
@@ -1047,7 +1012,16 @@
    "tilde": "Я возьму вот это."
   },
   "flags": [],
-  "checkedAt": "2026-11-04T00:23:45.949Z"
+  "checkedAt": "2026-11-04T00:23:45.949Z",
+  "note": {
+   "status": "ok",
+   "reason": "фраза в магазине; конструкция «es ņemšu» + указательное у носителей",
+   "evidence": [
+    "korpuss.lv LVK2022: «es ņemšu» — 44",
+    "korpuss.lv LVK2022: «ņemšu šo» — 1",
+    "korpuss.lv LVK2022: «ņemšu to» — 3"
+   ]
+  }
  },
  "lv-0023": {
   "text": "Es dzīvoju Rīgā.",
@@ -1631,7 +1605,7 @@
  "lv-0028": {
   "text": "Es strādāju birojā.",
   "hash": "5136e59adf0b",
-  "status": "doubtful",
+  "status": "ok",
   "reasons": [
    "в корпусе не нашлось фразы, редкие сочетания: «strādāju birojā» (2)"
   ],
@@ -1661,7 +1635,15 @@
    "tilde": "Я работаю в офисе."
   },
   "flags": [],
-  "checkedAt": "2026-11-04T00:24:47.506Z"
+  "checkedAt": "2026-11-04T00:24:47.506Z",
+  "note": {
+   "status": "ok",
+   "reason": "бытовая фраза; та же конструкция у носителей",
+   "evidence": [
+    "korpuss.lv LVK2022: «strādā birojā» — 14",
+    "korpuss.lv LVK2022: «es strādāju» — 565"
+   ]
+  }
  },
  "lv-0140": {
   "text": "Kāds ir tavs telefona numurs?",
@@ -2055,43 +2037,6 @@
   "flags": [],
   "checkedAt": "2026-11-04T00:25:31.056Z"
  },
- "lv-0145": {
-  "text": "Man patīk kafija.",
-  "hash": "3de4991d67f5",
-  "status": "doubtful",
-  "reasons": [
-   "в корпусе не нашлось фразы, редкие сочетания: «patīk kafija» (1)",
-   "Microsoft переводит иначе: «Я люблю кофе.»",
-   "Tilde переводит иначе: «Я люблю кофе.»"
-  ],
-  "corpus": {
-   "exact": 0,
-   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22pat%C4%ABk%22%5D%5Blc%3D%22kafija%22%5D",
-   "pairs": [
-    {
-     "pair": "Man patīk",
-     "hits": 3055,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22pat%C4%ABk%22%5D"
-    },
-    {
-     "pair": "patīk kafija",
-     "hits": 1,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22pat%C4%ABk%22%5D%5Blc%3D%22kafija%22%5D"
-    }
-   ]
-  },
-  "tatoeba": [],
-  "mt": {
-   "microsoft": "Я люблю кофе.",
-   "agree": {
-    "microsoft": false,
-    "tilde": false
-   },
-   "tilde": "Я люблю кофе."
-  },
-  "flags": [],
-  "checkedAt": "2026-11-04T00:25:35.515Z"
- },
  "lv-0113": {
   "text": "Tas ir smags.",
   "hash": "06f083d3db46",
@@ -2240,30 +2185,6 @@
   "flags": [],
   "checkedAt": "2026-11-04T00:25:49.204Z"
  },
- "lv-0047": {
-  "text": "Uzrakstiet, lūdzu!",
-  "hash": "2741a043c220",
-  "status": "doubtful",
-  "reasons": [
-   "в корпусе и Tatoeba фраза не найдена"
-  ],
-  "corpus": {
-   "exact": 0,
-   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22uzrakstiet%22%5D%5Blc%3D%22%2C%22%5D%5Blc%3D%22l%C5%ABdzu%22%5D",
-   "pairs": []
-  },
-  "tatoeba": [],
-  "mt": {
-   "microsoft": "Пожалуйста, пишите!",
-   "agree": {
-    "microsoft": true,
-    "tilde": true
-   },
-   "tilde": "Напишите, пожалуйста."
-  },
-  "flags": [],
-  "checkedAt": "2026-11-04T00:25:52.411Z"
- },
  "lv-0139": {
   "text": "Uzraksti man!",
   "hash": "d3917ee3d1ec",
@@ -2341,7 +2262,7 @@
  "lv-0035": {
   "text": "Es dzīvoju centrā.",
   "hash": "520b3636f0b8",
-  "status": "doubtful",
+  "status": "ok",
   "reasons": [
    "в корпусе не нашлось фразы, редкие сочетания: «dzīvoju centrā» (2)"
   ],
@@ -2371,7 +2292,15 @@
    "tilde": "Я живу в центре."
   },
   "flags": [],
-  "checkedAt": "2026-11-04T00:26:03.444Z"
+  "checkedAt": "2026-11-04T00:26:03.444Z",
+  "note": {
+   "status": "ok",
+   "reason": "та же конструкция у носителей",
+   "evidence": [
+    "korpuss.lv LVK2022: «dzīvo centrā» — 3",
+    "korpuss.lv LVK2022: «es dzīvoju» — 555"
+   ]
+  }
  },
  "lv-0079": {
   "text": "Tas ir tuvu.",
@@ -2453,34 +2382,10 @@
    "reason": "в корпусе 32 раза и в Tatoeba; Microsoft совпадает, Tilde «Сколько времени?» — синоним «Который час?»"
   }
  },
- "lv-0040": {
-  "text": "Lūdzu, atkārtojiet.",
-  "hash": "05d70231124e",
-  "status": "doubtful",
-  "reasons": [
-   "в корпусе и Tatoeba фраза не найдена"
-  ],
-  "corpus": {
-   "exact": 0,
-   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22l%C5%ABdzu%22%5D%5Blc%3D%22%2C%22%5D%5Blc%3D%22atk%C4%81rtojiet%22%5D",
-   "pairs": []
-  },
-  "tatoeba": [],
-  "mt": {
-   "microsoft": "Пожалуйста, повторяйте.",
-   "agree": {
-    "microsoft": true,
-    "tilde": true
-   },
-   "tilde": "Повторите, пожалуйста."
-  },
-  "flags": [],
-  "checkedAt": "2026-11-04T00:26:18.428Z"
- },
  "lv-0118": {
   "text": "Es gribu pierakstīties pie ārsta.",
   "hash": "5a45d81e4c80",
-  "status": "doubtful",
+  "status": "ok",
   "reasons": [
    "в корпусе не нашлось фразы, редкие сочетания: «gribu pierakstīties» (0)"
   ],
@@ -2520,7 +2425,16 @@
    "tilde": "Я хочу записаться к врачу."
   },
   "flags": [],
-  "checkedAt": "2026-11-04T00:26:33.610Z"
+  "checkedAt": "2026-11-04T00:26:33.610Z",
+  "note": {
+   "status": "ok",
+   "reason": "«pierakstīties pie ārsta» — обычное выражение (lsm.lv, lvportals.lv о записи к врачу)",
+   "evidence": [
+    "korpuss.lv LVK2022: «pierakstīties pie ārsta» — 4",
+    "korpuss.lv LVK2022: «es gribu» — 3109",
+    "https://lvportals.lv/e-konsultacijas/19068-vai-var-pierakstities-pie-arsta-elektroniski-2020"
+   ]
+  }
  },
  "lv-0070": {
   "text": "Kur ir tualete?",
@@ -2619,7 +2533,7 @@
  "lv-0052": {
   "text": "Melnu tēju, lūdzu.",
   "hash": "353d7ee21f11",
-  "status": "doubtful",
+  "status": "ok",
   "reasons": [
    "в корпусе не нашлось фразы, редкие сочетания: «Melnu tēju» (2)"
   ],
@@ -2644,7 +2558,15 @@
    "tilde": "Черный чай, пожалуйста."
   },
   "flags": [],
-  "checkedAt": "2026-11-04T00:27:29.846Z"
+  "checkedAt": "2026-11-04T00:27:29.846Z",
+  "note": {
+   "status": "ok",
+   "reason": "заказ по образцу «Vienu kafiju, lūdzu»",
+   "evidence": [
+    "korpuss.lv LVK2022: «melnu tēju» — 2",
+    "korpuss.lv LVK2022: «melnā tēja» — 35"
+   ]
+  }
  },
  "lv-0054": {
   "text": "Vai var maksāt ar karti?",
@@ -2753,7 +2675,7 @@
  "lv-0101": {
   "text": "Vakar es biju trenažieru zālē.",
   "hash": "38300e8e2b27",
-  "status": "doubtful",
+  "status": "ok",
   "reasons": [
    "в корпусе не нашлось фразы, редкие сочетания: «biju trenažieru» (0)"
   ],
@@ -2793,7 +2715,16 @@
    "tilde": "Вчера я был в тренажерном зале."
   },
   "flags": [],
-  "checkedAt": "2026-11-04T00:28:03.411Z"
+  "checkedAt": "2026-11-04T00:28:03.411Z",
+  "note": {
+   "status": "ok",
+   "reason": "«trenažieru zālē» — обычное место; «biju sporta zālē» у носителей",
+   "evidence": [
+    "korpuss.lv LVK2022: «trenažieru zālē» — 108",
+    "korpuss.lv LVK2022: «biju sporta zālē» — 1",
+    "korpuss.lv LVK2022: «es biju» — 3405"
+   ]
+  }
  },
  "lv-0069": {
   "text": "Kur ir stacija?",
@@ -3037,41 +2968,6 @@
   "flags": [],
   "checkedAt": "2026-11-04T00:28:31.064Z"
  },
- "lv-0146": {
-  "text": "Man nepatīk piens.",
-  "hash": "eaaacc6ad8f1",
-  "status": "doubtful",
-  "reasons": [
-   "в корпусе не нашлось фразы, редкие сочетания: «nepatīk piens» (0)"
-  ],
-  "corpus": {
-   "exact": 0,
-   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22nepat%C4%ABk%22%5D%5Blc%3D%22piens%22%5D",
-   "pairs": [
-    {
-     "pair": "Man nepatīk",
-     "hits": 619,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22nepat%C4%ABk%22%5D"
-    },
-    {
-     "pair": "nepatīk piens",
-     "hits": 0,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22nepat%C4%ABk%22%5D%5Blc%3D%22piens%22%5D"
-    }
-   ]
-  },
-  "tatoeba": [],
-  "mt": {
-   "microsoft": "Я не люблю молоко.",
-   "agree": {
-    "microsoft": true,
-    "tilde": true
-   },
-   "tilde": "Я не люблю молоко."
-  },
-  "flags": [],
-  "checkedAt": "2026-11-04T00:28:35.218Z"
- },
  "lv-0061": {
   "text": "Vai šis ir svaigs?",
   "hash": "3e63d9798cce",
@@ -3289,47 +3185,6 @@
   "flags": [],
   "checkedAt": "2026-11-04T00:28:58.491Z"
  },
- "lv-0066": {
-  "text": "Man garšo šī zupa.",
-  "hash": "cc9d84a37d9d",
-  "status": "doubtful",
-  "reasons": [
-   "в корпусе не нашлось фразы, редкие сочетания: «garšo šī» (2)",
-   "Tilde переводит иначе: «Я люблю этот суп.»"
-  ],
-  "corpus": {
-   "exact": 0,
-   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22gar%C5%A1o%22%5D%5Blc%3D%22%C5%A1%C4%AB%22%5D%5Blc%3D%22zupa%22%5D",
-   "pairs": [
-    {
-     "pair": "Man garšo",
-     "hits": 80,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22gar%C5%A1o%22%5D"
-    },
-    {
-     "pair": "garšo šī",
-     "hits": 2,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22gar%C5%A1o%22%5D%5Blc%3D%22%C5%A1%C4%AB%22%5D"
-    },
-    {
-     "pair": "šī zupa",
-     "hits": 20,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22%C5%A1%C4%AB%22%5D%5Blc%3D%22zupa%22%5D"
-    }
-   ]
-  },
-  "tatoeba": [],
-  "mt": {
-   "microsoft": "Мне нравится этот суп.",
-   "agree": {
-    "microsoft": true,
-    "tilde": false
-   },
-   "tilde": "Я люблю этот суп."
-  },
-  "flags": [],
-  "checkedAt": "2026-11-04T00:29:04.144Z"
- },
  "lv-0134": {
   "text": "Līst lietus.",
   "hash": "1db75fd9ef47",
@@ -3389,7 +3244,7 @@
  "lv-0106": {
   "text": "Es trenējos trīs reizes nedēļā.",
   "hash": "39edad2d93f5",
-  "status": "doubtful",
+  "status": "ok",
   "reasons": [
    "в корпусе не нашлось фразы, редкие сочетания: «trenējos trīs» (1)"
   ],
@@ -3429,7 +3284,15 @@
    "tilde": "Я тренируюсь три раза в неделю."
   },
   "flags": [],
-  "checkedAt": "2026-11-04T00:29:17.112Z"
+  "checkedAt": "2026-11-04T00:29:17.112Z",
+  "note": {
+   "status": "ok",
+   "reason": "обе части фразы частые у носителей",
+   "evidence": [
+    "korpuss.lv LVK2022: «es trenējos» — 23",
+    "korpuss.lv LVK2022: «trīs reizes nedēļā» — 281"
+   ]
+  }
  },
  "lv-0088": {
   "text": "Šodien ir pirmdiena.",
@@ -3520,45 +3383,10 @@
   "flags": [],
   "checkedAt": "2026-11-04T00:29:26.892Z"
  },
- "lv-0137": {
-  "text": "Man ir sapulce.",
-  "hash": "c16a326c662a",
-  "status": "doubtful",
-  "reasons": [
-   "в корпусе не нашлось фразы, редкие сочетания: «ir sapulce» (0)"
-  ],
-  "corpus": {
-   "exact": 0,
-   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22ir%22%5D%5Blc%3D%22sapulce%22%5D",
-   "pairs": [
-    {
-     "pair": "Man ir",
-     "hits": 13974,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22ir%22%5D"
-    },
-    {
-     "pair": "ir sapulce",
-     "hits": 0,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22ir%22%5D%5Blc%3D%22sapulce%22%5D"
-    }
-   ]
-  },
-  "tatoeba": [],
-  "mt": {
-   "microsoft": "У меня встреча.",
-   "agree": {
-    "microsoft": true,
-    "tilde": true
-   },
-   "tilde": "У меня собрание."
-  },
-  "flags": [],
-  "checkedAt": "2026-11-04T00:29:31.196Z"
- },
  "lv-0111": {
   "text": "Es aizmirsu dvieli.",
   "hash": "40e110cebb4c",
-  "status": "doubtful",
+  "status": "ok",
   "reasons": [
    "в корпусе не нашлось фразы, редкие сочетания: «aizmirsu dvieli» (0)"
   ],
@@ -3588,7 +3416,16 @@
    "tilde": "Я забыл полотенце."
   },
   "flags": [],
-  "checkedAt": "2026-11-04T00:29:34.834Z"
+  "checkedAt": "2026-11-04T00:29:34.834Z",
+  "note": {
+   "status": "ok",
+   "reason": "обычная бытовая фраза; глагол и форма слова у носителей",
+   "evidence": [
+    "korpuss.lv LVK2022: «aizmirsu» — 320",
+    "korpuss.lv LVK2022: «dvieli» (вин. п.) — 469",
+    "korpuss.lv LVK2022: «es aizmirsu» — 71"
+   ]
+  }
  },
  "lv-0123": {
   "text": "Man ir alerģija.",
@@ -3612,36 +3449,6 @@
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:29:37.139Z"
- },
- "lv-0075": {
-  "text": "Ejiet taisni.",
-  "hash": "71a0e9cef978",
-  "status": "doubtful",
-  "reasons": [
-   "в корпусе не нашлось фразы, редкие сочетания: «Ejiet taisni» (0)"
-  ],
-  "corpus": {
-   "exact": 0,
-   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22ejiet%22%5D%5Blc%3D%22taisni%22%5D",
-   "pairs": [
-    {
-     "pair": "Ejiet taisni",
-     "hits": 0,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22ejiet%22%5D%5Blc%3D%22taisni%22%5D"
-    }
-   ]
-  },
-  "tatoeba": [],
-  "mt": {
-   "microsoft": "Иди прямо.",
-   "agree": {
-    "microsoft": true,
-    "tilde": true
-   },
-   "tilde": "Идите прямо."
-  },
-  "flags": [],
-  "checkedAt": "2026-11-04T00:29:40.522Z"
  },
  "lv-0043": {
   "text": "Vai jūs runājat angliski?",
@@ -3741,41 +3548,6 @@
   "flags": [],
   "checkedAt": "2026-11-04T00:29:50.514Z"
  },
- "lv-0074": {
-  "text": "Kad atiet vilciens?",
-  "hash": "3e584f7d4bde",
-  "status": "doubtful",
-  "reasons": [
-   "в корпусе не нашлось фразы, редкие сочетания: «Kad atiet» (1), «atiet vilciens» (1)"
-  ],
-  "corpus": {
-   "exact": 0,
-   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22kad%22%5D%5Blc%3D%22atiet%22%5D%5Blc%3D%22vilciens%22%5D",
-   "pairs": [
-    {
-     "pair": "Kad atiet",
-     "hits": 1,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22kad%22%5D%5Blc%3D%22atiet%22%5D"
-    },
-    {
-     "pair": "atiet vilciens",
-     "hits": 1,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22atiet%22%5D%5Blc%3D%22vilciens%22%5D"
-    }
-   ]
-  },
-  "tatoeba": [],
-  "mt": {
-   "microsoft": "Когда отправляется поезд?",
-   "agree": {
-    "microsoft": true,
-    "tilde": true
-   },
-   "tilde": "Когда отправляется поезд?"
-  },
-  "flags": [],
-  "checkedAt": "2026-11-04T00:29:54.816Z"
- },
  "lv-0086": {
   "text": "Kur ir dzelzceļa stacija?",
   "hash": "624a4a8237da",
@@ -3836,7 +3608,7 @@
  "lv-0097": {
   "text": "Cikos sākas treniņš?",
   "hash": "0ca6b2504525",
-  "status": "doubtful",
+  "status": "ok",
   "reasons": [
    "в корпусе не нашлось фразы, редкие сочетания: «Cikos sākas» (2), «sākas treniņš» (1)"
   ],
@@ -3866,7 +3638,15 @@
    "tilde": "Когда начинается тренировка?"
   },
   "flags": [],
-  "checkedAt": "2026-11-04T00:30:03.044Z"
+  "checkedAt": "2026-11-04T00:30:03.044Z",
+  "note": {
+   "status": "ok",
+   "reason": "«Desmitos sākas treniņš» у носителей; cikos — «во сколько»",
+   "evidence": [
+    "korpuss.lv LVK2022: «cikos sākas» — 2",
+    "korpuss.lv LVK2022: «sākas treniņš» — 1"
+   ]
+  }
  },
  "lv-0027": {
   "text": "Es mācos latviešu valodu.",
@@ -4046,50 +3826,10 @@
   "flags": [],
   "checkedAt": "2026-11-04T00:30:25.255Z"
  },
- "lv-0112": {
-  "text": "Šodien mēs trenējam kājas.",
-  "hash": "068dbf398ee2",
-  "status": "doubtful",
-  "reasons": [
-   "в корпусе не нашлось фразы, редкие сочетания: «trenējam kājas» (0)"
-  ],
-  "corpus": {
-   "exact": 0,
-   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22%C5%A1odien%22%5D%5Blc%3D%22m%C4%93s%22%5D%5Blc%3D%22tren%C4%93jam%22%5D%5Blc%3D%22k%C4%81jas%22%5D",
-   "pairs": [
-    {
-     "pair": "Šodien mēs",
-     "hits": 531,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22%C5%A1odien%22%5D%5Blc%3D%22m%C4%93s%22%5D"
-    },
-    {
-     "pair": "mēs trenējam",
-     "hits": 4,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22m%C4%93s%22%5D%5Blc%3D%22tren%C4%93jam%22%5D"
-    },
-    {
-     "pair": "trenējam kājas",
-     "hits": 0,
-     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22tren%C4%93jam%22%5D%5Blc%3D%22k%C4%81jas%22%5D"
-    }
-   ]
-  },
-  "tatoeba": [],
-  "mt": {
-   "microsoft": "Сегодня мы тренируем ноги.",
-   "agree": {
-    "microsoft": true,
-    "tilde": true
-   },
-   "tilde": "Сегодня мы тренируем ноги."
-  },
-  "flags": [],
-  "checkedAt": "2026-11-04T00:30:30.265Z"
- },
  "lv-0110": {
   "text": "Kur ir ģērbtuve?",
   "hash": "f83333564cab",
-  "status": "doubtful",
+  "status": "ok",
   "reasons": [
    "в корпусе не нашлось фразы, редкие сочетания: «ir ģērbtuve» (0)"
   ],
@@ -4119,7 +3859,16 @@
    "tilde": "Где раздевалка?"
   },
   "flags": [],
-  "checkedAt": "2026-11-04T00:30:34.683Z"
+  "checkedAt": "2026-11-04T00:30:34.683Z",
+  "note": {
+   "status": "ok",
+   "reason": "«Kur ir …?» + место; ģērbtuve — раздевалка в зале/бассейне",
+   "evidence": [
+    "korpuss.lv LVK2022: «kur ir» — 5207",
+    "korpuss.lv LVK2022: «ģērbtuvē» — 176",
+    "korpuss.lv LVK2022: «ģērbtuves» — 190"
+   ]
+  }
  },
  "lv-0025": {
   "text": "Es runāju krieviski.",
@@ -4147,7 +3896,7 @@
  "lv-0062": {
   "text": "Divas bulciņas, lūdzu.",
   "hash": "8d679c146404",
-  "status": "doubtful",
+  "status": "ok",
   "reasons": [
    "в корпусе не нашлось фразы, редкие сочетания: «Divas bulciņas» (0)"
   ],
@@ -4172,7 +3921,15 @@
    "tilde": "Две булочки, пожалуйста."
   },
   "flags": [],
-  "checkedAt": "2026-11-04T00:30:40.808Z"
+  "checkedAt": "2026-11-04T00:30:40.808Z",
+  "note": {
+   "status": "ok",
+   "reason": "заказ по образцу «divas kafijas»",
+   "evidence": [
+    "korpuss.lv LVK2022: «divas kafijas» — 12",
+    "korpuss.lv LVK2022: «bulciņu» — 70"
+   ]
+  }
  },
  "lv-0001": {
   "text": "Labdien!",
@@ -4422,5 +4179,379 @@
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:31:00.740Z"
+ },
+ "lv-0125": {
+  "text": "Viņš ir mājās.",
+  "hash": "121430d93f36",
+  "status": "ok",
+  "reasons": [],
+  "corpus": {
+   "exact": 17,
+   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22vi%C5%86%C5%A1%22%5D%5Blc%3D%22ir%22%5D%5Blc%3D%22m%C4%81j%C4%81s%22%5D",
+   "pairs": [],
+   "example": ", ka interneta sarunās nedrīkst stāstīt, vai viņš ir mājās viens un arī to, kad mājās pārnāks pieaugušie;"
+  },
+  "tatoeba": [],
+  "mt": {
+   "microsoft": "Он дома.",
+   "agree": {
+    "microsoft": true,
+    "tilde": true
+   },
+   "tilde": "Он дома."
+  },
+  "flags": [],
+  "checkedAt": "2026-11-04T13:13:31.151Z"
+ },
+ "lv-0137": {
+  "text": "Man ir tikšanās.",
+  "hash": "0b7cc804f65c",
+  "status": "ok",
+  "reasons": [],
+  "corpus": {
+   "exact": 3,
+   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22ir%22%5D%5Blc%3D%22tik%C5%A1an%C4%81s%22%5D",
+   "pairs": [],
+   "example": "– tas ir forši vai stulbi? </p> <p> Visi, kam teicu, ka man ir tikšanās ar tevi, šausminājās – viņš ir lecīgs un"
+  },
+  "tatoeba": [],
+  "mt": {
+   "microsoft": "У меня встреча.",
+   "agree": {
+    "microsoft": true,
+    "tilde": true
+   },
+   "tilde": "У меня встреча."
+  },
+  "flags": [],
+  "checkedAt": "2026-11-04T13:13:33.306Z"
+ },
+ "lv-0145": {
+  "text": "Man patīk kafija.",
+  "hash": "ab3883d0565e",
+  "status": "ok",
+  "reasons": [
+   "в корпусе не нашлось фразы, редкие сочетания: «patīk kafija» (1)"
+  ],
+  "corpus": {
+   "exact": 0,
+   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22pat%C4%ABk%22%5D%5Blc%3D%22kafija%22%5D",
+   "pairs": [
+    {
+     "pair": "Man patīk",
+     "hits": 3055,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22pat%C4%ABk%22%5D"
+    },
+    {
+     "pair": "patīk kafija",
+     "hits": 1,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22pat%C4%ABk%22%5D%5Blc%3D%22kafija%22%5D"
+    }
+   ]
+  },
+  "tatoeba": [],
+  "mt": {
+   "microsoft": "Я люблю кофе.",
+   "agree": {
+    "microsoft": true,
+    "tilde": true
+   },
+   "tilde": "Я люблю кофе."
+  },
+  "flags": [],
+  "checkedAt": "2026-11-04T13:13:37.890Z",
+  "note": {
+   "status": "ok",
+   "reason": "patikt + именительный: «Man patīk Rīga» у носителей; перевод с обоими значениями",
+   "evidence": [
+    "korpuss.lv LVK2022: «man patīk» — 3055",
+    "korpuss.lv LVK2022: «patīk kafija» — 1"
+   ]
+  }
+ },
+ "lv-0047": {
+  "text": "Lūdzu, uzrakstiet!",
+  "hash": "79edd85d76d8",
+  "status": "ok",
+  "reasons": [],
+  "corpus": {
+   "exact": 6,
+   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22l%C5%ABdzu%22%5D%5Blc%3D%22%2C%22%5D%5Blc%3D%22uzrakstiet%22%5D",
+   "pairs": [],
+   "example": "arī par ķiploku mehanizētu novākšanu. Lūdzu, uzrakstiet plašāk! Varbūt kāds zemnieks pats \" atkodis\","
+  },
+  "tatoeba": [],
+  "mt": {
+   "microsoft": "Пожалуйста, пишите!",
+   "agree": {
+    "microsoft": true,
+    "tilde": true
+   },
+   "tilde": "Пожалуйста, напишите."
+  },
+  "flags": [],
+  "checkedAt": "2026-11-04T13:13:39.913Z"
+ },
+ "lv-0040": {
+  "text": "Atkārtojiet, lūdzu!",
+  "hash": "0236a33ad55e",
+  "status": "ok",
+  "reasons": [],
+  "corpus": {
+   "exact": 1,
+   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22atk%C4%81rtojiet%22%5D%5Blc%3D%22%2C%22%5D%5Blc%3D%22l%C5%ABdzu%22%5D",
+   "pairs": [],
+   "example": ", — viņa nočukstēja gandrīz bez skaņas. </p> <p> — Tātad atkārtojiet, lūdzu , — Silvestrs neuzbāzīgi aicināja, rūpīgi"
+  },
+  "tatoeba": [],
+  "mt": {
+   "microsoft": "Пожалуйста, повторите!",
+   "agree": {
+    "microsoft": true,
+    "tilde": true
+   },
+   "tilde": "Повторите, пожалуйста."
+  },
+  "flags": [],
+  "checkedAt": "2026-11-04T13:13:41.784Z"
+ },
+ "lv-0146": {
+  "text": "Man nepatīk piens.",
+  "hash": "5bdc4768c199",
+  "status": "ok",
+  "reasons": [
+   "в корпусе не нашлось фразы, редкие сочетания: «nepatīk piens» (0)"
+  ],
+  "corpus": {
+   "exact": 0,
+   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22nepat%C4%ABk%22%5D%5Blc%3D%22piens%22%5D",
+   "pairs": [
+    {
+     "pair": "Man nepatīk",
+     "hits": 619,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22nepat%C4%ABk%22%5D"
+    },
+    {
+     "pair": "nepatīk piens",
+     "hits": 0,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22nepat%C4%ABk%22%5D%5Blc%3D%22piens%22%5D"
+    }
+   ]
+  },
+  "tatoeba": [],
+  "mt": {
+   "microsoft": "Я не люблю молоко.",
+   "agree": {
+    "microsoft": true,
+    "tilde": true
+   },
+   "tilde": "Я не люблю молоко."
+  },
+  "flags": [],
+  "checkedAt": "2026-11-04T13:13:45.657Z",
+  "note": {
+   "status": "ok",
+   "reason": "отрицание nepatīk + именительный: «Nē, man nepatīk Rīga» у носителей; перевод с обоими значениями",
+   "evidence": [
+    "korpuss.lv LVK2022: «man nepatīk» — 619"
+   ]
+  }
+ },
+ "lv-0066": {
+  "text": "Man garšo šī zupa.",
+  "hash": "8c6395bd05c1",
+  "status": "ok",
+  "reasons": [
+   "в корпусе не нашлось фразы, редкие сочетания: «garšo šī» (2)",
+   "Tilde переводит иначе: «Я люблю этот суп.»"
+  ],
+  "corpus": {
+   "exact": 0,
+   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22gar%C5%A1o%22%5D%5Blc%3D%22%C5%A1%C4%AB%22%5D%5Blc%3D%22zupa%22%5D",
+   "pairs": [
+    {
+     "pair": "Man garšo",
+     "hits": 80,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22man%22%5D%5Blc%3D%22gar%C5%A1o%22%5D"
+    },
+    {
+     "pair": "garšo šī",
+     "hits": 2,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22gar%C5%A1o%22%5D%5Blc%3D%22%C5%A1%C4%AB%22%5D"
+    },
+    {
+     "pair": "šī zupa",
+     "hits": 20,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22%C5%A1%C4%AB%22%5D%5Blc%3D%22zupa%22%5D"
+    }
+   ]
+  },
+  "tatoeba": [],
+  "mt": {
+   "microsoft": "Мне нравится этот суп.",
+   "agree": {
+    "microsoft": true,
+    "tilde": false
+   },
+   "tilde": "Я люблю этот суп."
+  },
+  "flags": [],
+  "checkedAt": "2026-11-04T13:13:50.656Z",
+  "note": {
+   "status": "ok",
+   "reason": "garšot = «нравится на вкус»; учебник: «Man garšo dārzeņu zupa», твит: «Man ļoti garšo …»",
+   "evidence": [
+    "korpuss.lv LVK2022: «man garšo» — 80",
+    "korpuss.lv LVK2022: «šī zupa» — 20",
+    "https://sublearn.com/ar/learn/lv/vocabulary/zupa"
+   ]
+  }
+ },
+ "lv-0075": {
+  "text": "Ejiet taisni uz priekšu.",
+  "hash": "543c16b808f1",
+  "status": "ok",
+  "reasons": [
+   "в корпусе не нашлось фразы, редкие сочетания: «Ejiet taisni» (0)",
+   "Microsoft переводит иначе: «Иди прямо.»"
+  ],
+  "corpus": {
+   "exact": 0,
+   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22ejiet%22%5D%5Blc%3D%22taisni%22%5D%5Blc%3D%22uz%22%5D%5Blc%3D%22priek%C5%A1u%22%5D",
+   "pairs": [
+    {
+     "pair": "Ejiet taisni",
+     "hits": 0,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22ejiet%22%5D%5Blc%3D%22taisni%22%5D"
+    },
+    {
+     "pair": "taisni uz",
+     "hits": 13,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22taisni%22%5D%5Blc%3D%22uz%22%5D"
+    },
+    {
+     "pair": "uz priekšu",
+     "hits": 1917,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22uz%22%5D%5Blc%3D%22priek%C5%A1u%22%5D"
+    }
+   ]
+  },
+  "tatoeba": [],
+  "mt": {
+   "microsoft": "Иди прямо.",
+   "agree": {
+    "microsoft": false,
+    "tilde": true
+   },
+   "tilde": "Идите прямо вперед."
+  },
+  "flags": [],
+  "checkedAt": "2026-11-04T13:13:57.739Z",
+  "note": {
+   "status": "ok",
+   "reason": "указание дороги; «taisni uz priekšu» и «ejiet uz» у носителей",
+   "evidence": [
+    "korpuss.lv LVK2022: «taisni uz priekšu» — 9",
+    "korpuss.lv LVK2022: «ejiet uz» — 15"
+   ]
+  }
+ },
+ "lv-0074": {
+  "text": "Cikos atiet vilciens?",
+  "hash": "fac1c391955e",
+  "status": "ok",
+  "reasons": [
+   "в корпусе не нашлось фразы, редкие сочетания: «Cikos atiet» (0), «atiet vilciens» (1)",
+   "Tilde переводит иначе: «Когда отправляется поезд?»"
+  ],
+  "corpus": {
+   "exact": 0,
+   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22cikos%22%5D%5Blc%3D%22atiet%22%5D%5Blc%3D%22vilciens%22%5D",
+   "pairs": [
+    {
+     "pair": "Cikos atiet",
+     "hits": 0,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22cikos%22%5D%5Blc%3D%22atiet%22%5D"
+    },
+    {
+     "pair": "atiet vilciens",
+     "hits": 1,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22atiet%22%5D%5Blc%3D%22vilciens%22%5D"
+    }
+   ]
+  },
+  "tatoeba": [],
+  "mt": {
+   "microsoft": "Во сколько отправляется поезд?",
+   "agree": {
+    "microsoft": true,
+    "tilde": false
+   },
+   "tilde": "Когда отправляется поезд?"
+  },
+  "flags": [],
+  "checkedAt": "2026-11-04T13:14:02.895Z",
+  "note": {
+   "status": "ok",
+   "reason": "так спрашивают в разговорниках: «Cikos atiet vilciens?»",
+   "evidence": [
+    "https://www.goethe-verlag.com/book2/EN/ENLV/ENLV037.HTM",
+    "https://polyglotclub.com/wiki/Language%2FStandard-latvian%2FVocabulary%2FUsing-public-transport",
+    "korpuss.lv LVK2022: «atiet vilciens» — 1"
+   ]
+  }
+ },
+ "lv-0112": {
+  "text": "Šodien mēs trenējam kāju muskuļus.",
+  "hash": "399105294235",
+  "status": "ok",
+  "reasons": [
+   "в корпусе не нашлось фразы, редкие сочетания: «trenējam kāju» (0)"
+  ],
+  "corpus": {
+   "exact": 0,
+   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22%C5%A1odien%22%5D%5Blc%3D%22m%C4%93s%22%5D%5Blc%3D%22tren%C4%93jam%22%5D%5Blc%3D%22k%C4%81ju%22%5D%5Blc%3D%22musku%C4%BCus%22%5D",
+   "pairs": [
+    {
+     "pair": "Šodien mēs",
+     "hits": 531,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22%C5%A1odien%22%5D%5Blc%3D%22m%C4%93s%22%5D"
+    },
+    {
+     "pair": "mēs trenējam",
+     "hits": 4,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22m%C4%93s%22%5D%5Blc%3D%22tren%C4%93jam%22%5D"
+    },
+    {
+     "pair": "trenējam kāju",
+     "hits": 0,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22tren%C4%93jam%22%5D%5Blc%3D%22k%C4%81ju%22%5D"
+    },
+    {
+     "pair": "kāju muskuļus",
+     "hits": 15,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22k%C4%81ju%22%5D%5Blc%3D%22musku%C4%BCus%22%5D"
+    }
+   ]
+  },
+  "tatoeba": [],
+  "mt": {
+   "microsoft": "Сегодня мы тренируем мышцы ног.",
+   "agree": {
+    "microsoft": true,
+    "tilde": true
+   },
+   "tilde": "Сегодня мы тренируем мышцы ног."
+  },
+  "flags": [],
+  "checkedAt": "2026-11-04T13:14:10.189Z",
+  "note": {
+   "status": "ok",
+   "reason": "«kāju muskuļus» у носителей; «mēs trenējam» у носителей",
+   "evidence": [
+    "korpuss.lv LVK2022: «kāju muskuļus» — 15",
+    "korpuss.lv LVK2022: «mēs trenējam» — 4"
+   ]
+  }
  }
 }

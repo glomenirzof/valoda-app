@@ -43,10 +43,12 @@ interface Result {
   tatoeba: { id: number; text: string }[];
   mt: { google?: string; microsoft?: string; tilde?: string; agree: { google?: boolean; microsoft?: boolean; tilde?: boolean } };
   flags: string[];
-  note?: { status: Status; reason: string; suggestion?: string };
+  note?: Note;
   checkedAt: string;
 }
-interface Note { status: Status; reason: string; suggestion?: string }
+/** A manual decision. `evidence` lists sources found by hand (corpus queries of the construction, phrasebooks,
+ *  web pages) — required for «ok» when the automatic search found no attestation. */
+interface Note { status: Status; reason: string; suggestion?: string; evidence?: string[] }
 
 const outPath = `content/${lang}/auto-check.json`;
 const notesPath = `content/${lang}/check-notes.json`;
@@ -249,7 +251,8 @@ for (const p of phrases) {
   if (r.note?.status === 'drop' || r.note?.status === 'doubtful') r.status = r.note.status;
   // A note can clear a translation mismatch the stem metric got wrong (a synonym), never missing evidence.
   else if (r.note?.status === 'ok') {
-    const onlyWording = attested && have.length >= 2 && !r.flags.length;
+    const sourced = attested || (r.note.evidence?.length ?? 0) > 0;
+    const onlyWording = sourced && have.length >= 2 && !r.flags.length;
     r.status = onlyWording ? 'ok' : 'doubtful';
     if (!onlyWording) r.reasons.push('пометка «ок» не принята: нет источника или двух переводчиков');
   }
