@@ -16157,5 +16157,41 @@
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:52:34.472Z"
+ },
+ "lv-0468": {
+  "text": "Vidēju kafiju, lūdzu.",
+  "hash": "a06bd230c0e5",
+  "status": "drop",
+  "reasons": [
+   "в корпусе не нашлось фразы, редкие сочетания: «Vidēju kafiju» (0, в любых формах 1)"
+  ],
+  "corpus": {
+   "exact": 0,
+   "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22vid%C4%93ju%22%5D%5Blc%3D%22kafiju%22%5D%5Blc%3D%22%2C%22%5D%5Blc%3D%22l%C5%ABdzu%22%5D",
+   "pairs": [
+    {
+     "pair": "Vidēju kafiju",
+     "hits": 0,
+     "url": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22vid%C4%93ju%22%5D%5Blc%3D%22kafiju%22%5D",
+     "lemmaHits": 1,
+     "lemmaUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blemma%3D%22vid%C4%93js%22%5D%5Blemma%3D%22kafija%22%5D"
+    }
+   ]
+  },
+  "tatoeba": [],
+  "mt": {
+   "microsoft": "Средний кофе, пожалуйста.",
+   "agree": {
+    "microsoft": true,
+    "tilde": true
+   },
+   "tilde": "Средний кофе, пожалуйста."
+  },
+  "flags": [],
+  "checkedAt": "2026-11-04T14:01:46.260Z",
+  "note": {
+   "status": "drop",
+   "reason": "у носителей не нашлось ни «vidēju kafiju», ни «vidējo/vidēja kafija»; без источника не учим"
+  }
  }
 }

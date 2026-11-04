@@ -299,6 +299,8 @@ for (const p of phrases) {
   }
 }
 
+// Dropped phrases are no longer in phrases.json: keep their records, or the next build would bring them back unchecked.
+for (const [id, r] of Object.entries(prev)) if (!results[id] && r.status === 'drop') results[id] = r;
 writeFileSync(outPath, JSON.stringify(results, null, 1) + '\n');
 const count = (s: Status) => Object.values(results).filter((r) => r.status === s).length;
 console.log(`итог: ок ${count('ok')}, сомнительно ${count('doubtful')}, убрать ${count('drop')} → ${outPath}`);
