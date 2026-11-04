@@ -25,16 +25,21 @@ export interface StoredCard {
   introduced: number;
   /** lemmas that needed hints or had mistakes, with counts: input for ending drills later */
   weak: Record<string, number>;
+  /** card type of the last FSRS review: stable phrases alternate typing and saying */
+  lastMode?: 'type' | 'say';
 }
 
 export interface StoredLog {
   cardId: string;
   ts: number;
   grade: Grade;
-  /** which card type produced the grade; 'ladder' = the first grade, when a new phrase passes S4 */
-  mode: 'type' | 'say' | 'known' | 'ladder';
+  /** which card type produced the grade; 'ladder' = the first grade, when a new phrase passes S4; 'tiles' = relearning */
+  mode: 'type' | 'say' | 'known' | 'ladder' | 'tiles';
   hints: number;
-  log: ReviewLog;
+  /** FSRS log; absent for learning answers */
+  log?: ReviewLog;
+  /** practice inside a lesson (mini-ladder after a forgotten review): not written to FSRS */
+  learning?: true;
 }
 
 export const newCard = (id: string, lang: Lang, now: Date, introduced = now.getTime()): StoredCard => ({

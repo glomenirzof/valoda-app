@@ -55,6 +55,11 @@ export async function saveReview(card: StoredCard, log?: StoredLog) {
   await tx.done;
 }
 
+/** A log without a card change: answers in the mini-ladder after a forgotten review (learning: true). */
+export async function saveLog(log: StoredLog) {
+  await (await db()).add('logs', log);
+}
+
 export async function loadAcquaint(lang: Lang): Promise<Acquaintance[]> {
   try {
     return (await (await db()).getAll('acquaint')).filter((a) => a.lang === lang);

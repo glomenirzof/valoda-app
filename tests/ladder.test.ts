@@ -6,6 +6,7 @@ import {
   finished,
   LAG,
   place,
+  RELEARN_LAG,
   RETRY_LAG,
   startLesson,
   unfinished,
@@ -136,9 +137,53 @@ describe('failures', () => {
     }
   });
 
-  it('a forgotten review comes back once, said aloud', () => {
-    const { shown } = play({ reviews: [{ id: 'r', mode: 'type' }, { id: 'q', mode: 'type' }], acquainted: [], fresh: [] }, seq(0), (it) => it.id === 'r');
-    expect(shown.filter((x) => x.id === 'r').map((x) => (x.kind === 'review' ? x.mode : ''))).toEqual(['type', 'say']);
+});
+
+describe('forgotten review', () => {
+  const reviews = Array.from({ length: 10 }, (_, i) => ({ id: `r${i}`, mode: 'say' as const }));
+  const tag = (x: Item) => (x.kind === 'review' ? `R:${x.mode}` : `S${x.stage}${x.relearn ? 'r' : ''}`);
+
+  it('gets tiles 3 cards later, then the full typed answer 3–5 cards after, and no «say it» repeat', () => {
+    for (const rng of [seq(0), seq(0.999), seq(0.5)]) {
+      let firstR0 = true;
+      const { shown, graduated } = play({ reviews, acquainted: [], fresh: [] }, rng, (it) => {
+        if (it.id === 'r0' && it.kind === 'review' && firstR0) return !(firstR0 = false);
+        return false;
+      });
+      const r0 = shown.map((x, i) => ({ x, i })).filter((e) => e.x.id === 'r0');
+      expect(r0.map((e) => tag(e.x))).toEqual(['R:say', 'S2r', 'S4r']);
+      expect(r0[1].i - r0[0].i - 1).toBe(RETRY_LAG);
+      const gap = r0[2].i - r0[1].i - 1;
+      expect(gap).toBeGreaterThanOrEqual(RELEARN_LAG[0]);
+      expect(gap).toBeLessThanOrEqual(RELEARN_LAG[1]);
+      expect(graduated).toEqual([]); // already in FSRS: the mini-ladder graduates nothing
+    }
+  });
+
+  it('a failed mini-ladder step goes back to tiles 3 cards later', () => {
+    let failS4 = true;
+    const { shown } = play({ reviews, acquainted: [], fresh: [] }, seq(0), (it) => {
+      if (it.id !== 'r0') return false;
+      if (it.kind === 'review') return true;
+      if (it.stage === 4 && failS4) return !(failS4 = false);
+      return false;
+    });
+    const r0 = shown.map((x, i) => ({ x, i })).filter((e) => e.x.id === 'r0');
+    expect(r0.map((e) => tag(e.x))).toEqual(['R:say', 'S2r', 'S4r', 'S2r', 'S4r']);
+    expect(r0[3].i - r0[2].i - 1).toBe(RETRY_LAG);
+  });
+
+  it('a remembered review is shown once', () => {
+    const { shown } = play({ reviews, acquainted: [], fresh: [] });
+    expect(shown.map((x) => x.id)).toEqual(reviews.map((r) => r.id));
+  });
+
+  it('mini-ladder phrases never count as «знакомлюсь»', () => {
+    let l = startLesson({ reviews: [{ id: 'r', mode: 'type' }, { id: 'q', mode: 'type' }], acquainted: [], fresh: [] });
+    l = answerReview(l, true).lesson;
+    while (!finished(l) && !(current(l)!.kind === 'stage')) l = answerReview(l, false).lesson;
+    expect(current(l)).toMatchObject({ id: 'r', stage: 2, relearn: true });
+    expect(unfinished(l)).toEqual([]);
   });
 });
 

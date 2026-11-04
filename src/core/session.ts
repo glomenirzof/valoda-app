@@ -46,6 +46,13 @@ export function plan(phrases: Phrase[], cards: StoredCard[], s: Settings, now: D
   return { due, newLeft, paused, fresh, resume, introducedToday, next };
 }
 
+/** Below this stability (days) a review is typed: the phrase is still fragile and typing checks every ending. */
+export const TYPE_BELOW_STABILITY = 3;
+
+/** Card type of a review: typed while stability < 3 days, then typing and saying aloud take turns. */
+export const reviewMode = (c: StoredCard): 'type' | 'say' =>
+  c.fsrs.stability < TYPE_BELOW_STABILITY ? 'type' : c.lastMode === 'say' ? 'type' : 'say';
+
 /** What the next lesson contains: due reviews, «знакомлюсь» phrases first, then fresh ones (≤ 5 new in all). */
 export function lessonInput(phrases: Phrase[], cards: StoredCard[], s: Settings, now: Date, acquainted: Acquaintance[] = []): LessonInput {
   const { due, newLeft, paused, fresh, resume } = plan(phrases, cards, s, now, acquainted);
@@ -53,7 +60,7 @@ export function lessonInput(phrases: Phrase[], cards: StoredCard[], s: Settings,
   const reviews = due
     .filter((c) => known.has(c.id))
     .slice(0, MAX_REVIEWS_PER_SESSION)
-    .map((c) => ({ id: c.id, mode: (c.fsrs.reps % 2 ? 'say' : 'type') as 'say' | 'type' }));
+    .map((c) => ({ id: c.id, mode: reviewMode(c) }));
   // phrases already met are finished first; they were counted on the day they started
   const again = paused ? [] : resume.slice(0, MAX_NEW_PER_SESSION).map((a) => a.id);
   const fill = Math.min(newLeft, MAX_NEW_PER_SESSION - again.length);

@@ -4,7 +4,7 @@ import { answerReview, answerStage, current, startLesson, unfinished, type Answe
 import { lessonSize, type Acquaintance } from '../core/session';
 import { graduationGrade, newCard, review, whenRu, type Grade, type StoredCard } from '../core/srs';
 import type { Phrase, Settings, Token } from '../core/types';
-import { graduate, saveAcquaint, saveReview } from '../data/db';
+import { graduate, saveAcquaint, saveLog, saveReview } from '../data/db';
 import { playPhrase } from '../data/audio';
 import { Icon } from './icons';
 import { TappableText } from './PhraseList';
@@ -345,8 +345,36 @@ function TypeCard({ p, cue = false, onDone }: { p: Phrase; cue?: boolean; onDone
   );
 }
 
-function SayCard({ p, onDone }: { p: Phrase; onDone: (o: Outcome) => void }) {
+/** What saying the phrase aloud produced. Today it comes from self-assessment; later from speech recognition, same shape. */
+export interface SayResult {
+  grade: 'good' | 'hard' | 'again';
+  hints: number;
+  /** token indices to count as weak (hinted words, the key word on a wrong ending) */
+  weak: number[];
+  /** what recognition heard, once voice checking exists */
+  heard?: string;
+}
+
+/**
+ * Future voice check: hold the mic, say the phrase, release, get a verdict. When SayCard gets one, the mic
+ * becomes a hold-to-talk button and the verdict preselects a grade on the same reveal sheet; nothing else changes.
+ */
+export interface VoiceCheck {
+  start(p: Phrase): void;
+  stop(): Promise<{ verdict: 'ok' | 'almost' | 'bad'; heard: string }>;
+}
+
+function SayCard({ p, card, settings, voice, onDone }: {
+  p: Phrase;
+  card: StoredCard;
+  settings: Settings;
+  voice?: VoiceCheck;
+  onDone: (r: SayResult) => void;
+}) {
   const [hints, setHints] = useState(0);
+  const [shown, setShown] = useState(false);
+  const [heard, setHeard] = useState<{ verdict: 'ok' | 'almost' | 'bad'; heard: string } | null>(null);
+  const [holding, setHolding] = useState(false);
   const total = letterCount(p.text);
   let k = 0;
   const mask = p.text.split(/(\p{L}+)/u).map((part, j) =>
@@ -358,6 +386,15 @@ function SayCard({ p, onDone }: { p: Phrase; onDone: (o: Outcome) => void }) {
       </span>
     ),
   );
+  const hinted = wordsWithinLetters(p, hints);
+  const keyIdx = p.key ? [p.key.i] : [];
+  // with letters opened, «said it right» is still only Hard, as on the ladder
+  const okGrade: Grade = hints ? 'hard' : 'good';
+  const t = new Date();
+  const when = (g: Grade) => whenRu(review(card, g, t).card.fsrs.due, t);
+  const finish = (grade: SayResult['grade'], weak: number[]) => onDone({ grade, hints, weak: [...new Set(weak)], heard: heard?.heard });
+  const sug: Grade | null = heard ? ({ ok: okGrade, almost: 'hard', bad: 'again' } as const)[heard.verdict] : null;
+
   return (
     <>
       <main class="s-main">
@@ -365,26 +402,84 @@ function SayCard({ p, onDone }: { p: Phrase; onDone: (o: Outcome) => void }) {
         <h1 class="ru-big">{p.ru}</h1>
         {hints > 0 && <p class="mask">{mask}</p>}
         <div class="speak-box">
-          <div class="mic-ring">
-            <Icon name="mic" />
-          </div>
+          {voice ? (
+            <button
+              class={`mic-ring ${holding ? 'on' : ''}`}
+              aria-label="Держи и говори"
+              onPointerDown={() => { setHolding(true); voice.start(p); }}
+              onPointerUp={async () => { setHolding(false); setHeard(await voice.stop()); setShown(true); }}
+            >
+              <Icon name="mic" />
+            </button>
+          ) : (
+            <div class="mic-ring still" aria-hidden="true">
+              <Icon name="mic" />
+            </div>
+          )}
           <p>
-            Скажи фразу вслух
+            {voice ? 'Зажми и скажи фразу' : 'Скажи фразу вслух, потом сравни с образцом'}
             <br />
             Не помнишь — открой букву
           </p>
         </div>
       </main>
       <footer class="s-actions two">
-        <button class="btn ghost" disabled={hints >= total} onClick={() => setHints(hints + 1)}>
+        <button class="btn ghost" disabled={hints >= total || shown} onClick={() => setHints(hints + 1)}>
           <Icon name="bulb" />
           Буква{hints ? ` · ${hints}` : ''}
         </button>
-        <button class="btn primary" onClick={() => onDone({ mode: 'say', result: null, hints, weak: wordsWithinLetters(p, hints) })}>
+        <button class="btn primary" disabled={shown} onClick={() => setShown(true)}>
           <Icon name="eye" />
           Показать
         </button>
       </footer>
+      {shown && (
+        <>
+          <div class="scrim" />
+          <section class="sheet fb v-self" role="dialog" aria-label="Образец">
+            <div class="grab" />
+            <p class="verdict">
+              <Icon name="eye" />
+              <span>Сравни с образцом</span>
+            </p>
+            <div class="right">
+              <SoundButton p={p} settings={settings} cls="a-mini" label={false} autoplay />
+              <p class="right-lv">
+                <KeyText p={p} />
+              </p>
+            </div>
+            {heard && (
+              <p class="yours">
+                <span class="muted">Услышал: </span>
+                {heard.heard}
+              </p>
+            )}
+            {p.key && <p class="why">{p.key.why}</p>}
+            {hints > 0 && (
+              <p class="hint-note">
+                <Icon name="bulb" />
+                <span>
+                  Ты открыл {hints} {plural(hints, 'букву', 'буквы', 'букв')} — «сказал верно» засчитаю как «с подсказкой»
+                </span>
+              </p>
+            )}
+            <div class="rates three">
+              <button class={`rate rate-good ${sug === okGrade ? 'on' : ''}`} onClick={() => finish(okGrade, hinted)}>
+                <b>Сказал верно</b>
+                <small>{when(okGrade)}</small>
+              </button>
+              <button class={`rate rate-hard ${sug === 'hard' && okGrade !== 'hard' ? 'on' : ''}`} onClick={() => finish('hard', [...hinted, ...keyIdx])}>
+                <b>Ошибся в окончании или знаке</b>
+                <small>{when('hard')}</small>
+              </button>
+              <button class={`rate rate-again ${sug === 'again' ? 'on' : ''}`} onClick={() => finish('again', hinted)}>
+                <b>Не вспомнил</b>
+                <small>{when('again')}</small>
+              </button>
+            </div>
+          </section>
+        </>
+      )}
     </>
   );
 }
@@ -520,10 +615,12 @@ function ListenChoose({ p, options, settings, onDone }: { p: Phrase; options: st
 }
 
 /** Feedback after S3/S4: the answer is checked automatically, one button goes on. */
-function StageFeedback({ p, o, stage, settings, nextReview, onNext }: {
+function StageFeedback({ p, o, stage, relearn, settings, nextReview, onNext }: {
   p: Phrase;
   o: Outcome;
   stage: 3 | 4;
+  /** mini-ladder after a forgotten review */
+  relearn?: boolean;
   settings: Settings;
   /** for a passed S4: when FSRS brings the phrase back */
   nextReview?: string;
@@ -567,7 +664,11 @@ function StageFeedback({ p, o, stage, settings, nextReview, onNext }: {
         )}
         {p.key && <p class="why">{p.key.why}</p>}
         <p class="stage-note">
-          {pass && stage === 4
+          {relearn
+            ? pass
+              ? 'Закрепили — дальше по расписанию повторений'
+              : 'Ещё раз соберём её из слов через пару карточек'
+            : pass && stage === 4
             ? `Фраза выучена — дальше в повторениях${nextReview ? `, следующее ${nextReview}` : ''}`
             : pass
               ? 'Скоро напишешь её целиком, без подсказки'
@@ -619,7 +720,7 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
   // A phrase becomes «знакомлюсь» the moment it is first shown: it then counts against today's limit
   // and resumes at S2 if the lesson is left before it passes S4.
   useEffect(() => {
-    if (item?.kind !== 'stage' || meet.has(item.id) || deck.has(item.id)) return;
+    if (item?.kind !== 'stage' || item.relearn || meet.has(item.id) || deck.has(item.id)) return;
     const a: Acquaintance = { id: item.id, lang, started: Date.now(), stage: -1 };
     setMeet((m) => new Map(m).set(a.id, a));
     saveAcquaint(a);
@@ -628,9 +729,16 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
   const stageStep = (answer: Answer) => {
     const it = item as Extract<Item, { kind: 'stage' }>;
     const step = answerStage(lesson, answer);
+    const o = outcome;
     setOutcome(null);
     setNextReview(undefined);
     setLesson(step.lesson);
+    if (it.relearn) {
+      // practice after a forgotten review: logged, not written to FSRS
+      const pass = 'pass' in answer && answer.pass;
+      saveLog({ cardId: it.id, ts: Date.now(), grade: pass ? 'good' : 'again', mode: it.stage === 2 ? 'tiles' : 'type', hints: o?.hints ?? 0, learning: true });
+      return;
+    }
     if ('pass' in answer && answer.pass && it.stage < 4) {
       const a = meet.get(it.id);
       if (a && a.stage < it.stage) {
@@ -667,12 +775,11 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
 
   const typedDone = (o: Outcome) => {
     setOutcome(o);
-    if (item?.kind === 'stage' && item.stage === 4 && o.result!.verdict !== 'bad') graduateNow(o);
+    if (item?.kind === 'stage' && item.stage === 4 && !item.relearn && o.result!.verdict !== 'bad') graduateNow(o);
   };
 
-  const gradeReview = (g: Grade) => {
+  const gradeReview = (g: Grade, o: Outcome = outcome!) => {
     const c = deck.get(item!.id)!;
-    const o = outcome!;
     const t = now();
     const { card, log } = review(c, g, t);
     // Hinted words and words with mistakes are remembered per lemma: input for ending drills.
@@ -683,7 +790,7 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
       const lemma = p!.tokens[i]?.lemma;
       if (lemma) weak[lemma] = (weak[lemma] ?? 0) + 1;
     }
-    const next = { ...card, weak };
+    const next: StoredCard = { ...card, weak, lastMode: o.mode };
     setDeck((d) => new Map(d).set(next.id, next));
     saveReview(next, { cardId: c.id, ts: t.getTime(), grade: g, mode: o.mode, hints: o.hints, log });
     setGraded([...graded, { id: c.id, g }]);
@@ -739,12 +846,20 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
       {item.kind === 'stage' && item.stage === 2 && <Tiles p={p} settings={settings} trap={false} onNext={(pass) => stageStep(pass ? { pass: true } : { pass: false })} />}
       {item.kind === 'stage' && item.stage >= 3 && <TypeCard p={p} cue={item.stage === 3} onDone={typedDone} />}
       {item.kind === 'review' && item.mode === 'type' && <TypeCard p={p} onDone={setOutcome} />}
-      {item.kind === 'review' && item.mode === 'say' && <SayCard p={p} onDone={setOutcome} />}
+      {item.kind === 'review' && item.mode === 'say' && deck.get(p.id) && (
+        <SayCard
+          p={p}
+          card={deck.get(p.id)!}
+          settings={settings}
+          onDone={(r) => gradeReview(r.grade, { mode: 'say', result: null, hints: r.hints, weak: r.weak })}
+        />
+      )}
       {outcome && item.kind === 'stage' && (
         <StageFeedback
           p={p}
           o={outcome}
           stage={item.stage as 3 | 4}
+          relearn={!!item.relearn}
           settings={settings}
           nextReview={nextReview}
           onNext={() => stageStep(outcome.result!.verdict !== 'bad' ? { pass: true } : { pass: false })}

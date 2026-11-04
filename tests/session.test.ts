@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { BACKLOG_PAUSE, lessonInput, MAX_NEW_PER_SESSION, plan, type Acquaintance } from '../src/core/session';
+import { BACKLOG_PAUSE, lessonInput, MAX_NEW_PER_SESSION, plan, reviewMode, TYPE_BELOW_STABILITY, type Acquaintance } from '../src/core/session';
+import type { StoredCard } from '../src/core/srs';
 import { FSRS_PARAMS, graduationGrade, newCard, review } from '../src/core/srs';
 import { DEFAULT_SETTINGS, type Phrase } from '../src/core/types';
 
@@ -64,5 +65,33 @@ describe('FSRS after the ladder', () => {
     const hours = (card.fsrs.due.getTime() - now.getTime()) / 3600000;
     expect(hours).toBeGreaterThanOrEqual(23);
     expect(hours).toBeLessThanOrEqual(26);
+  });
+});
+
+describe('review card type', () => {
+  const withStability = (stability: number, lastMode?: 'type' | 'say'): StoredCard => {
+    const c = newCard('lv-1', 'lv', now);
+    return { ...c, lastMode, fsrs: { ...c.fsrs, stability } };
+  };
+
+  it('is typed while stability is under 3 days, whatever came before', () => {
+    expect(reviewMode(withStability(0.5))).toBe('type');
+    expect(reviewMode(withStability(TYPE_BELOW_STABILITY - 0.01, 'type'))).toBe('type');
+    expect(reviewMode(withStability(2, 'say'))).toBe('type');
+  });
+
+  it('alternates typing and saying once the phrase is stable', () => {
+    expect(reviewMode(withStability(3, 'type'))).toBe('say');
+    expect(reviewMode(withStability(10, 'say'))).toBe('type');
+    expect(reviewMode(withStability(10))).toBe('say'); // graduated by typing, so say it next
+  });
+
+  it('lessonInput uses it for due cards', () => {
+    const past = new Date('2026-10-01T10:00:00');
+    const fragile = review(newCard('lv-1', 'lv', past), 'good', past).card;
+    const stable = { ...review(newCard('lv-2', 'lv', past), 'good', past).card, lastMode: 'type' as const };
+    stable.fsrs = { ...stable.fsrs, stability: 12 };
+    const i = lessonInput([phrase(1), phrase(2)], [fragile, stable], S, now);
+    expect(Object.fromEntries(i.reviews.map((r) => [r.id, r.mode]))).toEqual({ 'lv-1': 'type', 'lv-2': 'say' });
   });
 });

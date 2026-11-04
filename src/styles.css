@@ -289,6 +289,10 @@ h1, h2, h3 { font-family: var(--font-head); margin: 0; }
 .rate.on { background: var(--primary); color: var(--on-primary); }
 .rate.on small { color: inherit; opacity: 0.7; }
 .rate-again { --c: var(--bad); }
+.rates.three { grid-template-columns: 1fr; gap: var(--s2); }
+.rates.three .rate { min-height: 56px; grid-template-columns: 1fr auto; place-content: center stretch; align-items: center; gap: var(--s3); text-align: left; padding: 0 var(--s4); }
+.mic-ring.still { opacity: 0.55; }
+button.mic-ring.on { background: var(--primary); color: var(--on-primary); }
 .rate-hard { --c: var(--warn); }
 .rate-good { --c: var(--good); }
 .summary { justify-content: center; }
