@@ -2,7 +2,8 @@
  * Naturalness check for every phrase, using real sources only:
  *   - korpuss.lv (NoSketch Engine, corpus LVK2022): the exact phrase, else every word pair of it
  *   - Tatoeba: the exact sentence written by people
- *   - back-translation to Russian by two independent engines: Google and Microsoft (Azure Translator)
+ *   - back-translation to Russian by at least two independent engines: Microsoft (Azure Translator), Tilde
+ *     (hugo.gov.lv, content/<lang>/mt-tilde.json, filled through its web page) and Google when it is not throttled
  *   - checks for typical AI mistakes (negation with «nav» + genitive, …)
  *
  *   npm run content:check            # Tēzaurs build → this check → build again with statuses
@@ -40,7 +41,7 @@ interface Result {
   reasons: string[];
   corpus: { exact: number; exactUrl: string; pairs: { pair: string; hits: number; url: string }[]; example?: string };
   tatoeba: { id: number; text: string }[];
-  mt: { google?: string; microsoft?: string; agree: { google?: boolean; microsoft?: boolean } };
+  mt: { google?: string; microsoft?: string; tilde?: string; agree: { google?: boolean; microsoft?: boolean; tilde?: boolean } };
   flags: string[];
   note?: { status: Status; reason: string; suggestion?: string };
   checkedAt: string;
@@ -52,6 +53,9 @@ const notesPath = `content/${lang}/check-notes.json`;
 const { phrases } = JSON.parse(readFileSync(`public/data/${lang}/phrases.json`, 'utf8')) as { phrases: Phrase[] };
 const prev: Record<string, Result> = existsSync(outPath) ? JSON.parse(readFileSync(outPath, 'utf8')) : {};
 const notes: Record<string, Note> = existsSync(notesPath) ? JSON.parse(readFileSync(notesPath, 'utf8')) : {};
+// Tilde (hugo.gov.lv) has no open API: its translations are pasted from the web page into this file, keyed by the exact text.
+const tildePath = `content/${lang}/mt-tilde.json`;
+const tilde: Record<string, string> = existsSync(tildePath) ? JSON.parse(readFileSync(tildePath, 'utf8')).byText : {};
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 const hashOf = (p: Phrase) => createHash('sha1').update(`${p.text}|${p.ru}`).digest('hex').slice(0, 12);
@@ -168,11 +172,14 @@ const results: Record<string, Result> = {};
 for (const p of phrases) if (!todo.includes(p) && prev[p.id]) results[p.id] = prev[p.id];
 
 for (const [n, p] of todo.entries()) {
-  const ws = words(p.text);
+  // The corpus keeps commas as tokens: the exact phrase is searched with them, and word pairs never span a comma
+  // («Kafiju ar pienu, lūdzu» → pairs inside «Kafiju ar pienu» only; a lone «lūdzu» needs no pair).
+  const ws = p.text.replace(/[.!?…]+\s*$/u, '').match(/\p{L}+(?:-\p{L}+)*|,/gu) ?? [];
   const exact = (await orMissing(() => corpusHits(ws))) ?? { hits: 0 };
   const pairs: Result['corpus']['pairs'] = [];
-  if (!exact.hits && ws.length > 1) {
+  if (!exact.hits && words(p.text).length > 1) {
     for (let i = 0; i + 1 < ws.length; i++) {
+      if (ws[i] === ',' || ws[i + 1] === ',') continue;
       const pair = [ws[i], ws[i + 1]];
       pairs.push({ pair: pair.join(' '), hits: (await orMissing(() => corpusHits(pair)))?.hits ?? 0, url: corpusUrl(pair) });
     }
@@ -223,16 +230,18 @@ if (needGoogle.length) console.log(`Google: получено ${needGoogle.filter
 for (const p of phrases) {
   const r = results[p.id];
   if (!r) continue;
+  r.mt.tilde = tilde[p.text];
+  r.mt.agree.tilde = r.mt.tilde === undefined ? undefined : agrees(r.mt.tilde, p.ru);
   const reasons: string[] = [];
   const attested = r.corpus.exact > 0 || r.tatoeba.length > 0 || (r.corpus.pairs.length > 0 && r.corpus.pairs.every((x) => x.hits >= PAIR_MIN));
   if (!attested) {
     const weak = r.corpus.pairs.filter((x) => x.hits < PAIR_MIN).map((x) => `«${x.pair}» (${x.hits})`);
     reasons.push(weak.length ? `в корпусе не нашлось фразы, редкие сочетания: ${weak.join(', ')}` : 'в корпусе и Tatoeba фраза не найдена');
   }
-  if (r.mt.google === undefined) reasons.push('Google не ответил — нет перевода для сверки');
-  if (r.mt.agree.google === false) reasons.push(`Google переводит иначе: «${r.mt.google}»`);
-  if (r.mt.microsoft === undefined) reasons.push('нет второго переводчика (Microsoft)');
-  else if (r.mt.agree.microsoft === false) reasons.push(`Microsoft переводит иначе: «${r.mt.microsoft}»`);
+  const engines = [['Microsoft', 'microsoft'], ['Tilde', 'tilde'], ['Google', 'google']] as const;
+  const have = engines.filter(([, k]) => r.mt[k] !== undefined);
+  if (have.length < 2) reasons.push(`меньше двух переводчиков: есть только ${have.map(([n]) => n).join(', ') || 'ни одного'}`);
+  for (const [name, k] of have) if (r.mt.agree[k] === false) reasons.push(`${name} переводит иначе: «${r.mt[k]}»`);
   reasons.push(...r.flags);
   r.reasons = reasons;
   r.status = reasons.length ? 'doubtful' : 'ok';
@@ -240,9 +249,9 @@ for (const p of phrases) {
   if (r.note?.status === 'drop' || r.note?.status === 'doubtful') r.status = r.note.status;
   // A note can clear a translation mismatch the stem metric got wrong (a synonym), never missing evidence.
   else if (r.note?.status === 'ok') {
-    const onlyWording = attested && r.mt.microsoft !== undefined && !r.flags.length;
+    const onlyWording = attested && have.length >= 2 && !r.flags.length;
     r.status = onlyWording ? 'ok' : 'doubtful';
-    if (!onlyWording) r.reasons.push('пометка «ок» не принята: нет источника или второго переводчика');
+    if (!onlyWording) r.reasons.push('пометка «ок» не принята: нет источника или двух переводчиков');
   }
 }
 

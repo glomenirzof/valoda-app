@@ -44,6 +44,7 @@
    "image": null,
    "freqRank": 8,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -101,6 +102,7 @@
    "image": null,
    "freqRank": 20,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -141,6 +143,7 @@
    "image": null,
    "freqRank": 30,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -188,6 +191,7 @@
    "image": null,
    "freqRank": 32,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -235,6 +239,7 @@
    "image": null,
    "freqRank": 34,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -282,6 +287,7 @@
    "image": null,
    "freqRank": 37,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -329,6 +335,7 @@
    "image": null,
    "freqRank": 37,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -376,6 +383,7 @@
    "image": null,
    "freqRank": 44,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -409,6 +417,7 @@
    "image": null,
    "freqRank": 44,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -457,6 +466,7 @@
    "image": null,
    "freqRank": 44,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -497,6 +507,7 @@
    "image": null,
    "freqRank": 61,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -530,6 +541,7 @@
    "image": null,
    "freqRank": 64,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -564,6 +576,7 @@
    "image": null,
    "freqRank": 67,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -590,6 +603,7 @@
    "image": null,
    "freqRank": 77,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -630,6 +644,7 @@
    "image": null,
    "freqRank": 78,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -670,6 +685,7 @@
    "image": null,
    "freqRank": 78,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -719,6 +735,7 @@
    "image": null,
    "freqRank": 81,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -774,6 +791,7 @@
    "image": null,
    "freqRank": 87,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -822,6 +840,7 @@
    "image": null,
    "freqRank": 94,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -871,6 +890,7 @@
    "image": null,
    "freqRank": 101,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -920,6 +940,7 @@
    "image": null,
    "freqRank": 101,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -971,6 +992,7 @@
    "image": null,
    "freqRank": 101,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1027,6 +1049,7 @@
    "image": null,
    "freqRank": 103,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1076,6 +1099,7 @@
    "image": null,
    "freqRank": 103,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1115,6 +1139,7 @@
    "image": null,
    "freqRank": 108,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1162,6 +1187,7 @@
    "image": null,
    "freqRank": 109,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1217,6 +1243,7 @@
    "image": null,
    "freqRank": 120,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1279,6 +1306,7 @@
    "image": null,
    "freqRank": 120,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1313,6 +1341,7 @@
    "image": null,
    "freqRank": 120,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1356,6 +1385,7 @@
    "image": null,
    "freqRank": 137,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1390,6 +1420,7 @@
    "image": null,
    "freqRank": 144,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1437,6 +1468,7 @@
    "image": null,
    "freqRank": 147,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1484,6 +1516,7 @@
    "image": null,
    "freqRank": 147,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1531,6 +1564,7 @@
    "image": null,
    "freqRank": 162,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1587,6 +1621,7 @@
    "image": null,
    "freqRank": 168,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1647,6 +1682,7 @@
    "image": null,
    "freqRank": 168,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1674,6 +1710,7 @@
    "image": null,
    "freqRank": 171,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1722,6 +1759,7 @@
    "image": null,
    "freqRank": 182,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1771,6 +1809,7 @@
    "image": null,
    "freqRank": 205,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1820,6 +1859,7 @@
    "image": null,
    "freqRank": 205,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1867,6 +1907,7 @@
    "image": null,
    "freqRank": 205,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1930,6 +1971,7 @@
    "image": null,
    "freqRank": 224,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -1979,6 +2021,7 @@
    "image": null,
    "freqRank": 234,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2039,6 +2082,7 @@
    "image": null,
    "freqRank": 240,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2087,6 +2131,7 @@
    "image": null,
    "freqRank": 249,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2128,6 +2173,7 @@
    "image": null,
    "freqRank": 249,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2170,6 +2216,7 @@
    "image": null,
    "freqRank": 305,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2211,6 +2258,7 @@
    "image": null,
    "freqRank": 315,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2267,6 +2315,7 @@
    "image": null,
    "freqRank": 318,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2315,6 +2364,7 @@
    "image": null,
    "freqRank": 320,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2363,6 +2413,7 @@
    "image": null,
    "freqRank": 328,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2410,6 +2461,7 @@
    "image": null,
    "freqRank": 347,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2458,6 +2510,7 @@
    "image": null,
    "freqRank": 362,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2505,6 +2558,7 @@
    "image": null,
    "freqRank": 373,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2545,6 +2599,7 @@
    "image": null,
    "freqRank": 373,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2599,6 +2654,7 @@
    "image": null,
    "freqRank": 377,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2640,6 +2696,7 @@
    "image": null,
    "freqRank": 393,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2696,6 +2753,7 @@
    "image": null,
    "freqRank": 442,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2745,6 +2803,7 @@
    "image": null,
    "freqRank": 465,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2814,6 +2873,7 @@
    "image": null,
    "freqRank": 476,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2862,6 +2922,7 @@
    "image": null,
    "freqRank": 482,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2917,6 +2978,7 @@
    "image": null,
    "freqRank": 487,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -2965,6 +3027,7 @@
    "image": null,
    "freqRank": 489,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3014,6 +3077,7 @@
    "image": null,
    "freqRank": 489,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3069,6 +3133,7 @@
    "image": null,
    "freqRank": 498,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3109,6 +3174,7 @@
    "image": null,
    "freqRank": 508,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3150,6 +3216,7 @@
    "image": null,
    "freqRank": 514,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3215,6 +3282,7 @@
    "image": null,
    "freqRank": 552,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3264,6 +3332,7 @@
    "image": null,
    "freqRank": 574,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3311,6 +3380,7 @@
    "image": null,
    "freqRank": 598,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3352,6 +3422,7 @@
    "image": null,
    "freqRank": 616,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3401,6 +3472,7 @@
    "image": null,
    "freqRank": 665,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3449,6 +3521,7 @@
    "image": null,
    "freqRank": 665,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3498,6 +3571,7 @@
    "image": null,
    "freqRank": 665,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3546,6 +3620,7 @@
    "image": null,
    "freqRank": 745,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3602,6 +3677,7 @@
    "image": null,
    "freqRank": 785,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3658,6 +3734,7 @@
    "image": null,
    "freqRank": 785,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3707,6 +3784,7 @@
    "image": null,
    "freqRank": 801,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3756,6 +3834,7 @@
    "image": null,
    "freqRank": 801,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3804,6 +3883,7 @@
    "image": null,
    "freqRank": 826,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3838,6 +3918,7 @@
    "image": null,
    "freqRank": 865,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3872,6 +3953,7 @@
    "image": null,
    "freqRank": 865,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3906,6 +3988,7 @@
    "image": null,
    "freqRank": 885,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -3953,6 +4036,7 @@
    "image": null,
    "freqRank": 892,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4002,6 +4086,7 @@
    "image": null,
    "freqRank": 900,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4050,6 +4135,7 @@
    "image": null,
    "freqRank": 909,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4099,6 +4185,7 @@
    "image": null,
    "freqRank": 940,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4148,6 +4235,7 @@
    "image": null,
    "freqRank": 951,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4182,6 +4270,7 @@
    "image": null,
    "freqRank": 966,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4246,6 +4335,7 @@
    "image": null,
    "freqRank": 1009,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4295,6 +4385,7 @@
    "image": null,
    "freqRank": 1081,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4337,6 +4428,7 @@
    "image": null,
    "freqRank": 1180,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4401,6 +4493,7 @@
    "image": null,
    "freqRank": 1220,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4449,6 +4542,7 @@
    "image": null,
    "freqRank": 1237,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4513,6 +4607,7 @@
    "image": null,
    "freqRank": 1262,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4569,6 +4664,7 @@
    "image": null,
    "freqRank": 1277,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4625,6 +4721,7 @@
    "image": null,
    "freqRank": 1297,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4690,6 +4787,7 @@
    "image": null,
    "freqRank": 1297,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4739,6 +4837,7 @@
    "image": null,
    "freqRank": 1370,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4788,6 +4887,7 @@
    "image": null,
    "freqRank": 1373,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4851,6 +4951,7 @@
    "image": null,
    "freqRank": 1446,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4916,6 +5017,7 @@
    "image": null,
    "freqRank": 1474,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4964,6 +5066,7 @@
    "image": null,
    "freqRank": 1516,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -4997,6 +5100,7 @@
    "image": null,
    "freqRank": 1548,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5044,6 +5148,7 @@
    "image": null,
    "freqRank": 1558,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5101,6 +5206,7 @@
    "image": null,
    "freqRank": 1695,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5150,6 +5256,7 @@
    "image": null,
    "freqRank": 1695,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5205,6 +5312,7 @@
    "image": null,
    "freqRank": 1711,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5254,6 +5362,7 @@
    "image": null,
    "freqRank": 2146,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5303,6 +5412,7 @@
    "image": null,
    "freqRank": 2146,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5352,6 +5462,7 @@
    "image": null,
    "freqRank": 2146,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5392,6 +5503,7 @@
    "image": null,
    "freqRank": 2178,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5433,6 +5545,7 @@
    "image": null,
    "freqRank": 2243,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5482,6 +5595,7 @@
    "image": null,
    "freqRank": 2451,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5539,6 +5653,7 @@
    "image": null,
    "freqRank": 2608,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5581,6 +5696,7 @@
    "image": null,
    "freqRank": 2810,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5622,6 +5738,7 @@
    "image": null,
    "freqRank": 2844,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5687,6 +5804,7 @@
    "image": null,
    "freqRank": 3034,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5736,6 +5854,7 @@
    "image": null,
    "freqRank": 3256,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5785,6 +5904,7 @@
    "image": null,
    "freqRank": 3339,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5841,6 +5961,7 @@
    "image": null,
    "freqRank": 3810,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5890,6 +6011,7 @@
    "image": null,
    "freqRank": 4000,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5939,6 +6061,7 @@
    "image": null,
    "freqRank": 4122,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -5988,6 +6111,7 @@
    "image": null,
    "freqRank": 4200,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6022,6 +6146,7 @@
    "image": null,
    "freqRank": 4423,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6076,6 +6201,7 @@
    "image": null,
    "freqRank": 4501,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6125,6 +6251,7 @@
    "image": null,
    "freqRank": 4717,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6166,6 +6293,7 @@
    "image": null,
    "freqRank": 4861,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6215,6 +6343,7 @@
    "image": null,
    "freqRank": 4865,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6273,6 +6402,7 @@
    "image": null,
    "freqRank": 4970,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6328,6 +6458,7 @@
    "image": null,
    "freqRank": 5329,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6377,6 +6508,7 @@
    "image": null,
    "freqRank": 5708,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6435,6 +6567,7 @@
    "image": null,
    "freqRank": 5843,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6489,6 +6622,7 @@
    "image": null,
    "freqRank": 6002,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6545,6 +6679,7 @@
    "image": null,
    "freqRank": 6358,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6594,6 +6729,7 @@
    "image": null,
    "freqRank": 6601,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6643,6 +6779,7 @@
    "image": null,
    "freqRank": 6822,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6690,6 +6827,7 @@
    "image": null,
    "freqRank": 6861,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6746,6 +6884,7 @@
    "image": null,
    "freqRank": 8335,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6795,6 +6934,7 @@
    "image": null,
    "freqRank": 8675,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6842,6 +6982,7 @@
    "image": null,
    "freqRank": 10098,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6890,6 +7031,7 @@
    "image": null,
    "freqRank": 10691,
    "status": "unverified",
+   "auto": "doubtful",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6916,6 +7058,7 @@
    "image": null,
    "freqRank": null,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6942,6 +7085,7 @@
    "image": null,
    "freqRank": null,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6968,6 +7112,7 @@
    "image": null,
    "freqRank": null,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -6994,6 +7139,7 @@
    "image": null,
    "freqRank": null,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -7020,6 +7166,7 @@
    "image": null,
    "freqRank": null,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -7046,6 +7193,7 @@
    "image": null,
    "freqRank": null,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -7079,6 +7227,7 @@
    "image": null,
    "freqRank": null,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
@@ -7112,6 +7261,7 @@
    "image": null,
    "freqRank": null,
    "status": "unverified",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
