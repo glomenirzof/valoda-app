@@ -4837,7 +4837,7 @@
    "image": null,
    "freqRank": 1370,
    "status": "unverified",
-   "auto": "doubtful",
+   "auto": "ok",
    "source": "llm",
    "check": {
     "tezaurs": "ok",
