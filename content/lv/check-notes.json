@@ -192,5 +192,215 @@
    "korpuss.lv LVK2022: «kāju muskuļus» — 15",
    "korpuss.lv LVK2022: «mēs trenējam» — 4"
   ]
+ },
+ "lv-0182": {
+  "status": "ok",
+  "reason": "переводчики: «Как тебя зовут?», «Как твое имя?» — оба значения в нашем переводе"
+ },
+ "lv-0209": {
+  "status": "ok",
+  "reason": "«Чего вы хотите?» — то же; Microsoft ошибочно на «ты»"
+ },
+ "lv-0286": {
+  "status": "ok",
+  "reason": "«Это разрешено?» у Microsoft — то же значение, что «Можно?»"
+ },
+ "lv-0166": {
+  "status": "ok",
+  "reason": "«Это мой первый раз здесь» — то же значение, что «Я здесь впервые»"
+ },
+ "lv-0262": {
+  "status": "ok",
+  "reason": "braukt — «ехать»; переводчики ошиблись («идём/плывём к морю»), смысл «едем на море»"
+ },
+ "lv-0174": {
+  "status": "ok",
+  "reason": "biļete — «билет»; Microsoft ошибся («штраф»), Tilde совпадает"
+ },
+ "lv-0173": {
+  "status": "ok",
+  "reason": "обычная конструкция; переводчики взяли прошедшее (sāku — и «начинаю», и «начал»), с «rīt» — настоящее",
+  "evidence": [
+   "korpuss.lv LVK2022: «sāku strādāt» — 318",
+   "korpuss.lv LVK2022: «es sāku» — 936"
+  ]
+ },
+ "lv-0222": {
+  "status": "ok",
+  "reason": "«главный вокзал / главная станция» — stacija: и «станция», и «вокзал»"
+ },
+ "lv-0279": {
+  "status": "ok",
+  "reason": "так спрашивают в разговорниках: «Cikos atiet vilciens?», «Kad atiet nākamais vilciens?»",
+  "evidence": [
+   "https://www.goethe-verlag.com/book2/EN/ENLV/ENLV037.HTM",
+   "https://polyglotclub.com/wiki/Language%2FStandard-latvian%2FVocabulary%2FUsing-public-transport",
+   "korpuss.lv LVK2022: «nākamais vilciens» — 6"
+  ]
+ },
+ "lv-0452": {
+  "status": "ok",
+  "reason": "«Здравствуйте, сэр» — то же обращение"
+ },
+ "lv-0490": {
+  "status": "ok",
+  "reason": "«Остальное хорошо / нормально» — то же значение"
+ },
+ "lv-0308": {
+  "status": "ok",
+  "reason": "«Каков результат?» — то же значение"
+ },
+ "lv-0323": {
+  "status": "ok",
+  "reason": "«Позвоните в полицию» — то же действие, Tilde совпадает"
+ },
+ "lv-0462": {
+  "status": "ok",
+  "reason": "«Рядом с домом стоит большое дерево» — то же значение"
+ },
+ "lv-0484": {
+  "status": "ok",
+  "reason": "«испытание» у Microsoft — одно из значений pārbaude, Tilde совпадает"
+ },
+ "lv-0329": {
+  "status": "ok",
+  "reason": "тот же вопрос у переводчиков («Каков твой уровень?»); līmenis в разговоре о языке",
+  "evidence": [
+   "korpuss.lv LVK2022: «valodas līmenis» — 6",
+   "korpuss.lv LVK2022: «kāds ir» — 362"
+  ]
+ },
+ "lv-0313": {
+  "status": "ok",
+  "reason": "«В этом нет необходимости / не обязательно» — то же значение"
+ },
+ "lv-0381": {
+  "status": "ok",
+  "reason": "тот же вопрос («Каково твоё/ваше мнение?»)"
+ },
+ "lv-0387": {
+  "status": "ok",
+  "reason": "«Какое название магазина?» — то же значение"
+ },
+ "lv-0403": {
+  "status": "ok",
+  "reason": "«Позвольте! / Разрешите!» — синонимы, оба в нашем переводе"
+ },
+ "lv-0445": {
+  "status": "ok",
+  "reason": "«Выбор за тобой» — то же значение"
+ },
+ "lv-0506": {
+  "status": "ok",
+  "reason": "sajūta — «ощущение, чувство»; «чувствую себя хорошо» у Microsoft — близкое значение"
+ },
+ "lv-0370": {
+  "status": "ok",
+  "reason": "«Какая задача?» — uzdevums: и «задание», и «задача»"
+ },
+ "lv-0474": {
+  "status": "ok",
+  "reason": "sods — «штраф» и «наказание», оба значения у переводчиков"
+ },
+ "lv-0482": {
+  "status": "ok",
+  "reason": "«изображение / картинка» — attēls"
+ },
+ "lv-0496": {
+  "status": "ok",
+  "reason": "prasīt — «спрашивать» и «просить»; Microsoft выбрал «просить», Tilde совпадает"
+ },
+ "lv-0397": {
+  "status": "ok",
+  "reason": "Microsoft ошибся («повышение»), Tilde совпадает: «Сегодня акция»"
+ },
+ "lv-0458": {
+  "status": "ok",
+  "reason": "Microsoft: «молодые люди проходят обучение» — trenēties: «тренироваться», Tilde совпадает"
+ },
+ "lv-0334": {
+  "status": "ok",
+  "reason": "«otru dvieli» у носителей (косметолог: «vienu un pēc tam otru dvieli»); otrs — «второй» и «другой», оба значения в переводе",
+  "evidence": [
+   "korpuss.lv LVK2022: «otru dvieli» — 2",
+   "korpuss.lv LVK2022: «man vajag» — 587"
+  ]
+ },
+ "lv-0408": {
+  "status": "ok",
+  "reason": "«повседневная жизнь / рутина» — ikdiena, то же значение"
+ },
+ "lv-0375": {
+  "status": "ok",
+  "reason": "«Думаю, он опаздывает» — то же значение, Tilde совпадает"
+ },
+ "lv-0486": {
+  "status": "ok",
+  "reason": "«Я узнаю / выясню» — синонимы"
+ },
+ "lv-0348": {
+  "status": "ok",
+  "reason": "patikt — «нравиться»; «люблю» у Tilde — второе значение, есть в переводе"
+ },
+ "lv-0365": {
+  "status": "ok",
+  "reason": "patikt — «нравиться»; «люблю» у Tilde — второе значение, есть в переводе"
+ },
+ "lv-0232": {
+  "status": "ok",
+  "reason": "patikt — «нравиться»; «люблю» у переводчиков — второе значение, есть в переводе"
+ },
+ "lv-0292": {
+  "status": "ok",
+  "reason": "kavēt — «опаздывать» и «задерживать»; Microsoft выбрал второе, Tilde — прошедшее время; оба значения формы в переводе"
+ },
+ "lv-0214": {
+  "status": "ok",
+  "reason": "jauns — «новый» и «молодой»; оба значения в переводе"
+ },
+ "lv-0181": {
+  "status": "ok",
+  "reason": "ēdu — и «ем», и «ел»; оба значения в переводе"
+ },
+ "lv-0238": {
+  "status": "ok",
+  "reason": "«Я использую карту» — то же значение"
+ },
+ "lv-0468": {
+  "status": "drop",
+  "reason": "у носителей не нашлось ни «vidēju kafiju», ни «vidējo/vidēja kafija»; без источника не учим"
+ },
+ "lv-0426": {
+  "status": "ok",
+  "reason": "предлог zem + родительный — обычная конструкция",
+  "evidence": [
+   "korpuss.lv LVK2022: «ir zem» — 89",
+   "korpuss.lv LVK2022: «zem grāmatas» — 1",
+   "korpuss.lv LVK2022: «zem galda» — 168"
+  ]
+ },
+ "lv-0469": {
+  "status": "ok",
+  "reason": "обычный вопрос",
+  "evidence": [
+   "korpuss.lv LVK2022: «kurā rajonā» — 5",
+   "korpuss.lv LVK2022: «tu dzīvo» — 185"
+  ]
+ },
+ "lv-0205": {
+  "status": "ok",
+  "reason": "обычная конструкция",
+  "evidence": [
+   "korpuss.lv LVK2022: «nevaru atrast» — 71",
+   "korpuss.lv LVK2022: «es nevaru» — 1828"
+  ]
+ },
+ "lv-0500": {
+  "status": "ok",
+  "reason": "atiet — «отходить» о транспорте, в т. ч. о корабле",
+  "evidence": [
+   "korpuss.lv LVK2022: «Kuģis atiet no Tallinas uz Helsinkiem» — 1",
+   "korpuss.lv LVK2022: «atiet vilciens» — 1"
+  ]
  }
 }

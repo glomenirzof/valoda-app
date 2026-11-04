@@ -1104,6 +1104,3034 @@
       "lv": "Pagaidiet, lūdzu!",
       "ru": "Подождите, пожалуйста!",
       "lemmas": "pagaidīt lūdzu"
+    },
+    {
+      "id": "lv-0151",
+      "topic": "polite",
+      "lv": "Paldies par palīdzību!",
+      "ru": "Спасибо за помощь!",
+      "lemmas": "paldies par palīdzība",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0152",
+      "topic": "understand",
+      "lv": "Es domāju, ka tas ir labi.",
+      "ru": "Я думаю, что это хорошо.",
+      "lemmas": "es domāt ka tas būt labi",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0153",
+      "topic": "shop",
+      "lv": "Es arī gribu kafiju.",
+      "ru": "Я тоже хочу кофе.",
+      "lemmas": "es arī gribēt kafija",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0154",
+      "topic": "understand",
+      "lv": "Nedari tā!",
+      "ru": "Не делай так!",
+      "lemmas": "darīt tā/ADV",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0155",
+      "topic": "me",
+      "lv": "Es gribu, bet es nevaru.",
+      "ru": "Хочу, но не могу.",
+      "lemmas": "es gribēt bet es varēt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0156",
+      "topic": "work",
+      "lv": "Es nāku, lai palīdzētu.",
+      "ru": "Я иду, чтобы помочь.",
+      "lemmas": "es nākt lai palīdzēt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0157",
+      "topic": "city",
+      "lv": "Kurš autobuss iet uz centru?",
+      "ru": "Какой автобус идёт в центр?",
+      "lemmas": "kurš autobuss iet uz centrs",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0158",
+      "topic": "city",
+      "lv": "Es jau esmu šeit.",
+      "ru": "Я уже здесь.",
+      "lemmas": "es jau būt šeit",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0159",
+      "topic": "polite",
+      "lv": "Ja tev ir laiks, piezvani.",
+      "ru": "Если у тебя есть время, позвони.",
+      "lemmas": "ja tu būt laiks piezvanīt",
+      "batch": "batch-1",
+      "hints": {
+        "piezvani": "IMP.2.SG"
+      }
+    },
+    {
+      "id": "lv-0160",
+      "topic": "work",
+      "lv": "Man ir daudz darba.",
+      "ru": "У меня много работы.",
+      "lemmas": "es būt daudz darbs",
+      "batch": "batch-1",
+      "hints": {
+        "darba": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0161",
+      "topic": "health",
+      "lv": "Viņa strādā aptiekā.",
+      "ru": "Она работает в аптеке.",
+      "lemmas": "viņa strādāt aptieka",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0162",
+      "topic": "city",
+      "lv": "Šeit ir daudz cilvēku.",
+      "ru": "Здесь много людей.",
+      "lemmas": "šeit būt daudz cilvēks",
+      "batch": "batch-1",
+      "hints": {
+        "cilvēku": "GEN.PL"
+      }
+    },
+    {
+      "id": "lv-0163",
+      "topic": "me",
+      "lv": "Man ir jauns telefons.",
+      "ru": "У меня новый телефон.",
+      "lemmas": "es būt jauns telefons",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0164",
+      "topic": "health",
+      "lv": "Es nenāku, jo esmu slims.",
+      "ru": "Я не приду, потому что болен.",
+      "lemmas": "es nākt jo būt slims",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0165",
+      "topic": "gym",
+      "lv": "Vai šī vieta ir brīva?",
+      "ru": "Это место свободно?",
+      "lemmas": "vai šī vieta būt brīvs",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0166",
+      "topic": "me",
+      "lv": "Es esmu šeit pirmo reizi.",
+      "ru": "Я здесь впервые.",
+      "lemmas": "es būt šeit pirmais reize",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0167",
+      "topic": "time",
+      "lv": "Tad tiekamies rīt!",
+      "ru": "Тогда увидимся завтра!",
+      "lemmas": "tad tikties rīt/ADV",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0168",
+      "topic": "me",
+      "lv": "Man ir divi bērni.",
+      "ru": "У меня двое детей.",
+      "lemmas": "es būt divi bērns",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0169",
+      "topic": "time",
+      "lv": "Kāda šodien ir diena?",
+      "ru": "Какой сегодня день?",
+      "lemmas": "kāda šodien būt diena",
+      "batch": "batch-1",
+      "hints": {
+        "Kāda": "NOM.SG.F"
+      }
+    },
+    {
+      "id": "lv-0170",
+      "topic": "city",
+      "lv": "Vai ir cits autobuss?",
+      "ru": "Есть другой автобус?",
+      "lemmas": "vai būt cits autobuss",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0171",
+      "topic": "work",
+      "lv": "Es to darīšu pats.",
+      "ru": "Я сделаю это сам.",
+      "lemmas": "es tas darīt pats",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0172",
+      "topic": "city",
+      "lv": "Rīga ir liela pilsēta.",
+      "ru": "Рига — большой город.",
+      "lemmas": "Rīga būt liels/ADJ pilsēta",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0173",
+      "topic": "work",
+      "lv": "Es sāku strādāt rīt.",
+      "ru": "Я начинаю работать завтра.",
+      "lemmas": "es sākt strādāt rīt/ADV",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0174",
+      "topic": "city",
+      "lv": "Vai tu saņēmi biļeti?",
+      "ru": "Ты получил билет?",
+      "lemmas": "vai tu saņemt biļete",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0175",
+      "topic": "gym",
+      "lv": "Šodien ir spēle.",
+      "ru": "Сегодня игра (матч).",
+      "lemmas": "šodien būt spēle",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0176",
+      "topic": "gym",
+      "lv": "Mana komanda šodien trenējas.",
+      "ru": "Моя команда сегодня тренируется.",
+      "lemmas": "mans komanda šodien trenēties",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0177",
+      "topic": "city",
+      "lv": "Kur ir šī iela?",
+      "ru": "Где эта улица?",
+      "lemmas": "kur būt šī iela",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0178",
+      "topic": "time",
+      "lv": "Šī ir otrā reize.",
+      "ru": "Это второй раз.",
+      "lemmas": "šī būt otrais reize",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0179",
+      "topic": "understand",
+      "lv": "Ko tu teici?",
+      "ru": "Что ты сказал?",
+      "lemmas": "kas tu teikt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0180",
+      "topic": "weather",
+      "lv": "Kļūst auksti.",
+      "ru": "Становится холодно.",
+      "lemmas": "kļūt auksti",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0181",
+      "topic": "gym",
+      "lv": "Pirms treniņa es ēdu.",
+      "ru": "Перед тренировкой я ем. (…я поел — ēdu: и «ем», и «ел»)",
+      "lemmas": "pirms treniņš es ēst",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0182",
+      "topic": "me",
+      "lv": "Kāds ir tavs vārds?",
+      "ru": "Как тебя зовут? (Какое у тебя имя?)",
+      "lemmas": "kāds būt tavs vārds",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0183",
+      "topic": "weather",
+      "lv": "Šodien ir siltāk nekā vakar.",
+      "ru": "Сегодня теплее, чем вчера.",
+      "lemmas": "šodien būt silti nekā vakar",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0184",
+      "topic": "work",
+      "lv": "Man ir jautājums.",
+      "ru": "У меня вопрос.",
+      "lemmas": "es būt jautājums",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0185",
+      "topic": "city",
+      "lv": "Vai tu redzi pieturu?",
+      "ru": "Ты видишь остановку?",
+      "lemmas": "vai tu redzēt pietura",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0186",
+      "topic": "shop",
+      "lv": "Tas ir tik dārgi!",
+      "ru": "Это так дорого!",
+      "lemmas": "tas būt tik dārgi",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0187",
+      "topic": "likes",
+      "lv": "Man patīk dzīve Rīgā.",
+      "ru": "Мне нравится жизнь в Риге.",
+      "lemmas": "es patikt dzīve Rīga",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0188",
+      "topic": "weather",
+      "lv": "Līst lietus, tāpēc es braucu ar autobusu.",
+      "ru": "Идёт дождь, поэтому я еду на автобусе.",
+      "lemmas": "līt lietus tāpēc es braukt ar autobuss",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0189",
+      "topic": "home",
+      "lv": "Kur ir manas lietas?",
+      "ru": "Где мои вещи?",
+      "lemmas": "kur būt mana lieta",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0190",
+      "topic": "shop",
+      "lv": "Man vajag mazu maisiņu.",
+      "ru": "Мне нужен маленький пакет.",
+      "lemmas": "es vajadzēt mazs maisiņš",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0191",
+      "topic": "understand",
+      "lv": "Tāda ir dzīve.",
+      "ru": "Такова жизнь.",
+      "lemmas": "tāda būt dzīve",
+      "batch": "batch-1",
+      "hints": {
+        "Tāda": "NOM.SG.F"
+      }
+    },
+    {
+      "id": "lv-0192",
+      "topic": "shop",
+      "lv": "Tas maksā desmit eiro.",
+      "ru": "Это стоит десять евро.",
+      "lemmas": "tas maksāt desmit eiro",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0193",
+      "topic": "city",
+      "lv": "Kur ir ceļš uz staciju?",
+      "ru": "Где дорога к вокзалу (станции)?",
+      "lemmas": "kur būt ceļš uz stacija",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0194",
+      "topic": "polite",
+      "lv": "Ejam kopā!",
+      "ru": "Пойдём вместе!",
+      "lemmas": "iet kopā",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0195",
+      "topic": "home",
+      "lv": "Mans bērns iet uz skolu.",
+      "ru": "Мой ребёнок ходит в школу.",
+      "lemmas": "mans bērns iet uz skola",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0196",
+      "topic": "city",
+      "lv": "Tualete ir otrā pusē.",
+      "ru": "Туалет на другой стороне.",
+      "lemmas": "tualete būt otrais puse",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0197",
+      "topic": "me",
+      "lv": "Viņš ir ļoti augsts.",
+      "ru": "Он очень высокий.",
+      "lemmas": "viņš būt ļoti augsts",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0198",
+      "topic": "work",
+      "lv": "Šī sieviete strādā šeit.",
+      "ru": "Эта женщина работает здесь.",
+      "lemmas": "šī sieviete strādāt šeit",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0199",
+      "topic": "me",
+      "lv": "Mans telefons ir vecs.",
+      "ru": "Мой телефон старый.",
+      "lemmas": "mans telefons būt vecs",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0200",
+      "topic": "gym",
+      "lv": "Es trenējos katru dienu.",
+      "ru": "Я тренируюсь каждый день.",
+      "lemmas": "es trenēties katrs diena",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0201",
+      "topic": "city",
+      "lv": "Pietura ir tur.",
+      "ru": "Остановка там.",
+      "lemmas": "pietura būt tur",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0202",
+      "topic": "me",
+      "lv": "Es šeit dzīvoju trīs mēnešus.",
+      "ru": "Я живу здесь три месяца.",
+      "lemmas": "es šeit dzīvot trīs mēnesis",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0203",
+      "topic": "shop",
+      "lv": "Man nav naudas.",
+      "ru": "У меня нет денег.",
+      "lemmas": "es būt nauda",
+      "batch": "batch-1",
+      "hints": {
+        "naudas": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0204",
+      "topic": "work",
+      "lv": "Es dodos uz darbu.",
+      "ru": "Я иду (отправляюсь) на работу.",
+      "lemmas": "es doties uz darbs",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0205",
+      "topic": "city",
+      "lv": "Es nevaru atrast pieturu.",
+      "ru": "Я не могу найти остановку.",
+      "lemmas": "es varēt atrast pietura",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0206",
+      "topic": "understand",
+      "lv": "Nu, labi!",
+      "ru": "Ну, ладно! (Ну хорошо!)",
+      "lemmas": "nu labi",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0207",
+      "topic": "me",
+      "lv": "Tas vīrietis ir mans brālis.",
+      "ru": "Тот мужчина — мой брат.",
+      "lemmas": "tas vīrietis būt mans brālis",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0208",
+      "topic": "shop",
+      "lv": "Lūdzu, dodiet man ūdeni.",
+      "ru": "Дайте мне воды, пожалуйста.",
+      "lemmas": "lūdzu dot es ūdens",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0209",
+      "topic": "shop",
+      "lv": "Ko jūs vēlaties?",
+      "ru": "Что вы желаете? (Что вам?)",
+      "lemmas": "kas jūs vēlēties",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0210",
+      "topic": "work",
+      "lv": "Viņš stāsta par darbu.",
+      "ru": "Он рассказывает о работе.",
+      "lemmas": "viņš stāstīt par darbs",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0211",
+      "topic": "home",
+      "lv": "Es palieku mājās.",
+      "ru": "Я остаюсь дома.",
+      "lemmas": "es palikt māja",
+      "batch": "batch-1",
+      "hints": {
+        "mājās": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0212",
+      "topic": "me",
+      "lv": "Mēs esam četri.",
+      "ru": "Нас четверо.",
+      "lemmas": "mēs būt četri",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0213",
+      "topic": "weather",
+      "lv": "Lietus dēļ es palieku mājās.",
+      "ru": "Из-за дождя я остаюсь дома.",
+      "lemmas": "lietus dēļ es palikt māja",
+      "batch": "batch-1",
+      "hints": {
+        "mājās": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0214",
+      "topic": "work",
+      "lv": "Es esmu jauns darbinieks.",
+      "ru": "Я новый (молодой) сотрудник.",
+      "lemmas": "es būt jauns darbinieks",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0215",
+      "topic": "work",
+      "lv": "Šobrīd es esmu aizņemts.",
+      "ru": "Сейчас я занят.",
+      "lemmas": "šobrīd es būt aizņemt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0216",
+      "topic": "city",
+      "lv": "Es bieži braucu uz Jūrmalu.",
+      "ru": "Я часто езжу в Юрмалу.",
+      "lemmas": "es bieži braukt uz Jūrmala",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0217",
+      "topic": "gym",
+      "lv": "Viņš spēlē komandā.",
+      "ru": "Он играет в команде.",
+      "lemmas": "viņš spēlēt komanda",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0218",
+      "topic": "polite",
+      "lv": "Es tevi gaidu.",
+      "ru": "Я тебя жду.",
+      "lemmas": "es tu gaidīt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0219",
+      "topic": "shop",
+      "lv": "Es eju uz tirgu.",
+      "ru": "Я иду на рынок.",
+      "lemmas": "es iet uz tirgus",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0220",
+      "topic": "polite",
+      "lv": "Vienu brīdi, lūdzu!",
+      "ru": "Минутку, пожалуйста!",
+      "lemmas": "viens brīdis lūdzu",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0221",
+      "topic": "time",
+      "lv": "Pēc piecām minūtēm.",
+      "ru": "Через пять минут.",
+      "lemmas": "pēc pieci minūte",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0222",
+      "topic": "city",
+      "lv": "Kur ir galvenā stacija?",
+      "ru": "Где главный вокзал?",
+      "lemmas": "kur būt galvenais stacija",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0223",
+      "topic": "shop",
+      "lv": "Ko jūs piedāvājat?",
+      "ru": "Что вы предлагаете?",
+      "lemmas": "kas jūs piedāvāt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0224",
+      "topic": "shop",
+      "lv": "Es vairs negribu.",
+      "ru": "Я больше не хочу.",
+      "lemmas": "es vairs gribēt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0225",
+      "topic": "understand",
+      "lv": "Turpiniet, lūdzu!",
+      "ru": "Продолжайте, пожалуйста!",
+      "lemmas": "turpināt lūdzu",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0226",
+      "topic": "gym",
+      "lv": "Darba beigās es eju uz zāli.",
+      "ru": "В конце рабочего дня я иду в зал.",
+      "lemmas": "darbs beigas es iet uz zāle",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0227",
+      "topic": "health",
+      "lv": "Man sāp roka.",
+      "ru": "У меня болит рука.",
+      "lemmas": "es sāpēt roka",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0228",
+      "topic": "shop",
+      "lv": "Kāda ir cena?",
+      "ru": "Какая цена?",
+      "lemmas": "kāda būt cena",
+      "batch": "batch-1",
+      "hints": {
+        "Kāda": "NOM.SG.F"
+      }
+    },
+    {
+      "id": "lv-0229",
+      "topic": "polite",
+      "lv": "Es tev uzrakstīšu ziņu.",
+      "ru": "Я напишу тебе сообщение.",
+      "lemmas": "es tu uzrakstīt ziņa",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0230",
+      "topic": "likes",
+      "lv": "Vakar mēs skatījāmies filmu.",
+      "ru": "Вчера мы смотрели фильм.",
+      "lemmas": "vakar mēs skatīties filma",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0231",
+      "topic": "work",
+      "lv": "Es to izdarīšu rīt.",
+      "ru": "Я сделаю это завтра.",
+      "lemmas": "es tas izdarīt rīt/ADV",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0232",
+      "topic": "likes",
+      "lv": "Man patīk mūzika.",
+      "ru": "Мне нравится музыка. / Я люблю музыку.",
+      "lemmas": "es patikt mūzika",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0233",
+      "topic": "gym",
+      "lv": "Es eju uz sporta klubu.",
+      "ru": "Я иду в спортклуб.",
+      "lemmas": "es iet uz sports klubs",
+      "batch": "batch-1",
+      "hints": {
+        "sporta": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0234",
+      "topic": "city",
+      "lv": "Kur ir banka?",
+      "ru": "Где банк?",
+      "lemmas": "kur būt banka",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0235",
+      "topic": "work",
+      "lv": "Mēs abi strādājam.",
+      "ru": "Мы оба работаем.",
+      "lemmas": "mēs abi strādāt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0236",
+      "topic": "home",
+      "lv": "Te ir mana māja.",
+      "ru": "Вот мой дом. (Здесь мой дом.)",
+      "lemmas": "te būt mans māja",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0237",
+      "topic": "gym",
+      "lv": "Kur es varu likt dvieli?",
+      "ru": "Куда я могу положить полотенце?",
+      "lemmas": "kur es varēt likt dvielis",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0238",
+      "topic": "shop",
+      "lv": "Es lietoju karti.",
+      "ru": "Я пользуюсь картой.",
+      "lemmas": "es lietot karte",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0239",
+      "topic": "likes",
+      "lv": "Man patīk šī grāmata.",
+      "ru": "Мне нравится эта книга.",
+      "lemmas": "es patikt šī grāmata",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0240",
+      "topic": "work",
+      "lv": "Viņš vienmēr kavē.",
+      "ru": "Он всегда опаздывает.",
+      "lemmas": "viņš vienmēr kavēt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0241",
+      "topic": "weather",
+      "lv": "Atkal līst lietus.",
+      "ru": "Опять идёт дождь.",
+      "lemmas": "atkal līt lietus",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0242",
+      "topic": "work",
+      "lv": "Es rakstu ziņu.",
+      "ru": "Я пишу сообщение.",
+      "lemmas": "es rakstīt ziņa",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0243",
+      "topic": "likes",
+      "lv": "Šī ir laba dziesma.",
+      "ru": "Это хорошая песня.",
+      "lemmas": "šī būt labs dziesma",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0244",
+      "topic": "work",
+      "lv": "Tas ir svarīgs jautājums.",
+      "ru": "Это важный вопрос.",
+      "lemmas": "tas būt svarīgs jautājums",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0245",
+      "topic": "time",
+      "lv": "Varbūt rīt.",
+      "ru": "Может быть, завтра.",
+      "lemmas": "varbūt rīt/ADV",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0246",
+      "topic": "health",
+      "lv": "Man sāp acis.",
+      "ru": "У меня болят глаза.",
+      "lemmas": "es sāpēt acs",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0247",
+      "topic": "polite",
+      "lv": "Pagaidi vismaz minūti!",
+      "ru": "Подожди хотя бы минуту!",
+      "lemmas": "pagaidīt vismaz minūte",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0248",
+      "topic": "gym",
+      "lv": "Mūsu komanda zaudēja.",
+      "ru": "Наша команда проиграла.",
+      "lemmas": "mēs komanda zaudēt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0249",
+      "topic": "work",
+      "lv": "Kāds ir plāns?",
+      "ru": "Какой план?",
+      "lemmas": "kāds būt plāns/NOUN",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0250",
+      "topic": "likes",
+      "lv": "Es eju uz mežu.",
+      "ru": "Я иду в лес.",
+      "lemmas": "es iet uz mežs",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0251",
+      "topic": "shop",
+      "lv": "Es izvēlos šo.",
+      "ru": "Я выбираю это.",
+      "lemmas": "es izvēlēties šis",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0252",
+      "topic": "polite",
+      "lv": "Tā bija laba saruna.",
+      "ru": "Это был хороший разговор.",
+      "lemmas": "tā/PRON būt labs saruna",
+      "batch": "batch-1",
+      "hints": {
+        "Tā": "NOM.SG.F"
+      }
+    },
+    {
+      "id": "lv-0253",
+      "topic": "time",
+      "lv": "Šodien ir svētki.",
+      "ru": "Сегодня праздник.",
+      "lemmas": "šodien būt svētki",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0254",
+      "topic": "work",
+      "lv": "Kāpēc tu kavē?",
+      "ru": "Почему ты опаздываешь?",
+      "lemmas": "kāpēc tu kavēt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0255",
+      "topic": "likes",
+      "lv": "Rīt ir koncerts.",
+      "ru": "Завтра концерт.",
+      "lemmas": "rīt/ADV būt koncerts",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0256",
+      "topic": "health",
+      "lv": "Slimības dēļ es nestrādāju.",
+      "ru": "Из-за болезни я не работаю.",
+      "lemmas": "slimība dēļ es strādāt",
+      "batch": "batch-1",
+      "hints": {
+        "Slimības": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0257",
+      "topic": "health",
+      "lv": "Kur ir slimnīca?",
+      "ru": "Где больница?",
+      "lemmas": "kur būt slimnīca",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0258",
+      "topic": "understand",
+      "lv": "Es gandrīz aizmirsu!",
+      "ru": "Я чуть не забыл!",
+      "lemmas": "es gandrīz aizmirst",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0259",
+      "topic": "weather",
+      "lv": "Joprojām līst lietus.",
+      "ru": "Всё ещё идёт дождь.",
+      "lemmas": "joprojām līt lietus",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0260",
+      "topic": "work",
+      "lv": "Es meklēju darbu.",
+      "ru": "Я ищу работу.",
+      "lemmas": "es meklēt darbs",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0261",
+      "topic": "work",
+      "lv": "Šodien bija gara diena.",
+      "ru": "Сегодня был длинный день.",
+      "lemmas": "šodien būt garš diena",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0262",
+      "topic": "likes",
+      "lv": "Mēs braucam uz jūru.",
+      "ru": "Мы едем на море.",
+      "lemmas": "mēs braukt uz jūra",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0263",
+      "topic": "weather",
+      "lv": "Vasarā ir silti.",
+      "ru": "Летом тепло.",
+      "lemmas": "vasara būt silti",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0264",
+      "topic": "work",
+      "lv": "Es strādāju sešas dienas nedēļā.",
+      "ru": "Я работаю шесть дней в неделю.",
+      "lemmas": "es strādāt seši diena nedēļa",
+      "batch": "batch-1",
+      "hints": {
+        "sešas": "ACC.PL",
+        "dienas": "ACC.PL"
+      }
+    },
+    {
+      "id": "lv-0265",
+      "topic": "time",
+      "lv": "Es atgriezīšos pēc stundas.",
+      "ru": "Я вернусь через час.",
+      "lemmas": "es atgriezties pēc stunda",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0266",
+      "topic": "polite",
+      "lv": "Labu nakti!",
+      "ru": "Спокойной ночи!",
+      "lemmas": "labs nakts",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0267",
+      "topic": "gym",
+      "lv": "Vakarā es trenējos.",
+      "ru": "Вечером я тренируюсь.",
+      "lemmas": "vakars es trenēties",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0268",
+      "topic": "city",
+      "lv": "Man nav automašīnas.",
+      "ru": "У меня нет машины.",
+      "lemmas": "es būt automašīna",
+      "batch": "batch-1",
+      "hints": {
+        "automašīnas": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0269",
+      "topic": "home",
+      "lv": "Vai jums ir dzīvnieki?",
+      "ru": "У вас есть животные?",
+      "lemmas": "vai jūs būt dzīvnieks",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0270",
+      "topic": "health",
+      "lv": "Viņš lūdz palīdzību.",
+      "ru": "Он просит помощи.",
+      "lemmas": "viņš lūgt palīdzība",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0271",
+      "topic": "home",
+      "lv": "Es atstāju telefonu mājās.",
+      "ru": "Я оставил (оставляю) телефон дома.",
+      "lemmas": "es atstāt telefons māja",
+      "batch": "batch-1",
+      "hints": {
+        "atstāju": "PST",
+        "mājās": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0272",
+      "topic": "me",
+      "lv": "Šī meitene ir mana māsa.",
+      "ru": "Эта девушка — моя сестра.",
+      "lemmas": "šī meitene būt mans māsa",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0273",
+      "topic": "home",
+      "lv": "Vai šeit ir internets?",
+      "ru": "Здесь есть интернет?",
+      "lemmas": "vai šeit būt internets",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0274",
+      "topic": "polite",
+      "lv": "Laba ideja!",
+      "ru": "Хорошая идея!",
+      "lemmas": "labs ideja",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0275",
+      "topic": "work",
+      "lv": "Viņš neatbild.",
+      "ru": "Он не отвечает.",
+      "lemmas": "viņš atbildēt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0276",
+      "topic": "understand",
+      "lv": "Viņš runā ļoti ātri.",
+      "ru": "Он говорит очень быстро.",
+      "lemmas": "viņš runāt ļoti ātri",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0277",
+      "topic": "work",
+      "lv": "Mans kolēģis ir slims.",
+      "ru": "Мой коллега болен.",
+      "lemmas": "mans kolēģis būt slims",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0278",
+      "topic": "time",
+      "lv": "Tiekamies pulksten trijos.",
+      "ru": "Встречаемся в три часа.",
+      "lemmas": "tikties pulksten trīs",
+      "batch": "batch-1",
+      "hints": {
+        "trijos": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0279",
+      "topic": "city",
+      "lv": "Cikos atiet nākamais vilciens?",
+      "ru": "Во сколько отходит следующий поезд?",
+      "lemmas": "cikos atiet nākamais vilciens",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0280",
+      "topic": "me",
+      "lv": "Mans vīrs strādā Rīgā.",
+      "ru": "Мой муж работает в Риге.",
+      "lemmas": "mans vīrs strādāt Rīga",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0281",
+      "topic": "understand",
+      "lv": "Es neatceros.",
+      "ru": "Я не помню.",
+      "lemmas": "es atcerēties",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0282",
+      "topic": "work",
+      "lv": "Klients gaida.",
+      "ru": "Клиент ждёт.",
+      "lemmas": "klients gaidīt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0283",
+      "topic": "city",
+      "lv": "Es gribu mainīt biļeti.",
+      "ru": "Я хочу поменять билет.",
+      "lemmas": "es gribēt mainīt biļete",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0284",
+      "topic": "understand",
+      "lv": "Es mēģināšu.",
+      "ru": "Я попробую.",
+      "lemmas": "es mēģināt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0285",
+      "topic": "shop",
+      "lv": "Vai šī prece ir jauna?",
+      "ru": "Этот товар новый?",
+      "lemmas": "vai šī prece būt jauns",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0286",
+      "topic": "polite",
+      "lv": "Vai drīkst?",
+      "ru": "Можно?",
+      "lemmas": "vai drīkstēt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0287",
+      "topic": "understand",
+      "lv": "Man ir grūti.",
+      "ru": "Мне трудно.",
+      "lemmas": "es būt grūti",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0288",
+      "topic": "polite",
+      "lv": "Es noteikti atnākšu.",
+      "ru": "Я обязательно приду.",
+      "lemmas": "es noteikti atnākt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0289",
+      "topic": "shop",
+      "lv": "Baltu maizi, lūdzu.",
+      "ru": "Белый хлеб, пожалуйста.",
+      "lemmas": "balts maize lūdzu",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0290",
+      "topic": "home",
+      "lv": "Vakariņas ir gatavas.",
+      "ru": "Ужин готов.",
+      "lemmas": "vakariņas būt gatavs",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0291",
+      "topic": "likes",
+      "lv": "Kāda krāsa tev patīk?",
+      "ru": "Какой цвет тебе нравится?",
+      "lemmas": "kāds krāsa tu patikt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0292",
+      "topic": "work",
+      "lv": "Es nekad nekavēju.",
+      "ru": "Я никогда не опаздываю (не опаздывал).",
+      "lemmas": "es nekad kavēt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0293",
+      "topic": "home",
+      "lv": "Es parasti ēdu mājās.",
+      "ru": "Я обычно ем дома.",
+      "lemmas": "es parasti ēst māja",
+      "batch": "batch-1",
+      "hints": {
+        "mājās": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0294",
+      "topic": "home",
+      "lv": "Mans dzīvoklis ir centrā.",
+      "ru": "Моя квартира в центре.",
+      "lemmas": "mans dzīvoklis būt centrs",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0295",
+      "topic": "weather",
+      "lv": "Ziemā ir auksti.",
+      "ru": "Зимой холодно.",
+      "lemmas": "ziema būt auksti",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0296",
+      "topic": "understand",
+      "lv": "Es tevi nedzirdu.",
+      "ru": "Я тебя не слышу.",
+      "lemmas": "es tu dzirdēt",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0297",
+      "topic": "me",
+      "lv": "Mana māte dzīvo Latvijā.",
+      "ru": "Моя мать живёт в Латвии.",
+      "lemmas": "mans māte dzīvot Latvija",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0298",
+      "topic": "me",
+      "lv": "Mans tēvs ir ārsts.",
+      "ru": "Мой отец — врач.",
+      "lemmas": "mans tēvs būt ārsts",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0299",
+      "topic": "health",
+      "lv": "Man sāp sirds.",
+      "ru": "У меня болит сердце.",
+      "lemmas": "es sāpēt sirds",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0300",
+      "topic": "likes",
+      "lv": "Es lasu grāmatu.",
+      "ru": "Я читаю книгу.",
+      "lemmas": "es lasīt grāmata",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0301",
+      "topic": "home",
+      "lv": "Durvis ir tur.",
+      "ru": "Дверь там.",
+      "lemmas": "durvis būt tur",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0302",
+      "topic": "home",
+      "lv": "Es drīz būšu mājās.",
+      "ru": "Я скоро буду дома.",
+      "lemmas": "es drīz būt māja",
+      "batch": "batch-1",
+      "hints": {
+        "mājās": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0303",
+      "topic": "likes",
+      "lv": "Rīga ir skaista pilsēta.",
+      "ru": "Рига — красивый город.",
+      "lemmas": "Rīga būt skaists pilsēta",
+      "batch": "batch-1"
+    },
+    {
+      "id": "lv-0304",
+      "topic": "likes",
+      "lv": "Pasaule ir liela.",
+      "ru": "Мир большой.",
+      "lemmas": "pasaule būt liels/ADJ",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0305",
+      "topic": "understand",
+      "lv": "Tas nav iespējams.",
+      "ru": "Это невозможно.",
+      "lemmas": "tas būt iespējams",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0306",
+      "topic": "shop",
+      "lv": "Mums ir dažādas krāsas.",
+      "ru": "У нас разные цвета.",
+      "lemmas": "mēs būt dažāds krāsa",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0307",
+      "topic": "city",
+      "lv": "Kur var saņemt informāciju?",
+      "ru": "Где можно получить информацию?",
+      "lemmas": "kur varēt saņemt informācija",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0308",
+      "topic": "gym",
+      "lv": "Kāds ir rezultāts?",
+      "ru": "Какой результат? (какой счёт?)",
+      "lemmas": "kāds būt rezultāts",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0309",
+      "topic": "understand",
+      "lv": "Vai jūs varat dot piemēru?",
+      "ru": "Можете привести пример?",
+      "lemmas": "vai jūs varēt dot piemērs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0310",
+      "topic": "work",
+      "lv": "Man ir vairāki jautājumi.",
+      "ru": "У меня несколько вопросов.",
+      "lemmas": "es būt vairāki jautājums",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0311",
+      "topic": "shop",
+      "lv": "Vai tev vajag kaut ko?",
+      "ru": "Тебе что-нибудь нужно?",
+      "lemmas": "vai tu vajadzēt kaut/PART kas",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0312",
+      "topic": "shop",
+      "lv": "Kafiju bez piena, lūdzu.",
+      "ru": "Кофе без молока, пожалуйста.",
+      "lemmas": "kafija bez piens lūdzu",
+      "batch": "batch-2",
+      "hints": {
+        "piena": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0313",
+      "topic": "work",
+      "lv": "Tas nav nepieciešams.",
+      "ru": "Это не нужно (необязательно).",
+      "lemmas": "tas būt nepieciešams",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0314",
+      "topic": "gym",
+      "lv": "Man nav spēka.",
+      "ru": "У меня нет сил.",
+      "lemmas": "es būt spēks",
+      "batch": "batch-2",
+      "hints": {
+        "spēka": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0315",
+      "topic": "understand",
+      "lv": "Tas ir labs veids.",
+      "ru": "Это хороший способ.",
+      "lemmas": "tas būt labs veids",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0316",
+      "topic": "work",
+      "lv": "Tas ir mans lēmums.",
+      "ru": "Это моё решение.",
+      "lemmas": "tas būt mans lēmums",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0317",
+      "topic": "time",
+      "lv": "Tāpat kā vakar.",
+      "ru": "Так же, как вчера.",
+      "lemmas": "tāpat kā vakar",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0318",
+      "topic": "shop",
+      "lv": "Es gribu šādu telefonu.",
+      "ru": "Я хочу такой телефон.",
+      "lemmas": "es gribēt šāds telefons",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0319",
+      "topic": "city",
+      "lv": "Aptieka ir starp banku un veikalu.",
+      "ru": "Аптека между банком и магазином.",
+      "lemmas": "aptieka būt starp banka un veikals",
+      "batch": "batch-2",
+      "hints": {
+        "banku": "ACC.SG",
+        "veikalu": "ACC.SG"
+      }
+    },
+    {
+      "id": "lv-0320",
+      "topic": "work",
+      "lv": "Kāda ir situācija?",
+      "ru": "Какая ситуация?",
+      "lemmas": "kāda būt situācija",
+      "batch": "batch-2",
+      "hints": {
+        "Kāda": "NOM.SG.F"
+      }
+    },
+    {
+      "id": "lv-0321",
+      "topic": "city",
+      "lv": "Kur atrodas stacija?",
+      "ru": "Где находится вокзал (станция)?",
+      "lemmas": "kur atrasties stacija",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0322",
+      "topic": "home",
+      "lv": "Telefons ir uz zemes.",
+      "ru": "Телефон на земле (на полу).",
+      "lemmas": "telefons būt uz zeme",
+      "batch": "batch-2",
+      "hints": {
+        "zemes": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0323",
+      "topic": "health",
+      "lv": "Izsauciet policiju!",
+      "ru": "Вызовите полицию!",
+      "lemmas": "izsaukt policija",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0324",
+      "topic": "shop",
+      "lv": "Vai jūs pieņemat karti?",
+      "ru": "Вы принимаете карту?",
+      "lemmas": "vai jūs pieņemt karte",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0325",
+      "topic": "understand",
+      "lv": "Tieši tā!",
+      "ru": "Именно так!",
+      "lemmas": "tieši tā/ADV",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0326",
+      "topic": "likes",
+      "lv": "Man patīk latviešu kultūra.",
+      "ru": "Мне нравится латышская культура.",
+      "lemmas": "es patikt latvietis kultūra",
+      "batch": "batch-2",
+      "hints": {
+        "latviešu": "GEN.PL"
+      }
+    },
+    {
+      "id": "lv-0327",
+      "topic": "health",
+      "lv": "Kā ar veselību?",
+      "ru": "Как здоровье?",
+      "lemmas": "kā ar veselība",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0328",
+      "topic": "gym",
+      "lv": "Es vairs nespēju.",
+      "ru": "Я больше не могу (нет сил).",
+      "lemmas": "es vairs spēt",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0329",
+      "topic": "understand",
+      "lv": "Kāds ir tavs līmenis?",
+      "ru": "Какой у тебя уровень?",
+      "lemmas": "kāds būt tavs līmenis",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0330",
+      "topic": "work",
+      "lv": "Mans vadītājs ir šeit.",
+      "ru": "Мой руководитель (начальник) здесь.",
+      "lemmas": "mans vadītājs būt šeit",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0331",
+      "topic": "me",
+      "lv": "Mans mērķis ir runāt latviski.",
+      "ru": "Моя цель — говорить по-латышски.",
+      "lemmas": "mans mērķis būt runāt latviski",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0332",
+      "topic": "understand",
+      "lv": "Šis ir tikai sākums.",
+      "ru": "Это только начало.",
+      "lemmas": "šis būt tikai sākums",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0333",
+      "topic": "time",
+      "lv": "Šī ir trešā reize.",
+      "ru": "Это третий раз.",
+      "lemmas": "šī būt trešais reize",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0334",
+      "topic": "gym",
+      "lv": "Man vajag otru dvieli.",
+      "ru": "Мне нужно ещё одно (второе) полотенце.",
+      "lemmas": "es vajadzēt otrs dvielis",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0335",
+      "topic": "work",
+      "lv": "Kur ir līgums?",
+      "ru": "Где договор?",
+      "lemmas": "kur būt līgums",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0336",
+      "topic": "polite",
+      "lv": "Es tevi aicinu uz vakariņām.",
+      "ru": "Я приглашаю тебя на ужин.",
+      "lemmas": "es tu aicināt uz vakariņas",
+      "batch": "batch-2",
+      "hints": {
+        "vakariņām": "DAT.PL"
+      }
+    },
+    {
+      "id": "lv-0337",
+      "topic": "time",
+      "lv": "Ko tu plāno rīt?",
+      "ru": "Что ты планируешь на завтра?",
+      "lemmas": "kas tu plānot rīt/ADV",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0338",
+      "topic": "health",
+      "lv": "Lūdzu, iepriekš piezvaniet!",
+      "ru": "Пожалуйста, позвоните заранее!",
+      "lemmas": "lūdzu iepriekš piezvanīt",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0339",
+      "topic": "polite",
+      "lv": "Ļaujiet man palīdzēt!",
+      "ru": "Позвольте мне помочь!",
+      "lemmas": "ļaut es palīdzēt",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0340",
+      "topic": "gym",
+      "lv": "Šī ir laba sezona.",
+      "ru": "Это хороший сезон.",
+      "lemmas": "šī būt labs sezona",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0341",
+      "topic": "me",
+      "lv": "Vecums nav problēma.",
+      "ru": "Возраст — не проблема.",
+      "lemmas": "vecums būt problēma",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0342",
+      "topic": "work",
+      "lv": "Drošība ir svarīga.",
+      "ru": "Безопасность важна.",
+      "lemmas": "drošība būt svarīgs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0343",
+      "topic": "health",
+      "lv": "Ārsts gaida pacientu.",
+      "ru": "Врач ждёт пациента.",
+      "lemmas": "ārsts gaidīt pacients",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0344",
+      "topic": "gym",
+      "lv": "Viņš sasniedza mērķi.",
+      "ru": "Он достиг цели.",
+      "lemmas": "viņš sasniegt mērķis",
+      "batch": "batch-2",
+      "hints": {
+        "mērķi": "ACC.SG"
+      }
+    },
+    {
+      "id": "lv-0345",
+      "topic": "city",
+      "lv": "Šī ēka ir ļoti veca.",
+      "ru": "Это здание очень старое.",
+      "lemmas": "šī ēka būt ļoti vecs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0346",
+      "topic": "shop",
+      "lv": "Man īpaši patīk šī zupa.",
+      "ru": "Мне особенно нравится этот суп.",
+      "lemmas": "es īpaši patikt šī zupa",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0347",
+      "topic": "work",
+      "lv": "Šī telpa ir brīva.",
+      "ru": "Это помещение (эта комната) свободно.",
+      "lemmas": "šī telpa būt brīvs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0348",
+      "topic": "likes",
+      "lv": "Man patīk māksla.",
+      "ru": "Мне нравится искусство. / Я люблю искусство.",
+      "lemmas": "es patikt māksla",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0349",
+      "topic": "understand",
+      "lv": "Viņš labi skaidro.",
+      "ru": "Он хорошо объясняет.",
+      "lemmas": "viņš labi skaidrot",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0350",
+      "topic": "me",
+      "lv": "Es šeit dzīvoju kopš vasaras.",
+      "ru": "Я живу здесь с лета.",
+      "lemmas": "es šeit dzīvot kopš vasara",
+      "batch": "batch-2",
+      "hints": {
+        "vasaras": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0351",
+      "topic": "city",
+      "lv": "Viņš vada automašīnu.",
+      "ru": "Он водит машину.",
+      "lemmas": "viņš vadīt automašīna",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0352",
+      "topic": "me",
+      "lv": "Šogad es mācos latviski.",
+      "ru": "В этом году я учу латышский.",
+      "lemmas": "šogad es mācīties latviski",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0353",
+      "topic": "gym",
+      "lv": "Rīt ir sacensības.",
+      "ru": "Завтра соревнования.",
+      "lemmas": "rīt/ADV būt sacensība",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0354",
+      "topic": "polite",
+      "lv": "Viss izdevās!",
+      "ru": "Всё получилось!",
+      "lemmas": "viss izdoties",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0355",
+      "topic": "city",
+      "lv": "Ielas galā ir veikals.",
+      "ru": "В конце улицы магазин.",
+      "lemmas": "iela gals būt veikals",
+      "batch": "batch-2",
+      "hints": {
+        "Ielas": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0356",
+      "topic": "shop",
+      "lv": "Šis produkts ir svaigs.",
+      "ru": "Этот продукт свежий.",
+      "lemmas": "šis produkts būt svaigs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0357",
+      "topic": "work",
+      "lv": "Tas ir ļoti svarīgi.",
+      "ru": "Это очень важно.",
+      "lemmas": "tas būt ļoti svarīgi",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0358",
+      "topic": "me",
+      "lv": "Mani vecāki dzīvo Latvijā.",
+      "ru": "Мои родители живут в Латвии.",
+      "lemmas": "mans vecāks dzīvot Latvija",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0359",
+      "topic": "work",
+      "lv": "Lūdzu, jūsu dokumentus.",
+      "ru": "Ваши документы, пожалуйста.",
+      "lemmas": "lūdzu jūs dokuments",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0360",
+      "topic": "me",
+      "lv": "Es esmu dzimis Rīgā.",
+      "ru": "Я родился в Риге.",
+      "lemmas": "es būt dzimt Rīga",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0361",
+      "topic": "time",
+      "lv": "Aptuveni desmit minūtes.",
+      "ru": "Примерно десять минут.",
+      "lemmas": "aptuveni desmit minūte",
+      "batch": "batch-2",
+      "hints": {
+        "minūtes": "ACC.PL"
+      }
+    },
+    {
+      "id": "lv-0362",
+      "topic": "likes",
+      "lv": "Šeit ir svaigs gaiss.",
+      "ru": "Здесь свежий воздух.",
+      "lemmas": "šeit būt svaigs gaiss/NOUN",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0363",
+      "topic": "home",
+      "lv": "Mūsu klase ir liela.",
+      "ru": "Наш класс большой.",
+      "lemmas": "mēs klase būt liels/ADJ",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0364",
+      "topic": "home",
+      "lv": "Bērni spēlē laukumā.",
+      "ru": "Дети играют на площадке.",
+      "lemmas": "bērns spēlēt laukums",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0365",
+      "topic": "likes",
+      "lv": "Man patīk daba.",
+      "ru": "Мне нравится природа. / Я люблю природу.",
+      "lemmas": "es patikt daba",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0366",
+      "topic": "city",
+      "lv": "Kur ir robeža?",
+      "ru": "Где граница?",
+      "lemmas": "kur būt robeža",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0367",
+      "topic": "city",
+      "lv": "Šodien ir liela satiksme.",
+      "ru": "Сегодня большое движение (пробки).",
+      "lemmas": "šodien būt liels/ADJ satiksme",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0368",
+      "topic": "gym",
+      "lv": "Tā ir mūsu uzvara!",
+      "ru": "Это наша победа!",
+      "lemmas": "tā/PRON būt mēs uzvara",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0369",
+      "topic": "likes",
+      "lv": "Tas bija liels notikums.",
+      "ru": "Это было большое событие.",
+      "lemmas": "tas būt liels/ADJ notikums",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0370",
+      "topic": "work",
+      "lv": "Kāds ir uzdevums?",
+      "ru": "Какое задание?",
+      "lemmas": "kāds būt uzdevums",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0371",
+      "topic": "time",
+      "lv": "Pēc dažām minūtēm.",
+      "ru": "Через несколько минут.",
+      "lemmas": "pēc daža minūte",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0372",
+      "topic": "me",
+      "lv": "Es esmu vietējais.",
+      "ru": "Я местный.",
+      "lemmas": "es būt vietējs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0373",
+      "topic": "home",
+      "lv": "Viņš ir skolēns.",
+      "ru": "Он школьник.",
+      "lemmas": "viņš būt skolēns",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0374",
+      "topic": "city",
+      "lv": "Kur ir saraksts?",
+      "ru": "Где расписание? (список)",
+      "lemmas": "kur būt saraksts",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0375",
+      "topic": "work",
+      "lv": "Man šķiet, ka viņš kavē.",
+      "ru": "Мне кажется, что он опаздывает.",
+      "lemmas": "es šķist ka viņš kavēt",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0376",
+      "topic": "understand",
+      "lv": "Es cenšos runāt latviski.",
+      "ru": "Я стараюсь говорить по-латышски.",
+      "lemmas": "es censties runāt latviski",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0377",
+      "topic": "likes",
+      "lv": "Man patīk vēsture.",
+      "ru": "Мне нравится история.",
+      "lemmas": "es patikt vēsture",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0378",
+      "topic": "likes",
+      "lv": "Vakarā mēs ejam uz teātri.",
+      "ru": "Вечером мы идём в театр.",
+      "lemmas": "vakars mēs iet uz teātris",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0379",
+      "topic": "understand",
+      "lv": "Kāds ir iemesls?",
+      "ru": "Какая причина? (В чём причина?)",
+      "lemmas": "kāds būt iemesls",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0380",
+      "topic": "me",
+      "lv": "Tie ir līdzīgi.",
+      "ru": "Они похожи.",
+      "lemmas": "tas būt līdzīgs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0381",
+      "topic": "understand",
+      "lv": "Kāds ir tavs viedoklis?",
+      "ru": "Какое у тебя мнение?",
+      "lemmas": "kāds būt tavs viedoklis",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0382",
+      "topic": "work",
+      "lv": "Man ir neliela problēma.",
+      "ru": "У меня небольшая проблема.",
+      "lemmas": "es būt neliels problēma",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0383",
+      "topic": "time",
+      "lv": "Pēc pāris minūtēm.",
+      "ru": "Через пару минут.",
+      "lemmas": "pēc pāris minūte",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0384",
+      "topic": "polite",
+      "lv": "Uzmanību!",
+      "ru": "Внимание!",
+      "lemmas": "uzmanība",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0385",
+      "topic": "polite",
+      "lv": "Pagaidi, kamēr es ēdu.",
+      "ru": "Подожди, пока я ем.",
+      "lemmas": "pagaidīt kamēr es ēst",
+      "batch": "batch-2",
+      "hints": {
+        "Pagaidi": "IMP.2.SG"
+      }
+    },
+    {
+      "id": "lv-0386",
+      "topic": "gym",
+      "lv": "Mūsu komanda uzvarēja!",
+      "ru": "Наша команда победила!",
+      "lemmas": "mēs komanda uzvarēt",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0387",
+      "topic": "shop",
+      "lv": "Kāds ir veikala nosaukums?",
+      "ru": "Как называется магазин?",
+      "lemmas": "kāds būt veikals nosaukums",
+      "batch": "batch-2",
+      "hints": {
+        "veikala": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0388",
+      "topic": "polite",
+      "lv": "Laba doma!",
+      "ru": "Хорошая мысль!",
+      "lemmas": "labs doma",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0389",
+      "topic": "city",
+      "lv": "Mūsu pilsētā ir desmit tūkstoši cilvēku.",
+      "ru": "В нашем городе десять тысяч человек.",
+      "lemmas": "mēs pilsēta būt desmit tūkstotis cilvēks",
+      "batch": "batch-2",
+      "hints": {
+        "cilvēku": "GEN.PL"
+      }
+    },
+    {
+      "id": "lv-0390",
+      "topic": "likes",
+      "lv": "Vai tu biji izstādē?",
+      "ru": "Ты был на выставке?",
+      "lemmas": "vai tu būt izstāde",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0391",
+      "topic": "understand",
+      "lv": "Tas ir vienkārši.",
+      "ru": "Это просто.",
+      "lemmas": "tas būt vienkārši",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0392",
+      "topic": "shop",
+      "lv": "Cena ir zema.",
+      "ru": "Цена низкая.",
+      "lemmas": "cena būt zems",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0393",
+      "topic": "shop",
+      "lv": "Kvalitāte ir laba.",
+      "ru": "Качество хорошее.",
+      "lemmas": "kvalitāte būt labs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0394",
+      "topic": "city",
+      "lv": "Kur ir muzejs?",
+      "ru": "Где музей?",
+      "lemmas": "kur būt muzejs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0395",
+      "topic": "me",
+      "lv": "Viņš ir mans tuvs draugs.",
+      "ru": "Он мой близкий друг.",
+      "lemmas": "viņš būt mans tuvs draugs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0396",
+      "topic": "shop",
+      "lv": "Salīdziniet cenas!",
+      "ru": "Сравните цены!",
+      "lemmas": "salīdzināt cena",
+      "batch": "batch-2",
+      "hints": {
+        "cenas": "ACC.PL"
+      }
+    },
+    {
+      "id": "lv-0397",
+      "topic": "shop",
+      "lv": "Šodien ir akcija.",
+      "ru": "Сегодня акция (распродажа).",
+      "lemmas": "šodien būt akcija",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0398",
+      "topic": "gym",
+      "lv": "Viņš ir labs spēlētājs.",
+      "ru": "Он хороший игрок.",
+      "lemmas": "viņš būt labs spēlētājs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0399",
+      "topic": "shop",
+      "lv": "Pievienojiet pienu, lūdzu.",
+      "ru": "Добавьте молока, пожалуйста.",
+      "lemmas": "pievienot piens lūdzu",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0400",
+      "topic": "gym",
+      "lv": "Tas bija ilgs treniņš.",
+      "ru": "Это была долгая тренировка.",
+      "lemmas": "tas būt ilgs treniņš",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0401",
+      "topic": "shop",
+      "lv": "Parādiet, lūdzu!",
+      "ru": "Покажите, пожалуйста!",
+      "lemmas": "parādīt lūdzu",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0402",
+      "topic": "me",
+      "lv": "Domā par nākotni!",
+      "ru": "Думай о будущем!",
+      "lemmas": "domāt par nākotne",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0403",
+      "topic": "polite",
+      "lv": "Atļaujiet!",
+      "ru": "Разрешите! (позвольте пройти)",
+      "lemmas": "atļaut",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0404",
+      "topic": "me",
+      "lv": "Es viņu pazīstu.",
+      "ru": "Я его знаю.",
+      "lemmas": "es viņš pazīt",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0405",
+      "topic": "polite",
+      "lv": "Nedaudz pagaidiet!",
+      "ru": "Немного подождите!",
+      "lemmas": "nedaudz pagaidīt",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0406",
+      "topic": "understand",
+      "lv": "Viss skaidrs.",
+      "ru": "Всё ясно.",
+      "lemmas": "viss skaidrs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0407",
+      "topic": "city",
+      "lv": "Autobuss ir pilns.",
+      "ru": "Автобус полный.",
+      "lemmas": "autobuss būt pilns",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0408",
+      "topic": "me",
+      "lv": "Mana ikdiena ir darbs un sports.",
+      "ru": "Мои будни — работа и спорт.",
+      "lemmas": "mana ikdiena būt darbs un sports",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0409",
+      "topic": "city",
+      "lv": "Pēc desmit metriem pa labi.",
+      "ru": "Через десять метров направо.",
+      "lemmas": "pēc desmit metrs pa labi",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0410",
+      "topic": "home",
+      "lv": "Es pavadu laiku ar ģimeni.",
+      "ru": "Я провожу время с семьёй.",
+      "lemmas": "es pavadīt laiks ar ģimene",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0411",
+      "topic": "understand",
+      "lv": "Tas nav viegli.",
+      "ru": "Это нелегко.",
+      "lemmas": "tas būt viegli",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0412",
+      "topic": "polite",
+      "lv": "Lūdzu, atgādiniet man!",
+      "ru": "Напомните мне, пожалуйста!",
+      "lemmas": "lūdzu atgādināt es",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0413",
+      "topic": "likes",
+      "lv": "Tev ir laba balss.",
+      "ru": "У тебя хороший голос.",
+      "lemmas": "tu būt labs balss/NOUN",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0414",
+      "topic": "understand",
+      "lv": "Tas ir garš stāsts.",
+      "ru": "Это долгая история.",
+      "lemmas": "tas būt garš stāsts",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0415",
+      "topic": "gym",
+      "lv": "Kur ir treneris?",
+      "ru": "Где тренер?",
+      "lemmas": "kur būt treneris",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0416",
+      "topic": "health",
+      "lv": "Es guļu septiņas stundas.",
+      "ru": "Я сплю семь часов.",
+      "lemmas": "es gulēt septiņi stunda",
+      "batch": "batch-2",
+      "hints": {
+        "septiņas": "ACC.PL",
+        "stundas": "ACC.PL"
+      }
+    },
+    {
+      "id": "lv-0417",
+      "topic": "work",
+      "lv": "Lūdzu, sagatavojiet dokumentus.",
+      "ru": "Подготовьте, пожалуйста, документы.",
+      "lemmas": "lūdzu sagatavot dokuments",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0418",
+      "topic": "gym",
+      "lv": "Sports ir labs ķermenim.",
+      "ru": "Спорт полезен для тела.",
+      "lemmas": "sports būt labs ķermenis",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0419",
+      "topic": "me",
+      "lv": "Tas ir īsts draugs.",
+      "ru": "Это настоящий друг.",
+      "lemmas": "tas būt īsts draugs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0420",
+      "topic": "me",
+      "lv": "Mans skolotājs ir latvietis.",
+      "ru": "Мой учитель — латыш.",
+      "lemmas": "mans skolotājs būt latvietis",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0421",
+      "topic": "understand",
+      "lv": "Lūdzu, uzrakstiet uz lapas.",
+      "ru": "Напишите, пожалуйста, на листе.",
+      "lemmas": "lūdzu uzrakstīt uz lapa",
+      "batch": "batch-2",
+      "hints": {
+        "lapas": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0422",
+      "topic": "polite",
+      "lv": "Paldies par atbildi!",
+      "ru": "Спасибо за ответ!",
+      "lemmas": "paldies par atbilde",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0423",
+      "topic": "time",
+      "lv": "Es ilgi gaidīju.",
+      "ru": "Я долго ждал.",
+      "lemmas": "es ilgi gaidīt",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0424",
+      "topic": "polite",
+      "lv": "Es ceru, ka viss būs labi.",
+      "ru": "Надеюсь, что всё будет хорошо.",
+      "lemmas": "es cerēt ka viss būt labi",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0425",
+      "topic": "understand",
+      "lv": "Tiešām?",
+      "ru": "Правда? (Действительно?)",
+      "lemmas": "tiešām",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0426",
+      "topic": "home",
+      "lv": "Telefons ir zem grāmatas.",
+      "ru": "Телефон под книгой.",
+      "lemmas": "telefons būt zem grāmata",
+      "batch": "batch-2",
+      "hints": {
+        "grāmatas": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0427",
+      "topic": "polite",
+      "lv": "Pietiek!",
+      "ru": "Хватит!",
+      "lemmas": "pietikt",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0428",
+      "topic": "likes",
+      "lv": "Es gribu apmeklēt muzeju.",
+      "ru": "Я хочу посетить музей.",
+      "lemmas": "es gribēt apmeklēt muzejs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0429",
+      "topic": "home",
+      "lv": "Lūdzu, atveriet durvis.",
+      "ru": "Откройте, пожалуйста, дверь.",
+      "lemmas": "lūdzu atvērt durvis",
+      "batch": "batch-2",
+      "hints": {
+        "durvis": "ACC.PL"
+      }
+    },
+    {
+      "id": "lv-0430",
+      "topic": "home",
+      "lv": "Bērni ātri aug.",
+      "ru": "Дети быстро растут.",
+      "lemmas": "bērns ātri augt",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0431",
+      "topic": "health",
+      "lv": "Vai ir vajadzīga palīdzība?",
+      "ru": "Нужна помощь?",
+      "lemmas": "vai būt vajadzīgs palīdzība",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0432",
+      "topic": "work",
+      "lv": "Es beidzu darbu sešos.",
+      "ru": "Я заканчиваю работу в шесть.",
+      "lemmas": "es beigt darbs seši",
+      "batch": "batch-2",
+      "hints": {
+        "sešos": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0433",
+      "topic": "time",
+      "lv": "Apmēram stundu.",
+      "ru": "Примерно час (около часа).",
+      "lemmas": "apmēram stunda",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0434",
+      "topic": "gym",
+      "lv": "Viņš ir sportists.",
+      "ru": "Он спортсмен.",
+      "lemmas": "viņš būt sportists",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0435",
+      "topic": "work",
+      "lv": "Darbs sākas astoņos.",
+      "ru": "Работа начинается в восемь.",
+      "lemmas": "darbs sākties astoņi",
+      "batch": "batch-2",
+      "hints": {
+        "astoņos": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0436",
+      "topic": "home",
+      "lv": "Es saņēmu vēstuli.",
+      "ru": "Я получил письмо.",
+      "lemmas": "es saņemt vēstule",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0437",
+      "topic": "understand",
+      "lv": "Es neatceros viņa seju.",
+      "ru": "Я не помню его лица.",
+      "lemmas": "es atcerēties viņš seja",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0438",
+      "topic": "me",
+      "lv": "Es esmu students.",
+      "ru": "Я студент.",
+      "lemmas": "es būt students",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0439",
+      "topic": "city",
+      "lv": "Kāds transports iet uz centru?",
+      "ru": "Какой транспорт идёт в центр?",
+      "lemmas": "kāds transports iet uz centrs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0440",
+      "topic": "city",
+      "lv": "Kur var iegādāties biļeti?",
+      "ru": "Где можно купить билет?",
+      "lemmas": "kur varēt iegādāties biļete",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0441",
+      "topic": "home",
+      "lv": "Mamma, es esmu mājās!",
+      "ru": "Мама, я дома!",
+      "lemmas": "mamma es būt māja",
+      "batch": "batch-2",
+      "hints": {
+        "mājās": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0442",
+      "topic": "work",
+      "lv": "Kāda ir alga?",
+      "ru": "Какая зарплата?",
+      "lemmas": "kāda būt alga",
+      "batch": "batch-2",
+      "hints": {
+        "Kāda": "NOM.SG.F"
+      }
+    },
+    {
+      "id": "lv-0443",
+      "topic": "home",
+      "lv": "Mans dēls mācās skolā.",
+      "ru": "Мой сын учится в школе.",
+      "lemmas": "mans dēls mācīties skola",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0444",
+      "topic": "polite",
+      "lv": "Es tev ticu.",
+      "ru": "Я тебе верю.",
+      "lemmas": "es tu ticēt",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0445",
+      "topic": "understand",
+      "lv": "Tā ir tava izvēle.",
+      "ru": "Это твой выбор.",
+      "lemmas": "tā/PRON būt tavs izvēle",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0446",
+      "topic": "gym",
+      "lv": "Ņem līdzi ūdeni!",
+      "ru": "Возьми с собой воду!",
+      "lemmas": "ņemt līdzi ūdens",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0447",
+      "topic": "work",
+      "lv": "Neviens neatbild.",
+      "ru": "Никто не отвечает.",
+      "lemmas": "neviens atbildēt",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0448",
+      "topic": "home",
+      "lv": "Mums ir dārzs.",
+      "ru": "У нас есть сад (огород).",
+      "lemmas": "mēs būt dārzs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0449",
+      "topic": "likes",
+      "lv": "Mēs ejam uz parku.",
+      "ru": "Мы идём в парк.",
+      "lemmas": "mēs iet uz parks",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0450",
+      "topic": "polite",
+      "lv": "Es aizeju.",
+      "ru": "Я ухожу.",
+      "lemmas": "es aiziet",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0451",
+      "topic": "home",
+      "lv": "Šajā telpā ir daudz gaismas.",
+      "ru": "В этом помещении много света.",
+      "lemmas": "šī telpa būt daudz gaisma",
+      "batch": "batch-2",
+      "hints": {
+        "gaismas": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0452",
+      "topic": "polite",
+      "lv": "Labdien, kungs!",
+      "ru": "Добрый день, господин!",
+      "lemmas": "labdien kungs",
+      "batch": "batch-2"
+    },
+    {
+      "id": "lv-0453",
+      "topic": "city",
+      "lv": "Rīgā ir daudz iedzīvotāju.",
+      "ru": "В Риге много жителей.",
+      "lemmas": "Rīga būt daudz iedzīvotājs",
+      "batch": "batch-2",
+      "hints": {
+        "iedzīvotāju": "GEN.PL"
+      }
+    },
+    {
+      "id": "lv-0454",
+      "topic": "home",
+      "lv": "Telefons nedarbojas.",
+      "ru": "Телефон не работает.",
+      "lemmas": "telefons darboties",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0455",
+      "topic": "time",
+      "lv": "Šodien ir īpaša diena.",
+      "ru": "Сегодня особенный день.",
+      "lemmas": "šodien būt īpašs diena",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0456",
+      "topic": "likes",
+      "lv": "Mēs braucam uz laukiem.",
+      "ru": "Мы едем в деревню (за город).",
+      "lemmas": "mēs braukt uz lauks/NOUN",
+      "batch": "batch-3",
+      "hints": {
+        "laukiem": "DAT.PL"
+      }
+    },
+    {
+      "id": "lv-0457",
+      "topic": "weather",
+      "lv": "Janvārī ir auksti.",
+      "ru": "В январе холодно.",
+      "lemmas": "janvāris būt auksti",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0458",
+      "topic": "gym",
+      "lv": "Šeit trenējas daudz jauniešu.",
+      "ru": "Здесь тренируется много молодёжи.",
+      "lemmas": "šeit trenēties daudz jaunietis",
+      "batch": "batch-3",
+      "hints": {
+        "jauniešu": "GEN.PL"
+      }
+    },
+    {
+      "id": "lv-0459",
+      "topic": "gym",
+      "lv": "Vai tu skatījies maču?",
+      "ru": "Ты смотрел матч?",
+      "lemmas": "vai tu skatīties mačs",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0460",
+      "topic": "city",
+      "lv": "Turpmāk es braukšu ar autobusu.",
+      "ru": "Впредь я буду ездить на автобусе.",
+      "lemmas": "turpmāk es braukt ar autobuss",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0461",
+      "topic": "work",
+      "lv": "Man nav pieredzes.",
+      "ru": "У меня нет опыта.",
+      "lemmas": "es būt pieredze",
+      "batch": "batch-3",
+      "hints": {
+        "pieredzes": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0462",
+      "topic": "home",
+      "lv": "Pie mājas ir liels koks.",
+      "ru": "У дома большое дерево.",
+      "lemmas": "pie māja būt liels/ADJ koks",
+      "batch": "batch-3",
+      "hints": {
+        "mājas": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0463",
+      "topic": "time",
+      "lv": "Nedēļas vidū.",
+      "ru": "В середине недели.",
+      "lemmas": "nedēļa vidus",
+      "batch": "batch-3",
+      "hints": {
+        "Nedēļas": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0464",
+      "topic": "likes",
+      "lv": "Jūnijā es braucu uz jūru.",
+      "ru": "В июне я еду на море.",
+      "lemmas": "jūnijs es braukt uz jūra",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0465",
+      "topic": "polite",
+      "lv": "Sekojiet man!",
+      "ru": "Следуйте за мной!",
+      "lemmas": "sekot es",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0466",
+      "topic": "gym",
+      "lv": "Kur ir mana sporta forma?",
+      "ru": "Где моя спортивная форма?",
+      "lemmas": "kur būt mana sports forma",
+      "batch": "batch-3",
+      "hints": {
+        "sporta": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0467",
+      "topic": "work",
+      "lv": "Tas ir mans pienākums.",
+      "ru": "Это моя обязанность (мой долг).",
+      "lemmas": "tas būt mans pienākums",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0468",
+      "topic": "shop",
+      "lv": "Vidēju kafiju, lūdzu.",
+      "ru": "Средний кофе, пожалуйста.",
+      "lemmas": "vidējs kafija lūdzu",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0469",
+      "topic": "city",
+      "lv": "Kurā rajonā tu dzīvo?",
+      "ru": "В каком районе ты живёшь?",
+      "lemmas": "kurš rajons tu dzīvot",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0470",
+      "topic": "time",
+      "lv": "Septembrī sākas skola.",
+      "ru": "В сентябре начинается школа.",
+      "lemmas": "septembris sākties skola",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0471",
+      "topic": "me",
+      "lv": "Es mācos universitātē.",
+      "ru": "Я учусь в университете.",
+      "lemmas": "es mācīties universitāte",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0472",
+      "topic": "shop",
+      "lv": "Kam pieder šis telefons?",
+      "ru": "Чей это телефон? (Кому принадлежит этот телефон?)",
+      "lemmas": "kas piederēt šis telefons",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0473",
+      "topic": "gym",
+      "lv": "Viņš saņēma balvu.",
+      "ru": "Он получил награду.",
+      "lemmas": "viņš saņemt balva",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0474",
+      "topic": "city",
+      "lv": "Kāds ir sods?",
+      "ru": "Какой штраф?",
+      "lemmas": "kāds būt sods",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0475",
+      "topic": "city",
+      "lv": "Kur var reģistrēt automašīnu?",
+      "ru": "Где можно зарегистрировать машину?",
+      "lemmas": "kur varēt reģistrēt automašīna",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0476",
+      "topic": "health",
+      "lv": "Lūdzu, ierodieties laikā.",
+      "ru": "Пожалуйста, приходите вовремя.",
+      "lemmas": "lūdzu ierasties laiks",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0477",
+      "topic": "health",
+      "lv": "Man vajag speciālistu.",
+      "ru": "Мне нужен специалист.",
+      "lemmas": "es vajadzēt speciālists",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0478",
+      "topic": "shop",
+      "lv": "Kur ir īpašnieks?",
+      "ru": "Где владелец (хозяин)?",
+      "lemmas": "kur būt īpašnieks",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0479",
+      "topic": "time",
+      "lv": "Decembrī ir svētki.",
+      "ru": "В декабре праздники.",
+      "lemmas": "decembris būt svētki",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0480",
+      "topic": "understand",
+      "lv": "Brīvība ir svarīga.",
+      "ru": "Свобода важна.",
+      "lemmas": "brīvība būt svarīgs",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0481",
+      "topic": "home",
+      "lv": "Pašlaik viņa nav mājās.",
+      "ru": "Сейчас её нет дома.",
+      "lemmas": "pašlaik viņa būt māja",
+      "batch": "batch-3",
+      "hints": {
+        "mājās": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0482",
+      "topic": "likes",
+      "lv": "Šis attēls ir skaists.",
+      "ru": "Это красивая картинка (фото).",
+      "lemmas": "šis attēls būt skaists",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0483",
+      "topic": "me",
+      "lv": "Es esmu krievs.",
+      "ru": "Я русский.",
+      "lemmas": "es būt krievs/NOUN",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0484",
+      "topic": "health",
+      "lv": "Rīt ir pārbaude.",
+      "ru": "Завтра проверка (осмотр, контрольная).",
+      "lemmas": "rīt/ADV būt pārbaude",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0485",
+      "topic": "work",
+      "lv": "Saglabā dokumentu!",
+      "ru": "Сохрани документ!",
+      "lemmas": "saglabāt dokuments",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0486",
+      "topic": "work",
+      "lv": "Es to noskaidrošu.",
+      "ru": "Я это выясню.",
+      "lemmas": "es tas noskaidrot",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0487",
+      "topic": "gym",
+      "lv": "Kas organizē sacensības?",
+      "ru": "Кто организует соревнования?",
+      "lemmas": "kas organizēt sacensība",
+      "batch": "batch-3",
+      "hints": {
+        "sacensības": "ACC.PL"
+      }
+    },
+    {
+      "id": "lv-0488",
+      "topic": "gym",
+      "lv": "Viņš ir ļoti spēcīgs.",
+      "ru": "Он очень сильный.",
+      "lemmas": "viņš būt ļoti spēcīgs",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0489",
+      "topic": "weather",
+      "lv": "Laiks mainās.",
+      "ru": "Погода меняется.",
+      "lemmas": "laiks mainīties",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0490",
+      "topic": "understand",
+      "lv": "Pārējais ir labi.",
+      "ru": "Остальное в порядке.",
+      "lemmas": "pārējais būt labi",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0491",
+      "topic": "me",
+      "lv": "Pērn es dzīvoju Rīgā.",
+      "ru": "В прошлом году я жил в Риге.",
+      "lemmas": "pērn es dzīvot Rīga",
+      "batch": "batch-3",
+      "hints": {
+        "dzīvoju": "PST"
+      }
+    },
+    {
+      "id": "lv-0492",
+      "topic": "gym",
+      "lv": "Kustība ir veselība.",
+      "ru": "Движение — это здоровье.",
+      "lemmas": "kustība būt veselība",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0493",
+      "topic": "city",
+      "lv": "Rīgas pils ir veca.",
+      "ru": "Рижский замок старый.",
+      "lemmas": "Rīga pils būt vecs",
+      "batch": "batch-3",
+      "hints": {
+        "Rīgas": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0494",
+      "topic": "work",
+      "lv": "Kāds ir termiņš?",
+      "ru": "Какой срок?",
+      "lemmas": "kāds būt termiņš",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0495",
+      "topic": "shop",
+      "lv": "Kur ir pārtikas veikals?",
+      "ru": "Где продуктовый магазин?",
+      "lemmas": "kur būt pārtika veikals",
+      "batch": "batch-3",
+      "hints": {
+        "pārtikas": "GEN.SG"
+      }
+    },
+    {
+      "id": "lv-0496",
+      "topic": "gym",
+      "lv": "Prasi trenerim!",
+      "ru": "Спроси у тренера!",
+      "lemmas": "prasīt treneris",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0497",
+      "topic": "home",
+      "lv": "Mana māsa mācās vidusskolā.",
+      "ru": "Моя сестра учится в средней школе.",
+      "lemmas": "mana māsa mācīties vidusskola",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0498",
+      "topic": "shop",
+      "lv": "Tikai desmit procenti.",
+      "ru": "Только десять процентов.",
+      "lemmas": "tikai desmit procents",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0499",
+      "topic": "shop",
+      "lv": "Kāda ir maksa?",
+      "ru": "Какая плата?",
+      "lemmas": "kāda būt maksa",
+      "batch": "batch-3",
+      "hints": {
+        "Kāda": "NOM.SG.F"
+      }
+    },
+    {
+      "id": "lv-0500",
+      "topic": "city",
+      "lv": "Kuģis atiet rīt.",
+      "ru": "Корабль (паром) отходит завтра.",
+      "lemmas": "kuģis atiet rīt/ADV",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0501",
+      "topic": "polite",
+      "lv": "Tu labi izskaties!",
+      "ru": "Ты хорошо выглядишь!",
+      "lemmas": "tu labi izskatīties",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0502",
+      "topic": "work",
+      "lv": "Direktors ir aizņemts.",
+      "ru": "Директор занят.",
+      "lemmas": "direktors būt aizņemt",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0503",
+      "topic": "understand",
+      "lv": "Es nesaprotu šo tekstu.",
+      "ru": "Я не понимаю этот текст.",
+      "lemmas": "es saprast šis teksts",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0504",
+      "topic": "city",
+      "lv": "Šī ir ceturtā reize.",
+      "ru": "Это четвёртый раз.",
+      "lemmas": "šī būt ceturtais reize",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0505",
+      "topic": "likes",
+      "lv": "Izrāde sākas septiņos.",
+      "ru": "Спектакль начинается в семь.",
+      "lemmas": "izrāde sākties septiņi",
+      "batch": "batch-3",
+      "hints": {
+        "septiņos": "LOC.PL"
+      }
+    },
+    {
+      "id": "lv-0506",
+      "topic": "me",
+      "lv": "Man ir laba sajūta.",
+      "ru": "У меня хорошее ощущение (предчувствие).",
+      "lemmas": "es būt labs sajūta",
+      "batch": "batch-3"
+    },
+    {
+      "id": "lv-0507",
+      "topic": "time",
+      "lv": "Februārī es atpūšos.",
+      "ru": "В феврале я отдыхаю.",
+      "lemmas": "februāris es atpūsties",
+      "batch": "batch-3"
     }
   ]
 }

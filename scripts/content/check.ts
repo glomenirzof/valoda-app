@@ -27,6 +27,8 @@ const lang = process.argv[2] && !process.argv[2].startsWith('--') ? process.argv
 const force = process.argv.includes('--force');
 // Google's free endpoint rate-limits: by default it is asked slowly, in a second pass, only for missing translations
 const skipGoogle = process.argv.includes('--no-google');
+// re-run the evidence search for phrases that are still doubtful (after the search itself got better)
+const recheckDoubtful = process.argv.includes('--recheck-doubtful');
 const CORPUS = 'LVK2022';
 const CORPUS_API = 'https://nosketch.korpuss.lv/bonito/run.cgi/view';
 const PAIR_MIN = 3; // a word pair seen at least this often counts as an attested construction
@@ -39,7 +41,13 @@ interface Result {
   hash: string;
   status: Status;
   reasons: string[];
-  corpus: { exact: number; exactUrl: string; pairs: { pair: string; hits: number; url: string }[]; example?: string };
+  corpus: {
+    exact: number;
+    exactUrl: string;
+    /** neighbour word pairs; `lemmaHits` — the same two words in any forms (the construction), searched when the exact forms are rare */
+    pairs: { pair: string; hits: number; url: string; lemmaHits?: number; lemmaUrl?: string }[];
+    example?: string;
+  };
   tatoeba: { id: number; text: string }[];
   mt: { google?: string; microsoft?: string; tilde?: string; agree: { google?: boolean; microsoft?: boolean; tilde?: boolean } };
   flags: string[];
@@ -93,6 +101,16 @@ async function orMissing<T>(f: () => Promise<T>): Promise<T | undefined> {
 const cql = (ws: string[]) => ws.map((w) => `[lc="${w.toLowerCase().replace(/"/g, '')}"]`).join('');
 const corpusUrl = (ws: string[]) =>
   `https://nosketch.korpuss.lv/#concordance?corpname=${CORPUS}&tab=advanced&queryselector=cql&cql=${encodeURIComponent(cql(ws))}`;
+
+const cqlLemma = (ls: string[]) => ls.map((l) => `[lemma="${l.replace(/"/g, '')}"]`).join('');
+const corpusLemmaUrl = (ls: string[]) =>
+  `https://nosketch.korpuss.lv/#concordance?corpname=${CORPUS}&tab=advanced&queryselector=cql&cql=${encodeURIComponent(cqlLemma(ls))}`;
+
+async function corpusLemmaHits(ls: string[]): Promise<number> {
+  const j = await getJson(`${CORPUS_API}?corpname=${CORPUS}&q=${encodeURIComponent(`q${cqlLemma(ls)}`)}&format=json&pagesize=1`);
+  await sleep(300);
+  return Number(j.concsize ?? 0);
+}
 
 async function corpusHits(ws: string[]): Promise<{ hits: number; example?: string }> {
   const q = encodeURIComponent(`q${cql(ws)}`);
@@ -156,8 +174,10 @@ function aiFlags(p: Phrase): string[] {
   const flags: string[] = [];
   p.tokens.forEach((t, i) => {
     const next = p.tokens[i + 1];
-    // "nav" (būt + negation) takes the genitive: nav laika, nav problēmu
-    if (t.lemma === 'būt' && t.feats.includes('NEG') && next?.pos === 'NOUN' && !next.feats.includes('GEN')) {
+    // Existential "nav" («у кого-то нет чего-то») takes the genitive: man nav laika, nav problēmu.
+    // Copula «Vecums nav problēma» (a nominative subject before it) and places («nav mājās») are fine.
+    const subjectBefore = p.tokens.slice(0, i).some((x) => x.feats.includes('NOM') && (x.pos === 'NOUN' || x.pos === 'PRON'));
+    if (t.lemma === 'būt' && t.feats.includes('NEG') && next?.pos === 'NOUN' && !subjectBefore && /NOM|ACC/.test(next.feats)) {
       flags.push(`отрицание: после «${t.s}» нужен родительный падеж, а «${next.s}» не в родительном`);
     }
   });
@@ -166,24 +186,36 @@ function aiFlags(p: Phrase): string[] {
 
 /* ---------- run ---------- */
 
-const todo = phrases.filter((p) => force || prev[p.id]?.hash !== hashOf(p));
+const todo = phrases.filter((p) => force || prev[p.id]?.hash !== hashOf(p) || (recheckDoubtful && prev[p.id]?.status === 'doubtful'));
 console.log(`фраз: ${phrases.length}, проверить: ${todo.length}${process.env.AZURE_TRANSLATOR_KEY ? '' : ' (нет AZURE_TRANSLATOR_KEY — второй переводчик пропущен)'}`);
 
 const ms = todo.length ? await microsoftBatch(todo.map((p) => p.text)) : null;
 const results: Record<string, Result> = {};
 for (const p of phrases) if (!todo.includes(p) && prev[p.id]) results[p.id] = prev[p.id];
 
-for (const [n, p] of todo.entries()) {
+// Three phrases at a time: the corpus answers slowly, and three parallel requests stay polite.
+const WORKERS = 3;
+let done = 0;
+async function checkOne(n: number, p: Phrase) {
   // The corpus keeps commas as tokens: the exact phrase is searched with them, and word pairs never span a comma
   // («Kafiju ar pienu, lūdzu» → pairs inside «Kafiju ar pienu» only; a lone «lūdzu» needs no pair).
   const ws = p.text.replace(/[.!?…]+\s*$/u, '').match(/\p{L}+(?:-\p{L}+)*|,/gu) ?? [];
   const exact = (await orMissing(() => corpusHits(ws))) ?? { hits: 0 };
   const pairs: Result['corpus']['pairs'] = [];
   if (!exact.hits && words(p.text).length > 1) {
+    let w = 0; // index of the word (tokens have no commas)
     for (let i = 0; i + 1 < ws.length; i++) {
-      if (ws[i] === ',' || ws[i + 1] === ',') continue;
+      if (ws[i] === ',') continue;
+      if (ws[i + 1] === ',') { w++; continue; }
       const pair = [ws[i], ws[i + 1]];
-      pairs.push({ pair: pair.join(' '), hits: (await orMissing(() => corpusHits(pair)))?.hits ?? 0, url: corpusUrl(pair) });
+      const entry: Result['corpus']['pairs'][number] = { pair: pair.join(' '), hits: (await orMissing(() => corpusHits(pair)))?.hits ?? 0, url: corpusUrl(pair) };
+      const lemmas = [p.tokens[w]?.lemma, p.tokens[w + 1]?.lemma];
+      if (entry.hits < PAIR_MIN && lemmas[0] && lemmas[1]) {
+        entry.lemmaHits = (await orMissing(() => corpusLemmaHits(lemmas as string[]))) ?? 0;
+        entry.lemmaUrl = corpusLemmaUrl(lemmas as string[]);
+      }
+      pairs.push(entry);
+      w++;
     }
   }
   const tatoe = (await orMissing(() => tatoeba(p.text))) ?? [];
@@ -202,8 +234,16 @@ for (const [n, p] of todo.entries()) {
   results[p.id] = r;
   // saved after every phrase: an interrupted run resumes where it stopped
   writeFileSync(outPath, JSON.stringify({ ...prev, ...results }, null, 1) + '\n');
-  if ((n + 1) % 10 === 0 || n + 1 === todo.length) console.log(`  ${n + 1}/${todo.length}`);
+  done++;
+  if (done % 10 === 0 || done === todo.length) console.log(`  ${done}/${todo.length}`);
 }
+let cursor = 0;
+await Promise.all(Array.from({ length: WORKERS }, async () => {
+  while (cursor < todo.length) {
+    const n = cursor++;
+    await checkOne(n, todo[n]);
+  }
+}));
 
 // Fill translations that are missing in cached results (a key added later, or Google throttled last time).
 const needMs = phrases.filter((p) => results[p.id] && results[p.id].mt.microsoft === undefined);
@@ -235,9 +275,10 @@ for (const p of phrases) {
   r.mt.tilde = tilde[p.text];
   r.mt.agree.tilde = r.mt.tilde === undefined ? undefined : agrees(r.mt.tilde, p.ru);
   const reasons: string[] = [];
-  const attested = r.corpus.exact > 0 || r.tatoeba.length > 0 || (r.corpus.pairs.length > 0 && r.corpus.pairs.every((x) => x.hits >= PAIR_MIN));
+  const pairOk = (x: Result['corpus']['pairs'][number]) => x.hits >= PAIR_MIN || (x.lemmaHits ?? 0) >= PAIR_MIN;
+  const attested = r.corpus.exact > 0 || r.tatoeba.length > 0 || (r.corpus.pairs.length > 0 && r.corpus.pairs.every(pairOk));
   if (!attested) {
-    const weak = r.corpus.pairs.filter((x) => x.hits < PAIR_MIN).map((x) => `«${x.pair}» (${x.hits})`);
+    const weak = r.corpus.pairs.filter((x) => !pairOk(x)).map((x) => `«${x.pair}» (${x.hits}${x.lemmaHits !== undefined ? `, в любых формах ${x.lemmaHits}` : ''})`);
     reasons.push(weak.length ? `в корпусе не нашлось фразы, редкие сочетания: ${weak.join(', ')}` : 'в корпусе и Tatoeba фраза не найдена');
   }
   const engines = [['Microsoft', 'microsoft'], ['Tilde', 'tilde'], ['Google', 'google']] as const;
