@@ -1,0 +1,17 @@
+# Valoda voice check Worker — see worker/README.md for the setup steps.
+name = "valoda-voice"
+main = "src/index.ts"
+compatibility_date = "2025-06-01"
+
+[vars]
+# only the app may call the Worker (scheme + host, no path)
+ALLOWED_ORIGINS = "https://glomenirzof.github.io"
+# requests per UTC day; one check is one request (KV free plan allows 1000 writes a day)
+DAILY_LIMIT = "300"
+
+# daily request counter; create it with: npx wrangler kv namespace create USAGE
+[[kv_namespaces]]
+binding = "USAGE"
+id = "PASTE_KV_NAMESPACE_ID_HERE"
+
+# The OpenAI key is NOT here: it is a secret, set with  npx wrangler secret put OPENAI_API_KEY

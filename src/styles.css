@@ -357,3 +357,11 @@ button.mic-ring.on { background: var(--primary); color: var(--on-primary); }
 .card .note, .screen > .note { margin: var(--s2) 0 0; font-size: 14px; line-height: 1.4; color: var(--muted); }
 .card .btn { margin-top: var(--s3); width: 100%; }
 .control-cta { margin-top: var(--s4); }
+
+/* voice check: hold-to-talk microphone */
+.mic-ring.hold { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; touch-action: none; transition: transform var(--dur) var(--ease), background var(--dur) var(--ease); }
+.mic-ring.hold.on { transform: scale(1.08); background: var(--primary); color: var(--on-primary); }
+.mic-ring.hold:disabled { opacity: 0.55; }
+.hint-note.soft { background: var(--surface-2); }
+.hint-note.soft .ic { color: var(--warn); }
+.sheet .s-link { display: block; margin: var(--s2) auto 0; }

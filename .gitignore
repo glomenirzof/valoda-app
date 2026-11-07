@@ -17,3 +17,8 @@ tts-out/
 
 # Reference screenshots contain personal data (name, email, card digits); keep them local.
 design/refs/
+
+# Cloudflare Worker: local secrets and build output
+worker/.dev.vars
+.wrangler/
+worker/.wrangler/

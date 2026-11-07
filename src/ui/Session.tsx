@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { checkAnswer, explain, keyWrong, type CheckResult } from '../core/check';
+import { judgeSpeech, type VoiceVerdict } from '../core/voice';
 import { answerReview, answerStage, current, startLesson, unfinished, type Answer, type Item, type Lesson, type LessonInput } from '../core/ladder';
 import { LEVEL_RU, levelOf, type Level } from '../core/progress';
 import { lessonSize, type Acquaintance } from '../core/session';
@@ -7,7 +8,8 @@ import { graduationGrade, newCard, review, whenRu, type Grade, type StoredCard }
 import type { Phrase, Settings, Token } from '../core/types';
 import { graduate, saveAcquaint, saveLog, saveReview } from '../data/db';
 import { playPhrase, playPhraseTwice, playWord, wordKey } from '../data/audio';
-import { Icon } from './icons';
+import { Recorder, transcribe, VOICE_ERROR_RU, VoiceFailure, voiceSupported } from '../data/voice';
+import { Icon, type IconName } from './icons';
 import { TappableText } from './PhraseList';
 import { StatusTag } from './StatusTag';
 import { WordSheet } from './WordSheet';
@@ -425,36 +427,53 @@ export function TypeCard({ p, cue = false, copy, noHints = false, eyebrow, onDon
   );
 }
 
-/** What saying the phrase aloud produced. Today it comes from self-assessment; later from speech recognition, same shape. */
+/** What saying the phrase aloud produced: from the voice check, or from self-assessment when it is not available. */
 export interface SayResult {
   grade: 'good' | 'hard' | 'again';
   hints: number;
-  /** token indices to count as weak (hinted words, the key word on a wrong ending) */
+  /** token indices to count as weak (hinted words, wrong endings, the key word on a self-reported wrong ending) */
   weak: number[];
-  /** what recognition heard, once voice checking exists */
+  /** what recognition heard */
   heard?: string;
 }
 
-/**
- * Future voice check: hold the mic, say the phrase, release, get a verdict. When SayCard gets one, the mic
- * becomes a hold-to-talk button and the verdict preselects a grade on the same reveal sheet; nothing else changes.
- */
+/** Hold to talk: start on press, stop on release and return what the recogniser heard. */
 export interface VoiceCheck {
-  start(p: Phrase): void;
-  stop(): Promise<{ verdict: 'ok' | 'almost' | 'bad'; heard: string }>;
+  start(): Promise<void>;
+  stop(): Promise<string>;
+  /** leaving the card: let go of the microphone */
+  cancel(): void;
 }
+
+export const voiceCheck = (): VoiceCheck => {
+  const r = new Recorder();
+  return { start: () => r.start(), stop: async () => transcribe(await r.stop()), cancel: () => r.release() };
+};
+
+const VOICE_HEAD: Record<VoiceVerdict['kind'], [IconName, string, string]> = {
+  ok: ['check', 'Верно', 'v-ok'],
+  marks: ['check', 'Верно — проверь произношение', 'v-ok'],
+  ending: ['alert', 'Почти — проверь окончание', 'v-almost'],
+  bad: ['alert', 'Не совсем', 'v-bad'],
+};
 
 function SayCard({ p, card, settings, voice, onDone }: {
   p: Phrase;
   card: StoredCard;
   settings: Settings;
+  /** voice check; without it (no Worker, no microphone) the learner grades themself */
   voice?: VoiceCheck;
   onDone: (r: SayResult) => void;
 }) {
   const [hints, setHints] = useState(0);
   const [shown, setShown] = useState(false);
-  const [heard, setHeard] = useState<{ verdict: 'ok' | 'almost' | 'bad'; heard: string } | null>(null);
-  const [holding, setHolding] = useState(false);
+  const [phase, setPhase] = useState<'idle' | 'holding' | 'busy'>('idle');
+  const [heard, setHeard] = useState<{ text: string; v: VoiceVerdict } | null>(null);
+  const [fail, setFail] = useState<string | null>(null);
+  const [tip, setTip] = useState<string | null>(null);
+  const [self, setSelf] = useState(false);
+  useEffect(() => () => voice?.cancel(), []);
+
   const total = letterCount(p.text);
   let k = 0;
   const mask = p.text.split(/(\p{L}+)/u).map((part, j) =>
@@ -472,8 +491,58 @@ function SayCard({ p, card, settings, voice, onDone }: {
   const okGrade: Grade = hints ? 'hard' : 'good';
   const t = new Date();
   const when = (g: Grade) => whenRu(review(card, g, t).card.fsrs.due, t);
-  const finish = (grade: SayResult['grade'], weak: number[]) => onDone({ grade, hints, weak: [...new Set(weak)], heard: heard?.heard });
-  const sug: Grade | null = heard ? ({ ok: okGrade, almost: 'hard', bad: 'again' } as const)[heard.verdict] : null;
+  const finish = (grade: SayResult['grade'], weak: number[]) => onDone({ grade, hints, weak: [...new Set(weak)], heard: heard?.text });
+
+  const press = (e: PointerEvent) => {
+    if (!voice || phase !== 'idle') return;
+    e.preventDefault();
+    // keep receiving pointerup even if the finger slides off the button
+    try {
+      (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    } catch {
+      /* pointer already gone */
+    }
+    setTip(null);
+    setPhase('holding');
+    voice.start().catch(() => {}); // a failure here comes back from stop()
+  };
+  const release = async () => {
+    if (!voice || phase !== 'holding') return;
+    setPhase('busy');
+    try {
+      const text = await voice.stop();
+      setHeard({ text, v: judgeSpeech(text, p, hints) });
+      setShown(true);
+    } catch (e) {
+      const reason = e instanceof VoiceFailure ? e.reason : 'failed';
+      if (reason === 'short') setTip(VOICE_ERROR_RU.short);
+      else {
+        setFail(VOICE_ERROR_RU[reason]);
+        setShown(true);
+      }
+    } finally {
+      setPhase('idle');
+    }
+  };
+
+  const selfButtons = (
+    <div class="rates three">
+      <button class="rate rate-good" onClick={() => finish(okGrade, hinted)}>
+        <b>Сказал верно</b>
+        <small>{when(okGrade)}</small>
+      </button>
+      <button class="rate rate-hard" onClick={() => finish('hard', [...hinted, ...keyIdx])}>
+        <b>Ошибся в окончании или знаке</b>
+        <small>{when('hard')}</small>
+      </button>
+      <button class="rate rate-again" onClick={() => finish('again', hinted)}>
+        <b>Не вспомнил</b>
+        <small>{when('again')}</small>
+      </button>
+    </div>
+  );
+  const head = heard ? VOICE_HEAD[heard.v.kind] : (['eye', fail ?? 'Сравни с образцом', 'v-self'] as [IconName, string, string]);
+  const markLines = heard?.v.kind === 'marks' ? explain(heard.v.result, p.tokens, p.key) : [];
 
   return (
     <>
@@ -484,10 +553,13 @@ function SayCard({ p, card, settings, voice, onDone }: {
         <div class="speak-box">
           {voice ? (
             <button
-              class={`mic-ring ${holding ? 'on' : ''}`}
-              aria-label="Держи и говори"
-              onPointerDown={() => { setHolding(true); voice.start(p); }}
-              onPointerUp={async () => { setHolding(false); setHeard(await voice.stop()); setShown(true); }}
+              class={`mic-ring hold ${phase !== 'idle' ? 'on' : ''}`}
+              aria-label="Зажми и скажи фразу"
+              disabled={shown || phase === 'busy'}
+              onPointerDown={press}
+              onPointerUp={release}
+              onPointerCancel={release}
+              onContextMenu={(e) => e.preventDefault()}
             >
               <Icon name="mic" />
             </button>
@@ -497,30 +569,36 @@ function SayCard({ p, card, settings, voice, onDone }: {
             </div>
           )}
           <p>
-            {voice ? 'Зажми и скажи фразу' : 'Скажи фразу вслух, потом сравни с образцом'}
+            {phase === 'holding'
+              ? 'Говори… отпусти, когда закончишь'
+              : phase === 'busy'
+                ? 'Проверяю…'
+                : voice
+                  ? tip ?? 'Зажми микрофон и скажи фразу'
+                  : 'Скажи фразу вслух, потом сравни с образцом'}
             <br />
-            Не помнишь — открой букву
+            {phase === 'idle' && 'Не помнишь — открой букву'}
           </p>
         </div>
       </main>
       <footer class="s-actions two">
-        <button class="btn ghost" disabled={hints >= total || shown} onClick={() => setHints(hints + 1)}>
+        <button class="btn ghost" disabled={hints >= total || shown || phase !== 'idle'} onClick={() => setHints(hints + 1)}>
           <Icon name="bulb" />
           Буква{hints ? ` · ${hints}` : ''}
         </button>
-        <button class="btn primary" disabled={shown} onClick={() => setShown(true)}>
+        <button class="btn primary" disabled={shown || phase !== 'idle'} onClick={() => setShown(true)}>
           <Icon name="eye" />
-          Показать
+          {voice ? 'Без голоса' : 'Показать'}
         </button>
       </footer>
       {shown && (
         <>
           <div class="scrim" />
-          <section class="sheet fb v-self" role="dialog" aria-label="Образец">
+          <section class={`sheet fb ${head[2]}`} role="dialog" aria-label="Образец">
             <div class="grab" />
             <p class="verdict">
-              <Icon name="eye" />
-              <span>Сравни с образцом</span>
+              <Icon name={head[0]} />
+              <span>{head[1]}</span>
             </p>
             <div class="right">
               <SampleSound p={p} settings={settings} />
@@ -528,35 +606,43 @@ function SayCard({ p, card, settings, voice, onDone }: {
                 <KeyText p={p} />
               </p>
             </div>
-            {heard && (
+            {heard && (heard.v.kind === 'ok' || heard.v.kind === 'marks') && (
               <p class="yours">
                 <span class="muted">Услышал: </span>
-                {heard.heard}
+                {heard.text}
               </p>
             )}
-            {p.key && <p class="why">{p.key.why}</p>}
+            {heard?.v.kind === 'marks' && (
+              <p class="hint-note soft">
+                <Icon name="info" />
+                <span>
+                  Распознавание не всегда слышит долгие гласные и знаки — сравни с образцом
+                  {markLines.length > 0 && `: ${markLines.map((e) => e.text).join('; ')}`}
+                </span>
+              </p>
+            )}
+            {heard && (heard.v.kind === 'ending' || heard.v.kind === 'bad') && <Mistakes p={p} r={heard.v.result} />}
+            {!heard && p.key && <p class="why">{p.key.why}</p>}
             {hints > 0 && (
               <p class="hint-note">
                 <Icon name="bulb" />
                 <span>
-                  Ты открыл {hints} {plural(hints, 'букву', 'буквы', 'букв')} — «сказал верно» засчитаю как «с подсказкой»
+                  Ты открыл {hints} {plural(hints, 'букву', 'буквы', 'букв')} — «верно» засчитаю как «с подсказкой»
                 </span>
               </p>
             )}
-            <div class="rates three">
-              <button class={`rate rate-good ${sug === okGrade ? 'on' : ''}`} onClick={() => finish(okGrade, hinted)}>
-                <b>Сказал верно</b>
-                <small>{when(okGrade)}</small>
-              </button>
-              <button class={`rate rate-hard ${sug === 'hard' && okGrade !== 'hard' ? 'on' : ''}`} onClick={() => finish('hard', [...hinted, ...keyIdx])}>
-                <b>Ошибся в окончании или знаке</b>
-                <small>{when('hard')}</small>
-              </button>
-              <button class={`rate rate-again ${sug === 'again' ? 'on' : ''}`} onClick={() => finish('again', hinted)}>
-                <b>Не вспомнил</b>
-                <small>{when('again')}</small>
-              </button>
-            </div>
+            {heard && !self ? (
+              <>
+                <button class="btn primary" onClick={() => finish(heard.v.grade, [...hinted, ...heard.v.weak])}>
+                  Дальше · {when(heard.v.grade)} <Icon name="arrow" />
+                </button>
+                <button class="s-link" onClick={() => setSelf(true)}>
+                  Распознало неверно — оценю сам
+                </button>
+              </>
+            ) : (
+              selfButtons
+            )}
           </section>
         </>
       )}
@@ -738,6 +824,8 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
   const [nextReview, setNextReview] = useState<string | undefined>();
   const [graded, setGraded] = useState<{ id: string; g: Grade }[]>([]);
   const [stopped, setStopped] = useState(false);
+  // one recorder for the lesson; each «Скажи» card releases the microphone when it closes
+  const voice = useMemo(() => (voiceSupported() ? voiceCheck() : undefined), []);
   // levels when the lesson started, for «знакомлюсь → запоминаю» in the summary
   const [before] = useState(() => {
     const met = new Set(acquainted.map((a) => a.id));
@@ -934,6 +1022,7 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
           p={p}
           card={deck.get(p.id)!}
           settings={settings}
+          voice={voice}
           onDone={(r) => gradeReview(r.grade, { mode: 'say', result: null, hints: r.hints, weak: r.weak })}
         />
       )}
