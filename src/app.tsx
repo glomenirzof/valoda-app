@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'preact/hooks';
 import type { LessonInput } from './core/ladder';
-import { lessonInput, type Acquaintance } from './core/session';
+import { canSay, controlPick, levelMap, type ControlResult } from './core/progress';
+import { lessonInput, trainable, type Acquaintance } from './core/session';
 import type { StoredCard } from './core/srs';
 import { DEFAULT_SETTINGS, type Phrase, type Settings as S } from './core/types';
+import { setSound, unlockAudio } from './data/audio';
 import { loadPhrases } from './data/content';
-import { loadAcquaint, loadCards, loadSettings, requestPersistence, saveSettings } from './data/db';
+import { loadAcquaint, loadCards, loadControl, loadSettings, requestPersistence, saveSettings } from './data/db';
+import { Control } from './ui/Control';
 import { Home } from './ui/Home';
 import { Icon, type IconName } from './ui/icons';
 import { applyLook } from './ui/look';
@@ -32,6 +35,9 @@ export function App() {
   const [cards, setCards] = useState<StoredCard[]>([]);
   const [acquaint, setAcquaint] = useState<Acquaintance[]>([]);
   const [session, setSession] = useState<LessonInput | null>(null);
+  const [control, setControl] = useState<ControlResult[]>([]);
+  /** phrase ids of a running control test */
+  const [test, setTest] = useState<string[] | null>(null);
 
   useEffect(() => {
     loadSettings().then(setSettings);
@@ -56,12 +62,15 @@ export function App() {
     return () => mq.removeEventListener('change', onChange);
   }, [settings]);
 
+  useEffect(() => setSound(settings.sound), [settings.sound]);
+
   useEffect(() => {
     loadPhrases(settings.lang)
       .then((f) => setPhrases(f.phrases))
       .catch((e) => setError(String(e)));
     loadCards(settings.lang).then(setCards);
     loadAcquaint(settings.lang).then(setAcquaint);
+    loadControl(settings.lang).then(setControl);
   }, [settings.lang]);
 
   const update = (s: S) => {
@@ -73,6 +82,28 @@ export function App() {
     setTab(t);
     scrollTo(0, 0);
   };
+
+  const startControl = () => {
+    if (!phrases) return;
+    unlockAudio();
+    const levels = levelMap(trainable(phrases), cards, acquaint);
+    setTest(controlPick([...levels.entries()].filter(([, l]) => canSay(l)).map(([id]) => id)));
+  };
+
+  if (test && phrases) {
+    return (
+      <Control
+        phrases={phrases}
+        ids={test}
+        settings={settings}
+        onExit={() => {
+          loadControl(settings.lang).then(setControl);
+          setTest(null);
+          scrollTo(0, 0);
+        }}
+      />
+    );
+  }
 
   if (session && phrases) {
     return (
@@ -111,8 +142,14 @@ export function App() {
             phrases={phrases}
             cards={cards}
             acquainted={acquaint}
+            control={control}
             settings={settings}
-            onStart={() => setSession(lessonInput(phrases, cards, settings, new Date(), acquaint))}
+            onControl={startControl}
+            onStart={() => {
+              // iOS Safari: the first play() must happen inside this tap; later clips reuse the unlocked player
+              unlockAudio();
+              setSession(lessonInput(phrases, cards, settings, new Date(), acquaint));
+            }}
             onTopic={(t) => {
               setTopic(t);
               go('phrases');
@@ -121,7 +158,7 @@ export function App() {
         ) : tab === 'phrases' ? (
           <PhraseList phrases={phrases} lang={settings.lang} topic={topic} onTopic={setTopic} />
         ) : tab === 'progress' ? (
-          <Progress phrases={phrases} settings={settings} />
+          <Progress phrases={phrases} cards={cards} acquainted={acquaint} control={control} settings={settings} onControl={startControl} />
         ) : (
           <Settings value={settings} onChange={update} />
         )}

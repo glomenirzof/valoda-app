@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'preact/hooks';
 import { TOPIC_RU, type Lang, type Phrase, type Token } from '../core/types';
-import { playPhrase } from '../data/audio';
+import { playPhrase, soundEnabled } from '../data/audio';
 import { Icon } from './icons';
 import { StatusTag } from './StatusTag';
 import { WordSheet } from './WordSheet';
@@ -76,12 +76,16 @@ export function PhraseList({ phrases, lang, topic, onTopic }: { phrases: Phrase[
                 <div onClick={(e) => e.stopPropagation()}>
                   <TappableText phrase={p} onWord={setWord} />
                   <div class="phrase-tools">
-                    <button class="a-mini" aria-label="Слушать" onClick={() => playPhrase(lang, p.id)}>
-                      <Icon name="play" />
-                    </button>
-                    <button class="a-mini" aria-label="Медленно" onClick={() => playPhrase(lang, p.id, 0.75)}>
-                      <Icon name="slow" />
-                    </button>
+                    {soundEnabled() && (
+                      <>
+                        <button class="a-mini" aria-label="Слушать" onClick={() => playPhrase(lang, p.id)}>
+                          <Icon name="play" />
+                        </button>
+                        <button class="a-mini" aria-label="Медленно" onClick={() => playPhrase(lang, p.id, 0.75)}>
+                          <Icon name="slow" />
+                        </button>
+                      </>
+                    )}
                     <p class="tap-hint">Нажми на слово — покажу разбор</p>
                   </div>
                 </div>

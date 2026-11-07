@@ -20,9 +20,11 @@
    "microsoft": "Что случилось?",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Что это?"
+   "tilde": "Что это?",
+   "google": "Что это такое?"
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:21:56.829Z"
@@ -53,9 +55,11 @@
    "microsoft": "Это всё, спасибо.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Это все, спасибо."
+   "tilde": "Это все, спасибо.",
+   "google": "Вот и все, спасибо."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:02.626Z"
@@ -85,9 +89,11 @@
    "microsoft": "Не знаю.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я не знаю."
+   "tilde": "Я не знаю.",
+   "google": "Я не знаю."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:05.138Z"
@@ -115,9 +121,11 @@
    "microsoft": "Чем вы занимаетесь?",
    "agree": {
     "microsoft": false,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Что ты делаешь?"
+   "tilde": "Что ты делаешь?",
+   "google": "что ты делаешь"
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:07.426Z",
@@ -142,9 +150,11 @@
    "microsoft": "Не делай этого!",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Не делай этого"
+   "tilde": "Не делай этого",
+   "google": "Не делай этого!"
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:25:58.358Z"
@@ -165,9 +175,11 @@
    "microsoft": "Чего ты хочешь?",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Чего ты хочешь?"
+   "tilde": "Чего ты хочешь?",
+   "google": "что ты хочешь"
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:10.104Z"
@@ -203,9 +215,11 @@
    "microsoft": "Я хочу, но не могу.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я хочу, но я не могу."
+   "tilde": "Я хочу, но я не могу.",
+   "google": "Я хочу, но не могу."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:26:05.672Z"
@@ -214,7 +228,9 @@
   "text": "Kā jums iet?",
   "hash": "37122c53fe8d",
   "status": "ok",
-  "reasons": [],
+  "reasons": [
+   "Google переводит иначе: «Как вы»"
+  ],
   "corpus": {
    "exact": 14,
    "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22k%C4%81%22%5D%5Blc%3D%22jums%22%5D%5Blc%3D%22iet%22%5D",
@@ -226,19 +242,26 @@
    "microsoft": "Как дела?",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": false
    },
-   "tilde": "Как у вас дела?"
+   "tilde": "Как у вас дела?",
+   "google": "Как вы"
   },
   "flags": [],
-  "checkedAt": "2026-11-04T00:22:12.343Z"
+  "checkedAt": "2026-11-04T00:22:12.343Z",
+  "note": {
+   "status": "ok",
+   "reason": "фраза в корпусе 14 раз; Microsoft «Как дела?» и Tilde «Как у вас дела?» совпадают с нашим переводом; Google обрезал перевод до «Как вы» — ошибка переводчика"
+  }
  },
  "lv-0013": {
   "text": "Kā tev iet?",
   "hash": "ba16f672a143",
   "status": "ok",
   "reasons": [
-   "Tilde переводит иначе: «Как ты?»"
+   "Tilde переводит иначе: «Как ты?»",
+   "Google переводит иначе: «Как вы»"
   ],
   "corpus": {
    "exact": 58,
@@ -251,9 +274,11 @@
    "microsoft": "Как дела?",
    "agree": {
     "microsoft": true,
-    "tilde": false
+    "tilde": false,
+    "google": false
    },
-   "tilde": "Как ты?"
+   "tilde": "Как ты?",
+   "google": "Как вы"
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:14.547Z",
@@ -278,9 +303,11 @@
    "microsoft": "Что ты сказал?",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Что ты сказал?"
+   "tilde": "Что ты сказал?",
+   "google": "что вы сказали"
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:26:08.346Z"
@@ -301,9 +328,11 @@
    "microsoft": "У меня всё хорошо.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "У меня все хорошо."
+   "tilde": "У меня все хорошо.",
+   "google": "У меня все хорошо."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:17.505Z"
@@ -327,9 +356,11 @@
    "microsoft": "Справа.",
    "agree": {
     "microsoft": false,
-    "tilde": false
+    "tilde": false,
+    "google": true
    },
-   "tilde": "Справа."
+   "tilde": "Справа.",
+   "google": "Направо."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:21.558Z",
@@ -354,9 +385,11 @@
    "microsoft": "Это хорошо.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Это хорошо."
+   "tilde": "Это хорошо.",
+   "google": "Это хорошо."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:26.017Z"
@@ -377,9 +410,11 @@
    "microsoft": "Я считаю, что это хорошо.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Думаю, это хорошо."
+   "tilde": "Думаю, это хорошо.",
+   "google": "Я думаю, это хорошо."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:26:11.037Z"
@@ -405,9 +440,11 @@
    "microsoft": "Ну ладно!",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Ну ладно!"
+   "tilde": "Ну ладно!",
+   "google": "Ну, хорошо!"
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:26:13.607Z"
@@ -433,9 +470,11 @@
    "microsoft": "Что случилось?",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Что случилось?"
+   "tilde": "Что случилось?",
+   "google": "Что случилось?"
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:29.336Z"
@@ -456,9 +495,11 @@
    "microsoft": "Не сейчас.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Не сейчас."
+   "tilde": "Не сейчас.",
+   "google": "Не сейчас."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:31.953Z"
@@ -479,9 +520,11 @@
    "microsoft": "Иди сюда!",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Иди сюда."
+   "tilde": "Иди сюда.",
+   "google": "Идите сюда!"
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:34.741Z"
@@ -517,9 +560,11 @@
    "microsoft": "Я уже здесь.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я уже здесь."
+   "tilde": "Я уже здесь.",
+   "google": "Я уже здесь."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:26:21.202Z"
@@ -557,9 +602,11 @@
    "microsoft": "Я сделаю это сам.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я сделаю это сам."
+   "tilde": "Я сделаю это сам.",
+   "google": "Я сделаю это сам."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:54:47.321Z"
@@ -568,7 +615,9 @@
   "text": "Vai tev vajag kaut ko?",
   "hash": "510e3e3f87ff",
   "status": "ok",
-  "reasons": [],
+  "reasons": [
+   "Google переводит иначе: «Вам что-то нужно?»"
+  ],
   "corpus": {
    "exact": 0,
    "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22vai%22%5D%5Blc%3D%22tev%22%5D%5Blc%3D%22vajag%22%5D%5Blc%3D%22kaut%22%5D%5Blc%3D%22ko%22%5D",
@@ -600,19 +649,26 @@
    "microsoft": "Тебе что-то нужно?",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": false
    },
-   "tilde": "Тебе что-нибудь нужно?"
+   "tilde": "Тебе что-нибудь нужно?",
+   "google": "Вам что-то нужно?"
   },
   "flags": [],
-  "checkedAt": "2026-11-04T13:45:06.746Z"
+  "checkedAt": "2026-11-04T13:45:06.746Z",
+  "note": {
+   "status": "ok",
+   "reason": "все пары слов в корпусе (vai tev 312, tev vajag 200, vajag kaut 194, kaut ko 8404); Microsoft и Tilde — «Тебе что-то/что-нибудь нужно?»; Google дал «Вам» — тот же смысл в вежливой форме, а tev — «тебе»"
+  }
  },
  "lv-0452": {
   "text": "Labdien, kungs!",
   "hash": "cac25498fadd",
   "status": "ok",
   "reasons": [
-   "Tilde переводит иначе: «Здравствуйте, сэр.»"
+   "Tilde переводит иначе: «Здравствуйте, сэр.»",
+   "Google переводит иначе: «Здравствуйте, сэр!»"
   ],
   "corpus": {
    "exact": 6,
@@ -625,9 +681,11 @@
    "microsoft": "Добрый день, сэр!",
    "agree": {
     "microsoft": true,
-    "tilde": false
+    "tilde": false,
+    "google": false
    },
-   "tilde": "Здравствуйте, сэр."
+   "tilde": "Здравствуйте, сэр.",
+   "google": "Здравствуйте, сэр!"
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:54:39.331Z",
@@ -642,7 +700,8 @@
   "status": "ok",
   "reasons": [
    "Microsoft переводит иначе: «Ничего.»",
-   "Tilde переводит иначе: «Ничего.»"
+   "Tilde переводит иначе: «Ничего.»",
+   "Google переводит иначе: «Ничего.»"
   ],
   "corpus": {
    "exact": 17132,
@@ -655,9 +714,11 @@
    "microsoft": "Ничего.",
    "agree": {
     "microsoft": false,
-    "tilde": false
+    "tilde": false,
+    "google": false
    },
-   "tilde": "Ничего."
+   "tilde": "Ничего.",
+   "google": "Ничего."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:37.315Z",
@@ -687,9 +748,11 @@
    "microsoft": "Я не понимаю.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я не понимаю."
+   "tilde": "Я не понимаю.",
+   "google": "Я не понимаю."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:39.868Z"
@@ -715,9 +778,11 @@
    "microsoft": "Я понимаю.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я понимаю."
+   "tilde": "Я понимаю.",
+   "google": "Я понимаю."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:42.280Z"
@@ -743,9 +808,11 @@
    "microsoft": "У меня нет времени.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "У меня нет времени."
+   "tilde": "У меня нет времени.",
+   "google": "У меня нет времени."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:44.768Z"
@@ -766,9 +833,11 @@
    "microsoft": "Как это сказать по-латышски?",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Как это говорят по-латышски?"
+   "tilde": "Как это говорят по-латышски?",
+   "google": "Как сказать по-латышски?"
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:46.955Z"
@@ -789,9 +858,11 @@
    "microsoft": "Здесь много людей.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Здесь много людей."
+   "tilde": "Здесь много людей.",
+   "google": "Здесь много людей."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:26:31.259Z"
@@ -812,9 +883,11 @@
    "microsoft": "Сколько тебе лет?",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Сколько тебе лет?"
+   "tilde": "Сколько тебе лет?",
+   "google": "Сколько тебе лет?"
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:49.007Z"
@@ -840,9 +913,11 @@
    "microsoft": "Я иду домой.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я иду домой."
+   "tilde": "Я иду домой.",
+   "google": "Я иду домой."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:51.260Z"
@@ -863,9 +938,11 @@
    "microsoft": "Я дома.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я дома."
+   "tilde": "Я дома.",
+   "google": "Я дома."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:22:53.379Z"
@@ -886,9 +963,11 @@
    "microsoft": "Он дома.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Он дома."
+   "tilde": "Он дома.",
+   "google": "Он дома."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:13:31.151Z"
@@ -924,9 +1003,11 @@
    "microsoft": "Это мой дом.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Вот мой дом."
+   "tilde": "Вот мой дом.",
+   "google": "Это мой дом."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:26:38.323Z"
@@ -947,9 +1028,11 @@
    "microsoft": "Я иду на работу.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я иду на работу."
+   "tilde": "Я иду на работу.",
+   "google": "Я собираюсь работать."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:23:00.717Z"
@@ -970,9 +1053,11 @@
    "microsoft": "Я на работе.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я на работе."
+   "tilde": "Я на работе.",
+   "google": "Я на работе."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:23:02.737Z"
@@ -993,9 +1078,11 @@
    "microsoft": "У меня много работы.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "У меня много работы."
+   "tilde": "У меня много работы.",
+   "google": "У меня много работы."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:26:41.211Z"
@@ -1004,7 +1091,9 @@
   "text": "Es dodos uz darbu.",
   "hash": "417a88042f0e",
   "status": "ok",
-  "reasons": [],
+  "reasons": [
+   "Google переводит иначе: «Я собираюсь работать.»"
+  ],
   "corpus": {
    "exact": 1,
    "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22es%22%5D%5Blc%3D%22dodos%22%5D%5Blc%3D%22uz%22%5D%5Blc%3D%22darbu%22%5D",
@@ -1016,12 +1105,18 @@
    "microsoft": "Я иду на работу.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": false
    },
-   "tilde": "Я еду на работу."
+   "tilde": "Я еду на работу.",
+   "google": "Я собираюсь работать."
   },
   "flags": [],
-  "checkedAt": "2026-11-04T13:26:43.999Z"
+  "checkedAt": "2026-11-04T13:26:43.999Z",
+  "note": {
+   "status": "ok",
+   "reason": "фраза в корпусе; Microsoft «Я иду на работу», Tilde «Я еду на работу» совпадают с нашим переводом; Google «Я собираюсь работать» неверно передаёт doties uz (направляться куда-то)"
+  }
  },
  "lv-0007": {
   "text": "Liels paldies!",
@@ -1048,9 +1143,11 @@
    "microsoft": "Большое спасибо!",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Большое спасибо!"
+   "tilde": "Большое спасибо!",
+   "google": "Большое спасибо!"
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:23:04.937Z"
@@ -1071,9 +1168,11 @@
    "microsoft": "Я всё ещё думаю.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я все еще думаю."
+   "tilde": "Я все еще думаю.",
+   "google": "Я все еще думаю."
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:23:07.071Z"
@@ -1083,7 +1182,8 @@
   "hash": "4b431cc3fe13",
   "status": "ok",
   "reasons": [
-   "Tilde переводит иначе: «Как твое имя?»"
+   "Tilde переводит иначе: «Как твое имя?»",
+   "Google переводит иначе: «как вас зовут»"
   ],
   "corpus": {
    "exact": 6,
@@ -1096,9 +1196,11 @@
    "microsoft": "Как тебя зовут?",
    "agree": {
     "microsoft": true,
-    "tilde": false
+    "tilde": false,
+    "google": false
    },
-   "tilde": "Как твое имя?"
+   "tilde": "Как твое имя?",
+   "google": "как вас зовут"
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:54:41.299Z",
@@ -1138,9 +1240,11 @@
    "microsoft": "Можете помочь?",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Вы можете помочь?"
+   "tilde": "Вы можете помочь?",
+   "google": "Можете ли вы помочь?"
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:23:12.727Z"
@@ -1161,9 +1265,11 @@
    "microsoft": "Ты можешь мне помочь?",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Ты можешь мне помочь?"
+   "tilde": "Ты можешь мне помочь?",
+   "google": "Вы можете помочь мне"
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:23:15.359Z"
@@ -1184,9 +1290,11 @@
    "microsoft": "Пожалуйста, помогите!",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Помогите, пожалуйста."
+   "tilde": "Помогите, пожалуйста.",
+   "google": "Помогите пожалуйста!"
   },
   "flags": [],
   "checkedAt": "2026-11-04T00:23:17.815Z"
@@ -1217,9 +1325,11 @@
    "microsoft": "Я иду помочь.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я прихожу, чтобы помочь."
+   "tilde": "Я прихожу, чтобы помочь.",
+   "google": "Я пришел помочь."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:26:52.745Z"
@@ -1245,9 +1355,11 @@
    "microsoft": "У меня нет денег.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "У меня нет денег."
+   "tilde": "У меня нет денег.",
+   "google": "У меня нет денег."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:26:55.278Z"
@@ -1268,9 +1380,11 @@
    "microsoft": "Я остаюсь дома.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я остаюсь дома."
+   "tilde": "Я остаюсь дома.",
+   "google": "Я остаюсь дома."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:26:57.784Z"
@@ -1291,9 +1405,11 @@
    "microsoft": "Я ухожу.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я ухожу."
+   "tilde": "Я ухожу.",
+   "google": "Я ухожу."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:44:58.815Z"
@@ -1319,9 +1435,11 @@
    "microsoft": "Я больше не хочу.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Я больше не хочу."
+   "tilde": "Я больше не хочу.",
+   "google": "Я больше не хочу."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:27:00.439Z"
@@ -1342,9 +1460,11 @@
    "microsoft": "Мир огромен.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": true
    },
-   "tilde": "Мир велик."
+   "tilde": "Мир велик.",
+   "google": "Мир большой."
   },
   "flags": [],
   "checkedAt": "2026-11-04T13:45:02.809Z"
@@ -1353,7 +1473,9 @@
   "text": "Viss kārtībā.",
   "hash": "26ebdecca8cf",
   "status": "ok",
-  "reasons": [],
+  "reasons": [
+   "Google переводит иначе: «Всё хорошо.»"
+  ],
   "corpus": {
    "exact": 826,
    "exactUrl": "https://nosketch.korpuss.lv/#concordance?corpname=LVK2022&tab=advanced&queryselector=cql&cql=%5Blc%3D%22viss%22%5D%5Blc%3D%22k%C4%81rt%C4%ABb%C4%81%22%5D",
@@ -1374,12 +1496,18 @@
    "microsoft": "Всё в порядке.",
    "agree": {
     "microsoft": true,
-    "tilde": true
+    "tilde": true,
+    "google": false
    },
-   "tilde": "Все в порядке."
+   "tilde": "Все в порядке.",
+   "google": "Всё хорошо."
   },
   "flags": [],
-  "checkedAt": "2026-11-04T00:23:20.373Z"
+  "checkedAt": "2026-11-04T00:23:20.373Z",
+  "note": {
+   "status": "ok",
+   "reason": "фраза в корпусе 826 раз и в Tatoeba; Microsoft и Tilde — «Всё в порядке»; Google «Всё хорошо» — синоним"
+  }
  },
  "lv-0296": {
   "text": "Es tevi nedzirdu.",

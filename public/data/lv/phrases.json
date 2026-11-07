@@ -49,7 +49,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 46
   },
   {
    "id": "lv-0063",
@@ -107,7 +108,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 47
   },
   {
    "id": "lv-0044",
@@ -148,7 +150,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 23
   },
   {
    "id": "lv-0147",
@@ -196,7 +199,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 48
   },
   {
    "id": "lv-0154",
@@ -231,7 +235,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 38
   },
   {
    "id": "lv-0148",
@@ -279,7 +284,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 49
   },
   {
    "id": "lv-0155",
@@ -342,7 +348,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 102
   },
   {
    "id": "lv-0012",
@@ -390,7 +397,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 51
   },
   {
    "id": "lv-0013",
@@ -438,7 +446,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 50
   },
   {
    "id": "lv-0179",
@@ -486,7 +495,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 52
   },
   {
    "id": "lv-0014",
@@ -534,7 +544,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 41
   },
   {
    "id": "lv-0076",
@@ -568,7 +579,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 40
   },
   {
    "id": "lv-0142",
@@ -617,7 +629,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 45
   },
   {
    "id": "lv-0152",
@@ -688,7 +701,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 239
   },
   {
    "id": "lv-0206",
@@ -722,7 +736,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 42
   },
   {
    "id": "lv-0149",
@@ -763,7 +778,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 53
   },
   {
    "id": "lv-0092",
@@ -797,7 +813,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 218
   },
   {
    "id": "lv-0128",
@@ -832,7 +849,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 219
   },
   {
    "id": "lv-0158",
@@ -887,7 +905,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 220
   },
   {
    "id": "lv-0171",
@@ -944,7 +963,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 54
   },
   {
    "id": "lv-0311",
@@ -1000,7 +1020,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 421
   },
   {
    "id": "lv-0452",
@@ -1042,7 +1063,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 9
   },
   {
    "id": "lv-0010",
@@ -1069,7 +1091,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 10
   },
   {
    "id": "lv-0037",
@@ -1110,7 +1133,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 24
   },
   {
    "id": "lv-0038",
@@ -1151,7 +1175,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 25
   },
   {
    "id": "lv-0091",
@@ -1201,7 +1226,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 55
   },
   {
    "id": "lv-0042",
@@ -1257,7 +1283,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 449
   },
   {
    "id": "lv-0162",
@@ -1314,7 +1341,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 221
   },
   {
    "id": "lv-0031",
@@ -1363,7 +1391,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 236
   },
   {
    "id": "lv-0072",
@@ -1413,7 +1442,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 43
   },
   {
    "id": "lv-0124",
@@ -1463,7 +1493,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 44
   },
   {
    "id": "lv-0125",
@@ -1515,7 +1546,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 56
   },
   {
    "id": "lv-0236",
@@ -1574,7 +1606,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 440
   },
   {
    "id": "lv-0071",
@@ -1631,7 +1664,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 58
   },
   {
    "id": "lv-0136",
@@ -1681,7 +1715,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 57
   },
   {
    "id": "lv-0160",
@@ -1738,7 +1773,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 59
   },
   {
    "id": "lv-0204",
@@ -1795,7 +1831,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 60
   },
   {
    "id": "lv-0007",
@@ -1835,7 +1872,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 11
   },
   {
    "id": "lv-0144",
@@ -1883,7 +1921,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 238
   },
   {
    "id": "lv-0182",
@@ -1944,7 +1983,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 479
   },
   {
    "id": "lv-0045",
@@ -2000,7 +2040,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 101
   },
   {
    "id": "lv-0046",
@@ -2063,7 +2104,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 103
   },
   {
    "id": "lv-0115",
@@ -2098,7 +2140,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 12
   },
   {
    "id": "lv-0156",
@@ -2154,7 +2197,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 222
   },
   {
    "id": "lv-0203",
@@ -2204,7 +2248,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 61
   },
   {
    "id": "lv-0211",
@@ -2254,7 +2299,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 62
   },
   {
    "id": "lv-0450",
@@ -2295,7 +2341,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 26
   },
   {
    "id": "lv-0224",
@@ -2343,7 +2390,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 63
   },
   {
    "id": "lv-0304",
@@ -2393,7 +2441,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 64
   },
   {
    "id": "lv-0011",
@@ -2437,7 +2486,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 65
   },
   {
    "id": "lv-0296",
@@ -2485,7 +2535,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 66
   },
   {
    "id": "lv-0150",
@@ -2520,7 +2571,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 13
   },
   {
    "id": "lv-0501",
@@ -2568,7 +2620,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 67
   },
   {
    "id": "lv-0021",
@@ -2616,7 +2669,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 68
   },
   {
    "id": "lv-0022",
@@ -2664,7 +2718,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 69
   },
   {
    "id": "lv-0339",
@@ -2707,7 +2762,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 27
   },
   {
    "id": "lv-0168",
@@ -2764,7 +2820,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 428
   },
   {
    "id": "lv-0060",
@@ -2812,7 +2869,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 302
   },
   {
    "id": "lv-0029",
@@ -2869,7 +2927,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 257
   },
   {
    "id": "lv-0126",
@@ -2930,7 +2989,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 441
   },
   {
    "id": "lv-0009",
@@ -2958,7 +3018,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 14
   },
   {
    "id": "lv-0419",
@@ -3016,7 +3077,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 442
   },
   {
    "id": "lv-0281",
@@ -3057,7 +3119,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 28
   },
   {
    "id": "lv-0058",
@@ -3106,7 +3169,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 304
   },
   {
    "id": "lv-0280",
@@ -3167,7 +3231,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 443
   },
   {
    "id": "lv-0209",
@@ -3215,7 +3280,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 70
   },
   {
    "id": "lv-0187",
@@ -3274,7 +3340,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 168
   },
   {
    "id": "lv-0191",
@@ -3326,7 +3393,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 169
   },
   {
    "id": "lv-0189",
@@ -3385,7 +3453,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 444
   },
   {
    "id": "lv-0328",
@@ -3433,7 +3502,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 71
   },
   {
    "id": "lv-0441",
@@ -3492,7 +3562,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 72
   },
   {
    "id": "lv-0286",
@@ -3533,7 +3604,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 104
   },
   {
    "id": "lv-0260",
@@ -3583,7 +3655,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 73
   },
   {
    "id": "lv-0444",
@@ -3631,7 +3704,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 74
   },
   {
    "id": "lv-0023",
@@ -3681,7 +3755,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 167
   },
   {
    "id": "lv-0024",
@@ -3731,7 +3806,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 170
   },
   {
    "id": "lv-0034",
@@ -3779,7 +3855,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 166
   },
   {
    "id": "lv-0406",
@@ -3821,7 +3898,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 75
   },
   {
    "id": "lv-0276",
@@ -3878,7 +3956,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 432
   },
   {
    "id": "lv-0218",
@@ -3926,7 +4005,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 76
   },
   {
    "id": "lv-0376",
@@ -3982,7 +4062,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 450
   },
   {
    "id": "lv-0388",
@@ -4024,7 +4105,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 225
   },
   {
    "id": "lv-0103",
@@ -4088,7 +4170,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 305
   },
   {
    "id": "lv-0135",
@@ -4138,7 +4221,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 77
   },
   {
    "id": "lv-0194",
@@ -4179,7 +4263,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 78
   },
   {
    "id": "lv-0198",
@@ -4237,7 +4322,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 389
   },
   {
    "id": "lv-0033",
@@ -4298,7 +4384,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 445
   },
   {
    "id": "lv-0476",
@@ -4348,7 +4435,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 79
   },
   {
    "id": "lv-0266",
@@ -4390,7 +4478,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 226
   },
   {
    "id": "lv-0104",
@@ -4439,7 +4528,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 237
   },
   {
    "id": "lv-0105",
@@ -4481,7 +4571,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 235
   },
   {
    "id": "lv-0166",
@@ -4545,7 +4636,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 240
   },
   {
    "id": "lv-0235",
@@ -4595,7 +4687,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 316
   },
   {
    "id": "lv-0427",
@@ -4629,7 +4722,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 15
   },
   {
    "id": "lv-0284",
@@ -4670,7 +4764,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 29
   },
   {
    "id": "lv-0383",
@@ -4721,7 +4816,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 339
   },
   {
    "id": "lv-0325",
@@ -4755,7 +4851,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 39
   },
   {
    "id": "lv-0184",
@@ -4805,7 +4902,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 80
   },
   {
    "id": "lv-0220",
@@ -4854,7 +4952,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 118
   },
   {
    "id": "lv-0225",
@@ -4889,7 +4988,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 16
   },
   {
    "id": "lv-0301",
@@ -4939,7 +5039,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 205
   },
   {
    "id": "lv-0401",
@@ -4974,7 +5075,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 17
   },
   {
    "id": "lv-0391",
@@ -5023,7 +5125,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 81
   },
   {
    "id": "lv-0354",
@@ -5066,7 +5169,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 82
   },
   {
    "id": "lv-0143",
@@ -5109,7 +5213,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 83
   },
   {
    "id": "lv-0315",
@@ -5167,7 +5272,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 227
   },
   {
    "id": "lv-0095",
@@ -5209,7 +5315,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 250
   },
   {
    "id": "lv-0265",
@@ -5266,7 +5373,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 251
   },
   {
    "id": "lv-0057",
@@ -5323,7 +5431,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 100
   },
   {
    "id": "lv-0208",
@@ -5380,7 +5489,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 105
   },
   {
    "id": "lv-0131",
@@ -5429,7 +5539,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 84
   },
   {
    "id": "lv-0314",
@@ -5479,7 +5590,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 85
   },
   {
    "id": "lv-0210",
@@ -5538,7 +5650,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 356
   },
   {
    "id": "lv-0258",
@@ -5586,7 +5699,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 349
   },
   {
    "id": "lv-0041",
@@ -5635,7 +5749,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 86
   },
   {
    "id": "lv-0405",
@@ -5670,7 +5785,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 18
   },
   {
    "id": "lv-0404",
@@ -5720,7 +5836,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 87
   },
   {
    "id": "lv-0297",
@@ -5781,7 +5898,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 446
   },
   {
    "id": "lv-0221",
@@ -5830,7 +5948,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 340
   },
   {
    "id": "lv-0138",
@@ -5878,7 +5997,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 88
   },
   {
    "id": "lv-0159",
@@ -5943,7 +6063,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 89
   },
   {
    "id": "lv-0302",
@@ -6000,7 +6121,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 90
   },
   {
    "id": "lv-0217",
@@ -6052,7 +6174,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 352
   },
   {
    "id": "lv-0248",
@@ -6102,7 +6225,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 353
   },
   {
    "id": "lv-0386",
@@ -6152,7 +6276,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 354
   },
   {
    "id": "lv-0249",
@@ -6204,7 +6329,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 287
   },
   {
    "id": "lv-0465",
@@ -6239,7 +6365,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 30
   },
   {
    "id": "lv-0244",
@@ -6297,7 +6424,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 91
   },
   {
    "id": "lv-0342",
@@ -6347,7 +6475,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 92
   },
   {
    "id": "lv-0064",
@@ -6396,7 +6525,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 93
   },
   {
    "id": "lv-0385",
@@ -6452,7 +6582,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 94
   },
   {
    "id": "lv-0151",
@@ -6501,7 +6632,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 355
   },
   {
    "id": "lv-0270",
@@ -6553,7 +6685,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 357
   },
   {
    "id": "lv-0431",
@@ -6610,7 +6743,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 358
   },
   {
    "id": "lv-0089",
@@ -6658,7 +6792,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 256
   },
   {
    "id": "lv-0094",
@@ -6699,7 +6834,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 254
   },
   {
    "id": "lv-0167",
@@ -6747,7 +6883,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 258
   },
   {
    "id": "lv-0173",
@@ -6803,7 +6940,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 259
   },
   {
    "id": "lv-0231",
@@ -6859,7 +6997,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 260
   },
   {
    "id": "lv-0245",
@@ -6893,7 +7032,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 255
   },
   {
    "id": "lv-0195",
@@ -6961,7 +7101,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 439
   },
   {
    "id": "lv-0026",
@@ -7016,7 +7157,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 451
   },
   {
    "id": "lv-0093",
@@ -7058,7 +7200,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 270
   },
   {
    "id": "lv-0424",
@@ -7130,7 +7273,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 241
   },
   {
    "id": "lv-0239",
@@ -7188,7 +7332,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 388
   },
   {
    "id": "lv-0163",
@@ -7245,7 +7390,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 272
   },
   {
    "id": "lv-0199",
@@ -7304,7 +7450,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 447
   },
   {
    "id": "lv-0271",
@@ -7363,7 +7510,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 273
   },
   {
    "id": "lv-0322",
@@ -7422,7 +7570,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 274
   },
   {
    "id": "lv-0426",
@@ -7481,7 +7630,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 390
   },
   {
    "id": "lv-0454",
@@ -7524,7 +7674,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 271
   },
   {
    "id": "lv-0172",
@@ -7583,7 +7734,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 171
   },
   {
    "id": "lv-0303",
@@ -7642,7 +7794,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 172
   },
   {
    "id": "lv-0207",
@@ -7711,7 +7864,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 500
   },
   {
    "id": "lv-0275",
@@ -7754,7 +7908,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 95
   },
   {
    "id": "lv-0447",
@@ -7797,7 +7952,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 96
   },
   {
    "id": "lv-0414",
@@ -7855,7 +8011,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 365
   },
   {
    "id": "lv-0429",
@@ -7905,7 +8062,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 206
   },
   {
    "id": "lv-0379",
@@ -7957,7 +8115,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 288
   },
   {
    "id": "lv-0331",
@@ -8024,7 +8183,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 448
   },
   {
    "id": "lv-0169",
@@ -8083,7 +8243,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 363
   },
   {
    "id": "lv-0175",
@@ -8133,7 +8294,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 362
   },
   {
    "id": "lv-0261",
@@ -8190,7 +8352,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 364
   },
   {
    "id": "lv-0455",
@@ -8247,7 +8410,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 366
   },
   {
    "id": "lv-0212",
@@ -8295,7 +8459,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 317
   },
   {
    "id": "lv-0036",
@@ -8352,7 +8517,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 261
   },
   {
    "id": "lv-0247",
@@ -8402,7 +8568,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 341
   },
   {
    "id": "lv-0251",
@@ -8451,7 +8618,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 306
   },
   {
    "id": "lv-0305",
@@ -8500,7 +8668,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 97
   },
   {
    "id": "lv-0242",
@@ -8550,7 +8719,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 130
   },
   {
    "id": "lv-0234",
@@ -8600,7 +8770,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 173
   },
   {
    "id": "lv-0178",
@@ -8658,7 +8829,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 391
   },
   {
    "id": "lv-0028",
@@ -8708,7 +8880,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 262
   },
   {
    "id": "lv-0371",
@@ -8759,7 +8932,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 342
   },
   {
    "id": "lv-0177",
@@ -8817,7 +8991,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 392
   },
   {
    "id": "lv-0140",
@@ -8887,7 +9062,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 480
   },
   {
    "id": "lv-0472",
@@ -8945,7 +9121,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 307
   },
   {
    "id": "lv-0049",
@@ -8994,7 +9171,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 242
   },
   {
    "id": "lv-0102",
@@ -9050,7 +9228,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 308
   },
   {
    "id": "lv-0165",
@@ -9115,7 +9294,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 393
   },
   {
    "id": "lv-0065",
@@ -9164,7 +9344,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 98
   },
   {
    "id": "lv-0114",
@@ -9214,7 +9395,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 99
   },
   {
    "id": "lv-0332",
@@ -9272,7 +9454,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 309
   },
   {
    "id": "lv-0078",
@@ -9328,7 +9511,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 106
   },
   {
    "id": "lv-0486",
@@ -9377,7 +9561,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 107
   },
   {
    "id": "lv-0274",
@@ -9419,7 +9604,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 228
   },
   {
    "id": "lv-0141",
@@ -9460,7 +9646,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 31
   },
   {
    "id": "lv-0384",
@@ -9495,7 +9682,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 19
   },
   {
    "id": "lv-0015",
@@ -9537,7 +9725,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 277
   },
   {
    "id": "lv-0410",
@@ -9603,7 +9792,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 452
   },
   {
    "id": "lv-0446",
@@ -9653,7 +9843,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 310
   },
   {
    "id": "lv-0032",
@@ -9719,7 +9910,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 501
   },
   {
    "id": "lv-0272",
@@ -9788,7 +9980,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 491
   },
   {
    "id": "lv-0456",
@@ -9845,7 +10038,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 321
   },
   {
    "id": "lv-0437",
@@ -9904,7 +10098,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 108
   },
   {
    "id": "lv-0423",
@@ -9952,7 +10147,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 109
   },
   {
    "id": "lv-0127",
@@ -10002,7 +10198,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 318
   },
   {
    "id": "lv-0307",
@@ -10060,7 +10257,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 410
   },
   {
    "id": "lv-0282",
@@ -10103,7 +10301,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 110
   },
   {
    "id": "lv-0359",
@@ -10152,7 +10351,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 111
   },
   {
    "id": "lv-0347",
@@ -10210,7 +10410,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 394
   },
   {
    "id": "lv-0451",
@@ -10277,7 +10478,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 395
   },
   {
    "id": "lv-0290",
@@ -10327,7 +10529,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 383
   },
   {
    "id": "lv-0402",
@@ -10377,7 +10580,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 359
   },
   {
    "id": "lv-0117",
@@ -10425,7 +10629,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 386
   },
   {
    "id": "lv-0223",
@@ -10473,7 +10678,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 112
   },
   {
    "id": "lv-0264",
@@ -10539,7 +10745,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 367
   },
   {
    "id": "lv-0432",
@@ -10596,7 +10803,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 368
   },
   {
    "id": "lv-0422",
@@ -10645,7 +10853,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 360
   },
   {
    "id": "lv-0020",
@@ -10687,7 +10896,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 113
   },
   {
    "id": "lv-0137",
@@ -10737,7 +10947,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 114
   },
   {
    "id": "lv-0243",
@@ -10795,7 +11006,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 396
   },
   {
    "id": "lv-0232",
@@ -10845,7 +11057,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 120
   },
   {
    "id": "lv-0413",
@@ -10902,7 +11115,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 229
   },
   {
    "id": "lv-0300",
@@ -10952,7 +11166,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 387
   },
   {
    "id": "lv-0489",
@@ -10995,7 +11210,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 115
   },
   {
    "id": "lv-0202",
@@ -11059,7 +11275,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 471
   },
   {
    "id": "lv-0262",
@@ -11116,7 +11333,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 322
   },
   {
    "id": "lv-0050",
@@ -11166,7 +11384,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 116
   },
   {
    "id": "lv-0051",
@@ -11215,7 +11434,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 117
   },
   {
    "id": "lv-0145",
@@ -11265,7 +11485,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 119
   },
   {
    "id": "lv-0153",
@@ -11322,7 +11543,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 121
   },
   {
    "id": "lv-0318",
@@ -11381,7 +11603,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 275
   },
   {
    "id": "lv-0252",
@@ -11439,7 +11662,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 230
   },
   {
    "id": "lv-0345",
@@ -11504,7 +11728,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 453
   },
   {
    "id": "lv-0197",
@@ -11561,7 +11786,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 376
   },
   {
    "id": "lv-0320",
@@ -11613,7 +11839,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 289
   },
   {
    "id": "lv-0226",
@@ -11688,7 +11915,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 486
   },
   {
    "id": "lv-0358",
@@ -11749,7 +11977,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 454
   },
   {
    "id": "lv-0370",
@@ -11801,7 +12030,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 290
   },
   {
    "id": "lv-0113",
@@ -11850,7 +12080,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 122
   },
   {
    "id": "lv-0288",
@@ -11898,7 +12129,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 402
   },
   {
    "id": "lv-0257",
@@ -11948,7 +12180,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 174
   },
   {
    "id": "lv-0445",
@@ -12008,7 +12241,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 481
   },
   {
    "id": "lv-0213",
@@ -12074,7 +12308,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 281
   },
   {
    "id": "lv-0443",
@@ -12135,7 +12370,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 455
   },
   {
    "id": "lv-0084",
@@ -12192,7 +12428,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 320
   },
   {
    "id": "lv-0085",
@@ -12249,7 +12486,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 319
   },
   {
    "id": "lv-0355",
@@ -12310,7 +12548,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 397
   },
   {
    "id": "lv-0506",
@@ -12367,7 +12606,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 231
   },
   {
    "id": "lv-0395",
@@ -12435,7 +12675,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 456
   },
   {
    "id": "lv-0107",
@@ -12485,7 +12726,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 404
   },
   {
    "id": "lv-0116",
@@ -12535,7 +12777,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 405
   },
   {
    "id": "lv-0227",
@@ -12585,7 +12828,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 406
   },
   {
    "id": "lv-0246",
@@ -12635,7 +12879,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 407
   },
   {
    "id": "lv-0299",
@@ -12685,7 +12930,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 408
   },
   {
    "id": "lv-0338",
@@ -12727,7 +12973,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 123
   },
   {
    "id": "lv-0403",
@@ -12755,7 +13002,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 20
   },
   {
    "id": "lv-0374",
@@ -12805,7 +13053,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 175
   },
   {
    "id": "lv-0099",
@@ -12854,7 +13103,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 124
   },
   {
    "id": "lv-0215",
@@ -12910,7 +13160,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 125
   },
   {
    "id": "lv-0417",
@@ -12960,7 +13211,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 126
   },
   {
    "id": "lv-0348",
@@ -13010,7 +13262,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 127
   },
   {
    "id": "lv-0380",
@@ -13059,7 +13312,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 128
   },
   {
    "id": "lv-0416",
@@ -13116,7 +13370,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 252
   },
   {
    "id": "lv-0291",
@@ -13175,7 +13430,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 291
   },
   {
    "id": "lv-0047",
@@ -13210,7 +13466,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 21
   },
   {
    "id": "lv-0139",
@@ -13245,7 +13502,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 22
   },
   {
    "id": "lv-0229",
@@ -13302,7 +13560,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 129
   },
   {
    "id": "lv-0490",
@@ -13351,7 +13610,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 131
   },
   {
    "id": "lv-0436",
@@ -13401,7 +13661,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 409
   },
   {
    "id": "lv-0019",
@@ -13436,7 +13697,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 32
   },
   {
    "id": "lv-0333",
@@ -13494,7 +13756,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 398
   },
   {
    "id": "lv-0377",
@@ -13544,7 +13807,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 132
   },
   {
    "id": "lv-0096",
@@ -13592,7 +13856,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 403
   },
   {
    "id": "lv-0368",
@@ -13650,7 +13915,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 323
   },
   {
    "id": "lv-0269",
@@ -13707,7 +13973,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 133
   },
   {
    "id": "lv-0357",
@@ -13763,7 +14030,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 377
   },
   {
    "id": "lv-0035",
@@ -13813,7 +14081,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 176
   },
   {
    "id": "lv-0079",
@@ -13862,7 +14131,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 134
   },
   {
    "id": "lv-0308",
@@ -13914,7 +14184,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 292
   },
   {
    "id": "lv-0310",
@@ -13971,7 +14242,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 135
   },
   {
    "id": "lv-0411",
@@ -14020,7 +14292,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 136
   },
   {
    "id": "lv-0250",
@@ -14077,7 +14350,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 137
   },
   {
    "id": "lv-0119",
@@ -14127,7 +14401,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 361
   },
   {
    "id": "lv-0323",
@@ -14170,7 +14445,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 278
   },
   {
    "id": "lv-0287",
@@ -14218,7 +14494,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 138
   },
   {
    "id": "lv-0480",
@@ -14268,7 +14545,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 139
   },
   {
    "id": "lv-0087",
@@ -14318,7 +14596,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 243
   },
   {
    "id": "lv-0366",
@@ -14368,7 +14647,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 177
   },
   {
    "id": "lv-0040",
@@ -14403,7 +14683,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 33
   },
   {
    "id": "lv-0462",
@@ -14469,7 +14750,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 504
   },
   {
    "id": "lv-0344",
@@ -14521,7 +14803,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 417
   },
   {
    "id": "lv-0484",
@@ -14571,7 +14854,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 263
   },
   {
    "id": "lv-0412",
@@ -14613,7 +14897,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 34
   },
   {
    "id": "lv-0341",
@@ -14665,7 +14950,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 140
   },
   {
    "id": "lv-0316",
@@ -14725,7 +15011,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 457
   },
   {
    "id": "lv-0335",
@@ -14775,7 +15062,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 178
   },
   {
    "id": "lv-0118",
@@ -14840,7 +15128,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 505
   },
   {
    "id": "lv-0298",
@@ -14901,7 +15190,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 458
   },
   {
    "id": "lv-0330",
@@ -14960,7 +15250,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 459
   },
   {
    "id": "lv-0435",
@@ -15010,7 +15301,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 418
   },
   {
    "id": "lv-0329",
@@ -15071,7 +15363,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 482
   },
   {
    "id": "lv-0363",
@@ -15128,7 +15421,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 324
   },
   {
    "id": "lv-0070",
@@ -15178,7 +15472,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 179
   },
   {
    "id": "lv-0196",
@@ -15237,7 +15532,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 424
   },
   {
    "id": "lv-0214",
@@ -15294,7 +15590,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 276
   },
   {
    "id": "lv-0228",
@@ -15346,7 +15643,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 286
   },
   {
    "id": "lv-0350",
@@ -15410,7 +15708,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 381
   },
   {
    "id": "lv-0488",
@@ -15467,7 +15766,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 378
   },
   {
    "id": "lv-0485",
@@ -15510,7 +15810,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 141
   },
   {
    "id": "lv-0499",
@@ -15562,7 +15863,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 293
   },
   {
    "id": "lv-0294",
@@ -15623,7 +15925,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 460
   },
   {
    "id": "lv-0365",
@@ -15673,7 +15976,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 142
   },
   {
    "id": "lv-0313",
@@ -15722,7 +16026,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 143
   },
   {
    "id": "lv-0306",
@@ -15779,7 +16084,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 325
   },
   {
    "id": "lv-0382",
@@ -15836,7 +16142,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 144
   },
   {
    "id": "lv-0109",
@@ -15879,7 +16186,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 420
   },
   {
    "id": "lv-0364",
@@ -15931,7 +16239,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 427
   },
   {
    "id": "lv-0081",
@@ -15996,7 +16305,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 413
   },
   {
    "id": "lv-0174",
@@ -16053,7 +16363,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 411
   },
   {
    "id": "lv-0283",
@@ -16111,7 +16422,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 412
   },
   {
    "id": "lv-0467",
@@ -16171,7 +16483,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 461
   },
   {
    "id": "lv-0052",
@@ -16220,7 +16533,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 430
   },
   {
    "id": "lv-0392",
@@ -16270,7 +16584,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 294
   },
   {
    "id": "lv-0337",
@@ -16325,7 +16640,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 264
   },
   {
    "id": "lv-0054",
@@ -16390,7 +16706,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 244
   },
   {
    "id": "lv-0238",
@@ -16440,7 +16757,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 245
   },
   {
    "id": "lv-0324",
@@ -16497,7 +16815,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 246
   },
   {
    "id": "lv-0073",
@@ -16554,7 +16873,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 326
   },
   {
    "id": "lv-0157",
@@ -16622,7 +16942,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 329
   },
   {
    "id": "lv-0170",
@@ -16681,7 +17002,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 328
   },
   {
    "id": "lv-0407",
@@ -16731,7 +17053,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 327
   },
   {
    "id": "lv-0309",
@@ -16796,7 +17119,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 145
   },
   {
    "id": "lv-0090",
@@ -16853,7 +17177,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 146
   },
   {
    "id": "lv-0101",
@@ -16919,7 +17244,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 487
   },
   {
    "id": "lv-0230",
@@ -16976,7 +17302,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 330
   },
   {
    "id": "lv-0317",
@@ -17017,7 +17344,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 147
   },
   {
    "id": "lv-0369",
@@ -17075,7 +17403,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 148
   },
   {
    "id": "lv-0219",
@@ -17132,7 +17461,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 149
   },
   {
    "id": "lv-0483",
@@ -17182,7 +17512,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 150
   },
   {
    "id": "lv-0336",
@@ -17246,7 +17577,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 384
   },
   {
    "id": "lv-0069",
@@ -17296,7 +17628,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 180
   },
   {
    "id": "lv-0193",
@@ -17362,7 +17695,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 182
   },
   {
    "id": "lv-0321",
@@ -17412,7 +17746,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 181
   },
   {
    "id": "lv-0129",
@@ -17462,7 +17797,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 385
   },
   {
    "id": "lv-0216",
@@ -17526,7 +17862,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 414
   },
   {
    "id": "lv-0430",
@@ -17576,7 +17913,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 431
   },
   {
    "id": "lv-0372",
@@ -17624,7 +17962,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 151
   },
   {
    "id": "lv-0083",
@@ -17688,7 +18027,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 343
   },
   {
    "id": "lv-0389",
@@ -17763,7 +18103,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 345
   },
   {
    "id": "lv-0409",
@@ -17826,7 +18167,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 344
   },
   {
    "id": "lv-0100",
@@ -17892,7 +18234,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 485
   },
   {
    "id": "lv-0418",
@@ -17951,7 +18294,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 484
   },
   {
    "id": "lv-0448",
@@ -18001,7 +18345,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 331
   },
   {
    "id": "lv-0421",
@@ -18058,7 +18403,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 152
   },
   {
    "id": "lv-0108",
@@ -18107,7 +18453,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 153
   },
   {
    "id": "lv-0394",
@@ -18157,7 +18504,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 183
   },
   {
    "id": "lv-0077",
@@ -18191,7 +18539,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 154
   },
   {
    "id": "lv-0121",
@@ -18239,7 +18588,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 155
   },
   {
    "id": "lv-0164",
@@ -18302,7 +18652,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 223
   },
   {
    "id": "lv-0293",
@@ -18359,7 +18710,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 156
   },
   {
    "id": "lv-0505",
@@ -18409,7 +18761,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 419
   },
   {
    "id": "lv-0466",
@@ -18477,7 +18830,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 488
   },
   {
    "id": "lv-0497",
@@ -18538,7 +18892,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 490
   },
   {
    "id": "lv-0340",
@@ -18596,7 +18951,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 399
   },
   {
    "id": "lv-0474",
@@ -18648,7 +19004,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 295
   },
   {
    "id": "lv-0493",
@@ -18707,7 +19064,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 462
   },
   {
    "id": "lv-0053",
@@ -18765,7 +19123,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 158
   },
   {
    "id": "lv-0146",
@@ -18815,7 +19174,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 157
   },
   {
    "id": "lv-0312",
@@ -18873,7 +19233,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 159
   },
   {
    "id": "lv-0498",
@@ -18922,7 +19283,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 346
   },
   {
    "id": "lv-0253",
@@ -18972,7 +19334,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 369
   },
   {
    "id": "lv-0327",
@@ -19021,7 +19384,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 160
   },
   {
    "id": "lv-0492",
@@ -19073,7 +19437,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 161
   },
   {
    "id": "lv-0061",
@@ -19129,7 +19494,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 311
   },
   {
    "id": "lv-0362",
@@ -19186,7 +19552,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 312
   },
   {
    "id": "lv-0463",
@@ -19230,7 +19597,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 279
   },
   {
    "id": "lv-0482",
@@ -19288,7 +19656,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 313
   },
   {
    "id": "lv-0256",
@@ -19345,7 +19714,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 282
   },
   {
    "id": "lv-0360",
@@ -19403,7 +19773,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 184
   },
   {
    "id": "lv-0471",
@@ -19453,7 +19824,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 436
   },
   {
    "id": "lv-0461",
@@ -19503,7 +19875,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 162
   },
   {
    "id": "lv-0381",
@@ -19564,7 +19937,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 483
   },
   {
    "id": "lv-0273",
@@ -19621,7 +19995,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 224
   },
   {
    "id": "lv-0387",
@@ -19682,7 +20057,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 332
   },
   {
    "id": "lv-0502",
@@ -19733,7 +20109,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 163
   },
   {
    "id": "lv-0233",
@@ -19799,7 +20176,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 489
   },
   {
    "id": "lv-0398",
@@ -19858,7 +20236,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 232
   },
   {
    "id": "lv-0433",
@@ -19900,7 +20279,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 253
   },
   {
    "id": "lv-0504",
@@ -19958,7 +20338,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 400
   },
   {
    "id": "lv-0469",
@@ -20017,7 +20398,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 333
   },
   {
    "id": "lv-0397",
@@ -20067,7 +20449,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 370
   },
   {
    "id": "lv-0285",
@@ -20132,7 +20515,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 401
   },
   {
    "id": "lv-0353",
@@ -20182,7 +20566,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 265
   },
   {
    "id": "lv-0478",
@@ -20232,7 +20617,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 185
   },
   {
    "id": "lv-0453",
@@ -20291,7 +20677,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 186
   },
   {
    "id": "lv-0343",
@@ -20343,7 +20730,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 437
   },
   {
    "id": "lv-0449",
@@ -20400,7 +20788,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 334
   },
   {
    "id": "lv-0495",
@@ -20459,7 +20848,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 335
   },
   {
    "id": "lv-0442",
@@ -20511,7 +20901,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 296
   },
   {
    "id": "lv-0473",
@@ -20563,7 +20954,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 415
   },
   {
    "id": "lv-0055",
@@ -20613,7 +21005,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 165
   },
   {
    "id": "lv-0068",
@@ -20663,7 +21056,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 247
   },
   {
    "id": "lv-0130",
@@ -20713,7 +21107,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 164
   },
   {
    "id": "lv-0289",
@@ -20762,7 +21157,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 187
   },
   {
    "id": "lv-0415",
@@ -20812,7 +21208,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 188
   },
   {
    "id": "lv-0496",
@@ -20855,7 +21252,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 189
   },
   {
    "id": "lv-0082",
@@ -20896,7 +21294,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 35
   },
   {
    "id": "lv-0240",
@@ -20946,7 +21345,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 190
   },
   {
    "id": "lv-0254",
@@ -20994,7 +21394,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 191
   },
   {
    "id": "lv-0292",
@@ -21042,7 +21443,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 36
   },
   {
    "id": "lv-0375",
@@ -21107,7 +21509,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 248
   },
   {
    "id": "lv-0399",
@@ -21157,7 +21560,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 192
   },
   {
    "id": "lv-0005",
@@ -21199,7 +21603,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 193
   },
   {
    "id": "lv-0352",
@@ -21254,7 +21659,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 463
   },
   {
    "id": "lv-0356",
@@ -21312,7 +21718,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 314
   },
   {
    "id": "lv-0378",
@@ -21378,7 +21785,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 467
   },
   {
    "id": "lv-0222",
@@ -21436,7 +21844,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 194
   },
   {
    "id": "lv-0481",
@@ -21495,7 +21904,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 269
   },
   {
    "id": "lv-0098",
@@ -21545,7 +21955,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 371
   },
   {
    "id": "lv-0439",
@@ -21613,7 +22024,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 297
   },
   {
    "id": "lv-0066",
@@ -21671,7 +22083,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 492
   },
   {
    "id": "lv-0346",
@@ -21736,7 +22149,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 493
   },
   {
    "id": "lv-0438",
@@ -21786,7 +22200,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 195
   },
   {
    "id": "lv-0277",
@@ -21845,7 +22260,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 464
   },
   {
    "id": "lv-0470",
@@ -21897,7 +22313,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 438
   },
   {
    "id": "lv-0181",
@@ -21954,7 +22371,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 476
   },
   {
    "id": "lv-0400",
@@ -22012,7 +22430,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 477
   },
   {
    "id": "lv-0460",
@@ -22076,7 +22495,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 336
   },
   {
    "id": "lv-0134",
@@ -22119,7 +22539,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 280
   },
   {
    "id": "lv-0188",
@@ -22200,7 +22621,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 337
   },
   {
    "id": "lv-0241",
@@ -22250,7 +22672,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 283
   },
   {
    "id": "lv-0259",
@@ -22300,7 +22723,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 284
   },
   {
    "id": "lv-0039",
@@ -22342,7 +22766,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 433
   },
   {
    "id": "lv-0428",
@@ -22400,7 +22825,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 196
   },
   {
    "id": "lv-0255",
@@ -22450,7 +22876,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 266
   },
   {
    "id": "lv-0396",
@@ -22493,7 +22920,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 285
   },
   {
    "id": "lv-0106",
@@ -22559,7 +22987,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 470
   },
   {
    "id": "lv-0176",
@@ -22618,7 +23047,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 465
   },
   {
    "id": "lv-0200",
@@ -22677,7 +23107,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 468
   },
   {
    "id": "lv-0267",
@@ -22727,7 +23158,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 466
   },
   {
    "id": "lv-0458",
@@ -22784,7 +23216,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 469
   },
   {
    "id": "lv-0088",
@@ -22834,7 +23267,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 372
   },
   {
    "id": "lv-0479",
@@ -22886,7 +23320,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 373
   },
   {
    "id": "lv-0122",
@@ -22936,7 +23371,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 197
   },
   {
    "id": "lv-0367",
@@ -22993,7 +23429,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 374
   },
   {
    "id": "lv-0393",
@@ -23043,7 +23480,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 233
   },
   {
    "id": "lv-0494",
@@ -23095,7 +23533,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 298
   },
   {
    "id": "lv-0268",
@@ -23145,7 +23584,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 198
   },
   {
    "id": "lv-0351",
@@ -23197,7 +23637,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 199
   },
   {
    "id": "lv-0278",
@@ -23245,7 +23686,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 472
   },
   {
    "id": "lv-0390",
@@ -23302,7 +23744,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 200
   },
   {
    "id": "lv-0440",
@@ -23360,7 +23803,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 416
   },
   {
    "id": "lv-0067",
@@ -23417,7 +23861,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 201
   },
   {
    "id": "lv-0190",
@@ -23474,7 +23919,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 422
   },
   {
    "id": "lv-0503",
@@ -23532,7 +23978,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 315
   },
   {
    "id": "lv-0111",
@@ -23582,7 +24029,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 350
   },
   {
    "id": "lv-0237",
@@ -23647,7 +24095,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 351
   },
   {
    "id": "lv-0334",
@@ -23704,7 +24153,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 423
   },
   {
    "id": "lv-0123",
@@ -23754,7 +24204,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 202
   },
   {
    "id": "lv-0361",
@@ -23803,7 +24254,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 347
   },
   {
    "id": "lv-0477",
@@ -23853,7 +24305,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 425
   },
   {
    "id": "lv-0408",
@@ -23930,7 +24383,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 502
   },
   {
    "id": "lv-0075",
@@ -23987,7 +24441,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 494
   },
   {
    "id": "lv-0043",
@@ -24042,7 +24497,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 434
   },
   {
    "id": "lv-0464",
@@ -24108,7 +24564,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 338
   },
   {
    "id": "lv-0487",
@@ -24158,7 +24615,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 267
   },
   {
    "id": "lv-0507",
@@ -24208,7 +24666,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 426
   },
   {
    "id": "lv-0080",
@@ -24258,7 +24717,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 203
   },
   {
    "id": "lv-0185",
@@ -24315,7 +24775,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 207
   },
   {
    "id": "lv-0201",
@@ -24365,7 +24826,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 204
   },
   {
    "id": "lv-0205",
@@ -24423,7 +24885,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 208
   },
   {
    "id": "lv-0018",
@@ -24465,7 +24928,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 234
   },
   {
    "id": "lv-0500",
@@ -24515,7 +24979,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 473
   },
   {
    "id": "lv-0086",
@@ -24574,7 +25039,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 209
   },
   {
    "id": "lv-0475",
@@ -24632,7 +25098,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 210
   },
   {
    "id": "lv-0056",
@@ -24688,7 +25155,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 495
   },
   {
    "id": "lv-0186",
@@ -24744,7 +25212,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 496
   },
   {
    "id": "lv-0074",
@@ -24794,7 +25263,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 474
   },
   {
    "id": "lv-0097",
@@ -24844,7 +25314,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 475
   },
   {
    "id": "lv-0279",
@@ -24902,7 +25373,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 478
   },
   {
    "id": "lv-0027",
@@ -24961,7 +25433,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 497
   },
   {
    "id": "lv-0326",
@@ -25020,7 +25493,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 498
   },
   {
    "id": "lv-0420",
@@ -25081,7 +25555,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 499
   },
   {
    "id": "lv-0132",
@@ -25136,7 +25611,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 375
   },
   {
    "id": "lv-0180",
@@ -25177,7 +25653,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 299
   },
   {
    "id": "lv-0295",
@@ -25227,7 +25704,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 300
   },
   {
    "id": "lv-0457",
@@ -25277,7 +25755,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 301
   },
   {
    "id": "lv-0349",
@@ -25327,7 +25806,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 211
   },
   {
    "id": "lv-0434",
@@ -25379,7 +25859,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 212
   },
   {
    "id": "lv-0030",
@@ -25436,7 +25917,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 249
   },
   {
    "id": "lv-0192",
@@ -25493,7 +25975,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 348
   },
   {
    "id": "lv-0373",
@@ -25545,7 +26028,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 213
   },
   {
    "id": "lv-0120",
@@ -25595,7 +26079,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 214
   },
   {
    "id": "lv-0161",
@@ -25647,7 +26132,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 268
   },
   {
    "id": "lv-0319",
@@ -25722,7 +26208,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 503
   },
   {
    "id": "lv-0059",
@@ -25772,7 +26259,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 215
   },
   {
    "id": "lv-0133",
@@ -25820,7 +26308,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 379
   },
   {
    "id": "lv-0183",
@@ -25882,7 +26371,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 382
   },
   {
    "id": "lv-0263",
@@ -25932,7 +26422,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 380
   },
   {
    "id": "lv-0491",
@@ -25989,7 +26480,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 216
   },
   {
    "id": "lv-0112",
@@ -26055,7 +26547,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 506
   },
   {
    "id": "lv-0110",
@@ -26105,7 +26598,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 217
   },
   {
    "id": "lv-0025",
@@ -26153,7 +26647,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 435
   },
   {
    "id": "lv-0459",
@@ -26210,7 +26705,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 303
   },
   {
    "id": "lv-0062",
@@ -26259,7 +26755,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 429
   },
   {
    "id": "lv-0001",
@@ -26286,7 +26783,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 1
   },
   {
    "id": "lv-0002",
@@ -26313,7 +26811,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 2
   },
   {
    "id": "lv-0003",
@@ -26340,7 +26839,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 3
   },
   {
    "id": "lv-0004",
@@ -26367,7 +26867,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 4
   },
   {
    "id": "lv-0006",
@@ -26394,7 +26895,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 5
   },
   {
    "id": "lv-0008",
@@ -26421,7 +26923,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 6
   },
   {
    "id": "lv-0016",
@@ -26455,7 +26958,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 37
   },
   {
    "id": "lv-0017",
@@ -26489,7 +26993,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 8
   },
   {
    "id": "lv-0425",
@@ -26516,7 +27021,8 @@
    "check": {
     "tezaurs": "ok",
     "edition": "2026_4"
-   }
+   },
+   "order": 7
   }
  ]
 }

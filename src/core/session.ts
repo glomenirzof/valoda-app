@@ -38,8 +38,10 @@ export function plan(phrases: Phrase[], cards: StoredCard[], s: Settings, now: D
     cards.filter((c) => c.introduced >= startOfDay(now)).length + acquainted.filter((a) => a.started >= startOfDay(now)).length;
   const paused = due.length >= BACKLOG_PAUSE;
   const newLeft = paused ? 0 : Math.max(0, s.newPerDay - introducedToday);
-  // phrases.json is sorted by frequency, so the most useful phrases come first
-  const fresh = trainable(phrases, s).filter((p) => !inFsrs.has(p.id) && !meeting.has(p.id));
+  // new phrases come in the i+1 order (each brings at most one unknown word); phrases without it go last
+  const fresh = trainable(phrases, s)
+    .filter((p) => !inFsrs.has(p.id) && !meeting.has(p.id))
+    .sort((a, b) => (a.order ?? Infinity) - (b.order ?? Infinity));
   const resume = acquainted.filter((a) => !inFsrs.has(a.id) && phrases.some((p) => p.id === a.id && isTrainable(p)));
   const next = cards.filter((c) => !isDue(c, now) && c.fsrs.due.getTime() > now.getTime())
     .sort((a, b) => a.fsrs.due.getTime() - b.fsrs.due.getTime())[0]?.fsrs.due ?? null;

@@ -66,6 +66,20 @@ export function Settings({ value, onChange }: { value: S; onChange: (s: S) => vo
         <Row icon="shield" title="Какие фразы учим" hint="Проверенные автоматически (корпус и два переводчика) или репетитором" />
       </div>
 
+      <h2 class="section-title">Звук</h2>
+      <div class="rows">
+        <Row icon={value.sound ? 'play' : 'mute'} title="Звук" hint={value.sound ? 'Фразы звучат сами, когда виден латышский текст' : 'Без звука: «узнай на слух» станет «узнай по тексту»'}>
+          <div class="seg" role="radiogroup" aria-label="Звук">
+            <button class={value.sound ? 'on' : ''} role="radio" aria-checked={value.sound} onClick={() => set({ sound: true })}>
+              Вкл
+            </button>
+            <button class={!value.sound ? 'on' : ''} role="radio" aria-checked={!value.sound} onClick={() => set({ sound: false })}>
+              Выкл
+            </button>
+          </div>
+        </Row>
+      </div>
+
       <h2 class="section-title">Вид</h2>
       <div class="rows">
         <Row icon={theme === 'dark' ? 'moon' : 'sun'} title="Тема">

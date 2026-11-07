@@ -402,5 +402,21 @@
    "korpuss.lv LVK2022: «Kuģis atiet no Tallinas uz Helsinkiem» — 1",
    "korpuss.lv LVK2022: «atiet vilciens» — 1"
   ]
+ },
+ "lv-0012": {
+  "status": "ok",
+  "reason": "фраза в корпусе 14 раз; Microsoft «Как дела?» и Tilde «Как у вас дела?» совпадают с нашим переводом; Google обрезал перевод до «Как вы» — ошибка переводчика"
+ },
+ "lv-0311": {
+  "status": "ok",
+  "reason": "все пары слов в корпусе (vai tev 312, tev vajag 200, vajag kaut 194, kaut ko 8404); Microsoft и Tilde — «Тебе что-то/что-нибудь нужно?»; Google дал «Вам» — тот же смысл в вежливой форме, а tev — «тебе»"
+ },
+ "lv-0204": {
+  "status": "ok",
+  "reason": "фраза в корпусе; Microsoft «Я иду на работу», Tilde «Я еду на работу» совпадают с нашим переводом; Google «Я собираюсь работать» неверно передаёт doties uz (направляться куда-то)"
+ },
+ "lv-0011": {
+  "status": "ok",
+  "reason": "фраза в корпусе 826 раз и в Tatoeba; Microsoft и Tilde — «Всё в порядке»; Google «Всё хорошо» — синоним"
  }
 }

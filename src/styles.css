@@ -297,6 +297,7 @@ h1, h2, h3 { font-family: var(--font-head); margin: 0; }
 .rates.three { grid-template-columns: 1fr; gap: var(--s2); }
 .rates.three .rate { min-height: 56px; grid-template-columns: 1fr auto; place-content: center stretch; align-items: center; gap: var(--s3); text-align: left; padding: 0 var(--s4); }
 .mic-ring.still { opacity: 0.55; }
+.listen-text { margin: var(--s4) 0 0; }
 button.mic-ring.on { background: var(--primary); color: var(--on-primary); }
 .rate-hard { --c: var(--warn); }
 .rate-good { --c: var(--good); }
@@ -323,3 +324,36 @@ button.mic-ring.on { background: var(--primary); color: var(--on-primary); }
 .phrase-tools .tap-hint { margin: 0 0 0 var(--s1); }
 
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* progress: levels */
+.say-n { margin: var(--s1) 0 0; font-size: 17px; }
+.say-n b { font: 800 44px/1 var(--font-head); letter-spacing: -0.03em; color: var(--accent-ink); }
+.lvl-bar { display: flex; height: 12px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin: var(--s3) 0 var(--s2); }
+.lvl-bar i { display: block; height: 100%; }
+.lv-new { background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--line-strong); }
+.lv-meeting { background: var(--line-strong); }
+.lv-learning { background: var(--warn); }
+.lv-remember { background: var(--accent); }
+.lv-know { background: var(--good); }
+.lvl-legend { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--s1) var(--s3); font-size: 14px; color: var(--muted); }
+.lvl-legend li { display: flex; align-items: center; gap: 6px; }
+.lvl-legend i { width: 10px; height: 10px; border-radius: 99px; }
+.lvl-legend b { color: var(--ink); }
+.topic-row .row-text { flex: 1; }
+.topic-row .lvl-bar { height: 8px; margin: 6px 0 0; }
+.weak-row .row-text small { display: block; }
+/* progress: weekly control test */
+.weeks { display: flex; align-items: flex-end; gap: var(--s2); height: 150px; margin-bottom: var(--s3); }
+.week { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; font-size: 12px; color: var(--muted); }
+.week i { width: 100%; max-width: 36px; border-radius: 8px 8px 4px 4px; background: var(--accent); }
+.week span { color: var(--ink); font-weight: 700; }
+/* lesson summary */
+.lesson-list { list-style: none; margin: var(--s4) 0 0; padding: 0; display: grid; gap: var(--s2); text-align: left; }
+.lesson-list li { display: flex; align-items: center; gap: var(--s2); padding: var(--s2) var(--s3); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow-sm); }
+.lesson-list .ll-text { flex: 1; min-width: 0; }
+.lesson-list .ll-text b { display: block; font-family: var(--font-head); }
+.lesson-list .ll-text small { display: block; color: var(--muted); font-size: 13px; }
+.ll-up { color: var(--accent-ink); }
+.card .note, .screen > .note { margin: var(--s2) 0 0; font-size: 14px; line-height: 1.4; color: var(--muted); }
+.card .btn { margin-top: var(--s3); width: 100%; }
+.control-cta { margin-top: var(--s4); }

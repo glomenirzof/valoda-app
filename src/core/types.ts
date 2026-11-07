@@ -32,6 +32,8 @@ export interface Phrase {
   audio: string | null;
   image: string | null;
   freqRank: number | null;
+  /** place among new phrases by the i+1 rule (scripts/content/order.ts); only trainable phrases have it */
+  order?: number;
   status: PhraseStatus;
   auto: AutoStatus;
   source: 'llm' | 'tutor' | 'life' | 'tatoeba';
@@ -51,12 +53,14 @@ export interface Settings {
   theme: 'light' | 'dark' | null;
   accent: Accent;
   font: FontPair;
+  /** off in the gym or on transport: no sound at all, «узнай на слух» becomes «узнай по тексту» */
+  sound: boolean;
 }
 
 export type Accent = 'terra' | 'amber';
 export type FontPair = 'A' | 'B' | 'C';
 
-export const DEFAULT_SETTINGS: Settings = { lang: 'lv', newPerDay: 10, theme: null, accent: 'terra', font: 'B' };
+export const DEFAULT_SETTINGS: Settings = { lang: 'lv', newPerDay: 10, theme: null, accent: 'terra', font: 'B', sound: true };
 
 export const TOPIC_RU: Record<string, string> = {
   polite: 'Вежливость',

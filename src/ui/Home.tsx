@@ -1,4 +1,5 @@
-import { lessonInput, lessonSize, plan, type Acquaintance } from '../core/session';
+import { canSay, controlDue, lessonOfDay, levelMap, type ControlResult } from '../core/progress';
+import { lessonInput, lessonSize, MAX_NEW_PER_SESSION, plan, trainable, type Acquaintance } from '../core/session';
 import { whenRu, type StoredCard } from '../core/srs';
 import { TOPIC_RU, type Phrase, type Settings } from '../core/types';
 import { Icon } from './icons';
@@ -9,18 +10,26 @@ export const TOPIC_HUE: Record<string, number> = {
   gym: 5, health: 140, home: 25, weather: 195, work: 60, likes: 340,
 };
 
-export function Home({ phrases, cards, acquainted, settings, onTopic, onStart }: {
+export function Home({ phrases, cards, acquainted, control, settings, onTopic, onStart, onControl }: {
   phrases: Phrase[];
   cards: StoredCard[];
   acquainted: Acquaintance[];
+  control: ControlResult[];
   settings: Settings;
   onTopic: (t: string) => void;
   onStart: () => void;
+  onControl: () => void;
 }) {
   const now = new Date();
-  const { due, newLeft, paused, fresh, resume, next } = plan(phrases, cards, settings, now, acquainted);
+  const { due, newLeft, paused, fresh, resume, next, introducedToday } = plan(phrases, cards, settings, now, acquainted);
   const newToday = Math.min(newLeft, fresh.length);
   const canStart = lessonSize(lessonInput(phrases, cards, settings, now, acquainted)) > 0;
+  // more new phrases a day than fit one lesson: show the lesson number instead of the phrase count
+  const split = settings.newPerDay > MAX_NEW_PER_SESSION && !paused && fresh.length > 0;
+  const day = lessonOfDay(settings.newPerDay, introducedToday);
+  const held = [...levelMap(trainable(phrases), cards, acquainted).values()].filter(canSay).length;
+  const showControl = controlDue(control, held, now);
+  const startLabel = newToday === 0 && due.length > 0 ? 'Повторить' : introducedToday > 0 ? 'Следующий урок' : 'Начать';
   const date = now.toLocaleDateString('ru-RU', { weekday: 'long', day: 'numeric', month: 'long' });
   const counts = new Map<string, number>();
   for (const p of phrases) counts.set(p.topic, (counts.get(p.topic) ?? 0) + 1);
@@ -35,15 +44,37 @@ export function Home({ phrases, cards, acquainted, settings, onTopic, onStart }:
           <b>{due.length}</b>
           <span>повторений</span>
         </div>
-        <div class="stat accent">
-          <b>{newToday}</b>
-          <span>новых фраз</span>
-        </div>
+        {split && newToday > 0 ? (
+          <div class="stat accent">
+            <b>
+              {day.n}
+              <small>/{day.total}</small>
+            </b>
+            <span>урок на сегодня</span>
+          </div>
+        ) : (
+          <div class="stat accent">
+            <b>{newToday}</b>
+            <span>новых фраз</span>
+          </div>
+        )}
       </div>
       {paused && <p class="subtitle">Много повторений накопилось — новые фразы на паузе, пока их не станет меньше.</p>}
       {resume.length > 0 && <p class="subtitle">Знакомлюсь: {resume.length} — продолжим со сборки из слов</p>}
       {!paused && fresh.length === 0 && cards.length === 0 && (
         <p class="subtitle">Пока нет проверенных фраз: учим только те, что прошли проверку по корпусу и переводчикам или у репетитора</p>
+      )}
+
+      {showControl && (
+        <div class="card control-cta">
+          <p>
+            <b>Контрольная недели</b>
+          </p>
+          <p class="note">20 фраз, которые ты помнишь, без подсказок и без влияния на повторения</p>
+          <button class="btn ghost" onClick={onControl}>
+            Пройти <Icon name="arrow" />
+          </button>
+        </div>
       )}
 
       <h2 class="section-title">Темы</h2>
@@ -60,9 +91,18 @@ export function Home({ phrases, cards, acquainted, settings, onTopic, onStart }:
 
       <div class="start">
         <button class="btn primary" disabled={!canStart} onClick={onStart}>
-          Начать <Icon name="arrow" />
+          {canStart ? (
+            <>
+              {startLabel} <Icon name="arrow" />
+            </>
+          ) : next ? (
+            `Повторение ${whenRu(next, now)}`
+          ) : (
+            'Пока нечего учить'
+          )}
         </button>
-        {!canStart && <p class="note">{next ? `На сегодня всё. Следующее повторение — ${whenRu(next, now)}` : 'Пока нечего учить'}</p>}
+        {split && newToday > 0 && <p class="note">Урок {day.n} из {day.total} на сегодня · {newToday} новых фраз осталось</p>}
+        {!canStart && next && <p class="note">Новое на сегодня пройдено — дальше только повторения</p>}
       </div>
     </>
   );

@@ -1,4 +1,5 @@
 import { openDB, type DBSchema, type IDBPDatabase } from 'idb';
+import type { ControlResult } from '../core/progress';
 import type { Acquaintance } from '../core/session';
 import type { StoredCard, StoredLog } from '../core/srs';
 import { DEFAULT_SETTINGS, type Lang, type Settings } from '../core/types';
@@ -9,12 +10,14 @@ interface ValodaDB extends DBSchema {
   logs: { key: number; value: StoredLog; indexes: { byCard: string } };
   /** v2: phrases met in a lesson but not yet passed to FSRS («знакомлюсь») */
   acquaint: { key: string; value: Acquaintance };
+  /** v3: weekly control test results */
+  control: { key: number; value: ControlResult };
 }
 
 let dbp: Promise<IDBPDatabase<ValodaDB>> | null = null;
 
 export function db() {
-  dbp ??= openDB<ValodaDB>('valoda', 2, {
+  dbp ??= openDB<ValodaDB>('valoda', 3, {
     upgrade(d, oldVersion) {
       if (oldVersion < 1) {
         d.createObjectStore('settings');
@@ -22,6 +25,7 @@ export function db() {
         d.createObjectStore('logs', { autoIncrement: true }).createIndex('byCard', 'cardId');
       }
       if (oldVersion < 2) d.createObjectStore('acquaint', { keyPath: 'id' });
+      if (oldVersion < 3) d.createObjectStore('control', { keyPath: 'ts' });
     },
   });
   return dbp;
@@ -79,6 +83,18 @@ export async function graduate(card: StoredCard, log: StoredLog) {
   await tx.objectStore('logs').add(log);
   await tx.objectStore('acquaint').delete(card.id);
   await tx.done;
+}
+
+export async function loadControl(lang: Lang): Promise<ControlResult[]> {
+  try {
+    return (await (await db()).getAll('control')).filter((r) => r.lang === lang).sort((a, b) => a.ts - b.ts);
+  } catch {
+    return [];
+  }
+}
+
+export async function saveControl(r: ControlResult) {
+  await (await db()).put('control', r);
 }
 
 /** Ask iOS not to evict IndexedDB under storage pressure (granted for home-screen apps). */

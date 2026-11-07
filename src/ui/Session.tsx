@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { checkAnswer, explain, keyWrong, type CheckResult } from '../core/check';
 import { answerReview, answerStage, current, startLesson, unfinished, type Answer, type Item, type Lesson, type LessonInput } from '../core/ladder';
+import { LEVEL_RU, levelOf, type Level } from '../core/progress';
 import { lessonSize, type Acquaintance } from '../core/session';
 import { graduationGrade, newCard, review, whenRu, type Grade, type StoredCard } from '../core/srs';
 import type { Phrase, Settings, Token } from '../core/types';
 import { graduate, saveAcquaint, saveLog, saveReview } from '../data/db';
-import { playPhrase } from '../data/audio';
+import { playPhrase, playPhraseTwice, playWord, wordKey } from '../data/audio';
 import { Icon } from './icons';
 import { TappableText } from './PhraseList';
 import { StatusTag } from './StatusTag';
@@ -45,7 +46,7 @@ const wordsWithinLetters = (p: Phrase, n: number) => {
   });
 };
 
-const plural = (n: number, one: string, few: string, many: string) => {
+export const plural = (n: number, one: string, few: string, many: string) => {
   const m10 = n % 10, m100 = n % 100;
   return m10 === 1 && m100 !== 11 ? one : m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14) ? few : many;
 };
@@ -56,7 +57,7 @@ const store = {
 };
 
 /** Phrase text with the key word highlighted. */
-function KeyText({ p }: { p: Phrase }) {
+export function KeyText({ p }: { p: Phrase }) {
   if (!p.key) return <>{p.text}</>;
   const k = p.tokens[p.key.i].s;
   const at = p.text.indexOf(k);
@@ -71,7 +72,8 @@ function KeyText({ p }: { p: Phrase }) {
 }
 
 /** Sample sound in a feedback sheet: normal speed (plays on open) and a separate slow button. */
-function SampleSound({ p, settings }: { p: Phrase; settings: Settings }) {
+export function SampleSound({ p, settings }: { p: Phrase; settings: Settings }) {
+  if (!settings.sound) return null;
   return (
     <>
       <SoundButton p={p} settings={settings} cls="a-mini" label={false} autoplay toggle={false} />
@@ -83,7 +85,7 @@ function SampleSound({ p, settings }: { p: Phrase; settings: Settings }) {
 }
 
 /** What was typed, word by word, and one concrete line per wrong word; the key word's rule only when that word was wrong. */
-function Mistakes({ p, r }: { p: Phrase; r: CheckResult }) {
+export function Mistakes({ p, r }: { p: Phrase; r: CheckResult }) {
   const lines = explain(r, p.tokens, p.key);
   return (
     <>
@@ -117,14 +119,23 @@ function Mistakes({ p, r }: { p: Phrase; r: CheckResult }) {
 }
 
 /** One sound button: first tap normal speed, next tap slower, and so on. */
-function SoundButton({ p, settings, cls, label = true, autoplay = false, toggle = true }: { p: Phrase; settings: Settings; cls: string; label?: boolean; autoplay?: boolean; toggle?: boolean }) {
+function SoundButton({ p, settings, cls, label = true, autoplay = false, twice = false, toggle = true }: {
+  p: Phrase; settings: Settings; cls: string; label?: boolean; autoplay?: boolean;
+  /** first meeting: normal speed, then 0.75 */ twice?: boolean; toggle?: boolean;
+}) {
   const [plays, setPlays] = useState(0);
   const slow = toggle && plays % 2 === 1;
   useEffect(() => {
-    if (!autoplay) return;
-    playPhrase(settings.lang, p.id, 1);
-    setPlays(1);
+    if (!autoplay || !settings.sound) return;
+    if (twice) {
+      playPhraseTwice(settings.lang, p.id);
+      setPlays(2);
+    } else {
+      playPhrase(settings.lang, p.id, 1);
+      setPlays(1);
+    }
   }, [p.id]);
+  if (!settings.sound) return null;
   return (
     <button
       class={cls}
@@ -170,7 +181,7 @@ function Intro({ p, settings, onNext, onKnown }: { p: Phrase; settings: Settings
           <TappableText phrase={p} onWord={setWord} cls="s-lv" />
           <p class="s-ru">{p.ru}</p>
           <div class="s-audio">
-            <SoundButton p={p} settings={settings} cls="s-play" autoplay />
+            <SoundButton p={p} settings={settings} cls="s-play" autoplay twice />
           </div>
         </div>
         <p class="s-hint">Нажми на слово — покажу разбор</p>
@@ -188,16 +199,15 @@ function Intro({ p, settings, onNext, onKnown }: { p: Phrase; settings: Settings
   );
 }
 
-function Tiles({ p, settings, trap = true, onNext }: { p: Phrase; settings: Settings; trap?: boolean; onNext: (pass: boolean) => void }) {
-  const withTrap = trap && !!p.key;
+/** Build the phrase from its own words. No wrong-ending trap here: key.trap is kept for future form cards. */
+function Tiles({ p, settings, onNext }: { p: Phrase; settings: Settings; onNext: (pass: boolean) => void }) {
   const pool = useMemo(
-    () => shuffle([...p.tokens.map((t) => t.s), ...(withTrap ? [p.key!.trap] : [])]).map((t, id) => ({ t, id })),
+    () => shuffle(p.tokens.map((tok) => ({ t: tok.s, tok }))).map((x, id) => ({ ...x, id })),
     [p.id],
   );
   const [picked, setPicked] = useState<number[]>([]);
   const [res, setRes] = useState<'ok' | 'bad' | null>(null);
   const text = (id: number) => pool.find((x) => x.id === id)!.t;
-  const usedTrap = withTrap && picked.some((id) => text(id) === p.key!.trap);
 
   return (
     <>
@@ -226,7 +236,7 @@ function Tiles({ p, settings, trap = true, onNext }: { p: Phrase; settings: Sett
             <p>
               Правильно: <b><KeyText p={p} /></b>
             </p>
-            <p>{usedTrap ? p.key!.trapWhy : 'Проверь порядок слов'}</p>
+            <p>Проверь порядок слов</p>
           </div>
         )}
         <div class="pool">
@@ -235,13 +245,15 @@ function Tiles({ p, settings, trap = true, onNext }: { p: Phrase; settings: Sett
               key={x.id}
               class={`wtile ${picked.includes(x.id) ? 'used' : ''}`}
               disabled={picked.includes(x.id) || !!res}
-              onClick={() => setPicked([...picked, x.id])}
+              onClick={() => {
+                setPicked([...picked, x.id]);
+                if (settings.sound) playWord(settings.lang, wordKey(x.tok));
+              }}
             >
               {x.t}
             </button>
           ))}
         </div>
-        {withTrap && !res && <p class="s-hint">Одно слово лишнее — с неправильным окончанием</p>}
       </main>
       <footer class="s-actions">
         {res ? (
@@ -265,9 +277,15 @@ function Tiles({ p, settings, trap = true, onNext }: { p: Phrase; settings: Sett
   );
 }
 
-interface Outcome { mode: 'type' | 'say'; result: CheckResult | null; hints: number; weak: number[] }
+export interface Outcome { mode: 'type' | 'say'; result: CheckResult | null; hints: number; weak: number[] }
 
-function TypeCard({ p, cue = false, copy, onDone }: { p: Phrase; cue?: boolean; /** «Набери правильно»: sample shown, no grade */ copy?: Settings; onDone: (o: Outcome) => void }) {
+export function TypeCard({ p, cue = false, copy, noHints = false, eyebrow, onDone }: {
+  p: Phrase; cue?: boolean;
+  /** «Набери правильно»: sample shown, no grade */ copy?: Settings;
+  /** control test: no letter hints */ noHints?: boolean;
+  eyebrow?: string;
+  onDone: (o: Outcome) => void;
+}) {
   const [text, setText] = useState('');
   const [hints, setHints] = useState(0);
   const [weak, setWeak] = useState<Set<number>>(new Set());
@@ -299,7 +317,7 @@ function TypeCard({ p, cue = false, copy, onDone }: { p: Phrase; cue?: boolean; 
   return (
     <>
       <main class="s-main">
-        <p class="eyebrow">{copy ? 'Набери правильно' : cue ? 'Напиши по первым буквам' : 'Напиши по-латышски'}</p>
+        <p class="eyebrow">{eyebrow ?? (copy ? 'Набери правильно' : cue ? 'Напиши по первым буквам' : 'Напиши по-латышски')}</p>
         <h1 class="ru-big">{p.ru}</h1>
         {copy && (
           <div class="right copy-sample">
@@ -381,11 +399,13 @@ function TypeCard({ p, cue = false, copy, onDone }: { p: Phrase; cue?: boolean; 
           )}
         </div>
       </main>
-      <footer class="s-actions two">
-        <button class="btn ghost" onPointerDown={keep} onClick={hint}>
-          <Icon name="bulb" />
-          Буква{hints ? ` · ${hints}` : ''}
-        </button>
+      <footer class={`s-actions ${noHints ? '' : 'two'}`}>
+        {!noHints && (
+          <button class="btn ghost" onPointerDown={keep} onClick={hint}>
+            <Icon name="bulb" />
+            Буква{hints ? ` · ${hints}` : ''}
+          </button>
+        )}
         {copy ? (
           <button class="btn primary" disabled={checkAnswer(text, p.text, p.accept).verdict !== 'ok'} onClick={() => onDone({ mode: 'type', result: null, hints, weak: [] })}>
             Дальше <Icon name="arrow" />
@@ -614,10 +634,14 @@ function ListenChoose({ p, options, settings, onDone }: { p: Phrase; options: st
   return (
     <>
       <main class="s-main">
-        <p class="eyebrow">Узнай на слух</p>
-        <div class="s-audio listen">
-          <SoundButton p={p} settings={settings} cls="s-play" autoplay />
-        </div>
+        <p class="eyebrow">{settings.sound ? 'Узнай на слух' : 'Узнай по тексту'}</p>
+        {settings.sound ? (
+          <div class="s-audio listen">
+            <SoundButton p={p} settings={settings} cls="s-play" autoplay />
+          </div>
+        ) : (
+          <p class="s-lv listen-text">{p.text}</p>
+        )}
         <p class="s-hint">Что значит эта фраза?</p>
         <div class="choices">
           {options.map((o) => (
@@ -631,7 +655,7 @@ function ListenChoose({ p, options, settings, onDone }: { p: Phrase; options: st
             </button>
           ))}
         </div>
-        {picked && <p class="choice-lv">{p.text}</p>}
+        {picked && settings.sound && <p class="choice-lv">{p.text}</p>}
       </main>
       <footer class="s-actions">
         <button class="btn primary" disabled={!picked} onClick={() => onDone(right)}>
@@ -714,6 +738,14 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
   const [nextReview, setNextReview] = useState<string | undefined>();
   const [graded, setGraded] = useState<{ id: string; g: Grade }[]>([]);
   const [stopped, setStopped] = useState(false);
+  // levels when the lesson started, for «знакомлюсь → запоминаю» in the summary
+  const [before] = useState(() => {
+    const met = new Set(acquainted.map((a) => a.id));
+    const byCard = new Map(cards.map((c) => [c.id, c]));
+    return new Map<string, Level>(
+      [...input.reviews.map((r) => r.id), ...input.acquainted, ...input.fresh].map((id) => [id, levelOf(byCard.get(id), met.has(id))]),
+    );
+  });
   /** after a typed mistake: «Набери правильно», then this continues the lesson */
   const [copyThen, setCopyThen] = useState<(() => void) | null>(null);
   const hadError = (o: Outcome | null) => !!o?.result && o.result.verdict !== 'ok';
@@ -822,6 +854,8 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
     const right = graded.filter((x) => x.g === 'good' || x.g === 'easy').length;
     const meeting = unfinished(lesson).length;
     const t = now();
+    // phrases of this lesson, in the order they first appeared
+    const seen = [...new Set(lesson.shown.map((it) => it.id))].map((id) => byId.get(id)).filter((x): x is Phrase => !!x);
     const nextDue = [...deck.values()].map((c) => c.fsrs.due).filter((d) => d.getTime() > t.getTime()).sort((a, b) => a.getTime() - b.getTime())[0];
     return (
       <div class="session">
@@ -844,6 +878,32 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
           )}
           {meeting > 0 && <p class="subtitle">Ещё знакомлюсь: {meeting} — в следующий раз начнём со сборки из слов</p>}
           {nextDue && <p class="subtitle">Следующее повторение — {whenRu(nextDue, t)}</p>}
+          {seen.length > 0 && (
+            <ul class="lesson-list">
+              {seen.map((ph) => {
+                const from = before.get(ph.id) ?? 'new';
+                const c = deck.get(ph.id);
+                const to = levelOf(c, meet.has(ph.id));
+                return (
+                  <li key={ph.id}>
+                    {settings.sound && (
+                      <button class="a-mini" aria-label={`Слушать ${ph.text}`} onClick={() => playPhrase(lang, ph.id)}>
+                        <Icon name="play" />
+                      </button>
+                    )}
+                    <span class="ll-text">
+                      <b>{ph.text}</b>
+                      <small>
+                        {from === to ? LEVEL_RU[to] : <span class="ll-up">{LEVEL_RU[from]} → {LEVEL_RU[to]}</span>}
+                        {' · '}
+                        {c ? `вернётся ${whenRu(c.fsrs.due, t)}` : 'в следующем уроке'}
+                      </small>
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
         </main>
         <footer class="s-actions">
           <button class="btn primary" onClick={onExit}>
@@ -866,7 +926,7 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
         <Intro p={p} settings={settings} onNext={() => stageStep({ pass: true })} onKnown={() => stageStep({ known: true })} />
       )}
       {item.kind === 'stage' && item.stage === 1 && <ListenChoose p={p} options={options} settings={settings} onDone={(pass) => stageStep(pass ? { pass: true } : { pass: false })} />}
-      {item.kind === 'stage' && item.stage === 2 && <Tiles p={p} settings={settings} trap={false} onNext={(pass) => stageStep(pass ? { pass: true } : { pass: false })} />}
+      {item.kind === 'stage' && item.stage === 2 && <Tiles p={p} settings={settings} onNext={(pass) => stageStep(pass ? { pass: true } : { pass: false })} />}
       {item.kind === 'stage' && item.stage >= 3 && <TypeCard p={p} cue={item.stage === 3} onDone={typedDone} />}
       {item.kind === 'review' && item.mode === 'type' && <TypeCard p={p} onDone={setOutcome} />}
       {item.kind === 'review' && item.mode === 'say' && deck.get(p.id) && (

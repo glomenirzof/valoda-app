@@ -13,11 +13,12 @@
     "tezaurs:check": "python -I scripts/tezaurs/check_forms.py",
     "tts:voicetest": "tsx scripts/tts/voice-test.ts",
     "tezaurs:index": "python -I scripts/tezaurs/build_index.py data-cache/tezaurs/tezaurs_2026_4_wordforms_tei.xml.zip data-cache/tezaurs/lv-forms.sqlite",
-    "content:build": "python -I scripts/content/build_phrases.py lv",
+    "content:build": "python -I scripts/content/build_phrases.py lv && tsx scripts/content/order.ts lv",
     "content:export": "tsx scripts/content/export-review.ts lv",
     "content:import": "tsx scripts/content/import-review.ts",
     "tts:generate": "tsx scripts/tts/generate.ts",
-    "content:check": "python -I scripts/content/build_phrases.py lv && tsx scripts/content/check.ts lv && python -I scripts/content/build_phrases.py lv"
+    "content:check": "python -I scripts/content/build_phrases.py lv && tsx scripts/content/check.ts lv && python -I scripts/content/build_phrases.py lv && tsx scripts/content/order.ts lv --check",
+    "content:order": "tsx scripts/content/order.ts lv"
   },
   "type": "module",
   "dependencies": {

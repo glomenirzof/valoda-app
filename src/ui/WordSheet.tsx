@@ -1,6 +1,7 @@
+import { useEffect } from 'preact/hooks';
 import { featsLong, paradigmRu, POS_RU } from '../core/grammar-ru';
 import type { Lang, Token } from '../core/types';
-import { playWord, wordKey } from '../data/audio';
+import { playWord, soundEnabled, wordKey } from '../data/audio';
 import { Icon } from './icons';
 
 /** Bottom sheet with the analysis of one tapped word; both the form and the dictionary form can be heard. */
@@ -8,6 +9,9 @@ export function WordSheet({ token, lang, onClose }: { token: Token; lang: Lang; 
   const paradigm = paradigmRu(token);
   const gender = token.gender === 'M' ? 'мужской род' : token.gender === 'F' ? 'женский род' : null;
   const form = wordKey(token);
+  useEffect(() => {
+    playWord(lang, form);
+  }, [form]);
   return (
     <>
       <div class="scrim" onClick={onClose} />
@@ -15,16 +19,18 @@ export function WordSheet({ token, lang, onClose }: { token: Token; lang: Lang; 
         <div class="grab" />
         <div class="ws-head">
           <p class="ws-form">{token.s}</p>
-          <button class="a-mini" aria-label={`Слушать ${form}`} onClick={() => playWord(lang, form)}>
-            <Icon name="play" />
-          </button>
+          {soundEnabled() && (
+            <button class="a-mini" aria-label={`Слушать ${form}`} onClick={() => playWord(lang, form)}>
+              <Icon name="play" />
+            </button>
+          )}
         </div>
         <p class="ws-ru">{token.ru || '—'}</p>
         <dl class="facts">
           <div>
             <dt>Начальная форма</dt>
             <dd>
-              {token.lemma.toLowerCase() !== form.toLowerCase() && (
+              {soundEnabled() && token.lemma.toLowerCase() !== form.toLowerCase() && (
                 <button class="a-inline" aria-label={`Слушать ${token.lemma}`} onClick={() => playWord(lang, token.lemma)}>
                   <Icon name="play" />
                 </button>

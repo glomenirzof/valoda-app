@@ -5,10 +5,13 @@
 Batch format: {"lexicon": {lemma: ru}, "phrases": [[topic, lv, ru, "lemma lemma …", {hints}?], …]}.
 Checks the i+1 rule: every phrase brings at most one lemma that is not known yet (known = lemmas of all
 earlier phrases, including earlier phrases of the same batch). Phrases that break it are listed and the
-batch is not merged. Already present texts are skipped, so re-running is safe. After merging, run
-npm run content:check — nothing goes into training before it says «ok».
+batch is not merged. Already present texts are skipped, so re-running is safe. After merging, the app
+data and the i+1 order of all phrases are rebuilt (npm run content:build → scripts/content/order.ts), so new
+phrases take their place in the common order. Then run npm run content:check — nothing goes into training
+before it says «ok», and it fails while the final order breaks i+1.
 """
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -62,6 +65,9 @@ def main() -> int:
     src_p.write_text(json.dumps(src, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     lex_p.write_text(json.dumps(lex, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"добавлено: {added[0]['id']}…{added[-1]['id']}" if added else "добавлять нечего")
+    # rebuild the app data and place the new phrases into the common i+1 order
+    subprocess.run("npm run content:build", shell=True)
+    print("дальше: npm run content:check")
     return 0
 
 

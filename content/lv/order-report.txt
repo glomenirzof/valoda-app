@@ -1,0 +1,564 @@
+Порядок новых фраз (i+1): 506 фраз к обучению; нарушений: 52
+Первые 15 — фразы из 1–2 слов; дальше самая частотная фраза с ≤1 новой леммой.
+
+НАРУШЕНИЯ (нет фразы с ≤1 новой леммой — взята самая короткая; нужна фраза-мостик с одним из этих слов):
+  №37 lv-0016 «Jā, protams.» — новые: jā, protams
+  №38 lv-0154 «Nedari tā!» — новые: darīt, tā
+  №40 lv-0076 «Pa labi.» — новые: pa, labi
+  №218 lv-0092 «Ne tagad.» — новые: ne, tagad
+  №219 lv-0128 «Nāc šeit!» — новые: nākt, šeit
+  №225 lv-0388 «Laba doma!» — новые: labs, doma
+  №235 lv-0105 «Cik reizes?» — новые: cik, reize
+  №250 lv-0095 «Pēc stundas.» — новые: pēc, stunda
+  №254 lv-0094 «Tiekamies rīt!» — новые: tikties, rīt
+  №270 lv-0093 «Līdz rītam!» — новые: līdz, rīts
+  №271 lv-0454 «Telefons nedarbojas.» — новые: telefons, darboties
+  №277 lv-0015 «Priecājos iepazīties!» — новые: priecāties, iepazīties
+  №278 lv-0323 «Izsauciet policiju!» — новые: izsaukt, policija
+  №279 lv-0463 «Nedēļas vidū.» — новые: nedēļa, vidus
+  №280 lv-0134 «Līst lietus.» — новые: līt, lietus
+  №285 lv-0396 «Salīdziniet cenas!» — новые: salīdzināt, cena
+  №299 lv-0180 «Kļūst auksti.» — новые: kļūt, auksti
+  №302 lv-0060 «Es tikai skatos.» — новые: tikai, skatīties
+  №304 lv-0058 «Es ņemšu šo.» — новые: ņemt, šis
+  №316 lv-0235 «Mēs abi strādājam.» — новые: mēs, abi
+  №339 lv-0383 «Pēc pāris minūtēm.» — новые: pāris, minūte
+  №349 lv-0258 «Es gandrīz aizmirsu!» — новые: gandrīz, aizmirst
+  №352 lv-0217 «Viņš spēlē komandā.» — новые: spēlēt, komanda
+  №355 lv-0151 «Paldies par palīdzību!» — новые: par, palīdzība
+  №362 lv-0175 «Šodien ir spēle.» — новые: šodien, spēle
+  №383 lv-0290 «Vakariņas ir gatavas.» — новые: vakariņas, gatavs
+  №386 lv-0117 «Es jūtos slikti.» — новые: justies, slikti
+  №387 lv-0300 «Es lasu grāmatu.» — новые: lasīt, grāmata
+  №402 lv-0288 «Es noteikti atnākšu.» — новые: noteikti, atnākt
+  №404 lv-0107 «Man sāp mugura.» — новые: sāpēt, mugura
+  №409 lv-0436 «Es saņēmu vēstuli.» — новые: saņemt, vēstule
+  №417 lv-0344 «Viņš sasniedza mērķi.» — новые: sasniegt, mērķis
+  №418 lv-0435 «Darbs sākas astoņos.» — новые: sākties, astoņi
+  №420 lv-0109 «Man vajag atpūsties.» — новые: vajadzēt, atpūsties
+  №427 lv-0364 «Bērni spēlē laukumā.» — новые: bērns, laukums
+  №430 lv-0052 «Melnu tēju, lūdzu.» — новые: melns, tēja
+  №431 lv-0430 «Bērni ātri aug.» — новые: ātri, augt
+  №436 lv-0471 «Es mācos universitātē.» — новые: mācīties, universitāte
+  №437 lv-0343 «Ārsts gaida pacientu.» — новые: ārsts, pacients
+  №438 lv-0470 «Septembrī sākas skola.» — новые: septembris, skola
+  №473 lv-0500 «Kuģis atiet rīt.» — новые: kuģis, atiet
+  №474 lv-0074 «Cikos atiet vilciens?» — новые: cikos, vilciens
+  №479 lv-0182 «Kāds ir tavs vārds?» — новые: tavs, vārds
+  №484 lv-0418 «Sports ir labs ķermenim.» — новые: sports, ķermenis
+  №490 lv-0497 «Mana māsa mācās vidusskolā.» — новые: māsa, vidusskola
+  №492 lv-0066 «Man garšo šī zupa.» — новые: garšot, zupa
+  №494 lv-0075 «Ejiet taisni uz priekšu.» — новые: taisni, priekša
+  №495 lv-0056 «Tas ir pārāk dārgi.» — новые: pārāk, dārgi
+  №497 lv-0027 «Es mācos latviešu valodu.» — новые: latvietis, valoda
+  №500 lv-0207 «Tas vīrietis ir mans brālis.» — новые: vīrietis, brālis
+  №504 lv-0462 «Pie mājas ir liels koks.» — новые: pie, koks
+  №506 lv-0112 «Šodien mēs trenējam kāju muskuļus.» — новые: trenēt, kāja, muskulis
+
+ПОРЯДОК:
+   1   lv-0001 «Labdien!» + labdien
+   2   lv-0002 «Labrīt!» + labrīt
+   3   lv-0003 «Labvakar!» + labvakar
+   4   lv-0004 «Sveiki!» + sveiki
+   5   lv-0006 «Paldies!» + paldies
+   6   lv-0008 «Lūdzu!» + lūdzu
+   7   lv-0425 «Tiešām?» + tiešām
+   8   lv-0017 «Nē, paldies.» + nē
+   9   lv-0452 «Labdien, kungs!» + kungs
+  10   lv-0010 «Nekas.» + nekas
+  11   lv-0007 «Liels paldies!» + liels
+  12   lv-0115 «Palīdziet, lūdzu!» + palīdzēt
+  13   lv-0150 «Pagaidiet, lūdzu!» + pagaidīt
+  14   lv-0009 «Atvainojiet!» + atvainot
+  15   lv-0427 «Pietiek!» + pietikt
+  16   lv-0225 «Turpiniet, lūdzu!» + turpināt
+  17   lv-0401 «Parādiet, lūdzu!» + parādīt
+  18   lv-0405 «Nedaudz pagaidiet!» + nedaudz
+  19   lv-0384 «Uzmanību!» + uzmanība
+  20   lv-0403 «Atļaujiet!» + atļaut
+  21   lv-0047 «Lūdzu, uzrakstiet!» + uzrakstīt
+  22   lv-0139 «Uzraksti man!» + es
+  23   lv-0044 «Es nezinu.» + zināt
+  24   lv-0037 «Es nesaprotu.» + saprast
+  25   lv-0038 «Es saprotu.»
+  26   lv-0450 «Es aizeju.» + aiziet
+  27   lv-0339 «Ļaujiet man palīdzēt!» + ļaut
+  28   lv-0281 «Es neatceros.» + atcerēties
+  29   lv-0284 «Es mēģināšu.» + mēģināt
+  30   lv-0465 «Sekojiet man!» + sekot
+  31   lv-0141 «Es piekrītu.» + piekrist
+  32   lv-0019 «Veiksmi!» + veiksme
+  33   lv-0040 «Atkārtojiet, lūdzu!» + atkārtot
+  34   lv-0412 «Lūdzu, atgādiniet man!» + atgādināt
+  35   lv-0082 «Es kavēju.» + kavēt
+  36   lv-0292 «Es nekad nekavēju.» + nekad
+  37 ! lv-0016 «Jā, protams.» + jā, protams
+  38 ! lv-0154 «Nedari tā!» + darīt, tā
+  39   lv-0325 «Tieši tā!» + tieši
+  40 ! lv-0076 «Pa labi.» + pa, labi
+  41   lv-0014 «Man iet labi.» + iet
+  42   lv-0206 «Nu, labi!» + nu
+  43   lv-0072 «Es eju mājās.» + māja
+  44   lv-0124 «Es esmu mājās.» + būt
+  45   lv-0142 «Tas ir labi.» + tas
+  46   lv-0048 «Kas tas ir?» + kas
+  47   lv-0063 «Tas ir viss, paldies.» + viss
+  48   lv-0147 «Ko tu dari?» + tu
+  49   lv-0148 «Ko tu gribi?» + gribēt
+  50   lv-0013 «Kā tev iet?» + kā
+  51   lv-0012 «Kā jums iet?» + jūs
+  52   lv-0179 «Ko tu teici?» + teikt
+  53   lv-0149 «Kas notika?» + notikt
+  54   lv-0171 «Es to darīšu pats.» + pats
+  55   lv-0091 «Man nav laika.» + laiks
+  56   lv-0125 «Viņš ir mājās.» + viņš
+  57   lv-0136 «Es esmu darbā.» + darbs
+  58   lv-0071 «Es eju uz darbu.» + uz
+  59   lv-0160 «Man ir daudz darba.» + daudz
+  60   lv-0204 «Es dodos uz darbu.» + doties
+  61   lv-0203 «Man nav naudas.» + nauda
+  62   lv-0211 «Es palieku mājās.» + palikt
+  63   lv-0224 «Es vairs negribu.» + vairs
+  64   lv-0304 «Pasaule ir liela.» + pasaule
+  65   lv-0011 «Viss kārtībā.» + kārtība
+  66   lv-0296 «Es tevi nedzirdu.» + dzirdēt
+  67   lv-0501 «Tu labi izskaties!» + izskatīties
+  68   lv-0021 «Kā jūs sauc?» + saukt
+  69   lv-0022 «Kā tevi sauc?»
+  70   lv-0209 «Ko jūs vēlaties?» + vēlēties
+  71   lv-0328 «Es vairs nespēju.» + spēt
+  72   lv-0441 «Mamma, es esmu mājās!» + mamma
+  73   lv-0260 «Es meklēju darbu.» + meklēt
+  74   lv-0444 «Es tev ticu.» + ticēt
+  75   lv-0406 «Viss skaidrs.» + skaidrs
+  76   lv-0218 «Es tevi gaidu.» + gaidīt
+  77   lv-0135 «Laiks ir jauks.» + jauks
+  78   lv-0194 «Ejam kopā!» + kopā
+  79   lv-0476 «Lūdzu, ierodieties laikā.» + ierasties
+  80   lv-0184 «Man ir jautājums.» + jautājums
+  81   lv-0391 «Tas ir vienkārši.» + vienkārši
+  82   lv-0354 «Viss izdevās!» + izdoties
+  83   lv-0143 «Nav problēmu.» + problēma
+  84   lv-0131 «Es gribu gulēt.» + gulēt
+  85   lv-0314 «Man nav spēka.» + spēks
+  86   lv-0041 «Ko tas nozīmē?» + nozīmēt
+  87   lv-0404 «Es viņu pazīstu.» + pazīt
+  88   lv-0138 «Es tev piezvanīšu.» + piezvanīt
+  89   lv-0159 «Ja tev ir laiks, piezvani.» + ja
+  90   lv-0302 «Es drīz būšu mājās.» + drīz
+  91   lv-0244 «Tas ir svarīgs jautājums.» + svarīgs
+  92   lv-0342 «Drošība ir svarīga.» + drošība
+  93   lv-0064 «Es gribu ēst.» + ēst
+  94   lv-0385 «Pagaidi, kamēr es ēdu.» + kamēr
+  95   lv-0275 «Viņš neatbild.» + atbildēt
+  96   lv-0447 «Neviens neatbild.» + neviens
+  97   lv-0305 «Tas nav iespējams.» + iespējams
+  98   lv-0065 «Es gribu dzert.» + dzert
+  99   lv-0114 «Es dzeru ūdeni.» + ūdens
+ 100   lv-0057 «Vai jums ir ūdens?» + vai
+ 101   lv-0045 «Vai jūs varat palīdzēt?» + varēt
+ 102   lv-0155 «Es gribu, bet es nevaru.» + bet
+ 103   lv-0046 «Vai tu vari man palīdzēt?»
+ 104   lv-0286 «Vai drīkst?» + drīkstēt
+ 105   lv-0208 «Lūdzu, dodiet man ūdeni.» + dot
+ 106   lv-0078 «Vai tas ir tālu?» + tālu
+ 107   lv-0486 «Es to noskaidrošu.» + noskaidrot
+ 108   lv-0437 «Es neatceros viņa seju.» + seja
+ 109   lv-0423 «Es ilgi gaidīju.» + ilgi
+ 110   lv-0282 «Klients gaida.» + klients
+ 111   lv-0359 «Lūdzu, jūsu dokumentus.» + dokuments
+ 112   lv-0223 «Ko jūs piedāvājat?» + piedāvāt
+ 113   lv-0020 «Uz tikšanos!» + tikšanās
+ 114   lv-0137 «Man ir tikšanās.»
+ 115   lv-0489 «Laiks mainās.» + mainīties
+ 116   lv-0050 «Es gribu kafiju.» + kafija
+ 117   lv-0051 «Vienu kafiju, lūdzu.» + viens
+ 118   lv-0220 «Vienu brīdi, lūdzu!» + brīdis
+ 119   lv-0145 «Man patīk kafija.» + patikt
+ 120   lv-0232 «Man patīk mūzika.» + mūzika
+ 121   lv-0153 «Es arī gribu kafiju.» + arī
+ 122   lv-0113 «Tas ir smags.» + smags
+ 123   lv-0338 «Lūdzu, iepriekš piezvaniet!» + iepriekš
+ 124   lv-0099 «Es esmu aizņemts.» + aizņemt
+ 125   lv-0215 «Šobrīd es esmu aizņemts.» + šobrīd
+ 126   lv-0417 «Lūdzu, sagatavojiet dokumentus.» + sagatavot
+ 127   lv-0348 «Man patīk māksla.» + māksla
+ 128   lv-0380 «Tie ir līdzīgi.» + līdzīgs
+ 129   lv-0229 «Es tev uzrakstīšu ziņu.» + ziņa
+ 130   lv-0242 «Es rakstu ziņu.» + rakstīt
+ 131   lv-0490 «Pārējais ir labi.» + pārējais
+ 132   lv-0377 «Man patīk vēsture.» + vēsture
+ 133   lv-0269 «Vai jums ir dzīvnieki?» + dzīvnieks
+ 134   lv-0079 «Tas ir tuvu.» + tuvu
+ 135   lv-0310 «Man ir vairāki jautājumi.» + vairāki
+ 136   lv-0411 «Tas nav viegli.» + viegli
+ 137   lv-0250 «Es eju uz mežu.» + mežs
+ 138   lv-0287 «Man ir grūti.» + grūti
+ 139   lv-0480 «Brīvība ir svarīga.» + brīvība
+ 140   lv-0341 «Vecums nav problēma.» + vecums
+ 141   lv-0485 «Saglabā dokumentu!» + saglabāt
+ 142   lv-0365 «Man patīk daba.» + daba
+ 143   lv-0313 «Tas nav nepieciešams.» + nepieciešams
+ 144   lv-0382 «Man ir neliela problēma.» + neliels
+ 145   lv-0309 «Vai jūs varat dot piemēru?» + piemērs
+ 146   lv-0090 «Vakar es biju mājās.» + vakar
+ 147   lv-0317 «Tāpat kā vakar.» + tāpat
+ 148   lv-0369 «Tas bija liels notikums.» + notikums
+ 149   lv-0219 «Es eju uz tirgu.» + tirgus
+ 150   lv-0483 «Es esmu krievs.» + krievs
+ 151   lv-0372 «Es esmu vietējais.» + vietējs
+ 152   lv-0421 «Lūdzu, uzrakstiet uz lapas.» + lapa
+ 153   lv-0108 «Es esmu noguris.» + nogurt
+ 154   lv-0077 «Pa kreisi.» + kreisi
+ 155   lv-0121 «Es esmu slims.» + slims
+ 156   lv-0293 «Es parasti ēdu mājās.» + parasti
+ 157   lv-0146 «Man nepatīk piens.» + piens
+ 158   lv-0053 «Kafiju ar pienu, lūdzu.» + ar
+ 159   lv-0312 «Kafiju bez piena, lūdzu.» + bez
+ 160   lv-0327 «Kā ar veselību?» + veselība
+ 161   lv-0492 «Kustība ir veselība.» + kustība
+ 162   lv-0461 «Man nav pieredzes.» + pieredze
+ 163   lv-0502 «Direktors ir aizņemts.» + direktors
+ 164   lv-0130 «Es ēdu maizi.» + maize
+ 165   lv-0055 «Kur ir maize?» + kur
+ 166   lv-0034 «Kur tu dzīvo?» + dzīvot
+ 167   lv-0023 «Es dzīvoju Rīgā.» + rīga
+ 168   lv-0187 «Man patīk dzīve Rīgā.» + dzīve
+ 169   lv-0191 «Tāda ir dzīve.» + tāds
+ 170   lv-0024 «Es dzīvoju Latvijā.» + latvija
+ 171   lv-0172 «Rīga ir liela pilsēta.» + pilsēta
+ 172   lv-0303 «Rīga ir skaista pilsēta.» + skaists
+ 173   lv-0234 «Kur ir banka?» + banka
+ 174   lv-0257 «Kur ir slimnīca?» + slimnīca
+ 175   lv-0374 «Kur ir saraksts?» + saraksts
+ 176   lv-0035 «Es dzīvoju centrā.» + centrs
+ 177   lv-0366 «Kur ir robeža?» + robeža
+ 178   lv-0335 «Kur ir līgums?» + līgums
+ 179   lv-0070 «Kur ir tualete?» + tualete
+ 180   lv-0069 «Kur ir stacija?» + stacija
+ 181   lv-0321 «Kur atrodas stacija?» + atrasties
+ 182   lv-0193 «Kur ir ceļš uz staciju?» + ceļš
+ 183   lv-0394 «Kur ir muzejs?» + muzejs
+ 184   lv-0360 «Es esmu dzimis Rīgā.» + dzimt
+ 185   lv-0478 «Kur ir īpašnieks?» + īpašnieks
+ 186   lv-0453 «Rīgā ir daudz iedzīvotāju.» + iedzīvotājs
+ 187   lv-0289 «Baltu maizi, lūdzu.» + balts
+ 188   lv-0415 «Kur ir treneris?» + treneris
+ 189   lv-0496 «Prasi trenerim!» + prasīt
+ 190   lv-0240 «Viņš vienmēr kavē.» + vienmēr
+ 191   lv-0254 «Kāpēc tu kavē?» + kāpēc
+ 192   lv-0399 «Pievienojiet pienu, lūdzu.» + pievienot
+ 193   lv-0005 «Uz redzēšanos!» + redzēšanās
+ 194   lv-0222 «Kur ir galvenā stacija?» + galvenais
+ 195   lv-0438 «Es esmu students.» + students
+ 196   lv-0428 «Es gribu apmeklēt muzeju.» + apmeklēt
+ 197   lv-0122 «Man ir temperatūra.» + temperatūra
+ 198   lv-0268 «Man nav automašīnas.» + automašīna
+ 199   lv-0351 «Viņš vada automašīnu.» + vadīt
+ 200   lv-0390 «Vai tu biji izstādē?» + izstāde
+ 201   lv-0067 «Vai jums ir maisiņš?» + maisiņš
+ 202   lv-0123 «Man ir alerģija.» + alerģija
+ 203   lv-0080 «Kur ir pietura?» + pietura
+ 204   lv-0201 «Pietura ir tur.» + tur
+ 205   lv-0301 «Durvis ir tur.» + durvis
+ 206   lv-0429 «Lūdzu, atveriet durvis.» + atvērt
+ 207   lv-0185 «Vai tu redzi pieturu?» + redzēt
+ 208   lv-0205 «Es nevaru atrast pieturu.» + atrast
+ 209   lv-0086 «Kur ir dzelzceļa stacija?» + dzelzceļš
+ 210   lv-0475 «Kur var reģistrēt automašīnu?» + reģistrēt
+ 211   lv-0349 «Viņš labi skaidro.» + skaidrot
+ 212   lv-0434 «Viņš ir sportists.» + sportists
+ 213   lv-0373 «Viņš ir skolēns.» + skolēns
+ 214   lv-0120 «Kur ir aptieka?» + aptieka
+ 215   lv-0059 «Kur ir kase?» + kase
+ 216   lv-0491 «Pērn es dzīvoju Rīgā.» + pērn
+ 217   lv-0110 «Kur ir ģērbtuve?» + ģērbtuve
+ 218 ! lv-0092 «Ne tagad.» + ne, tagad
+ 219 ! lv-0128 «Nāc šeit!» + nākt, šeit
+ 220   lv-0158 «Es jau esmu šeit.» + jau
+ 221   lv-0162 «Šeit ir daudz cilvēku.» + cilvēks
+ 222   lv-0156 «Es nāku, lai palīdzētu.» + lai
+ 223   lv-0164 «Es nenāku, jo esmu slims.» + jo
+ 224   lv-0273 «Vai šeit ir internets?» + internets
+ 225 ! lv-0388 «Laba doma!» + labs, doma
+ 226   lv-0266 «Labu nakti!» + nakts
+ 227   lv-0315 «Tas ir labs veids.» + veids
+ 228   lv-0274 «Laba ideja!» + ideja
+ 229   lv-0413 «Tev ir laba balss.» + balss
+ 230   lv-0252 «Tā bija laba saruna.» + saruna
+ 231   lv-0506 «Man ir laba sajūta.» + sajūta
+ 232   lv-0398 «Viņš ir labs spēlētājs.» + spēlētājs
+ 233   lv-0393 «Kvalitāte ir laba.» + kvalitāte
+ 234   lv-0018 «Labu apetīti!» + apetīte
+ 235 ! lv-0105 «Cik reizes?» + cik, reize
+ 236   lv-0031 «Cik tev gadu?» + gads
+ 237   lv-0104 «Vēl vienu reizi!» + vēl
+ 238   lv-0144 «Es vēl domāju.» + domāt
+ 239   lv-0152 «Es domāju, ka tas ir labi.» + ka
+ 240   lv-0166 «Es esmu šeit pirmo reizi.» + pirmais
+ 241   lv-0424 «Es ceru, ka viss būs labi.» + cerēt
+ 242   lv-0049 «Cik tas maksā?» + maksāt
+ 243   lv-0087 «Cik ir pulkstenis?» + pulkstenis
+ 244   lv-0054 «Vai var maksāt ar karti?» + karte
+ 245   lv-0238 «Es lietoju karti.» + lietot
+ 246   lv-0324 «Vai jūs pieņemat karti?» + pieņemt
+ 247   lv-0068 «Cik maksā maize?»
+ 248   lv-0375 «Man šķiet, ka viņš kavē.» + šķist
+ 249   lv-0030 «Man ir trīsdesmit gadu.» + trīsdesmit
+ 250 ! lv-0095 «Pēc stundas.» + pēc, stunda
+ 251   lv-0265 «Es atgriezīšos pēc stundas.» + atgriezties
+ 252   lv-0416 «Es guļu septiņas stundas.» + septiņi
+ 253   lv-0433 «Apmēram stundu.» + apmēram
+ 254 ! lv-0094 «Tiekamies rīt!» + tikties, rīt
+ 255   lv-0245 «Varbūt rīt.» + varbūt
+ 256   lv-0089 «Rīt es strādāju.» + strādāt
+ 257   lv-0029 «Es strādāju no mājām.» + no
+ 258   lv-0167 «Tad tiekamies rīt!» + tad
+ 259   lv-0173 «Es sāku strādāt rīt.» + sākt
+ 260   lv-0231 «Es to izdarīšu rīt.» + izdarīt
+ 261   lv-0036 «No kurienes jūs esat?» + kuriene
+ 262   lv-0028 «Es strādāju birojā.» + birojs
+ 263   lv-0484 «Rīt ir pārbaude.» + pārbaude
+ 264   lv-0337 «Ko tu plāno rīt?» + plānot
+ 265   lv-0353 «Rīt ir sacensības.» + sacensība
+ 266   lv-0255 «Rīt ir koncerts.» + koncerts
+ 267   lv-0487 «Kas organizē sacensības?» + organizēt
+ 268   lv-0161 «Viņa strādā aptiekā.» + viņa
+ 269   lv-0481 «Pašlaik viņa nav mājās.» + pašlaik
+ 270 ! lv-0093 «Līdz rītam!» + līdz, rīts
+ 271 ! lv-0454 «Telefons nedarbojas.» + telefons, darboties
+ 272   lv-0163 «Man ir jauns telefons.» + jauns
+ 273   lv-0271 «Es atstāju telefonu mājās.» + atstāt
+ 274   lv-0322 «Telefons ir uz zemes.» + zeme
+ 275   lv-0318 «Es gribu šādu telefonu.» + šāds
+ 276   lv-0214 «Es esmu jauns darbinieks.» + darbinieks
+ 277 ! lv-0015 «Priecājos iepazīties!» + priecāties, iepazīties
+ 278 ! lv-0323 «Izsauciet policiju!» + izsaukt, policija
+ 279 ! lv-0463 «Nedēļas vidū.» + nedēļa, vidus
+ 280 ! lv-0134 «Līst lietus.» + līt, lietus
+ 281   lv-0213 «Lietus dēļ es palieku mājās.» + dēļ
+ 282   lv-0256 «Slimības dēļ es nestrādāju.» + slimība
+ 283   lv-0241 «Atkal līst lietus.» + atkal
+ 284   lv-0259 «Joprojām līst lietus.» + joprojām
+ 285 ! lv-0396 «Salīdziniet cenas!» + salīdzināt, cena
+ 286   lv-0228 «Kāda ir cena?» + kāds
+ 287   lv-0249 «Kāds ir plāns?» + plāns
+ 288   lv-0379 «Kāds ir iemesls?» + iemesls
+ 289   lv-0320 «Kāda ir situācija?» + situācija
+ 290   lv-0370 «Kāds ir uzdevums?» + uzdevums
+ 291   lv-0291 «Kāda krāsa tev patīk?» + krāsa
+ 292   lv-0308 «Kāds ir rezultāts?» + rezultāts
+ 293   lv-0499 «Kāda ir maksa?» + maksa
+ 294   lv-0392 «Cena ir zema.» + zems
+ 295   lv-0474 «Kāds ir sods?» + sods
+ 296   lv-0442 «Kāda ir alga?» + alga
+ 297   lv-0439 «Kāds transports iet uz centru?» + transports
+ 298   lv-0494 «Kāds ir termiņš?» + termiņš
+ 299 ! lv-0180 «Kļūst auksti.» + kļūt, auksti
+ 300   lv-0295 «Ziemā ir auksti.» + ziema
+ 301   lv-0457 «Janvārī ir auksti.» + janvāris
+ 302 ! lv-0060 «Es tikai skatos.» + tikai, skatīties
+ 303   lv-0459 «Vai tu skatījies maču?» + mačs
+ 304 ! lv-0058 «Es ņemšu šo.» + ņemt, šis
+ 305   lv-0103 «Vai es varu izmantot šo?» + izmantot
+ 306   lv-0251 «Es izvēlos šo.» + izvēlēties
+ 307   lv-0472 «Kam pieder šis telefons?» + piederēt
+ 308   lv-0102 «Vai šis ir brīvs?» + brīvs
+ 309   lv-0332 «Šis ir tikai sākums.» + sākums
+ 310   lv-0446 «Ņem līdzi ūdeni!» + līdzi
+ 311   lv-0061 «Vai šis ir svaigs?» + svaigs
+ 312   lv-0362 «Šeit ir svaigs gaiss.» + gaiss
+ 313   lv-0482 «Šis attēls ir skaists.» + attēls
+ 314   lv-0356 «Šis produkts ir svaigs.» + produkts
+ 315   lv-0503 «Es nesaprotu šo tekstu.» + teksts
+ 316 ! lv-0235 «Mēs abi strādājam.» + mēs, abi
+ 317   lv-0212 «Mēs esam četri.» + četri
+ 318   lv-0127 «Mums ir suns.» + suns
+ 319   lv-0085 «Mēs ejam uz veikalu.» + veikals
+ 320   lv-0084 «Es braucu uz veikalu.» + braukt
+ 321   lv-0456 «Mēs braucam uz laukiem.» + lauks
+ 322   lv-0262 «Mēs braucam uz jūru.» + jūra
+ 323   lv-0368 «Tā ir mūsu uzvara!» + uzvara
+ 324   lv-0363 «Mūsu klase ir liela.» + klase
+ 325   lv-0306 «Mums ir dažādas krāsas.» + dažāds
+ 326   lv-0073 «Es braucu ar autobusu.» + autobuss
+ 327   lv-0407 «Autobuss ir pilns.» + pilns
+ 328   lv-0170 «Vai ir cits autobuss?» + cits
+ 329   lv-0157 «Kurš autobuss iet uz centru?» + kurš
+ 330   lv-0230 «Vakar mēs skatījāmies filmu.» + filma
+ 331   lv-0448 «Mums ir dārzs.» + dārzs
+ 332   lv-0387 «Kāds ir veikala nosaukums?» + nosaukums
+ 333   lv-0469 «Kurā rajonā tu dzīvo?» + rajons
+ 334   lv-0449 «Mēs ejam uz parku.» + parks
+ 335   lv-0495 «Kur ir pārtikas veikals?» + pārtika
+ 336   lv-0460 «Turpmāk es braukšu ar autobusu.» + turpmāk
+ 337   lv-0188 «Līst lietus, tāpēc es braucu ar autobusu.» + tāpēc
+ 338   lv-0464 «Jūnijā es braucu uz jūru.» + jūnijs
+ 339 ! lv-0383 «Pēc pāris minūtēm.» + pāris, minūte
+ 340   lv-0221 «Pēc piecām minūtēm.» + pieci
+ 341   lv-0247 «Pagaidi vismaz minūti!» + vismaz
+ 342   lv-0371 «Pēc dažām minūtēm.» + dažs
+ 343   lv-0083 «Es būšu pēc desmit minūtēm.» + desmit
+ 344   lv-0409 «Pēc desmit metriem pa labi.» + metrs
+ 345   lv-0389 «Mūsu pilsētā ir desmit tūkstoši cilvēku.» + tūkstotis
+ 346   lv-0498 «Tikai desmit procenti.» + procents
+ 347   lv-0361 «Aptuveni desmit minūtes.» + aptuveni
+ 348   lv-0192 «Tas maksā desmit eiro.» + eiro
+ 349 ! lv-0258 «Es gandrīz aizmirsu!» + gandrīz, aizmirst
+ 350   lv-0111 «Es aizmirsu dvieli.» + dvielis
+ 351   lv-0237 «Kur es varu likt dvieli?» + likt
+ 352 ! lv-0217 «Viņš spēlē komandā.» + spēlēt, komanda
+ 353   lv-0248 «Mūsu komanda zaudēja.» + zaudēt
+ 354   lv-0386 «Mūsu komanda uzvarēja!» + uzvarēt
+ 355 ! lv-0151 «Paldies par palīdzību!» + par, palīdzība
+ 356   lv-0210 «Viņš stāsta par darbu.» + stāstīt
+ 357   lv-0270 «Viņš lūdz palīdzību.» + lūgt
+ 358   lv-0431 «Vai ir vajadzīga palīdzība?» + vajadzīgs
+ 359   lv-0402 «Domā par nākotni!» + nākotne
+ 360   lv-0422 «Paldies par atbildi!» + atbilde
+ 361   lv-0119 «Izsauciet ātro palīdzību!» + ātrs
+ 362 ! lv-0175 «Šodien ir spēle.» + šodien, spēle
+ 363   lv-0169 «Kāda šodien ir diena?» + diena
+ 364   lv-0261 «Šodien bija gara diena.» + garš
+ 365   lv-0414 «Tas ir garš stāsts.» + stāsts
+ 366   lv-0455 «Šodien ir īpaša diena.» + īpašs
+ 367   lv-0264 «Es strādāju sešas dienas nedēļā.» + seši
+ 368   lv-0432 «Es beidzu darbu sešos.» + beigt
+ 369   lv-0253 «Šodien ir svētki.» + svētki
+ 370   lv-0397 «Šodien ir akcija.» + akcija
+ 371   lv-0098 «Šodien ir svētdiena.» + svētdiena
+ 372   lv-0088 «Šodien ir pirmdiena.» + pirmdiena
+ 373   lv-0479 «Decembrī ir svētki.» + decembris
+ 374   lv-0367 «Šodien ir liela satiksme.» + satiksme
+ 375   lv-0132 «Šodien ir ļoti auksti.» + ļoti
+ 376   lv-0197 «Viņš ir ļoti augsts.» + augsts
+ 377   lv-0357 «Tas ir ļoti svarīgi.» + svarīgi
+ 378   lv-0488 «Viņš ir ļoti spēcīgs.» + spēcīgs
+ 379   lv-0133 «Šodien ir silti.» + silti
+ 380   lv-0263 «Vasarā ir silti.» + vasara
+ 381   lv-0350 «Es šeit dzīvoju kopš vasaras.» + kopš
+ 382   lv-0183 «Šodien ir siltāk nekā vakar.» + nekā
+ 383 ! lv-0290 «Vakariņas ir gatavas.» + vakariņas, gatavs
+ 384   lv-0336 «Es tevi aicinu uz vakariņām.» + aicināt
+ 385   lv-0129 «Es gatavoju vakariņas.» + gatavot
+ 386 ! lv-0117 «Es jūtos slikti.» + justies, slikti
+ 387 ! lv-0300 «Es lasu grāmatu.» + lasīt, grāmata
+ 388   lv-0239 «Man patīk šī grāmata.» + šī
+ 389   lv-0198 «Šī sieviete strādā šeit.» + sieviete
+ 390   lv-0426 «Telefons ir zem grāmatas.» + zem
+ 391   lv-0178 «Šī ir otrā reize.» + otrais
+ 392   lv-0177 «Kur ir šī iela?» + iela
+ 393   lv-0165 «Vai šī vieta ir brīva?» + vieta
+ 394   lv-0347 «Šī telpa ir brīva.» + telpa
+ 395   lv-0451 «Šajā telpā ir daudz gaismas.» + gaisma
+ 396   lv-0243 «Šī ir laba dziesma.» + dziesma
+ 397   lv-0355 «Ielas galā ir veikals.» + gals
+ 398   lv-0333 «Šī ir trešā reize.» + trešais
+ 399   lv-0340 «Šī ir laba sezona.» + sezona
+ 400   lv-0504 «Šī ir ceturtā reize.» + ceturtais
+ 401   lv-0285 «Vai šī prece ir jauna?» + prece
+ 402 ! lv-0288 «Es noteikti atnākšu.» + noteikti, atnākt
+ 403   lv-0096 «Es atnākšu vēlāk.» + vēlu
+ 404 ! lv-0107 «Man sāp mugura.» + sāpēt, mugura
+ 405   lv-0116 «Man sāp galva.» + galva
+ 406   lv-0227 «Man sāp roka.» + roka
+ 407   lv-0246 «Man sāp acis.» + acs
+ 408   lv-0299 «Man sāp sirds.» + sirds
+ 409 ! lv-0436 «Es saņēmu vēstuli.» + saņemt, vēstule
+ 410   lv-0307 «Kur var saņemt informāciju?» + informācija
+ 411   lv-0174 «Vai tu saņēmi biļeti?» + biļete
+ 412   lv-0283 «Es gribu mainīt biļeti.» + mainīt
+ 413   lv-0081 «Vienu biļeti uz Jūrmalu, lūdzu.» + jūrmala
+ 414   lv-0216 «Es bieži braucu uz Jūrmalu.» + bieži
+ 415   lv-0473 «Viņš saņēma balvu.» + balva
+ 416   lv-0440 «Kur var iegādāties biļeti?» + iegādāties
+ 417 ! lv-0344 «Viņš sasniedza mērķi.» + sasniegt, mērķis
+ 418 ! lv-0435 «Darbs sākas astoņos.» + sākties, astoņi
+ 419   lv-0505 «Izrāde sākas septiņos.» + izrāde
+ 420 ! lv-0109 «Man vajag atpūsties.» + vajadzēt, atpūsties
+ 421   lv-0311 «Vai tev vajag kaut ko?» + kaut
+ 422   lv-0190 «Man vajag mazu maisiņu.» + mazs
+ 423   lv-0334 «Man vajag otru dvieli.» + otrs
+ 424   lv-0196 «Tualete ir otrā pusē.» + puse
+ 425   lv-0477 «Man vajag speciālistu.» + speciālists
+ 426   lv-0507 «Februārī es atpūšos.» + februāris
+ 427 ! lv-0364 «Bērni spēlē laukumā.» + bērns, laukums
+ 428   lv-0168 «Man ir divi bērni.» + divi
+ 429   lv-0062 «Divas bulciņas, lūdzu.» + bulciņa
+ 430 ! lv-0052 «Melnu tēju, lūdzu.» + melns, tēja
+ 431 ! lv-0430 «Bērni ātri aug.» + ātri, augt
+ 432   lv-0276 «Viņš runā ļoti ātri.» + runāt
+ 433   lv-0039 «Lūdzu, runājiet lēnāk.» + lēni
+ 434   lv-0043 «Vai jūs runājat angliski?» + angliski
+ 435   lv-0025 «Es runāju krieviski.» + krieviski
+ 436 ! lv-0471 «Es mācos universitātē.» + mācīties, universitāte
+ 437 ! lv-0343 «Ārsts gaida pacientu.» + ārsts, pacients
+ 438 ! lv-0470 «Septembrī sākas skola.» + septembris, skola
+ 439   lv-0195 «Mans bērns iet uz skolu.» + mans
+ 440   lv-0236 «Te ir mana māja.» + te
+ 441   lv-0126 «Mans draugs strādā Rīgā.» + draugs
+ 442   lv-0419 «Tas ir īsts draugs.» + īsts
+ 443   lv-0280 «Mans vīrs strādā Rīgā.» + vīrs
+ 444   lv-0189 «Kur ir manas lietas?» + lieta
+ 445   lv-0033 «Mana ģimene dzīvo Rīgā.» + ģimene
+ 446   lv-0297 «Mana māte dzīvo Latvijā.» + māte
+ 447   lv-0199 «Mans telefons ir vecs.» + vecs
+ 448   lv-0331 «Mans mērķis ir runāt latviski.» + latviski
+ 449   lv-0042 «Kā to saka latviski?» + sacīt
+ 450   lv-0376 «Es cenšos runāt latviski.» + censties
+ 451   lv-0026 «Es mazliet runāju latviski.» + mazliet
+ 452   lv-0410 «Es pavadu laiku ar ģimeni.» + pavadīt
+ 453   lv-0345 «Šī ēka ir ļoti veca.» + ēka
+ 454   lv-0358 «Mani vecāki dzīvo Latvijā.» + vecāks
+ 455   lv-0443 «Mans dēls mācās skolā.» + dēls
+ 456   lv-0395 «Viņš ir mans tuvs draugs.» + tuvs
+ 457   lv-0316 «Tas ir mans lēmums.» + lēmums
+ 458   lv-0298 «Mans tēvs ir ārsts.» + tēvs
+ 459   lv-0330 «Mans vadītājs ir šeit.» + vadītājs
+ 460   lv-0294 «Mans dzīvoklis ir centrā.» + dzīvoklis
+ 461   lv-0467 «Tas ir mans pienākums.» + pienākums
+ 462   lv-0493 «Rīgas pils ir veca.» + pils
+ 463   lv-0352 «Šogad es mācos latviski.» + šogad
+ 464   lv-0277 «Mans kolēģis ir slims.» + kolēģis
+ 465   lv-0176 «Mana komanda šodien trenējas.» + trenēties
+ 466   lv-0267 «Vakarā es trenējos.» + vakars
+ 467   lv-0378 «Vakarā mēs ejam uz teātri.» + teātris
+ 468   lv-0200 «Es trenējos katru dienu.» + katrs
+ 469   lv-0458 «Šeit trenējas daudz jauniešu.» + jaunietis
+ 470   lv-0106 «Es trenējos trīs reizes nedēļā.» + trīs
+ 471   lv-0202 «Es šeit dzīvoju trīs mēnešus.» + mēnesis
+ 472   lv-0278 «Tiekamies pulksten trijos.» + pulksten
+ 473 ! lv-0500 «Kuģis atiet rīt.» + kuģis, atiet
+ 474 ! lv-0074 «Cikos atiet vilciens?» + cikos, vilciens
+ 475   lv-0097 «Cikos sākas treniņš?» + treniņš
+ 476   lv-0181 «Pirms treniņa es ēdu.» + pirms
+ 477   lv-0400 «Tas bija ilgs treniņš.» + ilgs
+ 478   lv-0279 «Cikos atiet nākamais vilciens?» + nākamais
+ 479 ! lv-0182 «Kāds ir tavs vārds?» + tavs, vārds
+ 480   lv-0140 «Kāds ir tavs telefona numurs?» + numurs
+ 481   lv-0445 «Tā ir tava izvēle.» + izvēle
+ 482   lv-0329 «Kāds ir tavs līmenis?» + līmenis
+ 483   lv-0381 «Kāds ir tavs viedoklis?» + viedoklis
+ 484 ! lv-0418 «Sports ir labs ķermenim.» + sports, ķermenis
+ 485   lv-0100 «Es eju uz sporta zāli.» + zāle
+ 486   lv-0226 «Darba beigās es eju uz zāli.» + beigas
+ 487   lv-0101 «Vakar es biju trenažieru zālē.» + trenažieris
+ 488   lv-0466 «Kur ir mana sporta forma?» + forma
+ 489   lv-0233 «Es eju uz sporta klubu.» + klubs
+ 490 ! lv-0497 «Mana māsa mācās vidusskolā.» + māsa, vidusskola
+ 491   lv-0272 «Šī meitene ir mana māsa.» + meitene
+ 492 ! lv-0066 «Man garšo šī zupa.» + garšot, zupa
+ 493   lv-0346 «Man īpaši patīk šī zupa.» + īpaši
+ 494 ! lv-0075 «Ejiet taisni uz priekšu.» + taisni, priekša
+ 495 ! lv-0056 «Tas ir pārāk dārgi.» + pārāk, dārgi
+ 496   lv-0186 «Tas ir tik dārgi!» + tik
+ 497 ! lv-0027 «Es mācos latviešu valodu.» + latvietis, valoda
+ 498   lv-0326 «Man patīk latviešu kultūra.» + kultūra
+ 499   lv-0420 «Mans skolotājs ir latvietis.» + skolotājs
+ 500 ! lv-0207 «Tas vīrietis ir mans brālis.» + vīrietis, brālis
+ 501   lv-0032 «Man ir brālis un māsa.» + un
+ 502   lv-0408 «Mana ikdiena ir darbs un sports.» + ikdiena
+ 503   lv-0319 «Aptieka ir starp banku un veikalu.» + starp
+ 504 ! lv-0462 «Pie mājas ir liels koks.» + pie, koks
+ 505   lv-0118 «Es gribu pierakstīties pie ārsta.» + pierakstīties
+ 506 ! lv-0112 «Šodien mēs trenējam kāju muskuļus.» + trenēt, kāja, muskulis

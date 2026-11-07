@@ -95,3 +95,10 @@ describe('review card type', () => {
     expect(Object.fromEntries(i.reviews.map((r) => [r.id, r.mode]))).toEqual({ 'lv-1': 'type', 'lv-2': 'say' });
   });
 });
+
+describe('new phrase order', () => {
+  it('takes new phrases by their i+1 order, not by file position', () => {
+    const ps = [{ ...phrase(1), order: 3 }, { ...phrase(2), order: 1 }, { ...phrase(3), order: 2 }, phrase(4)];
+    expect(lessonInput(ps, [], S, now).fresh).toEqual(['lv-2', 'lv-3', 'lv-1', 'lv-4']);
+  });
+});
