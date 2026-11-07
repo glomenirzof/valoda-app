@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
-import { checkAnswer, MISTAKE_RU, type CheckResult } from '../core/check';
+import { checkAnswer, explain, keyWrong, type CheckResult } from '../core/check';
 import { answerReview, answerStage, current, startLesson, unfinished, type Answer, type Item, type Lesson, type LessonInput } from '../core/ladder';
 import { lessonSize, type Acquaintance } from '../core/session';
 import { graduationGrade, newCard, review, whenRu, type Grade, type StoredCard } from '../core/srs';
@@ -70,10 +70,56 @@ function KeyText({ p }: { p: Phrase }) {
   );
 }
 
+/** Sample sound in a feedback sheet: normal speed (plays on open) and a separate slow button. */
+function SampleSound({ p, settings }: { p: Phrase; settings: Settings }) {
+  return (
+    <>
+      <SoundButton p={p} settings={settings} cls="a-mini" label={false} autoplay toggle={false} />
+      <button class="a-mini" aria-label="Медленно" onClick={() => playPhrase(settings.lang, p.id, 0.75)}>
+        <Icon name="slow" />
+      </button>
+    </>
+  );
+}
+
+/** What was typed, word by word, and one concrete line per wrong word; the key word's rule only when that word was wrong. */
+function Mistakes({ p, r }: { p: Phrase; r: CheckResult }) {
+  const lines = explain(r, p.tokens, p.key);
+  return (
+    <>
+      {r.verdict !== 'ok' && (
+        <p class="yours">
+          <span class="muted">Ты: </span>
+          {r.words.map((w, i) => (
+            <span key={i}>
+              {i > 0 && ' '}
+              {w.kind === 'ok' ? w.got : w.kind === 'missing' ? <span class="d-err">…</span> : w.kind === 'mark' ? <span class="d-err d-mark">{w.got}</span> : (
+                <>
+                  {w.got.slice(0, w.p)}
+                  <span class="d-err">{w.got.slice(w.p) || '∅'}</span>
+                </>
+              )}
+            </span>
+          ))}
+          {r.extra.length > 0 && <span class="d-err"> {r.extra.join(' ')}</span>}
+        </p>
+      )}
+      {lines.length > 0 && (
+        <ul class="explain">
+          {lines.map((e) => (
+            <li key={`${e.i}-${e.kind}`} class={`ex-${e.kind}`}>{e.text}</li>
+          ))}
+        </ul>
+      )}
+      {keyWrong(r, p.key) && <p class="why">{p.key!.why}</p>}
+    </>
+  );
+}
+
 /** One sound button: first tap normal speed, next tap slower, and so on. */
-function SoundButton({ p, settings, cls, label = true, autoplay = false }: { p: Phrase; settings: Settings; cls: string; label?: boolean; autoplay?: boolean }) {
+function SoundButton({ p, settings, cls, label = true, autoplay = false, toggle = true }: { p: Phrase; settings: Settings; cls: string; label?: boolean; autoplay?: boolean; toggle?: boolean }) {
   const [plays, setPlays] = useState(0);
-  const slow = plays % 2 === 1;
+  const slow = toggle && plays % 2 === 1;
   useEffect(() => {
     if (!autoplay) return;
     playPhrase(settings.lang, p.id, 1);
@@ -221,7 +267,7 @@ function Tiles({ p, settings, trap = true, onNext }: { p: Phrase; settings: Sett
 
 interface Outcome { mode: 'type' | 'say'; result: CheckResult | null; hints: number; weak: number[] }
 
-function TypeCard({ p, cue = false, onDone }: { p: Phrase; cue?: boolean; onDone: (o: Outcome) => void }) {
+function TypeCard({ p, cue = false, copy, onDone }: { p: Phrase; cue?: boolean; /** «Набери правильно»: sample shown, no grade */ copy?: Settings; onDone: (o: Outcome) => void }) {
   const [text, setText] = useState('');
   const [hints, setHints] = useState(0);
   const [weak, setWeak] = useState<Set<number>>(new Set());
@@ -253,8 +299,16 @@ function TypeCard({ p, cue = false, onDone }: { p: Phrase; cue?: boolean; onDone
   return (
     <>
       <main class="s-main">
-        <p class="eyebrow">{cue ? 'Напиши по первым буквам' : 'Напиши по-латышски'}</p>
+        <p class="eyebrow">{copy ? 'Набери правильно' : cue ? 'Напиши по первым буквам' : 'Напиши по-латышски'}</p>
         <h1 class="ru-big">{p.ru}</h1>
+        {copy && (
+          <div class="right copy-sample">
+            <SampleSound p={p} settings={copy} />
+            <p class="right-lv">
+              <KeyText p={p} />
+            </p>
+          </div>
+        )}
         {cue && (
           <p class="mask cue">
             {p.text.split(/(\p{L}+)/u).map((part, j) =>
@@ -332,14 +386,20 @@ function TypeCard({ p, cue = false, onDone }: { p: Phrase; cue?: boolean; onDone
           <Icon name="bulb" />
           Буква{hints ? ` · ${hints}` : ''}
         </button>
-        <button
-          class="btn primary"
-          disabled={!text.trim()}
-          onClick={() => onDone({ mode: 'type', result: checkAnswer(text, p.text, p.accept), hints, weak: [...weak] })}
-        >
-          <Icon name="check" />
-          Проверить
-        </button>
+        {copy ? (
+          <button class="btn primary" disabled={checkAnswer(text, p.text, p.accept).verdict !== 'ok'} onClick={() => onDone({ mode: 'type', result: null, hints, weak: [] })}>
+            Дальше <Icon name="arrow" />
+          </button>
+        ) : (
+          <button
+            class="btn primary"
+            disabled={!text.trim()}
+            onClick={() => onDone({ mode: 'type', result: checkAnswer(text, p.text, p.accept), hints, weak: [...weak] })}
+          >
+            <Icon name="check" />
+            Проверить
+          </button>
+        )}
       </footer>
     </>
   );
@@ -443,7 +503,7 @@ function SayCard({ p, card, settings, voice, onDone }: {
               <span>Сравни с образцом</span>
             </p>
             <div class="right">
-              <SoundButton p={p} settings={settings} cls="a-mini" label={false} autoplay />
+              <SampleSound p={p} settings={settings} />
               <p class="right-lv">
                 <KeyText p={p} />
               </p>
@@ -504,9 +564,6 @@ function Feedback({ p, card, o, settings, onGrade }: { p: Phrase; card: StoredCa
   const second: [Grade, string] = o.hints ? ['hard', 'С подсказкой'] : sug === 'hard' ? ['hard', 'Почти'] : ['good', 'Вспомнил'];
   const now = new Date();
   const when = (g: Grade) => whenRu(review(card, g, now).card.fsrs.due, now);
-  const errors = o.result
-    ? [...new Set(o.result.words.filter((w) => w.kind !== 'ok').map((w) => MISTAKE_RU[w.kind as keyof typeof MISTAKE_RU]))]
-    : [];
   const weakWords = o.weak.map((i) => p.tokens[i]?.s).filter(Boolean);
 
   return (
@@ -519,41 +576,12 @@ function Feedback({ p, card, o, settings, onGrade }: { p: Phrase; card: StoredCa
           <span>{head[verdict][1]}</span>
         </p>
         <div class="right">
-          <SoundButton p={p} settings={settings} cls="a-mini" label={false} autoplay />
+          <SampleSound p={p} settings={settings} />
           <p class="right-lv">
             <KeyText p={p} />
           </p>
         </div>
-        {o.result && verdict !== 'ok' && (
-          <p class="yours">
-            <span class="muted">Ты: </span>
-            {o.result.words.map((w, i) => (
-              <span key={i}>
-                {i > 0 && ' '}
-                {w.kind === 'ok' ? (
-                  w.got
-                ) : w.kind === 'missing' ? (
-                  <span class="d-err">…</span>
-                ) : w.kind === 'mark' ? (
-                  <span class="d-err d-mark">{w.got}</span>
-                ) : (
-                  <>
-                    {w.got.slice(0, w.p)}
-                    <span class="d-err">{w.got.slice(w.p) || '∅'}</span>
-                  </>
-                )}
-              </span>
-            ))}
-            {errors.length > 0 && (
-              <span class="tags">
-                {errors.map((e) => (
-                  <i key={e}>{e}</i>
-                ))}
-              </span>
-            )}
-          </p>
-        )}
-        {p.key && <p class="why">{p.key.why}</p>}
+        {o.result ? <Mistakes p={p} r={o.result} /> : p.key && <p class="why">{p.key.why}</p>}
         {o.hints > 0 && (
           <p class="hint-note">
             <Icon name="bulb" />
@@ -629,7 +657,6 @@ function StageFeedback({ p, o, stage, relearn, settings, nextReview, onNext }: {
   const verdict = o.result!.verdict;
   const pass = verdict !== 'bad';
   const head = { ok: ['check', 'Верно'], almost: ['alert', 'Почти — проверь знаки'], bad: ['alert', 'Не совсем'] } as const;
-  const errors = [...new Set(o.result!.words.filter((w) => w.kind !== 'ok').map((w) => MISTAKE_RU[w.kind as keyof typeof MISTAKE_RU]))];
   return (
     <>
       <div class="scrim" />
@@ -640,29 +667,12 @@ function StageFeedback({ p, o, stage, relearn, settings, nextReview, onNext }: {
           <span>{head[verdict][1]}</span>
         </p>
         <div class="right">
-          <SoundButton p={p} settings={settings} cls="a-mini" label={false} autoplay />
+          <SampleSound p={p} settings={settings} />
           <p class="right-lv">
             <KeyText p={p} />
           </p>
         </div>
-        {verdict !== 'ok' && (
-          <p class="yours">
-            <span class="muted">Ты: </span>
-            {o.result!.words.map((w, i) => (
-              <span key={i}>
-                {i > 0 && ' '}
-                {w.kind === 'ok' ? w.got : w.kind === 'missing' ? <span class="d-err">…</span> : w.kind === 'mark' ? <span class="d-err d-mark">{w.got}</span> : (
-                  <>
-                    {w.got.slice(0, w.p)}
-                    <span class="d-err">{w.got.slice(w.p) || '∅'}</span>
-                  </>
-                )}
-              </span>
-            ))}
-            {errors.length > 0 && <span class="tags">{errors.map((e) => <i key={e}>{e}</i>)}</span>}
-          </p>
-        )}
-        {p.key && <p class="why">{p.key.why}</p>}
+        <Mistakes p={p} r={o.result!} />
         <p class="stage-note">
           {relearn
             ? pass
@@ -704,6 +714,9 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
   const [nextReview, setNextReview] = useState<string | undefined>();
   const [graded, setGraded] = useState<{ id: string; g: Grade }[]>([]);
   const [stopped, setStopped] = useState(false);
+  /** after a typed mistake: «Набери правильно», then this continues the lesson */
+  const [copyThen, setCopyThen] = useState<(() => void) | null>(null);
+  const hadError = (o: Outcome | null) => !!o?.result && o.result.verdict !== 'ok';
 
   const item = current(lesson);
   const p = item && byId.get(item.id);
@@ -795,7 +808,13 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
     saveReview(next, { cardId: c.id, ts: t.getTime(), grade: g, mode: o.mode, hints: o.hints, log });
     setGraded([...graded, { id: c.id, g }]);
     setOutcome(null);
-    setLesson(answerReview(lesson, g === 'again').lesson);
+    const go = () => {
+      setCopyThen(null);
+      setLesson(answerReview(lesson, g === 'again').lesson);
+    };
+    // the grade is already stored; typing the right answer once is practice only
+    if (hadError(o)) setCopyThen(() => go);
+    else go();
   };
 
   if (stopped || !item || !p) {
@@ -839,6 +858,10 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
   return (
     <div class="session" key={`${shown}-${stageKey(item)}`}>
       <TopBar pos={shown} total={shown + lesson.queue.length} onClose={() => (shown ? setStopped(true) : onExit())} />
+      {copyThen ? (
+        <TypeCard key="copy" p={p} copy={settings} onDone={() => copyThen()} />
+      ) : (
+      <>
       {item.kind === 'stage' && item.stage === 0 && (
         <Intro p={p} settings={settings} onNext={() => stageStep({ pass: true })} onKnown={() => stageStep({ known: true })} />
       )}
@@ -862,10 +885,19 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
           relearn={!!item.relearn}
           settings={settings}
           nextReview={nextReview}
-          onNext={() => stageStep(outcome.result!.verdict !== 'bad' ? { pass: true } : { pass: false })}
+          onNext={() => {
+            const go = () => {
+              setCopyThen(null);
+              stageStep(outcome.result!.verdict !== 'bad' ? { pass: true } : { pass: false });
+            };
+            if (hadError(outcome)) setCopyThen(() => go);
+            else go();
+          }}
         />
       )}
       {outcome && item.kind === 'review' && deck.get(p.id) && <Feedback p={p} card={deck.get(p.id)!} o={outcome} settings={settings} onGrade={gradeReview} />}
+      </>
+      )}
     </div>
   );
 }

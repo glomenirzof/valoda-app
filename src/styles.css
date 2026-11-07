@@ -278,6 +278,11 @@ h1, h2, h3 { font-family: var(--font-head); margin: 0; }
 .tags { display: flex; flex-wrap: wrap; gap: var(--s1); margin-top: var(--s2); }
 .tags i { font-style: normal; font-size: 13px; padding: 4px 10px; border-radius: 999px; background: var(--surface-2); color: var(--muted); }
 .why { margin: var(--s4) 0; color: var(--ink-2); }
+.explain { list-style: none; margin: var(--s3) 0 0; padding: 0; display: grid; gap: var(--s1); }
+.explain li { padding: var(--s2) var(--s3); border-radius: 14px; background: var(--surface-2); font-size: 15px; line-height: 1.35; }
+.explain li::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 99px; margin-right: 8px; vertical-align: 1px; background: var(--bad); }
+.explain li.ex-mark::before { background: var(--warn); }
+.copy-sample { margin-top: var(--s3); }
 .hint-note { display: flex; gap: var(--s2); align-items: flex-start; margin: 0 0 var(--s3); padding: var(--s3); border-radius: 16px; background: var(--accent-soft); font-size: 15px; }
 .hint-note .ic { color: var(--accent-ink); width: 20px; height: 20px; }
 .rates { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3); }
