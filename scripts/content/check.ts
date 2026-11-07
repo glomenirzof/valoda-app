@@ -161,11 +161,21 @@ async function microsoftBatch(texts: string[]): Promise<string[] | null> {
 }
 
 /** Same meaning, roughly: share of word stems (first 5 letters) the two Russian sentences have in common. */
-function agrees(a: string, b: string): boolean {
+function sameMeaning(a: string, b: string): boolean {
   const stems = (s: string) => new Set(norm(s).split(' ').filter(Boolean).map((w) => w.slice(0, 5)));
   const x = stems(a), y = stems(b);
   const common = [...x].filter((w) => y.has(w)).length;
   return common / Math.max(x.size, y.size, 1) >= 0.5;
+}
+
+/**
+ * Machine translation `mt` agrees with our translation `ours` when it matches the whole of it or one of its
+ * meanings: ours lists every meaning a phrase has in context, separated by «/» («Сейчас! / Теперь!»), and a
+ * context note in brackets («(при прощании)») is not part of the meaning.
+ */
+function agrees(mt: string, ours: string): boolean {
+  const variants = ours.split('/').map((v) => v.replace(/\([^)]*\)/g, ' ').trim()).filter(Boolean);
+  return sameMeaning(mt, ours) || variants.some((v) => sameMeaning(mt, v));
 }
 
 /* ---------- typical AI mistakes ---------- */
@@ -273,7 +283,8 @@ for (const p of phrases) {
   const r = results[p.id];
   if (!r) continue;
   r.mt.tilde = tilde[p.text];
-  r.mt.agree.tilde = r.mt.tilde === undefined ? undefined : agrees(r.mt.tilde, p.ru);
+  // agreement is cheap: recompute it for every engine, so a changed translation or comparison rule counts at once
+  for (const e of ['microsoft', 'google', 'tilde'] as const) r.mt.agree[e] = r.mt[e] === undefined ? undefined : agrees(r.mt[e]!, p.ru);
   const reasons: string[] = [];
   const pairOk = (x: Result['corpus']['pairs'][number]) => x.hits >= PAIR_MIN || (x.lemmaHits ?? 0) >= PAIR_MIN;
   const attested = r.corpus.exact > 0 || r.tatoeba.length > 0 || (r.corpus.pairs.length > 0 && r.corpus.pairs.every(pairOk));

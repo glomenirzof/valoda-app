@@ -3,6 +3,42 @@
  "edition": "2026_4",
  "phrases": [
   {
+   "id": "lv-0514",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Pēc tam.",
+   "ru": "Потом. / После этого.",
+   "tokens": [
+    {
+     "s": "Pēc",
+     "lemma": "pēc",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "через, после"
+    },
+    {
+     "s": "tam",
+     "lemma": "tas",
+     "pos": "PRON",
+     "feats": "3.DAT.SG.M",
+     "gender": "M",
+     "ru": "тот, это"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 4,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 52
+  },
+  {
    "id": "lv-0048",
    "lang": "lv",
    "topic": "understand",
@@ -50,7 +86,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 46
+   "order": 53
   },
   {
    "id": "lv-0063",
@@ -109,7 +145,51 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 47
+   "order": 54
+  },
+  {
+   "id": "lv-0530",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Paldies par visu!",
+   "ru": "Спасибо за всё!",
+   "tokens": [
+    {
+     "s": "Paldies",
+     "lemma": "paldies",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "спасибо"
+    },
+    {
+     "s": "par",
+     "lemma": "par",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "о, про; за (спасибо за …)"
+    },
+    {
+     "s": "visu",
+     "lemma": "viss",
+     "pos": "PRON",
+     "feats": "ACC.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "весь, всё"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 20,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 55
   },
   {
    "id": "lv-0044",
@@ -151,7 +231,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 23
+   "order": 43
   },
   {
    "id": "lv-0147",
@@ -200,7 +280,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 48
+   "order": 291
   },
   {
    "id": "lv-0154",
@@ -236,7 +316,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 38
+   "order": 292
   },
   {
    "id": "lv-0148",
@@ -285,7 +365,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 49
+   "order": 290
   },
   {
    "id": "lv-0155",
@@ -349,7 +429,43 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 102
+   "order": 328
+  },
+  {
+   "id": "lv-0525",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Šo, lūdzu.",
+   "ru": "Вот это, пожалуйста.",
+   "tokens": [
+    {
+     "s": "Šo",
+     "lemma": "šis",
+     "pos": "PRON",
+     "feats": "3.ACC.SG.M",
+     "gender": "M",
+     "ru": "этот"
+    },
+    {
+     "s": "lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 35,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 11
   },
   {
    "id": "lv-0012",
@@ -398,7 +514,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 51
+   "order": 294
   },
   {
    "id": "lv-0013",
@@ -447,7 +563,49 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 50
+   "order": 293
+  },
+  {
+   "id": "lv-0526",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Mēs ejam.",
+   "ru": "Мы идём. / Пошли!",
+   "tokens": [
+    {
+     "s": "Mēs",
+     "lemma": "mēs",
+     "pos": "PRON",
+     "feats": "1.NOM.PL",
+     "ru": "мы"
+    },
+    {
+     "s": "ejam",
+     "lemma": "iet",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.PL",
+     "conj": "Nekārtns",
+     "ru": "идти; (о делах) обстоять"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "iet",
+    "why": "iet → ejam: 1-е лицо, мн. ч., настоящее время",
+    "trapWhy": "iet — 3-е лицо, а здесь 1-е лицо: ejam"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 37,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 45
   },
   {
    "id": "lv-0179",
@@ -496,7 +654,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 52
+   "order": 295
   },
   {
    "id": "lv-0014",
@@ -545,7 +703,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 41
+   "order": 44
   },
   {
    "id": "lv-0076",
@@ -580,7 +738,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 40
+   "order": 13
   },
   {
    "id": "lv-0142",
@@ -630,7 +788,35 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 45
+   "order": 51
+  },
+  {
+   "id": "lv-0509",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Labi!",
+   "ru": "Хорошо! / Ладно!",
+   "tokens": [
+    {
+     "s": "Labi",
+     "lemma": "labi",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "хорошо"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 44,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 12
   },
   {
    "id": "lv-0152",
@@ -702,7 +888,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 239
+   "order": 347
   },
   {
    "id": "lv-0206",
@@ -737,7 +923,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 42
+   "order": 14
   },
   {
    "id": "lv-0149",
@@ -779,7 +965,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 53
+   "order": 56
   },
   {
    "id": "lv-0092",
@@ -814,7 +1000,35 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 218
+   "order": 16
+  },
+  {
+   "id": "lv-0510",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Tagad!",
+   "ru": "Сейчас! / Теперь!",
+   "tokens": [
+    {
+     "s": "Tagad",
+     "lemma": "tagad",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сейчас"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 64,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 15
   },
   {
    "id": "lv-0128",
@@ -850,7 +1064,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 219
+   "order": 58
   },
   {
    "id": "lv-0158",
@@ -906,7 +1120,108 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 220
+   "order": 59
+  },
+  {
+   "id": "lv-0511",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Es esmu šeit.",
+   "ru": "Я здесь.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "esmu",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "šeit",
+     "lemma": "šeit",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "здесь, сюда"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "ir",
+    "why": "būt → esmu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "ir — 3-е лицо, а здесь 1-е лицо: esmu"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 67,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 57
+  },
+  {
+   "id": "lv-0549",
+   "lang": "lv",
+   "topic": "likes",
+   "text": "Tas ir tavs?",
+   "ru": "Это твоё?",
+   "tokens": [
+    {
+     "s": "Tas",
+     "lemma": "tas",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.M",
+     "gender": "M",
+     "ru": "тот, это"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "tavs",
+     "lemma": "tavs",
+     "pos": "PRON",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "твой"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 69,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 60
   },
   {
    "id": "lv-0171",
@@ -964,7 +1279,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 54
+   "order": 296
   },
   {
    "id": "lv-0311",
@@ -1021,7 +1336,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 421
+   "order": 326
   },
   {
    "id": "lv-0452",
@@ -1064,7 +1379,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 9
+   "order": 17
   },
   {
    "id": "lv-0010",
@@ -1092,7 +1407,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 10
+   "order": 18
   },
   {
    "id": "lv-0037",
@@ -1134,7 +1449,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 24
+   "order": 46
   },
   {
    "id": "lv-0038",
@@ -1176,7 +1491,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 25
+   "order": 47
   },
   {
    "id": "lv-0091",
@@ -1227,7 +1542,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 55
+   "order": 61
   },
   {
    "id": "lv-0042",
@@ -1284,7 +1599,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 449
+   "order": 528
   },
   {
    "id": "lv-0162",
@@ -1342,7 +1657,35 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 221
+   "order": 66
+  },
+  {
+   "id": "lv-0513",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Cik?",
+   "ru": "Сколько?",
+   "tokens": [
+    {
+     "s": "Cik",
+     "lemma": "cik",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сколько"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 93,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 19
   },
   {
    "id": "lv-0031",
@@ -1392,7 +1735,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 236
+   "order": 297
   },
   {
    "id": "lv-0072",
@@ -1443,7 +1786,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 43
+   "order": 48
   },
   {
    "id": "lv-0124",
@@ -1494,7 +1837,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 44
+   "order": 50
   },
   {
    "id": "lv-0125",
@@ -1547,7 +1890,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 56
+   "order": 62
   },
   {
    "id": "lv-0236",
@@ -1607,7 +1950,50 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 440
+   "order": 126
+  },
+  {
+   "id": "lv-0557",
+   "lang": "lv",
+   "topic": "home",
+   "text": "Pie mājas.",
+   "ru": "У дома. / Возле дома.",
+   "tokens": [
+    {
+     "s": "Pie",
+     "lemma": "pie",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "у, к"
+    },
+    {
+     "s": "mājas",
+     "lemma": "māja",
+     "pos": "NOUN",
+     "feats": "GEN.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "дом (mājās — дома / домой)"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "māja",
+    "why": "после pie — родительный падеж: māja → mājas",
+    "trapWhy": "māja — именительный («кто? что?»), а здесь после pie — родительный падеж: mājas"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 101,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 49
   },
   {
    "id": "lv-0071",
@@ -1665,7 +2051,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 58
+   "order": 64
   },
   {
    "id": "lv-0136",
@@ -1716,7 +2102,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 57
+   "order": 63
   },
   {
    "id": "lv-0160",
@@ -1774,7 +2160,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 59
+   "order": 65
   },
   {
    "id": "lv-0204",
@@ -1832,7 +2218,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 60
+   "order": 67
   },
   {
    "id": "lv-0007",
@@ -1873,7 +2259,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 11
+   "order": 20
   },
   {
    "id": "lv-0144",
@@ -1922,7 +2308,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 238
+   "order": 346
   },
   {
    "id": "lv-0182",
@@ -1984,7 +2370,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 479
+   "order": 200
   },
   {
    "id": "lv-0045",
@@ -2041,7 +2427,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 101
+   "order": 327
   },
   {
    "id": "lv-0046",
@@ -2105,7 +2491,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 103
+   "order": 329
   },
   {
    "id": "lv-0115",
@@ -2141,7 +2527,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 12
+   "order": 21
   },
   {
    "id": "lv-0156",
@@ -2198,7 +2584,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 222
+   "order": 68
   },
   {
    "id": "lv-0203",
@@ -2249,7 +2635,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 61
+   "order": 69
   },
   {
    "id": "lv-0211",
@@ -2300,7 +2686,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 62
+   "order": 70
   },
   {
    "id": "lv-0450",
@@ -2342,7 +2728,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 26
+   "order": 71
   },
   {
    "id": "lv-0224",
@@ -2391,7 +2777,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 63
+   "order": 298
   },
   {
    "id": "lv-0304",
@@ -2442,7 +2828,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 64
+   "order": 72
   },
   {
    "id": "lv-0011",
@@ -2487,7 +2873,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 65
+   "order": 73
   },
   {
    "id": "lv-0296",
@@ -2536,7 +2922,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 66
+   "order": 299
   },
   {
    "id": "lv-0150",
@@ -2572,7 +2958,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 13
+   "order": 22
   },
   {
    "id": "lv-0501",
@@ -2621,7 +3007,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 67
+   "order": 300
   },
   {
    "id": "lv-0021",
@@ -2670,7 +3056,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 68
+   "order": 301
   },
   {
    "id": "lv-0022",
@@ -2719,7 +3105,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 69
+   "order": 302
   },
   {
    "id": "lv-0339",
@@ -2763,7 +3149,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 27
+   "order": 74
   },
   {
    "id": "lv-0168",
@@ -2821,7 +3207,58 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 428
+   "order": 76
+  },
+  {
+   "id": "lv-0541",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Man ir bērni.",
+   "ru": "У меня есть дети.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "bērni",
+     "lemma": "bērns",
+     "pos": "NOUN",
+     "feats": "NOM.PL.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "ребёнок"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 154,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 75
   },
   {
    "id": "lv-0060",
@@ -2870,7 +3307,49 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 302
+   "order": 78
+  },
+  {
+   "id": "lv-0524",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Es skatos.",
+   "ru": "Я смотрю.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "skatos",
+     "lemma": "skatīties",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "3",
+     "ru": "смотреть"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "skatās",
+    "why": "skatīties → skatos: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "skatās — 3-е лицо, а здесь 1-е лицо: skatos"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 162,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 77
   },
   {
    "id": "lv-0029",
@@ -2928,7 +3407,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 257
+   "order": 120
   },
   {
    "id": "lv-0126",
@@ -2990,7 +3469,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 441
+   "order": 308
   },
   {
    "id": "lv-0009",
@@ -3019,7 +3498,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 14
+   "order": 23
   },
   {
    "id": "lv-0419",
@@ -3078,7 +3557,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 442
+   "order": 309
   },
   {
    "id": "lv-0281",
@@ -3120,7 +3599,49 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 28
+   "order": 79
+  },
+  {
+   "id": "lv-0532",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Esmu gatavs!",
+   "ru": "Я готов!",
+   "tokens": [
+    {
+     "s": "Esmu",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "gatavs",
+     "lemma": "gatavs",
+     "pos": "ADJ",
+     "feats": "NOM.SG.M.INDEF",
+     "ru": "готовый"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Ir",
+    "why": "būt → Esmu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "Ir — 3-е лицо, а здесь 1-е лицо: Esmu"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 177,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 80
   },
   {
    "id": "lv-0058",
@@ -3170,7 +3691,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 304
+   "order": 81
   },
   {
    "id": "lv-0280",
@@ -3232,7 +3753,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 443
+   "order": 310
   },
   {
    "id": "lv-0209",
@@ -3281,7 +3802,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 70
+   "order": 303
   },
   {
    "id": "lv-0187",
@@ -3341,7 +3862,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 168
+   "order": 357
   },
   {
    "id": "lv-0191",
@@ -3394,7 +3915,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 169
+   "order": 358
   },
   {
    "id": "lv-0189",
@@ -3454,7 +3975,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 444
+   "order": 257
   },
   {
    "id": "lv-0328",
@@ -3503,7 +4024,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 71
+   "order": 304
   },
   {
    "id": "lv-0441",
@@ -3563,7 +4084,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 72
+   "order": 82
   },
   {
    "id": "lv-0286",
@@ -3605,7 +4126,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 104
+   "order": 330
   },
   {
    "id": "lv-0260",
@@ -3656,7 +4177,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 73
+   "order": 83
   },
   {
    "id": "lv-0444",
@@ -3705,7 +4226,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 74
+   "order": 305
   },
   {
    "id": "lv-0023",
@@ -3756,7 +4277,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 167
+   "order": 307
   },
   {
    "id": "lv-0024",
@@ -3807,7 +4328,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 170
+   "order": 311
   },
   {
    "id": "lv-0034",
@@ -3856,7 +4377,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 166
+   "order": 306
   },
   {
    "id": "lv-0406",
@@ -3899,7 +4420,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 75
+   "order": 84
   },
   {
    "id": "lv-0276",
@@ -3957,7 +4478,35 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 432
+   "order": 526
+  },
+  {
+   "id": "lv-0543",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Ātri!",
+   "ru": "Быстро!",
+   "tokens": [
+    {
+     "s": "Ātri",
+     "lemma": "ātri",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "быстро"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 208,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 24
   },
   {
    "id": "lv-0218",
@@ -4006,7 +4555,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 76
+   "order": 312
   },
   {
    "id": "lv-0376",
@@ -4063,7 +4612,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 450
+   "order": 529
   },
   {
    "id": "lv-0388",
@@ -4106,7 +4655,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 225
+   "order": 93
   },
   {
    "id": "lv-0103",
@@ -4171,7 +4720,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 305
+   "order": 331
   },
   {
    "id": "lv-0135",
@@ -4222,7 +4771,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 77
+   "order": 85
   },
   {
    "id": "lv-0194",
@@ -4264,7 +4813,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 78
+   "order": 86
   },
   {
    "id": "lv-0198",
@@ -4323,7 +4872,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 389
+   "order": 360
   },
   {
    "id": "lv-0033",
@@ -4385,7 +4934,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 445
+   "order": 313
   },
   {
    "id": "lv-0476",
@@ -4436,7 +4985,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 79
+   "order": 87
   },
   {
    "id": "lv-0266",
@@ -4479,7 +5028,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 226
+   "order": 94
   },
   {
    "id": "lv-0104",
@@ -4529,7 +5078,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 237
+   "order": 345
   },
   {
    "id": "lv-0105",
@@ -4572,7 +5121,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 235
+   "order": 25
   },
   {
    "id": "lv-0166",
@@ -4637,7 +5186,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 240
+   "order": 88
   },
   {
    "id": "lv-0235",
@@ -4688,7 +5237,58 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 316
+   "order": 121
+  },
+  {
+   "id": "lv-0556",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Man ir brālis.",
+   "ru": "У меня есть брат.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "brālis",
+     "lemma": "brālis",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "2",
+     "gender": "M",
+     "ru": "брат"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 254,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 89
   },
   {
    "id": "lv-0427",
@@ -4723,7 +5323,50 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 15
+   "order": 26
+  },
+  {
+   "id": "lv-0527",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Vienu minūti!",
+   "ru": "Одну минуту!",
+   "tokens": [
+    {
+     "s": "Vienu",
+     "lemma": "viens",
+     "pos": "NUM",
+     "feats": "ACC.SG.F.INDEF",
+     "ru": "один"
+    },
+    {
+     "s": "minūti",
+     "lemma": "minūte",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "минута"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "minūte",
+    "why": "кого? что? — винительный падеж: minūte → minūti",
+    "trapWhy": "minūte — именительный («кто? что?»), а здесь кого? что? — винительный падеж: minūti"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 257,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 348
   },
   {
    "id": "lv-0284",
@@ -4765,7 +5408,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 29
+   "order": 90
   },
   {
    "id": "lv-0383",
@@ -4817,7 +5460,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 339
+   "order": 349
   },
   {
    "id": "lv-0325",
@@ -4852,7 +5495,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 39
+   "order": 314
   },
   {
    "id": "lv-0184",
@@ -4903,7 +5546,50 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 80
+   "order": 91
+  },
+  {
+   "id": "lv-0512",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Labs jautājums!",
+   "ru": "Хороший вопрос!",
+   "tokens": [
+    {
+     "s": "Labs",
+     "lemma": "labs",
+     "pos": "ADJ",
+     "feats": "NOM.SG.M.INDEF",
+     "ru": "хороший"
+    },
+    {
+     "s": "jautājums",
+     "lemma": "jautājums",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "вопрос"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Labu",
+    "why": "кто? что? — именительный падеж: Labs",
+    "trapWhy": "Labu — винительный («кого? что?»), а здесь кто? что? — именительный падеж: Labs"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 268,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 92
   },
   {
    "id": "lv-0220",
@@ -4953,7 +5639,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 118
+   "order": 350
   },
   {
    "id": "lv-0225",
@@ -4989,7 +5675,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 16
+   "order": 27
   },
   {
    "id": "lv-0301",
@@ -5040,7 +5726,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 205
+   "order": 501
   },
   {
    "id": "lv-0401",
@@ -5076,7 +5762,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 17
+   "order": 28
   },
   {
    "id": "lv-0391",
@@ -5126,7 +5812,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 81
+   "order": 95
   },
   {
    "id": "lv-0354",
@@ -5170,7 +5856,52 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 82
+   "order": 96
+  },
+  {
+   "id": "lv-0520",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Visu nedēļu.",
+   "ru": "Всю неделю.",
+   "tokens": [
+    {
+     "s": "Visu",
+     "lemma": "visa",
+     "pos": "PRON",
+     "feats": "ACC.SG.F",
+     "decl": "1",
+     "gender": "M",
+     "ru": "весь, всё"
+    },
+    {
+     "s": "nedēļu",
+     "lemma": "nedēļa",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "неделя"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "nedēļa",
+    "why": "кого? что? — винительный падеж: nedēļa → nedēļu",
+    "trapWhy": "nedēļa — именительный («кто? что?»), а здесь кого? что? — винительный падеж: nedēļu"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 300,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 97
   },
   {
    "id": "lv-0143",
@@ -5214,7 +5945,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 83
+   "order": 98
   },
   {
    "id": "lv-0315",
@@ -5273,7 +6004,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 227
+   "order": 99
   },
   {
    "id": "lv-0095",
@@ -5316,7 +6047,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 250
+   "order": 100
   },
   {
    "id": "lv-0265",
@@ -5374,7 +6105,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 251
+   "order": 101
   },
   {
    "id": "lv-0057",
@@ -5432,7 +6163,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 100
+   "order": 325
   },
   {
    "id": "lv-0208",
@@ -5490,7 +6221,51 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 105
+   "order": 332
+  },
+  {
+   "id": "lv-0529",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Viņš spēlē.",
+   "ru": "Он играет.",
+   "tokens": [
+    {
+     "s": "Viņš",
+     "lemma": "viņš",
+     "pos": "PRON",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "он"
+    },
+    {
+     "s": "spēlē",
+     "lemma": "spēlēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "2",
+     "ru": "играть"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "spēlēju",
+    "why": "spēlēt → spēlē: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "spēlēju — 1-е лицо, а здесь 3-е лицо: spēlē"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 319,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 102
   },
   {
    "id": "lv-0131",
@@ -5540,7 +6315,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 84
+   "order": 315
   },
   {
    "id": "lv-0314",
@@ -5591,7 +6366,49 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 85
+   "order": 103
+  },
+  {
+   "id": "lv-0528",
+   "lang": "lv",
+   "topic": "understand",
+   "text": "Es aizmirsu!",
+   "ru": "Я забыл! / Я забыла!",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "aizmirsu",
+     "lemma": "aizmirst",
+     "pos": "VERB",
+     "feats": "IND.PST.1.SG",
+     "conj": "1",
+     "ru": "забыть"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "aizmirsa",
+    "why": "aizmirst → aizmirsu: 1-е лицо, ед. ч., прошедшее время",
+    "trapWhy": "aizmirsa — 3-е лицо, а здесь 1-е лицо: aizmirsu"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 324,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 104
   },
   {
    "id": "lv-0210",
@@ -5651,7 +6468,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 356
+   "order": 105
   },
   {
    "id": "lv-0258",
@@ -5700,7 +6517,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 349
+   "order": 106
   },
   {
    "id": "lv-0041",
@@ -5750,7 +6567,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 86
+   "order": 107
   },
   {
    "id": "lv-0405",
@@ -5786,7 +6603,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 18
+   "order": 29
   },
   {
    "id": "lv-0404",
@@ -5837,7 +6654,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 87
+   "order": 108
   },
   {
    "id": "lv-0297",
@@ -5899,7 +6716,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 446
+   "order": 316
   },
   {
    "id": "lv-0221",
@@ -5949,7 +6766,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 340
+   "order": 351
   },
   {
    "id": "lv-0138",
@@ -5998,7 +6815,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 88
+   "order": 317
   },
   {
    "id": "lv-0159",
@@ -6064,7 +6881,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 89
+   "order": 318
   },
   {
    "id": "lv-0302",
@@ -6122,7 +6939,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 90
+   "order": 109
   },
   {
    "id": "lv-0217",
@@ -6175,7 +6992,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 352
+   "order": 110
   },
   {
    "id": "lv-0248",
@@ -6226,7 +7043,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 353
+   "order": 111
   },
   {
    "id": "lv-0386",
@@ -6277,7 +7094,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 354
+   "order": 112
   },
   {
    "id": "lv-0249",
@@ -6330,7 +7147,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 287
+   "order": 201
   },
   {
    "id": "lv-0465",
@@ -6366,7 +7183,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 30
+   "order": 113
   },
   {
    "id": "lv-0244",
@@ -6425,7 +7242,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 91
+   "order": 114
   },
   {
    "id": "lv-0342",
@@ -6476,7 +7293,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 92
+   "order": 115
   },
   {
    "id": "lv-0064",
@@ -6526,7 +7343,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 93
+   "order": 289
   },
   {
    "id": "lv-0385",
@@ -6583,7 +7400,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 94
+   "order": 319
   },
   {
    "id": "lv-0151",
@@ -6633,7 +7450,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 355
+   "order": 116
   },
   {
    "id": "lv-0270",
@@ -6686,7 +7503,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 357
+   "order": 117
   },
   {
    "id": "lv-0431",
@@ -6744,7 +7561,58 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 358
+   "order": 333
+  },
+  {
+   "id": "lv-0540",
+   "lang": "lv",
+   "topic": "health",
+   "text": "Man vajag palīdzību.",
+   "ru": "Мне нужна помощь.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "vajag",
+     "lemma": "vajadzēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "3",
+     "ru": "быть нужным (man vajag — мне нужно)"
+    },
+    {
+     "s": "palīdzību",
+     "lemma": "palīdzība",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "помощь"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "palīdzība",
+    "why": "кого? что? — винительный падеж: palīdzība → palīdzību",
+    "trapWhy": "palīdzība — именительный («кто? что?»), а здесь кого? что? — винительный падеж: palīdzību"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 365,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 118
   },
   {
    "id": "lv-0089",
@@ -6793,7 +7661,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 256
+   "order": 119
   },
   {
    "id": "lv-0094",
@@ -6835,7 +7703,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 254
+   "order": 31
   },
   {
    "id": "lv-0167",
@@ -6884,7 +7752,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 258
+   "order": 33
   },
   {
    "id": "lv-0173",
@@ -6941,7 +7809,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 259
+   "order": 122
   },
   {
    "id": "lv-0231",
@@ -6998,7 +7866,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 260
+   "order": 123
   },
   {
    "id": "lv-0245",
@@ -7033,7 +7901,35 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 255
+   "order": 32
+  },
+  {
+   "id": "lv-0515",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Rīt!",
+   "ru": "Завтра!",
+   "tokens": [
+    {
+     "s": "Rīt",
+     "lemma": "rīt",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "завтра"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 373,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 30
   },
   {
    "id": "lv-0195",
@@ -7102,7 +7998,65 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 439
+   "order": 125
+  },
+  {
+   "id": "lv-0546",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Es eju uz skolu.",
+   "ru": "Я иду в школу.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "eju",
+     "lemma": "iet",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "Nekārtns",
+     "ru": "идти; (о делах) обстоять"
+    },
+    {
+     "s": "uz",
+     "lemma": "uz",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "на, в (куда); к"
+    },
+    {
+     "s": "skolu",
+     "lemma": "skola",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "школа"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 3,
+    "trap": "skola",
+    "why": "после uz — винительный падеж: skola → skolu",
+    "trapWhy": "skola — именительный («кто? что?»), а здесь после uz — винительный падеж: skolu"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 375,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 124
   },
   {
    "id": "lv-0026",
@@ -7158,7 +8112,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 451
+   "order": 530
   },
   {
    "id": "lv-0093",
@@ -7201,7 +8155,50 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 270
+   "order": 128
+  },
+  {
+   "id": "lv-0516",
+   "lang": "lv",
+   "topic": "time",
+   "text": "No rīta.",
+   "ru": "Утром.",
+   "tokens": [
+    {
+     "s": "No",
+     "lemma": "no",
+     "pos": "ADP",
+     "feats": "",
+     "ru": "из, от, с"
+    },
+    {
+     "s": "rīta",
+     "lemma": "rīts",
+     "pos": "NOUN",
+     "feats": "GEN.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "утро"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "rīts",
+    "why": "после no — родительный падеж: rīts → rīta",
+    "trapWhy": "rīts — именительный («кто? что?»), а здесь после no — родительный падеж: rīta"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 393,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 127
   },
   {
    "id": "lv-0424",
@@ -7274,7 +8271,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 241
+   "order": 352
   },
   {
    "id": "lv-0239",
@@ -7333,7 +8330,42 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 388
+   "order": 359
+  },
+  {
+   "id": "lv-0518",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Priecājos!",
+   "ru": "Рад! / Рада!",
+   "tokens": [
+    {
+     "s": "Priecājos",
+     "lemma": "priecāties",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "радоваться"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Priecājas",
+    "why": "priecāties → Priecājos: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "Priecājas — 3-е лицо, а здесь 1-е лицо: Priecājos"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 398,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 34
   },
   {
    "id": "lv-0163",
@@ -7391,7 +8423,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 272
+   "order": 260
   },
   {
    "id": "lv-0199",
@@ -7451,7 +8483,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 447
+   "order": 261
   },
   {
    "id": "lv-0271",
@@ -7511,7 +8543,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 273
+   "order": 262
   },
   {
    "id": "lv-0322",
@@ -7571,7 +8603,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 274
+   "order": 263
   },
   {
    "id": "lv-0426",
@@ -7631,7 +8663,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 390
+   "order": 264
   },
   {
    "id": "lv-0454",
@@ -7675,7 +8707,58 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 271
+   "order": 259
+  },
+  {
+   "id": "lv-0517",
+   "lang": "lv",
+   "topic": "home",
+   "text": "Kur ir telefons?",
+   "ru": "Где телефон?",
+   "tokens": [
+    {
+     "s": "Kur",
+     "lemma": "kur",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "где, куда"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "telefons",
+     "lemma": "telefons",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "телефон"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 401,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 258
   },
   {
    "id": "lv-0172",
@@ -7735,7 +8818,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 171
+   "order": 320
   },
   {
    "id": "lv-0303",
@@ -7795,7 +8878,43 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 172
+   "order": 321
+  },
+  {
+   "id": "lv-0519",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Policija!",
+   "ru": "Полиция!",
+   "tokens": [
+    {
+     "s": "Policija",
+     "lemma": "policija",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "полиция"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Policiju",
+    "why": "кто? что? — именительный падеж: Policija",
+    "trapWhy": "Policiju — винительный («кого? что?»), а здесь кто? что? — именительный падеж: Policija"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 405,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 35
   },
   {
    "id": "lv-0207",
@@ -7865,7 +8984,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 500
+   "order": 129
   },
   {
    "id": "lv-0275",
@@ -7909,7 +9028,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 95
+   "order": 130
   },
   {
    "id": "lv-0447",
@@ -7953,7 +9072,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 96
+   "order": 131
   },
   {
    "id": "lv-0414",
@@ -8012,7 +9131,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 365
+   "order": 206
   },
   {
    "id": "lv-0429",
@@ -8063,7 +9182,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 206
+   "order": 502
   },
   {
    "id": "lv-0379",
@@ -8116,7 +9235,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 288
+   "order": 202
   },
   {
    "id": "lv-0331",
@@ -8184,7 +9303,69 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 448
+   "order": 527
+  },
+  {
+   "id": "lv-0538",
+   "lang": "lv",
+   "topic": "work",
+   "text": "Kāds ir tavs mērķis?",
+   "ru": "Какая у тебя цель? / Какова твоя цель?",
+   "tokens": [
+    {
+     "s": "Kāds",
+     "lemma": "kāds",
+     "pos": "PRON",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "какой"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "tavs",
+     "lemma": "tavs",
+     "pos": "PRON",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "твой"
+    },
+    {
+     "s": "mērķis",
+     "lemma": "mērķis",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "2",
+     "gender": "M",
+     "ru": "цель"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 435,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 203
   },
   {
    "id": "lv-0169",
@@ -8244,7 +9425,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 363
+   "order": 204
   },
   {
    "id": "lv-0175",
@@ -8295,7 +9476,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 362
+   "order": 132
   },
   {
    "id": "lv-0261",
@@ -8353,7 +9534,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 364
+   "order": 205
   },
   {
    "id": "lv-0455",
@@ -8411,7 +9592,42 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 366
+   "order": 207
+  },
+  {
+   "id": "lv-0531",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Ne šodien.",
+   "ru": "Не сегодня.",
+   "tokens": [
+    {
+     "s": "Ne",
+     "lemma": "ne",
+     "pos": "CCONJ",
+     "feats": "",
+     "ru": "не"
+    },
+    {
+     "s": "šodien",
+     "lemma": "šodien",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "сегодня"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 436,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 36
   },
   {
    "id": "lv-0212",
@@ -8460,7 +9676,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 317
+   "order": 133
   },
   {
    "id": "lv-0036",
@@ -8518,7 +9734,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 261
+   "order": 322
   },
   {
    "id": "lv-0247",
@@ -8569,7 +9785,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 341
+   "order": 353
   },
   {
    "id": "lv-0251",
@@ -8619,7 +9835,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 306
+   "order": 134
   },
   {
    "id": "lv-0305",
@@ -8669,7 +9885,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 97
+   "order": 135
   },
   {
    "id": "lv-0242",
@@ -8720,7 +9936,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 130
+   "order": 380
   },
   {
    "id": "lv-0234",
@@ -8771,7 +9987,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 173
+   "order": 265
   },
   {
    "id": "lv-0178",
@@ -8830,7 +10046,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 391
+   "order": 361
   },
   {
    "id": "lv-0028",
@@ -8881,7 +10097,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 262
+   "order": 136
   },
   {
    "id": "lv-0371",
@@ -8933,7 +10149,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 342
+   "order": 354
   },
   {
    "id": "lv-0177",
@@ -8992,7 +10208,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 392
+   "order": 362
   },
   {
    "id": "lv-0140",
@@ -9063,7 +10279,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 480
+   "order": 266
   },
   {
    "id": "lv-0472",
@@ -9122,7 +10338,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 307
+   "order": 267
   },
   {
    "id": "lv-0049",
@@ -9172,7 +10388,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 242
+   "order": 137
   },
   {
    "id": "lv-0102",
@@ -9229,7 +10445,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 308
+   "order": 334
   },
   {
    "id": "lv-0165",
@@ -9295,7 +10511,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 393
+   "order": 363
   },
   {
    "id": "lv-0065",
@@ -9345,7 +10561,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 98
+   "order": 323
   },
   {
    "id": "lv-0114",
@@ -9396,7 +10612,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 99
+   "order": 324
   },
   {
    "id": "lv-0332",
@@ -9455,7 +10671,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 309
+   "order": 138
   },
   {
    "id": "lv-0078",
@@ -9512,7 +10728,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 106
+   "order": 335
   },
   {
    "id": "lv-0486",
@@ -9562,7 +10778,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 107
+   "order": 139
   },
   {
    "id": "lv-0274",
@@ -9605,7 +10821,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 228
+   "order": 140
   },
   {
    "id": "lv-0141",
@@ -9647,7 +10863,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 31
+   "order": 141
   },
   {
    "id": "lv-0384",
@@ -9683,7 +10899,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 19
+   "order": 37
   },
   {
    "id": "lv-0015",
@@ -9726,7 +10942,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 277
+   "order": 38
   },
   {
    "id": "lv-0410",
@@ -9793,7 +11009,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 452
+   "order": 412
   },
   {
    "id": "lv-0446",
@@ -9844,7 +11060,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 310
+   "order": 336
   },
   {
    "id": "lv-0032",
@@ -9911,7 +11127,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 501
+   "order": 143
   },
   {
    "id": "lv-0272",
@@ -9981,7 +11197,58 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 491
+   "order": 364
+  },
+  {
+   "id": "lv-0551",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Man ir māsa.",
+   "ru": "У меня есть сестра.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "māsa",
+     "lemma": "māsa",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "сестра"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 552,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 142
   },
   {
    "id": "lv-0456",
@@ -10039,7 +11306,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 321
+   "order": 165
   },
   {
    "id": "lv-0437",
@@ -10099,7 +11366,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 108
+   "order": 144
   },
   {
    "id": "lv-0423",
@@ -10148,7 +11415,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 109
+   "order": 337
   },
   {
    "id": "lv-0127",
@@ -10199,7 +11466,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 318
+   "order": 145
   },
   {
    "id": "lv-0307",
@@ -10258,7 +11525,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 410
+   "order": 338
   },
   {
    "id": "lv-0282",
@@ -10302,7 +11569,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 110
+   "order": 339
   },
   {
    "id": "lv-0359",
@@ -10352,7 +11619,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 111
+   "order": 340
   },
   {
    "id": "lv-0347",
@@ -10411,7 +11678,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 394
+   "order": 365
   },
   {
    "id": "lv-0451",
@@ -10479,7 +11746,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 395
+   "order": 366
   },
   {
    "id": "lv-0290",
@@ -10530,7 +11797,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 383
+   "order": 146
   },
   {
    "id": "lv-0402",
@@ -10581,7 +11848,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 359
+   "order": 355
   },
   {
    "id": "lv-0117",
@@ -10630,7 +11897,56 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 386
+   "order": 148
+  },
+  {
+   "id": "lv-0533",
+   "lang": "lv",
+   "topic": "health",
+   "text": "Man ir slikti.",
+   "ru": "Мне плохо.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "slikti",
+     "lemma": "slikti",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "плохо"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 598,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 147
   },
   {
    "id": "lv-0223",
@@ -10679,7 +11995,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 112
+   "order": 341
   },
   {
    "id": "lv-0264",
@@ -10746,7 +12062,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 367
+   "order": 208
   },
   {
    "id": "lv-0432",
@@ -10804,7 +12120,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 368
+   "order": 209
   },
   {
    "id": "lv-0422",
@@ -10854,7 +12170,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 360
+   "order": 149
   },
   {
    "id": "lv-0020",
@@ -10897,7 +12213,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 113
+   "order": 150
   },
   {
    "id": "lv-0137",
@@ -10948,7 +12264,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 114
+   "order": 151
   },
   {
    "id": "lv-0243",
@@ -11007,7 +12323,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 396
+   "order": 367
   },
   {
    "id": "lv-0232",
@@ -11058,7 +12374,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 120
+   "order": 368
   },
   {
    "id": "lv-0413",
@@ -11116,7 +12432,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 229
+   "order": 342
   },
   {
    "id": "lv-0300",
@@ -11167,7 +12483,49 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 387
+   "order": 153
+  },
+  {
+   "id": "lv-0534",
+   "lang": "lv",
+   "topic": "likes",
+   "text": "Es lasu.",
+   "ru": "Я читаю.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "lasu",
+     "lemma": "lasīt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "3",
+     "ru": "читать"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "lasa",
+    "why": "lasīt → lasu: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "lasa — 3-е лицо, а здесь 1-е лицо: lasu"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 644,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 152
   },
   {
    "id": "lv-0489",
@@ -11211,7 +12569,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 115
+   "order": 154
   },
   {
    "id": "lv-0202",
@@ -11276,7 +12634,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 471
+   "order": 467
   },
   {
    "id": "lv-0262",
@@ -11334,7 +12692,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 322
+   "order": 166
   },
   {
    "id": "lv-0050",
@@ -11385,7 +12743,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 116
+   "order": 343
   },
   {
    "id": "lv-0051",
@@ -11435,7 +12793,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 117
+   "order": 344
   },
   {
    "id": "lv-0145",
@@ -11486,7 +12844,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 119
+   "order": 356
   },
   {
    "id": "lv-0153",
@@ -11544,7 +12902,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 121
+   "order": 369
   },
   {
    "id": "lv-0318",
@@ -11604,7 +12962,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 275
+   "order": 370
   },
   {
    "id": "lv-0252",
@@ -11663,7 +13021,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 230
+   "order": 155
   },
   {
    "id": "lv-0345",
@@ -11729,7 +13087,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 453
+   "order": 531
   },
   {
    "id": "lv-0197",
@@ -11787,7 +13145,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 376
+   "order": 532
   },
   {
    "id": "lv-0320",
@@ -11840,7 +13198,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 289
+   "order": 210
   },
   {
    "id": "lv-0226",
@@ -11916,7 +13274,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 486
+   "order": 404
   },
   {
    "id": "lv-0358",
@@ -11978,7 +13336,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 454
+   "order": 371
   },
   {
    "id": "lv-0370",
@@ -12031,7 +13389,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 290
+   "order": 211
   },
   {
    "id": "lv-0113",
@@ -12081,7 +13439,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 122
+   "order": 156
   },
   {
    "id": "lv-0288",
@@ -12130,7 +13488,35 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 402
+   "order": 157
+  },
+  {
+   "id": "lv-0535",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Noteikti!",
+   "ru": "Обязательно! / Конечно! / Определённо!",
+   "tokens": [
+    {
+     "s": "Noteikti",
+     "lemma": "noteikti",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "обязательно, точно"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 753,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 39
   },
   {
    "id": "lv-0257",
@@ -12181,7 +13567,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 174
+   "order": 268
   },
   {
    "id": "lv-0445",
@@ -12242,7 +13628,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 481
+   "order": 158
   },
   {
    "id": "lv-0213",
@@ -12309,7 +13695,51 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 281
+   "order": 160
+  },
+  {
+   "id": "lv-0521",
+   "lang": "lv",
+   "topic": "weather",
+   "text": "Būs lietus.",
+   "ru": "Будет дождь.",
+   "tokens": [
+    {
+     "s": "Būs",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.FUT.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "lietus",
+     "lemma": "lietus",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "3",
+     "gender": "M",
+     "ru": "дождь"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Būšu",
+    "why": "būt → Būs: 3-е лицо, ед. ч., будущее время",
+    "trapWhy": "Būšu — 1-е лицо, а здесь 3-е лицо: Būs"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 776,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 159
   },
   {
    "id": "lv-0443",
@@ -12371,7 +13801,49 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 455
+   "order": 162
+  },
+  {
+   "id": "lv-0544",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Es mācos.",
+   "ru": "Я учусь.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "mācos",
+     "lemma": "mācīties",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "3",
+     "ru": "учиться, учить"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "mācās",
+    "why": "mācīties → mācos: 1-е лицо, ед. ч., настоящее время",
+    "trapWhy": "mācās — 3-е лицо, а здесь 1-е лицо: mācos"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 778,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 161
   },
   {
    "id": "lv-0084",
@@ -12429,7 +13901,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 320
+   "order": 164
   },
   {
    "id": "lv-0085",
@@ -12487,7 +13959,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 319
+   "order": 163
   },
   {
    "id": "lv-0355",
@@ -12549,7 +14021,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 397
+   "order": 372
   },
   {
    "id": "lv-0506",
@@ -12607,7 +14079,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 231
+   "order": 167
   },
   {
    "id": "lv-0395",
@@ -12676,7 +14148,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 456
+   "order": 373
   },
   {
    "id": "lv-0107",
@@ -12727,7 +14199,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 404
+   "order": 270
   },
   {
    "id": "lv-0116",
@@ -12778,7 +14250,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 405
+   "order": 271
   },
   {
    "id": "lv-0227",
@@ -12829,7 +14301,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 406
+   "order": 272
   },
   {
    "id": "lv-0246",
@@ -12880,7 +14352,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 407
+   "order": 273
   },
   {
    "id": "lv-0299",
@@ -12931,7 +14403,100 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 408
+   "order": 274
+  },
+  {
+   "id": "lv-0536",
+   "lang": "lv",
+   "topic": "health",
+   "text": "Kur sāp?",
+   "ru": "Где болит?",
+   "tokens": [
+    {
+     "s": "Kur",
+     "lemma": "kur",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "где, куда"
+    },
+    {
+     "s": "sāp",
+     "lemma": "sāpēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "3",
+     "ru": "болеть"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "sāpu",
+    "why": "sāpēt → sāp: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "sāpu — 1-е лицо, а здесь 3-е лицо: sāp"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 801,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 269
+  },
+  {
+   "id": "lv-0558",
+   "lang": "lv",
+   "topic": "health",
+   "text": "Man sāp kāja.",
+   "ru": "У меня болит нога.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "sāp",
+     "lemma": "sāpēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "3",
+     "ru": "болеть"
+    },
+    {
+     "s": "kāja",
+     "lemma": "kāja",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "нога"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "sāpu",
+    "why": "sāpēt → sāp: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "sāpu — 1-е лицо, а здесь 3-е лицо: sāp"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 801,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 275
   },
   {
    "id": "lv-0338",
@@ -12974,7 +14539,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 123
+   "order": 374
   },
   {
    "id": "lv-0403",
@@ -13003,7 +14568,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 20
+   "order": 40
   },
   {
    "id": "lv-0374",
@@ -13054,7 +14619,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 175
+   "order": 276
   },
   {
    "id": "lv-0099",
@@ -13104,7 +14669,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 124
+   "order": 168
   },
   {
    "id": "lv-0215",
@@ -13161,7 +14726,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 125
+   "order": 169
   },
   {
    "id": "lv-0417",
@@ -13212,7 +14777,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 126
+   "order": 375
   },
   {
    "id": "lv-0348",
@@ -13263,7 +14828,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 127
+   "order": 376
   },
   {
    "id": "lv-0380",
@@ -13313,7 +14878,58 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 128
+   "order": 170
+  },
+  {
+   "id": "lv-0555",
+   "lang": "lv",
+   "topic": "me",
+   "text": "Es mācos valodu.",
+   "ru": "Я учу язык.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "mācos",
+     "lemma": "mācīties",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "3",
+     "ru": "учиться, учить"
+    },
+    {
+     "s": "valodu",
+     "lemma": "valoda",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "язык"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "valoda",
+    "why": "кого? что? — винительный падеж: valoda → valodu",
+    "trapWhy": "valoda — именительный («кто? что?»), а здесь кого? что? — винительный падеж: valodu"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 852,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 171
   },
   {
    "id": "lv-0416",
@@ -13371,7 +14987,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 252
+   "order": 377
   },
   {
    "id": "lv-0291",
@@ -13431,7 +15047,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 291
+   "order": 378
   },
   {
    "id": "lv-0047",
@@ -13467,7 +15083,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 21
+   "order": 41
   },
   {
    "id": "lv-0139",
@@ -13503,7 +15119,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 22
+   "order": 42
   },
   {
    "id": "lv-0229",
@@ -13561,7 +15177,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 129
+   "order": 379
   },
   {
    "id": "lv-0490",
@@ -13611,7 +15227,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 131
+   "order": 172
   },
   {
    "id": "lv-0436",
@@ -13662,7 +15278,58 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 409
+   "order": 174
+  },
+  {
+   "id": "lv-0537",
+   "lang": "lv",
+   "topic": "work",
+   "text": "Es uzrakstīju vēstuli.",
+   "ru": "Я написал(а) письмо.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "uzrakstīju",
+     "lemma": "uzrakstīt",
+     "pos": "VERB",
+     "feats": "IND.PST.1.SG",
+     "conj": "3",
+     "ru": "написать"
+    },
+    {
+     "s": "vēstuli",
+     "lemma": "vēstule",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "5",
+     "gender": "F",
+     "ru": "письмо"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "vēstule",
+    "why": "кого? что? — винительный падеж: vēstule → vēstuli",
+    "trapWhy": "vēstule — именительный («кто? что?»), а здесь кого? что? — винительный падеж: vēstuli"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 877,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 173
   },
   {
    "id": "lv-0019",
@@ -13698,7 +15365,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 32
+   "order": 175
   },
   {
    "id": "lv-0333",
@@ -13757,7 +15424,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 398
+   "order": 381
   },
   {
    "id": "lv-0377",
@@ -13808,7 +15475,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 132
+   "order": 382
   },
   {
    "id": "lv-0096",
@@ -13857,7 +15524,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 403
+   "order": 176
   },
   {
    "id": "lv-0368",
@@ -13916,7 +15583,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 323
+   "order": 177
   },
   {
    "id": "lv-0269",
@@ -13974,7 +15641,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 133
+   "order": 383
   },
   {
    "id": "lv-0357",
@@ -14031,7 +15698,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 377
+   "order": 533
   },
   {
    "id": "lv-0035",
@@ -14082,7 +15749,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 176
+   "order": 384
   },
   {
    "id": "lv-0079",
@@ -14132,7 +15799,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 134
+   "order": 178
   },
   {
    "id": "lv-0308",
@@ -14185,7 +15852,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 292
+   "order": 212
   },
   {
    "id": "lv-0310",
@@ -14243,7 +15910,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 135
+   "order": 179
   },
   {
    "id": "lv-0411",
@@ -14293,7 +15960,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 136
+   "order": 180
   },
   {
    "id": "lv-0250",
@@ -14351,7 +16018,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 137
+   "order": 181
   },
   {
    "id": "lv-0119",
@@ -14402,7 +16069,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 361
+   "order": 183
   },
   {
    "id": "lv-0323",
@@ -14446,7 +16113,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 278
+   "order": 182
   },
   {
    "id": "lv-0287",
@@ -14495,7 +16162,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 138
+   "order": 184
   },
   {
    "id": "lv-0480",
@@ -14546,7 +16213,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 139
+   "order": 185
   },
   {
    "id": "lv-0087",
@@ -14597,7 +16264,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 243
+   "order": 186
   },
   {
    "id": "lv-0366",
@@ -14648,7 +16315,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 177
+   "order": 277
   },
   {
    "id": "lv-0040",
@@ -14684,7 +16351,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 33
+   "order": 187
   },
   {
    "id": "lv-0462",
@@ -14751,7 +16418,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 504
+   "order": 188
   },
   {
    "id": "lv-0344",
@@ -14804,7 +16471,58 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 417
+   "order": 213
+  },
+  {
+   "id": "lv-0547",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Kur ir vilciens?",
+   "ru": "Где поезд?",
+   "tokens": [
+    {
+     "s": "Kur",
+     "lemma": "kur",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "где, куда"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "vilciens",
+     "lemma": "vilciens",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "поезд"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 978,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 278
   },
   {
    "id": "lv-0484",
@@ -14855,7 +16573,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 263
+   "order": 189
   },
   {
    "id": "lv-0412",
@@ -14898,7 +16616,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 34
+   "order": 190
   },
   {
    "id": "lv-0341",
@@ -14951,7 +16669,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 140
+   "order": 191
   },
   {
    "id": "lv-0316",
@@ -15012,7 +16730,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 457
+   "order": 192
   },
   {
    "id": "lv-0335",
@@ -15063,7 +16781,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 178
+   "order": 279
   },
   {
    "id": "lv-0118",
@@ -15129,7 +16847,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 505
+   "order": 385
   },
   {
    "id": "lv-0298",
@@ -15191,7 +16909,58 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 458
+   "order": 194
+  },
+  {
+   "id": "lv-0545",
+   "lang": "lv",
+   "topic": "health",
+   "text": "Man vajag ārstu.",
+   "ru": "Мне нужен врач.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "vajag",
+     "lemma": "vajadzēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "3",
+     "ru": "быть нужным (man vajag — мне нужно)"
+    },
+    {
+     "s": "ārstu",
+     "lemma": "ārsts",
+     "pos": "NOUN",
+     "feats": "ACC.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "врач"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "ārsts",
+    "why": "кого? что? — винительный падеж: ārsts → ārstu",
+    "trapWhy": "ārsts — именительный («кто? что?»), а здесь кого? что? — винительный падеж: ārstu"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 1009,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 193
   },
   {
    "id": "lv-0330",
@@ -15251,7 +17020,49 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 459
+   "order": 195
+  },
+  {
+   "id": "lv-0552",
+   "lang": "lv",
+   "topic": "likes",
+   "text": "Man garšo.",
+   "ru": "Мне вкусно. / Мне нравится (на вкус).",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "garšo",
+     "lemma": "garšot",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "2",
+     "ru": "нравиться на вкус"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "garšoju",
+    "why": "garšot → garšo: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "garšoju — 1-е лицо, а здесь 3-е лицо: garšo"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 1031,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 196
   },
   {
    "id": "lv-0435",
@@ -15302,7 +17113,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 418
+   "order": 478
   },
   {
    "id": "lv-0329",
@@ -15364,7 +17175,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 482
+   "order": 214
   },
   {
    "id": "lv-0363",
@@ -15422,7 +17233,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 324
+   "order": 197
   },
   {
    "id": "lv-0070",
@@ -15473,7 +17284,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 179
+   "order": 280
   },
   {
    "id": "lv-0196",
@@ -15533,7 +17344,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 424
+   "order": 488
   },
   {
    "id": "lv-0214",
@@ -15591,7 +17402,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 276
+   "order": 281
   },
   {
    "id": "lv-0228",
@@ -15644,7 +17455,50 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 286
+   "order": 199
+  },
+  {
+   "id": "lv-0522",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Laba cena!",
+   "ru": "Хорошая цена!",
+   "tokens": [
+    {
+     "s": "Laba",
+     "lemma": "labs",
+     "pos": "ADJ",
+     "feats": "NOM.SG.F.INDEF",
+     "ru": "хороший"
+    },
+    {
+     "s": "cena",
+     "lemma": "cena",
+     "pos": "NOUN",
+     "feats": "NOM.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "цена"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Labu",
+    "why": "кто? что? — именительный падеж: labs → Laba",
+    "trapWhy": "Labu — винительный («кого? что?»), а здесь кто? что? — именительный падеж: Laba"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 1085,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 198
   },
   {
    "id": "lv-0350",
@@ -15709,7 +17563,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 381
+   "order": 550
   },
   {
    "id": "lv-0488",
@@ -15767,7 +17621,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 378
+   "order": 534
   },
   {
    "id": "lv-0485",
@@ -15811,7 +17665,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 141
+   "order": 386
   },
   {
    "id": "lv-0499",
@@ -15864,7 +17718,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 293
+   "order": 215
   },
   {
    "id": "lv-0294",
@@ -15926,7 +17780,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 460
+   "order": 387
   },
   {
    "id": "lv-0365",
@@ -15977,7 +17831,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 142
+   "order": 388
   },
   {
    "id": "lv-0313",
@@ -16027,7 +17881,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 143
+   "order": 216
   },
   {
    "id": "lv-0306",
@@ -16085,7 +17939,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 325
+   "order": 389
   },
   {
    "id": "lv-0382",
@@ -16143,7 +17997,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 144
+   "order": 217
   },
   {
    "id": "lv-0109",
@@ -16187,7 +18041,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 420
+   "order": 218
   },
   {
    "id": "lv-0364",
@@ -16240,7 +18094,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 427
+   "order": 219
   },
   {
    "id": "lv-0081",
@@ -16306,7 +18160,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 413
+   "order": 392
   },
   {
    "id": "lv-0174",
@@ -16364,7 +18218,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 411
+   "order": 390
   },
   {
    "id": "lv-0283",
@@ -16423,7 +18277,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 412
+   "order": 391
   },
   {
    "id": "lv-0467",
@@ -16484,7 +18338,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 461
+   "order": 220
   },
   {
    "id": "lv-0052",
@@ -16534,7 +18388,50 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 430
+   "order": 222
+  },
+  {
+   "id": "lv-0542",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Tēju, lūdzu.",
+   "ru": "Чай, пожалуйста.",
+   "tokens": [
+    {
+     "s": "Tēju",
+     "lemma": "tēja",
+     "pos": "NOUN",
+     "feats": "ACC.SG.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "чай"
+    },
+    {
+     "s": "lūdzu",
+     "lemma": "lūdzu",
+     "pos": "INTJ",
+     "feats": "",
+     "ru": "пожалуйста"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Tēja",
+    "why": "кого? что? — винительный падеж: tēja → Tēju",
+    "trapWhy": "Tēja — именительный («кто? что?»), а здесь кого? что? — винительный падеж: Tēju"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 1237,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 221
   },
   {
    "id": "lv-0392",
@@ -16585,7 +18482,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 294
+   "order": 223
   },
   {
    "id": "lv-0337",
@@ -16641,7 +18538,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 264
+   "order": 393
   },
   {
    "id": "lv-0054",
@@ -16707,7 +18604,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 244
+   "order": 413
   },
   {
    "id": "lv-0238",
@@ -16758,7 +18655,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 245
+   "order": 414
   },
   {
    "id": "lv-0324",
@@ -16816,7 +18713,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 246
+   "order": 415
   },
   {
    "id": "lv-0073",
@@ -16874,7 +18771,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 326
+   "order": 416
   },
   {
    "id": "lv-0157",
@@ -16943,7 +18840,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 329
+   "order": 419
   },
   {
    "id": "lv-0170",
@@ -17003,7 +18900,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 328
+   "order": 418
   },
   {
    "id": "lv-0407",
@@ -17054,7 +18951,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 327
+   "order": 417
   },
   {
    "id": "lv-0309",
@@ -17120,7 +19017,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 145
+   "order": 394
   },
   {
    "id": "lv-0090",
@@ -17178,7 +19075,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 146
+   "order": 224
   },
   {
    "id": "lv-0101",
@@ -17245,7 +19142,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 487
+   "order": 405
   },
   {
    "id": "lv-0230",
@@ -17303,7 +19200,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 330
+   "order": 225
   },
   {
    "id": "lv-0317",
@@ -17345,7 +19242,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 147
+   "order": 395
   },
   {
    "id": "lv-0369",
@@ -17404,7 +19301,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 148
+   "order": 226
   },
   {
    "id": "lv-0219",
@@ -17462,7 +19359,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 149
+   "order": 227
   },
   {
    "id": "lv-0483",
@@ -17513,7 +19410,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 150
+   "order": 228
   },
   {
    "id": "lv-0336",
@@ -17578,7 +19475,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 384
+   "order": 396
   },
   {
    "id": "lv-0069",
@@ -17629,7 +19526,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 180
+   "order": 282
   },
   {
    "id": "lv-0193",
@@ -17696,7 +19593,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 182
+   "order": 284
   },
   {
    "id": "lv-0321",
@@ -17747,7 +19644,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 181
+   "order": 283
   },
   {
    "id": "lv-0129",
@@ -17798,7 +19695,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 385
+   "order": 229
   },
   {
    "id": "lv-0216",
@@ -17863,7 +19760,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 414
+   "order": 397
   },
   {
    "id": "lv-0430",
@@ -17914,7 +19811,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 431
+   "order": 230
   },
   {
    "id": "lv-0372",
@@ -17963,7 +19860,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 151
+   "order": 231
   },
   {
    "id": "lv-0083",
@@ -18028,7 +19925,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 343
+   "order": 398
   },
   {
    "id": "lv-0389",
@@ -18104,7 +20001,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 345
+   "order": 400
   },
   {
    "id": "lv-0409",
@@ -18168,7 +20065,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 344
+   "order": 399
   },
   {
    "id": "lv-0100",
@@ -18235,7 +20132,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 485
+   "order": 403
   },
   {
    "id": "lv-0418",
@@ -18295,7 +20192,58 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 484
+   "order": 402
+  },
+  {
+   "id": "lv-0550",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Man patīk sports.",
+   "ru": "Мне нравится спорт. / Я люблю спорт.",
+   "tokens": [
+    {
+     "s": "Man",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.DAT.SG",
+     "ru": "я"
+    },
+    {
+     "s": "patīk",
+     "lemma": "patikt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "1",
+     "ru": "нравиться"
+    },
+    {
+     "s": "sports",
+     "lemma": "sports",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "спорт"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "patīku",
+    "why": "patikt → patīk: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "patīku — 1-е лицо, а здесь 3-е лицо: patīk"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 1474,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 401
   },
   {
    "id": "lv-0448",
@@ -18346,7 +20294,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 331
+   "order": 232
   },
   {
    "id": "lv-0421",
@@ -18404,7 +20352,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 152
+   "order": 233
   },
   {
    "id": "lv-0108",
@@ -18454,7 +20402,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 153
+   "order": 234
   },
   {
    "id": "lv-0394",
@@ -18505,7 +20453,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 183
+   "order": 285
   },
   {
    "id": "lv-0077",
@@ -18540,7 +20488,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 154
+   "order": 235
   },
   {
    "id": "lv-0121",
@@ -18589,7 +20537,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 155
+   "order": 236
   },
   {
    "id": "lv-0164",
@@ -18653,7 +20601,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 223
+   "order": 237
   },
   {
    "id": "lv-0293",
@@ -18711,7 +20659,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 156
+   "order": 406
   },
   {
    "id": "lv-0505",
@@ -18762,7 +20710,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 419
+   "order": 479
   },
   {
    "id": "lv-0466",
@@ -18831,7 +20779,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 488
+   "order": 407
   },
   {
    "id": "lv-0497",
@@ -18893,7 +20841,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 490
+   "order": 238
   },
   {
    "id": "lv-0340",
@@ -18952,7 +20900,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 399
+   "order": 408
   },
   {
    "id": "lv-0474",
@@ -19005,7 +20953,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 295
+   "order": 239
   },
   {
    "id": "lv-0493",
@@ -19065,7 +21013,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 462
+   "order": 409
   },
   {
    "id": "lv-0053",
@@ -19124,7 +21072,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 158
+   "order": 411
   },
   {
    "id": "lv-0146",
@@ -19175,7 +21123,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 157
+   "order": 410
   },
   {
    "id": "lv-0312",
@@ -19234,7 +21182,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 159
+   "order": 420
   },
   {
    "id": "lv-0498",
@@ -19284,7 +21232,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 346
+   "order": 421
   },
   {
    "id": "lv-0253",
@@ -19335,7 +21283,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 369
+   "order": 240
   },
   {
    "id": "lv-0327",
@@ -19385,7 +21333,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 160
+   "order": 422
   },
   {
    "id": "lv-0492",
@@ -19438,7 +21386,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 161
+   "order": 423
   },
   {
    "id": "lv-0061",
@@ -19495,7 +21443,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 311
+   "order": 424
   },
   {
    "id": "lv-0362",
@@ -19553,7 +21501,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 312
+   "order": 425
   },
   {
    "id": "lv-0463",
@@ -19598,7 +21546,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 279
+   "order": 241
   },
   {
    "id": "lv-0482",
@@ -19657,7 +21605,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 313
+   "order": 426
   },
   {
    "id": "lv-0256",
@@ -19715,7 +21663,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 282
+   "order": 242
   },
   {
    "id": "lv-0360",
@@ -19774,7 +21722,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 184
+   "order": 427
   },
   {
    "id": "lv-0471",
@@ -19825,7 +21773,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 436
+   "order": 243
   },
   {
    "id": "lv-0461",
@@ -19876,7 +21824,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 162
+   "order": 244
   },
   {
    "id": "lv-0381",
@@ -19938,7 +21886,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 483
+   "order": 245
   },
   {
    "id": "lv-0273",
@@ -19996,7 +21944,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 224
+   "order": 428
   },
   {
    "id": "lv-0387",
@@ -20058,7 +22006,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 332
+   "order": 246
   },
   {
    "id": "lv-0502",
@@ -20110,7 +22058,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 163
+   "order": 247
   },
   {
    "id": "lv-0233",
@@ -20177,7 +22125,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 489
+   "order": 429
   },
   {
    "id": "lv-0398",
@@ -20237,7 +22185,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 232
+   "order": 248
   },
   {
    "id": "lv-0433",
@@ -20280,7 +22228,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 253
+   "order": 249
   },
   {
    "id": "lv-0504",
@@ -20339,7 +22287,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 400
+   "order": 430
   },
   {
    "id": "lv-0469",
@@ -20399,7 +22347,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 333
+   "order": 431
   },
   {
    "id": "lv-0397",
@@ -20450,7 +22398,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 370
+   "order": 250
   },
   {
    "id": "lv-0285",
@@ -20516,7 +22464,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 401
+   "order": 432
   },
   {
    "id": "lv-0353",
@@ -20567,7 +22515,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 265
+   "order": 251
   },
   {
    "id": "lv-0478",
@@ -20618,7 +22566,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 185
+   "order": 286
   },
   {
    "id": "lv-0453",
@@ -20678,7 +22626,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 186
+   "order": 433
   },
   {
    "id": "lv-0343",
@@ -20731,7 +22679,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 437
+   "order": 434
   },
   {
    "id": "lv-0449",
@@ -20789,7 +22737,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 334
+   "order": 252
   },
   {
    "id": "lv-0495",
@@ -20849,7 +22797,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 335
+   "order": 287
   },
   {
    "id": "lv-0442",
@@ -20902,7 +22850,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 296
+   "order": 253
   },
   {
    "id": "lv-0473",
@@ -20955,7 +22903,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 415
+   "order": 254
   },
   {
    "id": "lv-0055",
@@ -21006,7 +22954,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 165
+   "order": 256
   },
   {
    "id": "lv-0068",
@@ -21057,7 +23005,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 247
+   "order": 255
   },
   {
    "id": "lv-0130",
@@ -21108,7 +23056,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 164
+   "order": 288
   },
   {
    "id": "lv-0289",
@@ -21158,7 +23106,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 187
+   "order": 435
   },
   {
    "id": "lv-0415",
@@ -21209,7 +23157,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 188
+   "order": 436
   },
   {
    "id": "lv-0496",
@@ -21253,7 +23201,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 189
+   "order": 437
   },
   {
    "id": "lv-0082",
@@ -21295,7 +23243,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 35
+   "order": 438
   },
   {
    "id": "lv-0240",
@@ -21346,7 +23294,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 190
+   "order": 439
   },
   {
    "id": "lv-0254",
@@ -21395,7 +23343,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 191
+   "order": 440
   },
   {
    "id": "lv-0292",
@@ -21444,7 +23392,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 36
+   "order": 441
   },
   {
    "id": "lv-0375",
@@ -21510,7 +23458,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 248
+   "order": 442
   },
   {
    "id": "lv-0399",
@@ -21561,7 +23509,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 192
+   "order": 443
   },
   {
    "id": "lv-0005",
@@ -21604,7 +23552,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 193
+   "order": 444
   },
   {
    "id": "lv-0352",
@@ -21660,7 +23608,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 463
+   "order": 535
   },
   {
    "id": "lv-0356",
@@ -21719,7 +23667,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 314
+   "order": 445
   },
   {
    "id": "lv-0378",
@@ -21786,7 +23734,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 467
+   "order": 463
   },
   {
    "id": "lv-0222",
@@ -21845,7 +23793,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 194
+   "order": 446
   },
   {
    "id": "lv-0481",
@@ -21905,7 +23853,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 269
+   "order": 545
   },
   {
    "id": "lv-0098",
@@ -21956,7 +23904,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 371
+   "order": 447
   },
   {
    "id": "lv-0439",
@@ -22025,7 +23973,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 297
+   "order": 448
   },
   {
    "id": "lv-0066",
@@ -22084,7 +24032,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 492
+   "order": 449
   },
   {
    "id": "lv-0346",
@@ -22150,7 +24098,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 493
+   "order": 450
   },
   {
    "id": "lv-0438",
@@ -22201,7 +24149,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 195
+   "order": 451
   },
   {
    "id": "lv-0277",
@@ -22261,7 +24209,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 464
+   "order": 452
   },
   {
    "id": "lv-0470",
@@ -22314,7 +24262,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 438
+   "order": 480
   },
   {
    "id": "lv-0181",
@@ -22372,7 +24320,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 476
+   "order": 515
   },
   {
    "id": "lv-0400",
@@ -22431,7 +24379,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 477
+   "order": 516
   },
   {
    "id": "lv-0460",
@@ -22496,7 +24444,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 336
+   "order": 453
   },
   {
    "id": "lv-0134",
@@ -22540,7 +24488,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 280
+   "order": 454
   },
   {
    "id": "lv-0188",
@@ -22622,7 +24570,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 337
+   "order": 457
   },
   {
    "id": "lv-0241",
@@ -22673,7 +24621,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 283
+   "order": 455
   },
   {
    "id": "lv-0259",
@@ -22724,7 +24672,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 284
+   "order": 456
   },
   {
    "id": "lv-0039",
@@ -22767,7 +24715,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 433
+   "order": 536
   },
   {
    "id": "lv-0428",
@@ -22826,7 +24774,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 196
+   "order": 458
   },
   {
    "id": "lv-0255",
@@ -22877,7 +24825,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 266
+   "order": 459
   },
   {
    "id": "lv-0396",
@@ -22921,7 +24869,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 285
+   "order": 460
   },
   {
    "id": "lv-0106",
@@ -22988,7 +24936,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 470
+   "order": 466
   },
   {
    "id": "lv-0176",
@@ -23048,7 +24996,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 465
+   "order": 461
   },
   {
    "id": "lv-0200",
@@ -23108,7 +25056,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 468
+   "order": 464
   },
   {
    "id": "lv-0267",
@@ -23159,7 +25107,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 466
+   "order": 462
   },
   {
    "id": "lv-0458",
@@ -23217,7 +25165,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 469
+   "order": 465
   },
   {
    "id": "lv-0088",
@@ -23268,7 +25216,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 372
+   "order": 468
   },
   {
    "id": "lv-0479",
@@ -23321,7 +25269,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 373
+   "order": 469
   },
   {
    "id": "lv-0122",
@@ -23372,7 +25320,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 197
+   "order": 470
   },
   {
    "id": "lv-0367",
@@ -23430,7 +25378,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 374
+   "order": 471
   },
   {
    "id": "lv-0393",
@@ -23481,7 +25429,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 233
+   "order": 472
   },
   {
    "id": "lv-0494",
@@ -23534,7 +25482,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 298
+   "order": 473
   },
   {
    "id": "lv-0268",
@@ -23585,7 +25533,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 198
+   "order": 474
   },
   {
    "id": "lv-0351",
@@ -23638,7 +25586,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 199
+   "order": 475
   },
   {
    "id": "lv-0278",
@@ -23687,7 +25635,42 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 472
+   "order": 476
+  },
+  {
+   "id": "lv-0539",
+   "lang": "lv",
+   "topic": "time",
+   "text": "Pulksten astoņos.",
+   "ru": "В восемь часов.",
+   "tokens": [
+    {
+     "s": "Pulksten",
+     "lemma": "pulksten",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "в … часов (pulksten trijos — в три часа)"
+    },
+    {
+     "s": "astoņos",
+     "lemma": "astoņi",
+     "pos": "NUM",
+     "feats": "LOC.PL.M.INDEF",
+     "ru": "восемь"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": 3684,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 477
   },
   {
    "id": "lv-0390",
@@ -23745,7 +25728,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 200
+   "order": 481
   },
   {
    "id": "lv-0440",
@@ -23804,7 +25787,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 416
+   "order": 482
   },
   {
    "id": "lv-0067",
@@ -23862,7 +25845,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 201
+   "order": 483
   },
   {
    "id": "lv-0190",
@@ -23920,7 +25903,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 422
+   "order": 484
   },
   {
    "id": "lv-0503",
@@ -23979,7 +25962,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 315
+   "order": 485
   },
   {
    "id": "lv-0111",
@@ -24030,7 +26013,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 350
+   "order": 486
   },
   {
    "id": "lv-0237",
@@ -24096,7 +26079,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 351
+   "order": 489
   },
   {
    "id": "lv-0334",
@@ -24154,7 +26137,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 423
+   "order": 487
   },
   {
    "id": "lv-0123",
@@ -24205,7 +26188,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 202
+   "order": 490
   },
   {
    "id": "lv-0361",
@@ -24255,7 +26238,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 347
+   "order": 491
   },
   {
    "id": "lv-0477",
@@ -24306,7 +26289,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 425
+   "order": 492
   },
   {
    "id": "lv-0408",
@@ -24384,7 +26367,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 502
+   "order": 493
   },
   {
    "id": "lv-0075",
@@ -24432,6 +26415,42 @@
     "why": "после uz — винительный падеж: priekša → priekšu",
     "trapWhy": "priekša — именительный («кто? что?»), а здесь после uz — винительный падеж: priekšu"
    },
+   "audio": null,
+   "image": null,
+   "freqRank": 4423,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 495
+  },
+  {
+   "id": "lv-0553",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Ejiet taisni!",
+   "ru": "Идите прямо!",
+   "tokens": [
+    {
+     "s": "Ejiet",
+     "lemma": "iet",
+     "pos": "VERB",
+     "feats": "IMP.2.PL",
+     "conj": "Nekārtns",
+     "ru": "идти; (о делах) обстоять"
+    },
+    {
+     "s": "taisni",
+     "lemma": "taisni",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "прямо"
+    }
+   ],
+   "accept": [],
    "audio": null,
    "image": null,
    "freqRank": 4423,
@@ -24498,7 +26517,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 434
+   "order": 537
   },
   {
    "id": "lv-0464",
@@ -24565,7 +26584,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 338
+   "order": 496
   },
   {
    "id": "lv-0487",
@@ -24616,7 +26635,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 267
+   "order": 497
   },
   {
    "id": "lv-0507",
@@ -24667,7 +26686,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 426
+   "order": 498
   },
   {
    "id": "lv-0080",
@@ -24718,7 +26737,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 203
+   "order": 499
   },
   {
    "id": "lv-0185",
@@ -24776,7 +26795,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 207
+   "order": 503
   },
   {
    "id": "lv-0201",
@@ -24827,7 +26846,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 204
+   "order": 500
   },
   {
    "id": "lv-0205",
@@ -24886,7 +26905,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 208
+   "order": 504
   },
   {
    "id": "lv-0018",
@@ -24929,7 +26948,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 234
+   "order": 505
   },
   {
    "id": "lv-0500",
@@ -24980,7 +26999,51 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 473
+   "order": 507
+  },
+  {
+   "id": "lv-0548",
+   "lang": "lv",
+   "topic": "city",
+   "text": "Vilciens atiet.",
+   "ru": "Поезд отходит.",
+   "tokens": [
+    {
+     "s": "Vilciens",
+     "lemma": "vilciens",
+     "pos": "NOUN",
+     "feats": "NOM.SG.M",
+     "decl": "1",
+     "gender": "M",
+     "ru": "поезд"
+    },
+    {
+     "s": "atiet",
+     "lemma": "atiet",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "отходить, отправляться"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "ateju",
+    "why": "atiet → atiet: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "ateju — 1-е лицо, а здесь 3-е лицо: atiet"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 4865,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 506
   },
   {
    "id": "lv-0086",
@@ -25040,7 +27103,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 209
+   "order": 508
   },
   {
    "id": "lv-0475",
@@ -25099,7 +27162,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 210
+   "order": 509
   },
   {
    "id": "lv-0056",
@@ -25156,7 +27219,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 495
+   "order": 511
   },
   {
    "id": "lv-0186",
@@ -25213,7 +27276,57 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 496
+   "order": 512
+  },
+  {
+   "id": "lv-0554",
+   "lang": "lv",
+   "topic": "shop",
+   "text": "Tas ir dārgi.",
+   "ru": "Это дорого.",
+   "tokens": [
+    {
+     "s": "Tas",
+     "lemma": "tas",
+     "pos": "PRON",
+     "feats": "3.NOM.SG.M",
+     "gender": "M",
+     "ru": "тот, это"
+    },
+    {
+     "s": "ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "dārgi",
+     "lemma": "dārgi",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "дорого"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 1,
+    "trap": "esmu",
+    "why": "būt → ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "esmu — 1-е лицо, а здесь 3-е лицо: ir"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 5329,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 510
   },
   {
    "id": "lv-0074",
@@ -25264,7 +27377,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 474
+   "order": 513
   },
   {
    "id": "lv-0097",
@@ -25315,7 +27428,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 475
+   "order": 514
   },
   {
    "id": "lv-0279",
@@ -25374,7 +27487,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 478
+   "order": 517
   },
   {
    "id": "lv-0027",
@@ -25434,7 +27547,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 497
+   "order": 518
   },
   {
    "id": "lv-0326",
@@ -25494,7 +27607,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 498
+   "order": 519
   },
   {
    "id": "lv-0420",
@@ -25556,7 +27669,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 499
+   "order": 520
   },
   {
    "id": "lv-0132",
@@ -25612,7 +27725,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 375
+   "order": 525
   },
   {
    "id": "lv-0180",
@@ -25654,7 +27767,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 299
+   "order": 522
   },
   {
    "id": "lv-0295",
@@ -25705,7 +27818,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 300
+   "order": 523
   },
   {
    "id": "lv-0457",
@@ -25756,7 +27869,49 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 301
+   "order": 524
+  },
+  {
+   "id": "lv-0523",
+   "lang": "lv",
+   "topic": "weather",
+   "text": "Ir auksti.",
+   "ru": "Холодно.",
+   "tokens": [
+    {
+     "s": "Ir",
+     "lemma": "būt",
+     "pos": "VERB",
+     "feats": "IND.PRS.3",
+     "conj": "Nekārtns",
+     "ru": "быть; (man ir) иметь"
+    },
+    {
+     "s": "auksti",
+     "lemma": "auksti",
+     "pos": "ADV",
+     "feats": "",
+     "ru": "холодно"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 0,
+    "trap": "Esmu",
+    "why": "būt → Ir: 3-е лицо, ед. ч., настоящее время",
+    "trapWhy": "Esmu — 1-е лицо, а здесь 3-е лицо: Ir"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 6002,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 521
   },
   {
    "id": "lv-0349",
@@ -25807,7 +27962,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 211
+   "order": 538
   },
   {
    "id": "lv-0434",
@@ -25860,7 +28015,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 212
+   "order": 539
   },
   {
    "id": "lv-0030",
@@ -25918,7 +28073,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 249
+   "order": 540
   },
   {
    "id": "lv-0192",
@@ -25976,7 +28131,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 348
+   "order": 541
   },
   {
    "id": "lv-0373",
@@ -26029,7 +28184,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 213
+   "order": 542
   },
   {
    "id": "lv-0120",
@@ -26080,7 +28235,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 214
+   "order": 543
   },
   {
    "id": "lv-0161",
@@ -26133,7 +28288,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 268
+   "order": 544
   },
   {
    "id": "lv-0319",
@@ -26209,7 +28364,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 503
+   "order": 546
   },
   {
    "id": "lv-0059",
@@ -26260,7 +28415,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 215
+   "order": 547
   },
   {
    "id": "lv-0133",
@@ -26309,7 +28464,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 379
+   "order": 548
   },
   {
    "id": "lv-0183",
@@ -26372,7 +28527,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 382
+   "order": 551
   },
   {
    "id": "lv-0263",
@@ -26423,7 +28578,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 380
+   "order": 549
   },
   {
    "id": "lv-0491",
@@ -26481,7 +28636,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 216
+   "order": 552
   },
   {
    "id": "lv-0112",
@@ -26548,7 +28703,58 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 506
+   "order": 554
+  },
+  {
+   "id": "lv-0559",
+   "lang": "lv",
+   "topic": "gym",
+   "text": "Es trenēju kājas.",
+   "ru": "Я тренирую ноги.",
+   "tokens": [
+    {
+     "s": "Es",
+     "lemma": "es",
+     "pos": "PRON",
+     "feats": "1.NOM.SG",
+     "ru": "я"
+    },
+    {
+     "s": "trenēju",
+     "lemma": "trenēt",
+     "pos": "VERB",
+     "feats": "IND.PRS.1.SG",
+     "conj": "2",
+     "ru": "тренировать"
+    },
+    {
+     "s": "kājas",
+     "lemma": "kāja",
+     "pos": "NOUN",
+     "feats": "ACC.PL.F",
+     "decl": "4",
+     "gender": "F",
+     "ru": "нога"
+    }
+   ],
+   "accept": [],
+   "key": {
+    "i": 2,
+    "trap": "kāju",
+    "why": "кого? что? — винительный падеж: kāja → kājas",
+    "trapWhy": "kāju — родительный («кого? чего?»), а здесь кого? что? — винительный падеж: kājas"
+   },
+   "audio": null,
+   "image": null,
+   "freqRank": 8335,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 553
   },
   {
    "id": "lv-0110",
@@ -26599,7 +28805,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 217
+   "order": 555
   },
   {
    "id": "lv-0025",
@@ -26648,7 +28854,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 435
+   "order": 556
   },
   {
    "id": "lv-0459",
@@ -26706,7 +28912,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 303
+   "order": 557
   },
   {
    "id": "lv-0062",
@@ -26756,7 +28962,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 429
+   "order": 558
   },
   {
    "id": "lv-0001",
@@ -26959,7 +29165,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 37
+   "order": 9
   },
   {
    "id": "lv-0017",
@@ -26994,7 +29200,7 @@
     "tezaurs": "ok",
     "edition": "2026_4"
    },
-   "order": 8
+   "order": 10
   },
   {
    "id": "lv-0425",
@@ -27023,6 +29229,34 @@
     "edition": "2026_4"
    },
    "order": 7
+  },
+  {
+   "id": "lv-0508",
+   "lang": "lv",
+   "topic": "polite",
+   "text": "Jā!",
+   "ru": "Да!",
+   "tokens": [
+    {
+     "s": "Jā",
+     "lemma": "jā",
+     "pos": "PART",
+     "feats": "",
+     "ru": "да"
+    }
+   ],
+   "accept": [],
+   "audio": null,
+   "image": null,
+   "freqRank": null,
+   "status": "unverified",
+   "auto": "ok",
+   "source": "llm",
+   "check": {
+    "tezaurs": "ok",
+    "edition": "2026_4"
+   },
+   "order": 8
   }
  ]
 }

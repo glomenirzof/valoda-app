@@ -5,7 +5,8 @@
 Batch format: {"lexicon": {lemma: ru}, "phrases": [[topic, lv, ru, "lemma lemma …", {hints}?], …]}.
 Checks the i+1 rule: every phrase brings at most one lemma that is not known yet (known = lemmas of all
 earlier phrases, including earlier phrases of the same batch). Phrases that break it are listed and the
-batch is not merged. Already present texts are skipped, so re-running is safe. After merging, the app
+batch is not merged. A phrase with no new lemma is fine: it may be a bridge that brings a known word
+earlier in the common order (scripts/content/order.ts decides where every phrase goes). Already present texts are skipped, so re-running is safe. After merging, the app
 data and the i+1 order of all phrases are rebuilt (npm run content:build → scripts/content/order.ts), so new
 phrases take their place in the common order. Then run npm run content:check — nothing goes into training
 before it says «ok», and it fails while the final order breaks i+1.
@@ -41,8 +42,6 @@ def main() -> int:
         new = sorted({lemma(l) for l in lemmas.split()} - known)
         if len(new) > 1:
             problems.append(f"«{lv}»: новых слов {len(new)} — {', '.join(new)}")
-        if not new:
-            problems.append(f"«{lv}»: нет нового слова")
         missing = [l for l in new if l not in {k.lower() for k in {**lex, **batch.get('lexicon', {})}}]
         if missing:
             problems.append(f"«{lv}»: нет перевода для {', '.join(missing)}")

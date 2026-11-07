@@ -22,7 +22,7 @@ export const MAX_NEW = 1;
  */
 const SAME_WORD: Record<string, string> = {
   'mana/PRON': 'mans', 'tava/PRON': 'tavs', 'tāda/PRON': 'tāds', 'kāda/PRON': 'kāds', 'daža/PRON': 'dažs',
-  'tā/PRON': 'tas', 'galvenā/ADJ': 'galvenais',
+  'tā/PRON': 'tas', 'visa/PRON': 'viss', 'galvenā/ADJ': 'galvenais',
 };
 const word = (t: { lemma: string; pos?: string }) => {
   const l = t.lemma.toLowerCase();
