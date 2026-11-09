@@ -22,3 +22,6 @@ design/refs/
 worker/.dev.vars
 .wrangler/
 worker/.wrangler/
+
+# Python bytecode
+__pycache__/
