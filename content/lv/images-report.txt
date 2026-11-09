@@ -1,0 +1,308 @@
+Картинок: 82 (257 КБ), фраз с картинкой: 223 из 558; из них картинка вместо перевода возможна: 12
+
+ПРОБЛЕМЫ:
+
+ПОСМОТРЕТЬ ГЛАЗАМИ:
+№ 41 Lūdzu, uzrakstiet! — Пожалуйста, напишите!  →  uzrakstīt (tw-270d)  [вместо перевода]  — картинка к глаголу
+№ 42 Uzraksti man! — Напиши мне!  →  uzrakstīt (tw-270d)  [вместо перевода]  — картинка к глаголу
+№ 45 Mēs ejam. — Мы идём. / Пошли!  →  iet (tw-1f6b6)  — картинка к глаголу
+№ 48 Es eju mājās. — Я иду домой.  →  māja (tw-1f3e0)  — во фразе несколько слов с картинками
+№ 64 Es eju uz darbu. — Я иду на работу.  →  iet (tw-1f6b6)  — картинка к глаголу
+№ 77 Es skatos. — Я смотрю.  →  skatīties (tw-1f440)  [вместо перевода]  — картинка к глаголу
+№ 78 Es tikai skatos. — Я просто смотрю.  →  skatīties (tw-1f440)  — картинка к глаголу
+№ 83 Es meklēju darbu. — Я ищу работу.  →  meklēt (tw-1f50d)  — картинка к глаголу
+№ 86 Ejam kopā! — Пойдём вместе!  →  iet (tw-1f6b6)  — картинка к глаголу
+№112 Mūsu komanda uzvarēja! — Наша команда победила!  →  komanda (tw-1f465)  — во фразе несколько слов с картинками
+№124 Es eju uz skolu. — Я иду в школу.  →  skola (tw-1f3eb)  — во фразе несколько слов с картинками
+№125 Mans bērns iet uz skolu. — Мой ребёнок ходит в школу.  →  skola (tw-1f3eb)  — во фразе несколько слов с картинками
+№137 Cik tas maksā? — Сколько это стоит?  →  maksāt (tw-1f4b6)  — картинка к глаголу
+№152 Es lasu. — Я читаю.  →  lasīt (tw-1f4d6)  [вместо перевода]  — картинка к глаголу
+№160 Lietus dēļ es palieku mājās. — Из-за дождя я остаюсь дома.  →  lietus (tw-1f327)  — во фразе несколько слов с картинками
+№161 Es mācos. — Я учусь.  →  mācīties (tw-1f4da)  [вместо перевода]  — картинка к глаголу
+№162 Mans dēls mācās skolā. — Мой сын учится в школе.  →  skola (tw-1f3eb)  — во фразе несколько слов с картинками
+№163 Mēs ejam uz veikalu. — Мы идём в магазин.  →  veikals (tw-1f3ea)  — во фразе несколько слов с картинками
+№171 Es mācos valodu. — Я учу язык.  →  mācīties (tw-1f4da)  — картинка к глаголу
+№173 Es uzrakstīju vēstuli. — Я написал(а) письмо.  →  vēstule (tw-2709)  — во фразе несколько слов с картинками
+№181 Es eju uz mežu. — Я иду в лес.  →  mežs (tw-1f332)  — во фразе несколько слов с картинками
+№188 Pie mājas ir liels koks. — У дома большое дерево.  →  koks (tw-1f333)  — во фразе несколько слов с картинками
+№218 Man vajag atpūsties. — Мне нужно отдохнуть.  →  atpūsties (tw-1f6cb)  — картинка к глаголу
+№225 Vakar mēs skatījāmies filmu. — Вчера мы смотрели фильм.  →  filma (tw-1f3ac)  — во фразе несколько слов с картинками
+№227 Es eju uz tirgu. — Я иду на рынок.  →  iet (tw-1f6b6)  — картинка к глаголу
+№229 Es gatavoju vakariņas. — Я готовлю ужин.  →  vakariņas (tw-1f37d)  — во фразе несколько слов с картинками
+№230 Bērni ātri aug. — Дети быстро растут.  →  bērns (tw-1f9d2)  — во фразе несколько слов с картинками
+№233 Lūdzu, uzrakstiet uz lapas. — Напишите, пожалуйста, на листе.  →  uzrakstīt (tw-270d)  — картинка к глаголу
+№238 Mana māsa mācās vidusskolā. — Моя сестра учится в средней школе.  →  mācīties (tw-1f4da)  — картинка к глаголу
+№243 Es mācos universitātē. — Я учусь в университете.  →  universitāte (tw-1f393)  — во фразе несколько слов с картинками
+№252 Mēs ejam uz parku. — Мы идём в парк.  →  parks (tw-1f3de)  — во фразе несколько слов с картинками
+№255 Cik maksā maize? — Сколько стоит хлеб?  →  maize (tw-1f35e)  — во фразе несколько слов с картинками
+№262 Es atstāju telefonu mājās. — Я оставил (оставляю) телефон дома.  →  telefons (tw-1f4f1)  — во фразе несколько слов с картинками
+№264 Telefons ir zem grāmatas. — Телефон под книгой.  →  telefons (tw-1f4f1)  — во фразе несколько слов с картинками
+№284 Kur ir ceļš uz staciju? — Где дорога к вокзалу (станции)?  →  stacija (tw-1f689)  — во фразе несколько слов с картинками
+№288 Es ēdu maizi. — Я ем хлеб.  →  maize (tw-1f35e)  — во фразе несколько слов с картинками
+№289 Es gribu ēst. — Я хочу есть.  →  ēst (tw-1f374)  — картинка к глаголу
+№299 Es tevi nedzirdu. — Я тебя не слышу.  →  dzirdēt (tw-1f442)  — картинка к глаголу
+№315 Es gribu gulēt. — Я хочу спать.  →  gulēt (tw-1f634)  — картинка к глаголу
+№317 Es tev piezvanīšu. — Я тебе позвоню.  →  piezvanīt (tw-1f4de)  — картинка к глаголу
+№318 Ja tev ir laiks, piezvani. — Если у тебя есть время, позвони.  →  piezvanīt (tw-1f4de)  — картинка к глаголу
+№319 Pagaidi, kamēr es ēdu. — Подожди, пока я ем.  →  ēst (tw-1f374)  — картинка к глаголу
+№323 Es gribu dzert. — Я хочу пить.  →  dzert (tw-1f964)  — картинка к глаголу
+№324 Es dzeru ūdeni. — Я пью воду.  →  ūdens (tw-1f4a7)  — во фразе несколько слов с картинками
+№374 Lūdzu, iepriekš piezvaniet! — Пожалуйста, позвоните заранее!  →  piezvanīt (tw-1f4de)  — картинка к глаголу
+№377 Es guļu septiņas stundas. — Я сплю семь часов.  →  gulēt (tw-1f634)  — картинка к глаголу
+№379 Es tev uzrakstīšu ziņu. — Я напишу тебе сообщение.  →  uzrakstīt (tw-270d)  — картинка к глаголу
+№380 Es rakstu ziņu. — Я пишу сообщение.  →  rakstīt (tw-270d)  — картинка к глаголу
+№392 Vienu biļeti uz Jūrmalu, lūdzu. — Один билет в Юрмалу, пожалуйста.  →  biļete (tw-1f3ab)  — во фразе несколько слов с картинками
+№403 Es eju uz sporta zāli. — Я иду в спортзал.  →  zāle (tw-1f3cb)  — во фразе несколько слов с картинками
+№404 Darba beigās es eju uz zāli. — В конце рабочего дня я иду в зал.  →  zāle (tw-1f3cb)  — во фразе несколько слов с картинками
+№406 Es parasti ēdu mājās. — Я обычно ем дома.  →  māja (tw-1f3e0)  — во фразе несколько слов с картинками
+№413 Vai var maksāt ar karti? — Можно заплатить картой?  →  karte (tw-1f4b3)  — во фразе несколько слов с картинками
+№419 Kurš autobuss iet uz centru? — Какой автобус идёт в центр?  →  autobuss (tw-1f68c)  — во фразе несколько слов с картинками
+№429 Es eju uz sporta klubu. — Я иду в спортклуб.  →  iet (tw-1f6b6)  — картинка к глаголу
+№457 Līst lietus, tāpēc es braucu ar autobusu. — Идёт дождь, поэтому я еду на автобусе.  →  autobuss (tw-1f68c)  — во фразе несколько слов с картинками
+№461 Mana komanda šodien trenējas. — Моя команда сегодня тренируется.  →  komanda (tw-1f465)  — во фразе несколько слов с картинками
+№462 Vakarā es trenējos. — Вечером я тренируюсь.  →  trenēties (tw-1f3cb)  — картинка к глаголу
+№463 Vakarā mēs ejam uz teātri. — Вечером мы идём в театр.  →  teātris (tw-1f3ad)  — во фразе несколько слов с картинками
+№464 Es trenējos katru dienu. — Я тренируюсь каждый день.  →  trenēties (tw-1f3cb)  — картинка к глаголу
+№465 Šeit trenējas daudz jauniešu. — Здесь тренируется много молодёжи.  →  trenēties (tw-1f3cb)  — картинка к глаголу
+№466 Es trenējos trīs reizes nedēļā. — Я тренируюсь три раза в неделю.  →  trenēties (tw-1f3cb)  — картинка к глаголу
+№494 Ejiet taisni! — Идите прямо!  →  iet (tw-1f6b6)  — картинка к глаголу
+№495 Ejiet taisni uz priekšu. — Идите прямо (вперёд).  →  iet (tw-1f6b6)  — картинка к глаголу
+№498 Februārī es atpūšos. — В феврале я отдыхаю.  →  atpūsties (tw-1f6cb)  — картинка к глаголу
+№503 Vai tu redzi pieturu? — Ты видишь остановку?  →  pietura (tw-1f68f)  — во фразе несколько слов с картинками
+№515 Pirms treniņa es ēdu. — Перед тренировкой я ем. (…я поел — ēdu: и «ем», и «ел»)  →  treniņš (tw-1f3cb)  — во фразе несколько слов с картинками
+№518 Es mācos latviešu valodu. — Я учу латышский язык.  →  mācīties (tw-1f4da)  — картинка к глаголу
+№526 Viņš runā ļoti ātri. — Он говорит очень быстро.  →  runāt (tw-1f5e3)  — картинка к глаголу
+№527 Mans mērķis ir runāt latviski. — Моя цель — говорить по-латышски.  →  runāt (tw-1f5e3)  — картинка к глаголу
+№529 Es cenšos runāt latviski. — Я стараюсь говорить по-латышски.  →  runāt (tw-1f5e3)  — картинка к глаголу
+№530 Es mazliet runāju latviski. — Я немного говорю по-латышски.  →  runāt (tw-1f5e3)  — картинка к глаголу
+№535 Šogad es mācos latviski. — В этом году я учу латышский.  →  mācīties (tw-1f4da)  — картинка к глаголу
+№536 Lūdzu, runājiet lēnāk. — Пожалуйста, говорите медленнее.  →  runāt (tw-1f5e3)  — картинка к глаголу
+№537 Vai jūs runājat angliski? — Вы говорите по-английски?  →  runāt (tw-1f5e3)  — картинка к глаголу
+№546 Aptieka ir starp banku un veikalu. — Аптека между банком и магазином.  →  aptieka (tw-1f48a)  — во фразе несколько слов с картинками
+№556 Es runāju krieviski. — Я говорю по-русски.  →  runāt (tw-1f5e3)  — картинка к глаголу
+№557 Vai tu skatījies maču? — Ты смотрел матч?  →  mačs (tw-26bd)  — во фразе несколько слов с картинками
+
+ВСЕ ФРАЗЫ С КАРТИНКАМИ:
+№ 35 Policija! — Полиция!  →  policija (tw-1f693)  [вместо перевода]
+№ 41 Lūdzu, uzrakstiet! — Пожалуйста, напишите!  →  uzrakstīt (tw-270d)  [вместо перевода]
+№ 42 Uzraksti man! — Напиши мне!  →  uzrakstīt (tw-270d)  [вместо перевода]
+№ 45 Mēs ejam. — Мы идём. / Пошли!  →  iet (tw-1f6b6)
+№ 48 Es eju mājās. — Я иду домой.  →  māja (tw-1f3e0)
+№ 49 Pie mājas. — У дома. / Возле дома.  →  māja (tw-1f3e0)
+№ 50 Es esmu mājās. — Я дома.  →  māja (tw-1f3e0)  [вместо перевода]
+№ 62 Viņš ir mājās. — Он дома.  →  māja (tw-1f3e0)
+№ 64 Es eju uz darbu. — Я иду на работу.  →  iet (tw-1f6b6)
+№ 69 Man nav naudas. — У меня нет денег.  →  nauda (tw-1f4b6)
+№ 70 Es palieku mājās. — Я остаюсь дома.  →  māja (tw-1f3e0)
+№ 75 Man ir bērni. — У меня есть дети.  →  bērns (tw-1f9d2)  [вместо перевода]
+№ 76 Man ir divi bērni. — У меня двое детей.  →  bērns (tw-1f9d2)
+№ 77 Es skatos. — Я смотрю.  →  skatīties (tw-1f440)  [вместо перевода]
+№ 78 Es tikai skatos. — Я просто смотрю.  →  skatīties (tw-1f440)
+№ 82 Mamma, es esmu mājās! — Мама, я дома!  →  māja (tw-1f3e0)
+№ 83 Es meklēju darbu. — Я ищу работу.  →  meklēt (tw-1f50d)
+№ 86 Ejam kopā! — Пойдём вместе!  →  iet (tw-1f6b6)
+№ 94 Labu nakti! — Спокойной ночи!  →  nakts (tw-1f319)
+№109 Es drīz būšu mājās. — Я скоро буду дома.  →  māja (tw-1f3e0)
+№110 Viņš spēlē komandā. — Он играет в команде.  →  komanda (tw-1f465)
+№111 Mūsu komanda zaudēja. — Наша команда проиграла.  →  komanda (tw-1f465)
+№112 Mūsu komanda uzvarēja! — Наша команда победила!  →  komanda (tw-1f465)
+№120 Es strādāju no mājām. — Я работаю из дома.  →  māja (tw-1f3e0)
+№124 Es eju uz skolu. — Я иду в школу.  →  skola (tw-1f3eb)
+№125 Mans bērns iet uz skolu. — Мой ребёнок ходит в школу.  →  skola (tw-1f3eb)
+№126 Te ir mana māja. — Вот мой дом. (Здесь мой дом.)  →  māja (tw-1f3e0)
+№127 No rīta. — Утром.  →  rīts (tw-1f305)
+№128 Līdz rītam! — До завтра! (до утра)  →  rīts (tw-1f305)
+№129 Tas vīrietis ir mans brālis. — Тот мужчина — мой брат.  →  vīrietis (tw-1f468)
+№132 Šodien ir spēle. — Сегодня игра (матч).  →  spēle (tw-26bd)
+№137 Cik tas maksā? — Сколько это стоит?  →  maksāt (tw-1f4b6)
+№145 Mums ir suns. — У нас есть собака.  →  suns (tw-1f415)
+№146 Vakariņas ir gatavas. — Ужин готов.  →  vakariņas (tw-1f37d)
+№152 Es lasu. — Я читаю.  →  lasīt (tw-1f4d6)  [вместо перевода]
+№153 Es lasu grāmatu. — Я читаю книгу.  →  grāmata (tw-1f4d6)
+№159 Būs lietus. — Будет дождь.  →  lietus (tw-1f327)  [вместо перевода]
+№160 Lietus dēļ es palieku mājās. — Из-за дождя я остаюсь дома.  →  lietus (tw-1f327)
+№161 Es mācos. — Я учусь.  →  mācīties (tw-1f4da)  [вместо перевода]
+№162 Mans dēls mācās skolā. — Мой сын учится в школе.  →  skola (tw-1f3eb)
+№163 Mēs ejam uz veikalu. — Мы идём в магазин.  →  veikals (tw-1f3ea)
+№164 Es braucu uz veikalu. — Я еду в магазин.  →  veikals (tw-1f3ea)
+№166 Mēs braucam uz jūru. — Мы едем на море.  →  jūra (tw-1f30a)
+№171 Es mācos valodu. — Я учу язык.  →  mācīties (tw-1f4da)
+№173 Es uzrakstīju vēstuli. — Я написал(а) письмо.  →  vēstule (tw-2709)
+№174 Es saņēmu vēstuli. — Я получил письмо.  →  vēstule (tw-2709)
+№177 Tā ir mūsu uzvara! — Это наша победа!  →  uzvara (tw-1f3c6)
+№181 Es eju uz mežu. — Я иду в лес.  →  mežs (tw-1f332)
+№182 Izsauciet policiju! — Вызовите полицию!  →  policija (tw-1f693)
+№186 Cik ir pulkstenis? — Который час?  →  pulkstenis (tw-231a)
+№188 Pie mājas ir liels koks. — У дома большое дерево.  →  koks (tw-1f333)
+№193 Man vajag ārstu. — Мне нужен врач.  →  ārsts (tw-1fa7a)
+№194 Mans tēvs ir ārsts. — Мой отец — врач.  →  ārsts (tw-1fa7a)
+№218 Man vajag atpūsties. — Мне нужно отдохнуть.  →  atpūsties (tw-1f6cb)
+№219 Bērni spēlē laukumā. — Дети играют на площадке.  →  bērns (tw-1f9d2)
+№221 Tēju, lūdzu. — Чай, пожалуйста.  →  tēja (tw-1f375)  [вместо перевода]
+№222 Melnu tēju, lūdzu. — Чёрный чай, пожалуйста.  →  tēja (tw-1f375)
+№224 Vakar es biju mājās. — Вчера я был дома.  →  māja (tw-1f3e0)
+№225 Vakar mēs skatījāmies filmu. — Вчера мы смотрели фильм.  →  filma (tw-1f3ac)
+№227 Es eju uz tirgu. — Я иду на рынок.  →  iet (tw-1f6b6)
+№229 Es gatavoju vakariņas. — Я готовлю ужин.  →  vakariņas (tw-1f37d)
+№230 Bērni ātri aug. — Дети быстро растут.  →  bērns (tw-1f9d2)
+№233 Lūdzu, uzrakstiet uz lapas. — Напишите, пожалуйста, на листе.  →  uzrakstīt (tw-270d)
+№238 Mana māsa mācās vidusskolā. — Моя сестра учится в средней школе.  →  mācīties (tw-1f4da)
+№243 Es mācos universitātē. — Я учусь в университете.  →  universitāte (tw-1f393)
+№246 Kāds ir veikala nosaukums? — Как называется магазин?  →  veikals (tw-1f3ea)
+№252 Mēs ejam uz parku. — Мы идём в парк.  →  parks (tw-1f3de)
+№254 Viņš saņēma balvu. — Он получил награду.  →  balva (tw-1f3c6)
+№255 Cik maksā maize? — Сколько стоит хлеб?  →  maize (tw-1f35e)
+№256 Kur ir maize? — Где хлеб?  →  maize (tw-1f35e)
+№258 Kur ir telefons? — Где телефон?  →  telefons (tw-1f4f1)
+№259 Telefons nedarbojas. — Телефон не работает.  →  telefons (tw-1f4f1)
+№260 Man ir jauns telefons. — У меня новый телефон.  →  telefons (tw-1f4f1)
+№261 Mans telefons ir vecs. — Мой телефон старый.  →  telefons (tw-1f4f1)
+№262 Es atstāju telefonu mājās. — Я оставил (оставляю) телефон дома.  →  telefons (tw-1f4f1)
+№263 Telefons ir uz zemes. — Телефон на земле (на полу).  →  telefons (tw-1f4f1)
+№264 Telefons ir zem grāmatas. — Телефон под книгой.  →  telefons (tw-1f4f1)
+№265 Kur ir banka? — Где банк?  →  banka (tw-1f3e6)
+№266 Kāds ir tavs telefona numurs? — Какой у тебя номер телефона?  →  telefons (tw-1f4f1)
+№267 Kam pieder šis telefons? — Чей это телефон? (Кому принадлежит этот телефон?)  →  telefons (tw-1f4f1)
+№268 Kur ir slimnīca? — Где больница?  →  slimnīca (tw-1f3e5)
+№272 Man sāp roka. — У меня болит рука.  →  roka (tw-270b)
+№273 Man sāp acis. — У меня болят глаза.  →  acs (tw-1f441)
+№274 Man sāp sirds. — У меня болит сердце.  →  sirds (cm-e42258dfe0)
+№275 Man sāp kāja. — У меня болит нога.  →  kāja (tw-1f9b5)
+№278 Kur ir vilciens? — Где поезд?  →  vilciens (tw-1f686)
+№280 Kur ir tualete? — Где туалет?  →  tualete (tw-1f6bb)
+№282 Kur ir stacija? — Где вокзал?  →  stacija (tw-1f689)
+№283 Kur atrodas stacija? — Где находится вокзал (станция)?  →  stacija (tw-1f689)
+№284 Kur ir ceļš uz staciju? — Где дорога к вокзалу (станции)?  →  stacija (tw-1f689)
+№285 Kur ir muzejs? — Где музей?  →  muzejs (tw-1f5bc)
+№287 Kur ir pārtikas veikals? — Где продуктовый магазин?  →  veikals (tw-1f3ea)
+№288 Es ēdu maizi. — Я ем хлеб.  →  maize (tw-1f35e)
+№289 Es gribu ēst. — Я хочу есть.  →  ēst (tw-1f374)
+№299 Es tevi nedzirdu. — Я тебя не слышу.  →  dzirdēt (tw-1f442)
+№313 Mana ģimene dzīvo Rīgā. — Моя семья живёт в Риге.  →  ģimene (tw-1f46a)
+№315 Es gribu gulēt. — Я хочу спать.  →  gulēt (tw-1f634)
+№317 Es tev piezvanīšu. — Я тебе позвоню.  →  piezvanīt (tw-1f4de)
+№318 Ja tev ir laiks, piezvani. — Если у тебя есть время, позвони.  →  piezvanīt (tw-1f4de)
+№319 Pagaidi, kamēr es ēdu. — Подожди, пока я ем.  →  ēst (tw-1f374)
+№320 Rīga ir liela pilsēta. — Рига — большой город.  →  pilsēta (tw-1f3d9)
+№321 Rīga ir skaista pilsēta. — Рига — красивый город.  →  pilsēta (tw-1f3d9)
+№323 Es gribu dzert. — Я хочу пить.  →  dzert (tw-1f964)
+№324 Es dzeru ūdeni. — Я пью воду.  →  ūdens (tw-1f4a7)
+№325 Vai jums ir ūdens? — У вас есть вода?  →  ūdens (tw-1f4a7)
+№332 Lūdzu, dodiet man ūdeni. — Дайте мне воды, пожалуйста.  →  ūdens (tw-1f4a7)
+№336 Ņem līdzi ūdeni! — Возьми с собой воду!  →  ūdens (tw-1f4a7)
+№340 Lūdzu, jūsu dokumentus. — Ваши документы, пожалуйста.  →  dokuments (tw-1f4c4)
+№343 Es gribu kafiju. — Я хочу кофе.  →  kafija (tw-2615)
+№344 Vienu kafiju, lūdzu. — Один кофе, пожалуйста.  →  kafija (tw-2615)
+№356 Man patīk kafija. — Мне нравится кофе. / Я люблю кофе.  →  kafija (tw-2615)
+№359 Man patīk šī grāmata. — Мне нравится эта книга.  →  grāmata (tw-1f4d6)
+№360 Šī sieviete strādā šeit. — Эта женщина работает здесь.  →  sieviete (tw-1f469)
+№364 Šī meitene ir mana māsa. — Эта девушка — моя сестра.  →  meitene (tw-1f467)
+№367 Šī ir laba dziesma. — Это хорошая песня.  →  dziesma (tw-1f3a4)
+№368 Man patīk mūzika. — Мне нравится музыка. / Я люблю музыку.  →  mūzika (tw-1f3b5)
+№369 Es arī gribu kafiju. — Я тоже хочу кофе.  →  kafija (tw-2615)
+№370 Es gribu šādu telefonu. — Я хочу такой телефон.  →  telefons (tw-1f4f1)
+№372 Ielas galā ir veikals. — В конце улицы магазин.  →  veikals (tw-1f3ea)
+№374 Lūdzu, iepriekš piezvaniet! — Пожалуйста, позвоните заранее!  →  piezvanīt (tw-1f4de)
+№375 Lūdzu, sagatavojiet dokumentus. — Подготовьте, пожалуйста, документы.  →  dokuments (tw-1f4c4)
+№377 Es guļu septiņas stundas. — Я сплю семь часов.  →  gulēt (tw-1f634)
+№378 Kāda krāsa tev patīk? — Какой цвет тебе нравится?  →  krāsa (tw-1f3a8)
+№379 Es tev uzrakstīšu ziņu. — Я напишу тебе сообщение.  →  uzrakstīt (tw-270d)
+№380 Es rakstu ziņu. — Я пишу сообщение.  →  rakstīt (tw-270d)
+№383 Vai jums ir dzīvnieki? — У вас есть животные?  →  dzīvnieks (tw-1f43e)
+№385 Es gribu pierakstīties pie ārsta. — Я хочу записаться к врачу.  →  ārsts (tw-1fa7a)
+№386 Saglabā dokumentu! — Сохрани документ!  →  dokuments (tw-1f4c4)
+№389 Mums ir dažādas krāsas. — У нас разные цвета.  →  krāsa (tw-1f3a8)
+№390 Vai tu saņēmi biļeti? — Ты получил билет?  →  biļete (tw-1f3ab)
+№391 Es gribu mainīt biļeti. — Я хочу поменять билет.  →  biļete (tw-1f3ab)
+№392 Vienu biļeti uz Jūrmalu, lūdzu. — Один билет в Юрмалу, пожалуйста.  →  biļete (tw-1f3ab)
+№396 Es tevi aicinu uz vakariņām. — Я приглашаю тебя на ужин.  →  vakariņas (tw-1f37d)
+№397 Es bieži braucu uz Jūrmalu. — Я часто езжу в Юрмалу.  →  jūrmala (tw-1f3d6)
+№400 Mūsu pilsētā ir desmit tūkstoši cilvēku. — В нашем городе десять тысяч человек.  →  pilsēta (tw-1f3d9)
+№403 Es eju uz sporta zāli. — Я иду в спортзал.  →  zāle (tw-1f3cb)
+№404 Darba beigās es eju uz zāli. — В конце рабочего дня я иду в зал.  →  zāle (tw-1f3cb)
+№405 Vakar es biju trenažieru zālē. — Вчера я был в тренажёрном зале.  →  zāle (tw-1f3cb)
+№406 Es parasti ēdu mājās. — Я обычно ем дома.  →  māja (tw-1f3e0)
+№409 Rīgas pils ir veca. — Рижский замок старый.  →  pils (tw-1f3f0)
+№410 Man nepatīk piens. — Мне не нравится молоко. / Я не люблю молоко.  →  piens (tw-1f95b)
+№411 Kafiju ar pienu, lūdzu. — Кофе с молоком, пожалуйста.  →  kafija (tw-2615)
+№412 Es pavadu laiku ar ģimeni. — Я провожу время с семьёй.  →  ģimene (tw-1f46a)
+№413 Vai var maksāt ar karti? — Можно заплатить картой?  →  karte (tw-1f4b3)
+№414 Es lietoju karti. — Я пользуюсь картой.  →  karte (tw-1f4b3)
+№415 Vai jūs pieņemat karti? — Вы принимаете карту?  →  karte (tw-1f4b3)
+№416 Es braucu ar autobusu. — Я еду на автобусе.  →  autobuss (tw-1f68c)
+№417 Autobuss ir pilns. — Автобус полный.  →  autobuss (tw-1f68c)
+№418 Vai ir cits autobuss? — Есть другой автобус?  →  autobuss (tw-1f68c)
+№419 Kurš autobuss iet uz centru? — Какой автобус идёт в центр?  →  autobuss (tw-1f68c)
+№420 Kafiju bez piena, lūdzu. — Кофе без молока, пожалуйста.  →  kafija (tw-2615)
+№428 Vai šeit ir internets? — Здесь есть интернет?  →  internets (tw-1f310)
+№429 Es eju uz sporta klubu. — Я иду в спортклуб.  →  iet (tw-1f6b6)
+№434 Ārsts gaida pacientu. — Врач ждёт пациента.  →  ārsts (tw-1fa7a)
+№435 Baltu maizi, lūdzu. — Белый хлеб, пожалуйста.  →  maize (tw-1f35e)
+№443 Pievienojiet pienu, lūdzu. — Добавьте молока, пожалуйста.  →  piens (tw-1f95b)
+№446 Kur ir galvenā stacija? — Где главный вокзал?  →  stacija (tw-1f689)
+№449 Man garšo šī zupa. — Мне нравится этот суп (на вкус). / Вкусный суп.  →  zupa (tw-1f372)
+№450 Man īpaši patīk šī zupa. — Мне особенно нравится этот суп.  →  zupa (tw-1f372)
+№451 Es esmu students. — Я студент.  →  students (tw-1f393)  [вместо перевода]
+№453 Turpmāk es braukšu ar autobusu. — Впредь я буду ездить на автобусе.  →  autobuss (tw-1f68c)
+№454 Līst lietus. — Идёт дождь.  →  lietus (tw-1f327)
+№455 Atkal līst lietus. — Опять идёт дождь.  →  lietus (tw-1f327)
+№456 Joprojām līst lietus. — Всё ещё идёт дождь.  →  lietus (tw-1f327)
+№457 Līst lietus, tāpēc es braucu ar autobusu. — Идёт дождь, поэтому я еду на автобусе.  →  autobuss (tw-1f68c)
+№458 Es gribu apmeklēt muzeju. — Я хочу посетить музей.  →  muzejs (tw-1f5bc)
+№459 Rīt ir koncerts. — Завтра концерт.  →  koncerts (tw-1f3b8)
+№461 Mana komanda šodien trenējas. — Моя команда сегодня тренируется.  →  komanda (tw-1f465)
+№462 Vakarā es trenējos. — Вечером я тренируюсь.  →  trenēties (tw-1f3cb)
+№463 Vakarā mēs ejam uz teātri. — Вечером мы идём в театр.  →  teātris (tw-1f3ad)
+№464 Es trenējos katru dienu. — Я тренируюсь каждый день.  →  trenēties (tw-1f3cb)
+№465 Šeit trenējas daudz jauniešu. — Здесь тренируется много молодёжи.  →  trenēties (tw-1f3cb)
+№466 Es trenējos trīs reizes nedēļā. — Я тренируюсь три раза в неделю.  →  trenēties (tw-1f3cb)
+№470 Man ir temperatūra. — У меня температура.  →  temperatūra (tw-1f321)  [вместо перевода]
+№474 Man nav automašīnas. — У меня нет машины.  →  automašīna (tw-1f697)
+№475 Viņš vada automašīnu. — Он водит машину.  →  automašīna (tw-1f697)
+№480 Septembrī sākas skola. — В сентябре начинается школа.  →  skola (tw-1f3eb)
+№482 Kur var iegādāties biļeti? — Где можно купить билет?  →  biļete (tw-1f3ab)
+№483 Vai jums ir maisiņš? — У вас есть пакет?  →  maisiņš (tw-1f6cd)
+№484 Man vajag mazu maisiņu. — Мне нужен маленький пакет.  →  maisiņš (tw-1f6cd)
+№486 Es aizmirsu dvieli. — Я забыл полотенце.  →  dvielis (cm-0fcb82715c)
+№487 Man vajag otru dvieli. — Мне нужно ещё одно (второе) полотенце.  →  dvielis (cm-0fcb82715c)
+№488 Tualete ir otrā pusē. — Туалет на другой стороне.  →  tualete (tw-1f6bb)
+№489 Kur es varu likt dvieli? — Куда я могу положить полотенце?  →  dvielis (cm-0fcb82715c)
+№494 Ejiet taisni! — Идите прямо!  →  iet (tw-1f6b6)
+№495 Ejiet taisni uz priekšu. — Идите прямо (вперёд).  →  iet (tw-1f6b6)
+№496 Jūnijā es braucu uz jūru. — В июне я еду на море.  →  jūra (tw-1f30a)
+№498 Februārī es atpūšos. — В феврале я отдыхаю.  →  atpūsties (tw-1f6cb)
+№499 Kur ir pietura? — Где остановка?  →  pietura (tw-1f68f)
+№500 Pietura ir tur. — Остановка там.  →  pietura (tw-1f68f)
+№501 Durvis ir tur. — Дверь там.  →  durvis (tw-1f6aa)
+№502 Lūdzu, atveriet durvis. — Откройте, пожалуйста, дверь.  →  durvis (tw-1f6aa)
+№503 Vai tu redzi pieturu? — Ты видишь остановку?  →  pietura (tw-1f68f)
+№504 Es nevaru atrast pieturu. — Я не могу найти остановку.  →  pietura (tw-1f68f)
+№506 Vilciens atiet. — Поезд отходит.  →  vilciens (tw-1f686)
+№507 Kuģis atiet rīt. — Корабль (паром) отходит завтра.  →  kuģis (tw-1f6a2)
+№508 Kur ir dzelzceļa stacija? — Где железнодорожный вокзал?  →  stacija (tw-1f689)
+№509 Kur var reģistrēt automašīnu? — Где можно зарегистрировать машину?  →  automašīna (tw-1f697)
+№513 Cikos atiet vilciens? — Во сколько отходит поезд?  →  vilciens (tw-1f686)
+№514 Cikos sākas treniņš? — Во сколько начинается тренировка?  →  treniņš (tw-1f3cb)
+№515 Pirms treniņa es ēdu. — Перед тренировкой я ем. (…я поел — ēdu: и «ем», и «ел»)  →  treniņš (tw-1f3cb)
+№516 Tas bija ilgs treniņš. — Это была долгая тренировка.  →  treniņš (tw-1f3cb)
+№517 Cikos atiet nākamais vilciens? — Во сколько отходит следующий поезд?  →  vilciens (tw-1f686)
+№518 Es mācos latviešu valodu. — Я учу латышский язык.  →  mācīties (tw-1f4da)
+№523 Ziemā ir auksti. — Зимой холодно.  →  ziema (tw-2744)
+№526 Viņš runā ļoti ātri. — Он говорит очень быстро.  →  runāt (tw-1f5e3)
+№527 Mans mērķis ir runāt latviski. — Моя цель — говорить по-латышски.  →  runāt (tw-1f5e3)
+№529 Es cenšos runāt latviski. — Я стараюсь говорить по-латышски.  →  runāt (tw-1f5e3)
+№530 Es mazliet runāju latviski. — Я немного говорю по-латышски.  →  runāt (tw-1f5e3)
+№535 Šogad es mācos latviski. — В этом году я учу латышский.  →  mācīties (tw-1f4da)
+№536 Lūdzu, runājiet lēnāk. — Пожалуйста, говорите медленнее.  →  runāt (tw-1f5e3)
+№537 Vai jūs runājat angliski? — Вы говорите по-английски?  →  runāt (tw-1f5e3)
+№541 Tas maksā desmit eiro. — Это стоит десять евро.  →  eiro (tw-1f4b6)
+№543 Kur ir aptieka? — Где аптека?  →  aptieka (tw-1f48a)
+№544 Viņa strādā aptiekā. — Она работает в аптеке.  →  aptieka (tw-1f48a)
+№545 Pašlaik viņa nav mājās. — Сейчас её нет дома.  →  māja (tw-1f3e0)
+№546 Aptieka ir starp banku un veikalu. — Аптека между банком и магазином.  →  aptieka (tw-1f48a)
+№549 Vasarā ir silti. — Летом тепло.  →  vasara (tw-2600)
+№550 Es šeit dzīvoju kopš vasaras. — Я живу здесь с лета.  →  vasara (tw-2600)
+№553 Es trenēju kājas. — Я тренирую ноги.  →  kāja (tw-1f9b5)
+№554 Šodien mēs trenējam kāju muskuļus. — Сегодня мы тренируем мышцы ног.  →  kāja (tw-1f9b5)
+№556 Es runāju krieviski. — Я говорю по-русски.  →  runāt (tw-1f5e3)
+№557 Vai tu skatījies maču? — Ты смотрел матч?  →  mačs (tw-26bd)

@@ -1,5 +1,6 @@
 import { useState } from 'preact/hooks';
 import type { Accent, FontPair, Settings as S } from '../core/types';
+import { imageUrl, type ImagesData } from '../data/images';
 import { Icon, type IconName } from './icons';
 import { ACCENT_RU, effectiveTheme, FONT_PAIRS } from './look';
 
@@ -29,8 +30,9 @@ function Row({ icon, title, hint, value, onClick, children }: {
   );
 }
 
-export function Settings({ value, onChange, onPlacement }: { value: S; onChange: (s: S) => void; onPlacement: () => void }) {
+export function Settings({ value, onChange, onPlacement, images }: { value: S; onChange: (s: S) => void; onPlacement: () => void; images: ImagesData | null }) {
   const [picker, setPicker] = useState<Picker>(null);
+  const [credits, setCredits] = useState(false);
   const set = (patch: Partial<S>) => onChange({ ...value, ...patch });
   const theme = effectiveTheme(value);
 
@@ -55,6 +57,41 @@ export function Settings({ value, onChange, onPlacement }: { value: S; onChange:
     },
   };
   const open = picker ? options[picker] : null;
+
+  if (credits && images) {
+    const used = new Set(Object.values(images.phrases).map((x) => x.image));
+    const list = Object.entries(images.images).filter(([k]) => used.has(k));
+    const lemmas = (k: string) => [...new Set(Object.values(images.phrases).filter((x) => x.image === k).map((x) => x.lemma))].join(', ');
+    return (
+      <>
+        <button class="s-link back" onClick={() => setCredits(false)}>
+          ← Настройки
+        </button>
+        <h1 class="title">Авторы изображений</h1>
+        <p class="subtitle">Картинки к фразам — с Wikimedia Commons, под открытыми лицензиями. Значки — набор Twemoji (Twitter, CC BY 4.0) и Noto Emoji (Google, Apache 2.0)</p>
+        <div class="rows credits">
+          {list.map(([k, c]) => (
+            <div key={k} class="row credit-row">
+              <img src={imageUrl(c.file)} alt="" width={40} height={40} loading="lazy" />
+              <span class="row-text">
+                <b>{lemmas(k)}</b>
+                <small>
+                  {c.author} ·{' '}
+                  <a href={c.licenseUrl || c.source} target="_blank" rel="noopener">
+                    {c.license}
+                  </a>{' '}
+                  ·{' '}
+                  <a href={c.source} target="_blank" rel="noopener">
+                    {c.title.replace(/^File:/, '')}
+                  </a>
+                </small>
+              </span>
+            </div>
+          ))}
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
@@ -90,6 +127,24 @@ export function Settings({ value, onChange, onPlacement }: { value: S; onChange:
         </Row>
       </div>
 
+      <h2 class="section-title">Картинки</h2>
+      <div class="rows">
+        <Row
+          icon="eye"
+          title="Картинка вместо перевода"
+          hint="Для простых конкретных фраз (Policija!, Tēju, lūdzu.) при вводе и «скажи» показываю картинку вместо русского; перевод — по нажатию"
+        >
+          <div class="seg" role="radiogroup" aria-label="Картинка вместо перевода">
+            <button class={value.pictureCue ? 'on' : ''} role="radio" aria-checked={!!value.pictureCue} onClick={() => set({ pictureCue: true })}>
+              Вкл
+            </button>
+            <button class={!value.pictureCue ? 'on' : ''} role="radio" aria-checked={!value.pictureCue} onClick={() => set({ pictureCue: false })}>
+              Выкл
+            </button>
+          </div>
+        </Row>
+      </div>
+
       <h2 class="section-title">Вид</h2>
       <div class="rows">
         <Row icon={theme === 'dark' ? 'moon' : 'sun'} title="Тема">
@@ -112,6 +167,7 @@ export function Settings({ value, onChange, onPlacement }: { value: S; onChange:
       <div class="rows">
         <Row icon="info" title="Словарь форм" hint="Tēzaurs.lv 2026, CLARIN-LV, лицензия CC BY-SA 4.0" />
         <Row icon="play" title="Голос" hint="Azure, Everita (латышский)" />
+        {images && <Row icon="palette" title="Авторы изображений" hint="Источники, авторы и лицензии картинок" onClick={() => setCredits(true)} />}
       </div>
       <p class="foot">Всё хранится на этом телефоне и работает без интернета</p>
 

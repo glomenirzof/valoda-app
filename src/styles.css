@@ -372,3 +372,16 @@ button.mic-ring.on { background: var(--primary); color: var(--on-primary); }
 .warn-note { padding: var(--s3); border-radius: 16px; background: var(--surface-2); color: var(--ink); }
 .summary .note { margin: var(--s3) 0 0; font-size: 14px; line-height: 1.4; color: var(--muted); }
 .summary .warn-note { color: var(--ink); }
+
+/* phrase pictures (dual coding) */
+.ph-img { display: block; width: 96px; height: 96px; object-fit: contain; margin: 0 auto var(--s3); border-radius: 18px; }
+.ph-img.big { width: 128px; height: 128px; margin: var(--s4) 0 var(--s2); }
+.phrase-card .ph-img { margin-bottom: var(--s3); }
+.choice-after { margin-top: var(--s4); text-align: center; }
+.choice-after .ph-img { width: 72px; height: 72px; margin-bottom: var(--s2); }
+.choice-after .choice-lv { margin-top: 0; }
+.cue-prompt { display: grid; justify-items: start; }
+.cue-ru { margin: 0; font: 700 22px/1.2 var(--font-head); color: var(--ink-2); }
+.credit-row img { width: 40px; height: 40px; object-fit: contain; flex: none; border-radius: 8px; }
+.credit-row small a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.s-link.back { margin: 0 0 var(--s2); padding: 0; }

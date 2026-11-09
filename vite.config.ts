@@ -30,7 +30,7 @@ export default defineConfig({
       workbox: {
         // App shell + content + audio are precached so sessions work fully offline.
         // voice-test/ and design/ are one-off comparison pages and stay out of the cache.
-        globPatterns: ['**/*.{js,css,html,png,svg,webmanifest,json,mp3,woff2}'],
+        globPatterns: ['**/*.{js,css,html,png,svg,webp,webmanifest,json,mp3,woff2}'],
         // single-word audio (audio/<lang>/w/) is cached on first play, below, to keep the first download small
         globIgnores: ['voice-test/**', 'design/**', 'audio/*/w/**'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,

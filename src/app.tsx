@@ -5,6 +5,7 @@ import { lessonInput, trainable, type Acquaintance } from './core/session';
 import type { StoredCard } from './core/srs';
 import { DEFAULT_SETTINGS, type Phrase, type Settings as S } from './core/types';
 import { setSound, unlockAudio } from './data/audio';
+import { loadImages, type ImagesData } from './data/images';
 import { loadPhrases } from './data/content';
 import { loadAcquaint, loadCards, loadControl, loadSettings, requestPersistence, saveSettings } from './data/db';
 import { Control } from './ui/Control';
@@ -41,6 +42,7 @@ export function App() {
   const [test, setTest] = useState<string[] | null>(null);
   /** placement test running */
   const [placing, setPlacing] = useState(false);
+  const [images, setImages] = useState<ImagesData | null>(null);
   /** settings and the learner's data are loaded: only then can the first-launch offer be decided */
   const [loaded, setLoaded] = useState({ settings: false, data: false });
 
@@ -80,6 +82,7 @@ export function App() {
       setLoaded((l) => ({ ...l, data: true })),
     );
     loadControl(settings.lang).then(setControl);
+    loadImages(settings.lang).then(setImages);
   }, [settings.lang]);
 
   const update = (s: S) => {
@@ -212,7 +215,7 @@ export function App() {
         ) : tab === 'progress' ? (
           <Progress phrases={phrases} cards={cards} acquainted={acquaint} control={control} settings={settings} onControl={startControl} />
         ) : (
-          <Settings value={settings} onChange={update} onPlacement={() => setPlacing(true)} />
+          <Settings value={settings} onChange={update} onPlacement={() => setPlacing(true)} images={images} />
         )}
       </main>
 

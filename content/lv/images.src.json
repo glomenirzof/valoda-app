@@ -1,0 +1,322 @@
+{
+ "note": "Картинки к словам (dual coding): только конкретные предметы, места, транспорт, еда и действия. Абстрактные слова (laiks, problēma, vajadzēt, domāt), время (minūte, nedēļa), люди-роли без однозначного значка и части тела без понятной картинки (mugura — на Commons только анатомические таблицы) — без картинок. emoji → файл Twemoji с Wikimedia Commons (CC BY 4.0); commons → конкретный файл Commons. Собирает scripts/content/build_images.py. phraseOverride: для отдельной фразы — другое слово с картинкой или null (без картинки), когда автоматический выбор вводит в заблуждение. Во фразах с отрицанием картинка никогда не заменяет перевод.",
+ "lemmas": {
+  "māja": {
+   "emoji": "🏠"
+  },
+  "telefons": {
+   "emoji": "📱"
+  },
+  "kafija": {
+   "emoji": "☕"
+  },
+  "lietus": {
+   "emoji": "🌧"
+  },
+  "līt": {
+   "emoji": "🌧"
+  },
+  "veikals": {
+   "emoji": "🏪"
+  },
+  "autobuss": {
+   "emoji": "🚌"
+  },
+  "bērns": {
+   "emoji": "🧒"
+  },
+  "stacija": {
+   "emoji": "🚉"
+  },
+  "ūdens": {
+   "emoji": "💧"
+  },
+  "skola": {
+   "emoji": "🏫"
+  },
+  "vilciens": {
+   "emoji": "🚆"
+  },
+  "ārsts": {
+   "emoji": "🩺"
+  },
+  "biļete": {
+   "emoji": "🎫"
+  },
+  "piens": {
+   "emoji": "🥛"
+  },
+  "maize": {
+   "emoji": "🍞"
+  },
+  "pietura": {
+   "emoji": "🚏"
+  },
+  "grāmata": {
+   "emoji": "📖"
+  },
+  "pilsēta": {
+   "emoji": "🏙"
+  },
+  "dokuments": {
+   "emoji": "📄"
+  },
+  "vakariņas": {
+   "emoji": "🍽"
+  },
+  "kāja": {
+   "emoji": "🦵"
+  },
+  "karte": {
+   "emoji": "💳"
+  },
+  "automašīna": {
+   "emoji": "🚗"
+  },
+  "aptieka": {
+   "emoji": "💊"
+  },
+  "durvis": {
+   "emoji": "🚪"
+  },
+  "policija": {
+   "emoji": "🚓"
+  },
+  "banka": {
+   "emoji": "🏦"
+  },
+  "jūra": {
+   "emoji": "🌊"
+  },
+  "jūrmala": {
+   "emoji": "🏖"
+  },
+  "vēstule": {
+   "emoji": "✉"
+  },
+  "tualete": {
+   "emoji": "🚻"
+  },
+  "tēja": {
+   "emoji": "🍵"
+  },
+  "muzejs": {
+   "emoji": "🖼"
+  },
+  "zupa": {
+   "emoji": "🍲"
+  },
+  "maisiņš": {
+   "emoji": "🛍"
+  },
+  "nauda": {
+   "emoji": "💶"
+  },
+  "eiro": {
+   "emoji": "💶"
+  },
+  "sieviete": {
+   "emoji": "👩"
+  },
+  "vīrietis": {
+   "emoji": "👨"
+  },
+  "meitene": {
+   "emoji": "👧"
+  },
+  "nakts": {
+   "emoji": "🌙"
+  },
+  "rīts": {
+   "emoji": "🌅"
+  },
+  "vakars": {
+   "emoji": "🌆"
+  },
+  "ziema": {
+   "emoji": "❄"
+  },
+  "vasara": {
+   "emoji": "☀"
+  },
+  "suns": {
+   "emoji": "🐕"
+  },
+  "dzīvnieks": {
+   "emoji": "🐾"
+  },
+  "mūzika": {
+   "emoji": "🎵"
+  },
+  "dziesma": {
+   "emoji": "🎤"
+  },
+  "koncerts": {
+   "emoji": "🎸"
+  },
+  "slimnīca": {
+   "emoji": "🏥"
+  },
+  "roka": {
+   "emoji": "✋"
+  },
+  "acs": {
+   "emoji": "👁"
+  },
+  "sirds": {
+   "commons": "File:Noto_Emoji_v2.034_1fac0.svg"
+  },
+  "mežs": {
+   "emoji": "🌲"
+  },
+  "koks": {
+   "emoji": "🌳"
+  },
+  "pulkstenis": {
+   "emoji": "⌚"
+  },
+  "filma": {
+   "emoji": "🎬"
+  },
+  "pils": {
+   "emoji": "🏰"
+  },
+  "universitāte": {
+   "emoji": "🎓"
+  },
+  "students": {
+   "emoji": "🎓"
+  },
+  "internets": {
+   "emoji": "🌐"
+  },
+  "parks": {
+   "emoji": "🏞"
+  },
+  "teātris": {
+   "emoji": "🎭"
+  },
+  "kuģis": {
+   "emoji": "🚢"
+  },
+  "dzelzceļš": {
+   "emoji": "🛤"
+  },
+  "temperatūra": {
+   "emoji": "🌡"
+  },
+  "trenažieris": {
+   "emoji": "🏋"
+  },
+  "treniņš": {
+   "emoji": "🏋"
+  },
+  "zāle": {
+   "emoji": "🏋"
+  },
+  "trenēties": {
+   "emoji": "🏋"
+  },
+  "ģimene": {
+   "emoji": "👪"
+  },
+  "krāsa": {
+   "emoji": "🎨"
+  },
+  "balva": {
+   "emoji": "🏆"
+  },
+  "uzvara": {
+   "emoji": "🏆"
+  },
+  "uzvarēt": {
+   "emoji": "🏆"
+  },
+  "mačs": {
+   "emoji": "⚽"
+  },
+  "spēle": {
+   "emoji": "⚽"
+  },
+  "komanda": {
+   "emoji": "👥"
+  },
+  "ceļš": {
+   "emoji": "🛣"
+  },
+  "iet": {
+   "emoji": "🚶"
+  },
+  "runāt": {
+   "emoji": "🗣"
+  },
+  "ēst": {
+   "emoji": "🍴"
+  },
+  "dzert": {
+   "emoji": "🥤"
+  },
+  "lasīt": {
+   "emoji": "📖"
+  },
+  "gulēt": {
+   "emoji": "😴"
+  },
+  "piezvanīt": {
+   "emoji": "📞"
+  },
+  "skatīties": {
+   "emoji": "👀"
+  },
+  "redzēt": {
+   "emoji": "👀"
+  },
+  "rakstīt": {
+   "emoji": "✍"
+  },
+  "uzrakstīt": {
+   "emoji": "✍"
+  },
+  "gatavot": {
+   "emoji": "🍳"
+  },
+  "dzirdēt": {
+   "emoji": "👂"
+  },
+  "augt": {
+   "emoji": "🌱"
+  },
+  "mācīties": {
+   "emoji": "📚"
+  },
+  "atpūsties": {
+   "emoji": "🛋"
+  },
+  "meklēt": {
+   "emoji": "🔍"
+  },
+  "vadīt": {
+   "emoji": "🚗"
+  },
+  "maksāt": {
+   "emoji": "💶"
+  },
+  "dvielis": {
+   "commons": "File:Stacks-of-gym-towels-on-wood-bench.jpg"
+  }
+ },
+ "skipText": [
+  "Kā tev iet?",
+  "Kā jums iet?",
+  "Man iet labi.",
+  "Kā iet?",
+  "Viss iet labi."
+ ],
+ "phraseOverride": {
+  "Kafiju ar pienu, lūdzu.": "kafija",
+  "Kafiju bez piena, lūdzu.": "kafija",
+  "Vakarā es trenējos.": "trenēties",
+  "Kur ir dzelzceļa stacija?": "stacija",
+  "Kāds transports iet uz centru?": null
+ }
+}

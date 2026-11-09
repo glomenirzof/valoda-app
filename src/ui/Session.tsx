@@ -8,6 +8,7 @@ import { graduationGrade, newCard, review, whenRu, type Grade, type StoredCard }
 import type { Phrase, Settings, Token } from '../core/types';
 import { graduate, saveAcquaint, saveLog, saveReview } from '../data/db';
 import { playPhrase, playPhraseTwice, playWord, wordKey } from '../data/audio';
+import { imageFor } from '../data/images';
 import { Recorder, transcribe, VOICE_ERROR_RU, VoiceFailure, voiceSupported } from '../data/voice';
 import { Icon, type IconName } from './icons';
 import { TappableText } from './PhraseList';
@@ -171,6 +172,34 @@ function TopBar({ pos, total, onClose }: { pos: number; total: number; onClose: 
 
 /* ---------- cards ---------- */
 
+/** The picture of a phrase (concrete words only, see scripts/content/build_images.py). */
+function PhraseImage({ p, cls = '' }: { p: Phrase; cls?: string }) {
+  const im = imageFor(p.id);
+  return im ? <img class={`ph-img ${cls}`} src={im.url} alt={im.lemma} width={96} height={96} /> : null;
+}
+
+/**
+ * What to say or write, on production cards: the Russian, or — with «Картинка вместо перевода» on and a phrase
+ * the picture fully says (Policija!, Tēju, lūdzu.) — the picture, with the Russian one tap away.
+ */
+function Prompt({ p, settings }: { p: Phrase; settings?: Settings }) {
+  const [show, setShow] = useState(false);
+  const im = settings?.pictureCue ? imageFor(p.id) : null;
+  if (!im?.cue) return <h1 class="ru-big">{p.ru}</h1>;
+  return (
+    <div class="cue-prompt">
+      <img class="ph-img big" src={im.url} alt="Картинка-подсказка" width={128} height={128} />
+      {show ? (
+        <p class="cue-ru">{p.ru}</p>
+      ) : (
+        <button class="s-link" onClick={() => setShow(true)}>
+          Показать перевод
+        </button>
+      )}
+    </div>
+  );
+}
+
 function Intro({ p, settings, onNext, onKnown }: { p: Phrase; settings: Settings; onNext: () => void; onKnown: () => void }) {
   const [word, setWord] = useState<Token | null>(null);
   return (
@@ -180,6 +209,7 @@ function Intro({ p, settings, onNext, onKnown }: { p: Phrase; settings: Settings
           Новая фраза <StatusTag p={p} />
         </p>
         <div class="phrase-card">
+          <PhraseImage p={p} />
           <TappableText phrase={p} onWord={setWord} cls="s-lv" />
           <p class="s-ru">{p.ru}</p>
           <div class="s-audio">
@@ -215,7 +245,7 @@ function Tiles({ p, settings, onNext }: { p: Phrase; settings: Settings; onNext:
     <>
       <main class="s-main">
         <p class="eyebrow">Собери фразу</p>
-        <h1 class="ru-big">{p.ru}</h1>
+        <Prompt p={p} settings={settings} />
         <div class={`build ${res ? `b-${res}` : ''}`}>
           {picked.length ? (
             picked.map((id) => (
@@ -281,8 +311,9 @@ function Tiles({ p, settings, onNext }: { p: Phrase; settings: Settings; onNext:
 
 export interface Outcome { mode: 'type' | 'say'; result: CheckResult | null; hints: number; weak: number[] }
 
-export function TypeCard({ p, cue = false, copy, noHints = false, freeKeys = false, eyebrow, onSkip, onDone }: {
+export function TypeCard({ p, cue = false, copy, noHints = false, freeKeys = false, eyebrow, settings, onSkip, onDone }: {
   p: Phrase; cue?: boolean;
+  /** lesson settings: a picture may stand in for the Russian */ settings?: Settings;
   /** «Набери правильно»: sample shown, no grade */ copy?: Settings;
   /** control and placement tests: no letter hints */ noHints?: boolean;
   /** tests: the phone keyboard only — the phrase keyboard shows which letters the answer has */ freeKeys?: boolean;
@@ -322,7 +353,7 @@ export function TypeCard({ p, cue = false, copy, noHints = false, freeKeys = fal
     <>
       <main class="s-main">
         <p class="eyebrow">{eyebrow ?? (copy ? 'Набери правильно' : cue ? 'Напиши по первым буквам' : 'Напиши по-латышски')}</p>
-        <h1 class="ru-big">{p.ru}</h1>
+        {copy ? <h1 class="ru-big">{p.ru}</h1> : <Prompt p={p} settings={settings} />}
         {copy && (
           <div class="right copy-sample">
             <SampleSound p={p} settings={copy} />
@@ -557,7 +588,7 @@ function SayCard({ p, card, settings, voice, onDone }: {
     <>
       <main class="s-main">
         <p class="eyebrow">Скажи по-латышски</p>
-        <h1 class="ru-big">{p.ru}</h1>
+        <Prompt p={p} settings={settings} />
         {hints > 0 && <p class="mask">{mask}</p>}
         <div class="speak-box">
           {voice ? (
@@ -750,7 +781,12 @@ function ListenChoose({ p, options, settings, onDone }: { p: Phrase; options: st
             </button>
           ))}
         </div>
-        {picked && settings.sound && <p class="choice-lv">{p.text}</p>}
+        {picked && (
+          <div class="choice-after">
+            <PhraseImage p={p} />
+            {settings.sound && <p class="choice-lv">{p.text}</p>}
+          </div>
+        )}
       </main>
       <footer class="s-actions">
         <button class="btn primary" disabled={!picked} onClick={() => onDone(right)}>
@@ -1024,8 +1060,8 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
       )}
       {item.kind === 'stage' && item.stage === 1 && <ListenChoose p={p} options={options} settings={settings} onDone={(pass) => stageStep(pass ? { pass: true } : { pass: false })} />}
       {item.kind === 'stage' && item.stage === 2 && <Tiles p={p} settings={settings} onNext={(pass) => stageStep(pass ? { pass: true } : { pass: false })} />}
-      {item.kind === 'stage' && item.stage >= 3 && <TypeCard p={p} cue={item.stage === 3} onDone={typedDone} />}
-      {item.kind === 'review' && item.mode === 'type' && <TypeCard p={p} onDone={setOutcome} />}
+      {item.kind === 'stage' && item.stage >= 3 && <TypeCard p={p} cue={item.stage === 3} settings={settings} onDone={typedDone} />}
+      {item.kind === 'review' && item.mode === 'type' && <TypeCard p={p} settings={settings} onDone={setOutcome} />}
       {item.kind === 'review' && item.mode === 'say' && deck.get(p.id) && (
         <SayCard
           p={p}

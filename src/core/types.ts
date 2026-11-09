@@ -55,6 +55,8 @@ export interface Settings {
   font: FontPair;
   /** off in the gym or on transport: no sound at all, «узнай на слух» becomes «узнай по тексту» */
   sound: boolean;
+  /** production cards show the picture instead of the Russian where the picture says it all */
+  pictureCue?: boolean;
   /** the first-launch placement offer was answered (taken or skipped) */
   onboarded?: boolean;
   /** last placement test result */
