@@ -170,3 +170,13 @@ export function explain(r: CheckResult, tokens: Token[], key?: { i: number; trap
 
 /** The key word's own rule is worth showing only when that word was wrong. */
 export const keyWrong = (r: CheckResult, key?: { i: number }) => !!key && r.words[key.i]?.kind !== 'ok';
+
+/**
+ * Word-by-word analysis helps only when part of the answer is right. A one-word phrase, or an answer where no
+ * word is even close («es: другое слово, nezinu: другое слово…»), gets the whole right answer instead.
+ */
+export function wholeAnswer(r: CheckResult, tokens: Token[]): boolean {
+  if (r.verdict === 'ok') return false;
+  if (tokens.length <= 1 || r.words.length <= 1) return true;
+  return r.words.every((w) => w.kind === 'root' || w.kind === 'missing');
+}

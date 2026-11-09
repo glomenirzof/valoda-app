@@ -5,6 +5,8 @@ import { lessonInput, trainable, type Acquaintance } from './core/session';
 import type { StoredCard } from './core/srs';
 import { DEFAULT_SETTINGS, type Phrase, type Settings as S } from './core/types';
 import { setSound, unlockAudio } from './data/audio';
+import { backupDue, progressMark } from './data/backup';
+import { saveBackupFile } from './data/backup-io';
 import { loadImages, type ImagesData } from './data/images';
 import { loadPhrases } from './data/content';
 import { loadAcquaint, loadCards, loadControl, loadSettings, requestPersistence, saveSettings } from './data/db';
@@ -89,6 +91,14 @@ export function App() {
     setSettings(s);
     saveSettings(s);
   };
+
+  const mark = progressMark(cards, acquaint, control);
+  const offerBackup = loaded.data && backupDue(mark, settings.backup, Date.now(), cards.length + acquaint.length > 0);
+  const backupNow = async () => {
+    const r = await saveBackupFile();
+    if (r !== 'cancelled') update({ ...settings, backup: { mark, offered: Date.now(), saved: Date.now() } });
+  };
+  const backupLater = () => update({ ...settings, backup: { ...settings.backup, mark: settings.backup?.mark ?? '', offered: Date.now() } });
 
   const go = (t: Tab) => {
     setTab(t);
@@ -200,6 +210,10 @@ export function App() {
             control={control}
             settings={settings}
             onControl={startControl}
+            onKbTipDone={() => update({ ...settings, kbTipDone: true })}
+            backupOffer={offerBackup}
+            onBackup={backupNow}
+            onBackupLater={backupLater}
             onStart={() => {
               // iOS Safari: the first play() must happen inside this tap; later clips reuse the unlocked player
               unlockAudio();
@@ -215,7 +229,7 @@ export function App() {
         ) : tab === 'progress' ? (
           <Progress phrases={phrases} cards={cards} acquainted={acquaint} control={control} settings={settings} onControl={startControl} />
         ) : (
-          <Settings value={settings} onChange={update} onPlacement={() => setPlacing(true)} images={images} />
+          <Settings value={settings} onChange={update} onPlacement={() => setPlacing(true)} images={images} mark={mark} />
         )}
       </main>
 

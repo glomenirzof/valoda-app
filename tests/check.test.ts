@@ -106,3 +106,25 @@ describe('keyWrong', () => {
     expect(keyWrong(checkAnswer('Es nezinu', 'Es nezinu.'), undefined)).toBe(false);
   });
 });
+
+describe('whole answer instead of word-by-word', () => {
+  it('one-word phrases get the whole right answer', async () => {
+    const { wholeAnswer } = await import('../src/core/check');
+    const t = [tok('Labdien', 'labdien', 'INTJ', '', 'добрый день')];
+    expect(wholeAnswer(checkAnswer('Labrīt', 'Labdien!'), t)).toBe(true);
+    expect(wholeAnswer(checkAnswer('Labdiena', 'Labdien!'), t)).toBe(true);
+  });
+
+  it('a completely wrong answer gets the whole right answer', async () => {
+    const { wholeAnswer } = await import('../src/core/check');
+    expect(wholeAnswer(checkAnswer('Paldies liels', 'Es nezinu.'), ES_NEZINU)).toBe(true);
+    expect(wholeAnswer(checkAnswer('', 'Es nezinu.'), ES_NEZINU)).toBe(true);
+  });
+
+  it('a partly right answer keeps the word-by-word analysis', async () => {
+    const { wholeAnswer } = await import('../src/core/check');
+    expect(wholeAnswer(checkAnswer('Es nezina', 'Es nezinu.'), ES_NEZINU)).toBe(false);
+    expect(wholeAnswer(checkAnswer('Es dzivoju Riga', 'Es dzīvoju Rīgā.'), RIGA)).toBe(false);
+    expect(wholeAnswer(checkAnswer('Es nezinu', 'Es nezinu.'), ES_NEZINU)).toBe(false);
+  });
+});

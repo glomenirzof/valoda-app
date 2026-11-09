@@ -57,6 +57,10 @@ export interface Settings {
   sound: boolean;
   /** production cards show the picture instead of the Russian where the picture says it all */
   pictureCue?: boolean;
+  /** last backup offer: progress fingerprint then, and when it was offered (ms) */
+  backup?: { mark: string; offered: number; saved?: number };
+  /** the tip to add the Latvian keyboard in iOS was read */
+  kbTipDone?: boolean;
   /** the first-launch placement offer was answered (taken or skipped) */
   onboarded?: boolean;
   /** last placement test result */

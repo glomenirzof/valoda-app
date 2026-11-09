@@ -10,7 +10,7 @@ export const TOPIC_HUE: Record<string, number> = {
   gym: 5, health: 140, home: 25, weather: 195, work: 60, likes: 340,
 };
 
-export function Home({ phrases, cards, acquainted, control, settings, onTopic, onStart, onControl }: {
+export function Home({ phrases, cards, acquainted, control, settings, onTopic, onStart, onControl, onKbTipDone, backupOffer, onBackup, onBackupLater }: {
   phrases: Phrase[];
   cards: StoredCard[];
   acquainted: Acquaintance[];
@@ -19,6 +19,11 @@ export function Home({ phrases, cards, acquainted, control, settings, onTopic, o
   onTopic: (t: string) => void;
   onStart: () => void;
   onControl: () => void;
+  onKbTipDone: () => void;
+  /** progress changed and a day has passed: offer to save a copy */
+  backupOffer: boolean;
+  onBackup: () => void;
+  onBackupLater: () => void;
 }) {
   const now = new Date();
   const { due, newLeft, paused, fresh, resume, next, introducedToday } = plan(phrases, cards, settings, now, acquainted);
@@ -73,6 +78,38 @@ export function Home({ phrases, cards, acquainted, control, settings, onTopic, o
           <p class="note">20 фраз, которые ты помнишь, без подсказок и без влияния на повторения</p>
           <button class="btn ghost" onClick={onControl}>
             Пройти <Icon name="arrow" />
+          </button>
+        </div>
+      )}
+
+      {backupOffer && (
+        <div class="card backup-offer">
+          <p>
+            <b>Сохранить копию прогресса?</b>
+          </p>
+          <p class="note">Через «Поделиться» — в Файлы или iCloud. Если телефон очистит данные сайта, прогресс вернётся из копии</p>
+          <div class="s-actions two">
+            <button class="btn ghost" onClick={onBackupLater}>
+              Позже
+            </button>
+            <button class="btn primary" onClick={onBackup}>
+              Сохранить
+            </button>
+          </div>
+        </div>
+      )}
+
+      {!settings.kbTipDone && (
+        <div class="card kb-tip">
+          <p>
+            <b>Латышская клавиатура на iPhone</b>
+          </p>
+          <p class="note">
+            Настройки → Основные → Клавиатура → Клавиатуры → Новые клавиатуры → Латышская. Тогда ā, š, ž — долгим нажатием на букву. Над полем ввода в уроке
+            тоже есть ряд с этими буквами
+          </p>
+          <button class="btn ghost" onClick={onKbTipDone}>
+            Понятно
           </button>
         </div>
       )}

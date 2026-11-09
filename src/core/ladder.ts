@@ -125,6 +125,17 @@ export function answerStage(l: Lesson, a: Answer, rng: Rng = Math.random): Step 
   return { lesson: { ...lesson, queue: place(rest, { kind: 'stage', id: it.id, stage: again }, RETRY_LAG) } };
 }
 
+/**
+ * The current card is tiles (S2) that would teach nothing (a one- or two-word phrase without enough extra
+ * tiles): it becomes the next stage in place — S3, or S4 in the mini-ladder of a forgotten review.
+ */
+export function skipStage(l: Lesson): Lesson {
+  const it = l.queue[0];
+  if (!it || it.kind !== 'stage' || it.stage !== 2) return l;
+  const next: Item = it.relearn ? { kind: 'stage', id: it.id, stage: 4, relearn: true } : { kind: 'stage', id: it.id, stage: 3 };
+  return { ...l, queue: [next, ...l.queue.slice(1)] };
+}
+
 /** Mini-ladder S2 → S4: a pass at S2 brings S4 3–5 cards later, a pass at S4 ends it; a failure goes back to S2. */
 function relearnNext(rest: Item[], it: Extract<Item, { kind: 'stage' }>, pass: boolean, rng: Rng): Item[] {
   if (pass && it.stage === 4) return rest;
@@ -154,4 +165,23 @@ export function unfinished(l: Lesson): string[] {
   const now = l.queue[0];
   if (now && isNew(now)) met.add(now.id);
   return [...met].filter((id) => !l.graduated.includes(id));
+}
+
+/**
+ * Progress of a lesson by its phrases, not by cards (the number of cards grows as stages come back):
+ * a new phrase counts the stages it has passed (from S2 for a phrase met before), a review counts once answered.
+ * `done` — phrases finished for this lesson; `share` — 0…1 for the bar, never going back.
+ */
+export function lessonProgress(l: Lesson, input: LessonInput): { done: number; total: number; share: number } {
+  const answered = new Set(l.shown.filter((it) => it.kind === 'review').map((it) => it.id));
+  const parts: number[] = [
+    ...input.reviews.map((r) => (answered.has(r.id) ? 1 : 0)),
+    ...[...input.acquainted.map((id) => [id, RESUME_STAGE] as const), ...input.fresh.map((id) => [id, 0] as const)].map(([id, start]) => {
+      if (l.graduated.includes(id)) return 1;
+      const passed = (l.reached[id] ?? -1) - start + 1;
+      return Math.max(0, Math.min(passed, 5 - start - 1)) / (5 - start);
+    }),
+  ];
+  const total = parts.length;
+  return { done: parts.filter((x) => x === 1).length, total, share: total ? parts.reduce((a, b) => a + b, 0) / total : 0 };
 }

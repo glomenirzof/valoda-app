@@ -1,4 +1,7 @@
-import { useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
+import { BackupError, type BackupFile } from '../data/backup';
+import { openBackupFile, restoreBackup, saveBackupFile } from '../data/backup-io';
+import { storagePersisted } from '../data/db';
 import type { Accent, FontPair, Settings as S } from '../core/types';
 import { imageUrl, type ImagesData } from '../data/images';
 import { Icon, type IconName } from './icons';
@@ -30,9 +33,39 @@ function Row({ icon, title, hint, value, onClick, children }: {
   );
 }
 
-export function Settings({ value, onChange, onPlacement, images }: { value: S; onChange: (s: S) => void; onPlacement: () => void; images: ImagesData | null }) {
+export function Settings({ value, onChange, onPlacement, images, mark }: {
+  value: S;
+  onChange: (s: S) => void;
+  onPlacement: () => void;
+  images: ImagesData | null;
+  /** progress fingerprint, remembered with a saved backup */
+  mark: string;
+}) {
   const [picker, setPicker] = useState<Picker>(null);
   const [credits, setCredits] = useState(false);
+  const [persisted, setPersisted] = useState<boolean | null>(null);
+  const [restore, setRestore] = useState<BackupFile | null>(null);
+  const [backupMsg, setBackupMsg] = useState<string | null>(null);
+  useEffect(() => {
+    storagePersisted().then(setPersisted);
+  }, []);
+  const save = async () => {
+    const r = await saveBackupFile();
+    if (r === 'cancelled') return;
+    onChange({ ...value, backup: { mark, offered: Date.now(), saved: Date.now() } });
+    setBackupMsg(r === 'shared' ? 'Копия сохранена' : 'Файл копии скачан');
+  };
+  const pick = async (e: Event) => {
+    const input = e.target as HTMLInputElement;
+    const f = input.files?.[0];
+    input.value = '';
+    if (!f) return;
+    try {
+      setRestore(await openBackupFile(f));
+    } catch (err) {
+      setBackupMsg(err instanceof BackupError ? err.message : 'Не удалось прочитать файл');
+    }
+  };
   const set = (patch: Partial<S>) => onChange({ ...value, ...patch });
   const theme = effectiveTheme(value);
 
@@ -163,6 +196,40 @@ export function Settings({ value, onChange, onPlacement, images }: { value: S; o
         <Row icon="type" title="Шрифт" value={FONT_PAIRS[value.font].name} onClick={() => setPicker('font')} />
       </div>
 
+      <h2 class="section-title">Резервная копия</h2>
+      <div class="rows">
+        <Row
+          icon="shield"
+          title="Сохранить копию"
+          hint={
+            value.backup?.saved
+              ? `Последняя: ${new Date(value.backup.saved).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' })}. Через «Поделиться» — в Файлы или iCloud`
+              : 'Через «Поделиться» — в Файлы или iCloud'
+          }
+          onClick={save}
+        />
+        <label class="row">
+          <Icon name="arrow" />
+          <span class="row-text">
+            <b>Восстановить из файла</b>
+            <small>Заменит прогресс на этом телефоне копией</small>
+          </span>
+          <input type="file" accept="application/json,.json" class="file-input" onChange={pick} />
+        </label>
+        <Row
+          icon="info"
+          title="Хранилище"
+          hint={
+            persisted === true
+              ? 'Защищено: телефон не удалит прогресс сам'
+              : persisted === false
+                ? 'Не защищено: iPhone может очистить данные сайта. Добавь приложение на экран «Домой» и держи копию в Файлах'
+                : 'Состояние неизвестно'
+          }
+        />
+      </div>
+      {backupMsg && <p class="foot">{backupMsg}</p>}
+
       <h2 class="section-title">О приложении</h2>
       <div class="rows">
         <Row icon="info" title="Словарь форм" hint="Tēzaurs.lv 2026, CLARIN-LV, лицензия CC BY-SA 4.0" />
@@ -170,6 +237,34 @@ export function Settings({ value, onChange, onPlacement, images }: { value: S; o
         {images && <Row icon="palette" title="Авторы изображений" hint="Источники, авторы и лицензии картинок" onClick={() => setCredits(true)} />}
       </div>
       <p class="foot">Всё хранится на этом телефоне и работает без интернета</p>
+
+      {restore && (
+        <>
+          <div class="scrim" onClick={() => setRestore(null)} />
+          <section class="sheet" role="dialog" aria-label="Восстановить копию">
+            <div class="grab" />
+            <h3>Восстановить копию?</h3>
+            <p>
+              Копия от {new Date(restore.exportedAt).toLocaleString('ru-RU', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' })}: фраз в
+              повторениях {restore.data.cards.length}, знакомлюсь {restore.data.acquaint.length}. Текущий прогресс на этом телефоне заменится.
+            </p>
+            <div class="s-actions two">
+              <button class="btn ghost" onClick={() => setRestore(null)}>
+                Отмена
+              </button>
+              <button
+                class="btn primary"
+                onClick={async () => {
+                  await restoreBackup(restore);
+                  location.reload();
+                }}
+              >
+                Заменить
+              </button>
+            </div>
+          </section>
+        </>
+      )}
 
       {open && (
         <>

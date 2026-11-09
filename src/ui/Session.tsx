@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
-import { checkAnswer, explain, keyWrong, type CheckResult } from '../core/check';
+import { checkAnswer, explain, keyWrong, wholeAnswer, type CheckResult } from '../core/check';
+import { suggestedGrade } from '../core/grade';
+import { isShort, MIN_DISTRACTORS, tileDistractors, tileText } from '../core/tiles';
 import { judgeSpeech, type VoiceVerdict } from '../core/voice';
-import { answerReview, answerStage, current, startLesson, unfinished, type Answer, type Item, type Lesson, type LessonInput } from '../core/ladder';
+import { answerReview, answerStage, current, lessonProgress, skipStage, startLesson, unfinished, type Answer, type Item, type Lesson, type LessonInput } from '../core/ladder';
 import { LEVEL_RU, levelOf, type Level } from '../core/progress';
 import { lessonSize, type Acquaintance } from '../core/session';
 import { graduationGrade, newCard, review, whenRu, type Grade, type StoredCard } from '../core/srs';
@@ -54,10 +56,6 @@ export const plural = (n: number, one: string, few: string, many: string) => {
   return m10 === 1 && m100 !== 11 ? one : m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14) ? few : many;
 };
 
-const store = {
-  get: (k: string, d: string) => { try { return localStorage.getItem(k) ?? d; } catch { return d; } },
-  set: (k: string, v: string) => { try { localStorage.setItem(k, v); } catch { /* private mode */ } },
-};
 
 /** Phrase text with the key word highlighted. */
 export function KeyText({ p }: { p: Phrase }) {
@@ -90,6 +88,13 @@ export function SampleSound({ p, settings }: { p: Phrase; settings: Settings }) 
 /** What was typed, word by word, and one concrete line per wrong word; the key word's rule only when that word was wrong. */
 export function Mistakes({ p, r }: { p: Phrase; r: CheckResult }) {
   const lines = explain(r, p.tokens, p.key);
+  if (wholeAnswer(r, p.tokens)) {
+    return (
+      <p class="whole-answer">
+        Правильно: <b>{p.text}</b> — {p.ru}
+      </p>
+    );
+  }
   return (
     <>
       {r.verdict !== 'ok' && (
@@ -154,17 +159,18 @@ function SoundButton({ p, settings, cls, label = true, autoplay = false, twice =
   );
 }
 
-function TopBar({ pos, total, onClose }: { pos: number; total: number; onClose: () => void }) {
+/** Lesson bar: the share of the lesson's phrases done, and how many of them are finished. */
+function TopBar({ share, done, total, onClose }: { share: number; done: number; total: number; onClose: () => void }) {
   return (
     <header class="s-top">
       <button class="icon-btn" aria-label="Закончить" onClick={onClose}>
         <Icon name="x" />
       </button>
-      <div class="s-progress">
-        <i style={{ width: `${Math.round(((pos + 1) / Math.max(total, 1)) * 100)}%` }} />
+      <div class="s-progress" role="progressbar" aria-valuenow={Math.round(share * 100)} aria-valuemin={0} aria-valuemax={100}>
+        <i style={{ width: `${Math.round(share * 100)}%` }} />
       </div>
-      <span class="s-count">
-        {pos + 1}/{total}
+      <span class="s-count" aria-label={`Фраз пройдено: ${done} из ${total}`}>
+        {done}/{total}
       </span>
     </header>
   );
@@ -231,10 +237,16 @@ function Intro({ p, settings, onNext, onKnown }: { p: Phrase; settings: Settings
   );
 }
 
-/** Build the phrase from its own words. No wrong-ending trap here: key.trap is kept for future form cards. */
-function Tiles({ p, settings, onNext }: { p: Phrase; settings: Settings; onNext: (pass: boolean) => void }) {
+/**
+ * Build the phrase from its own words. Short phrases get a few extra words from phrases seen before (never
+ * another form of a word of the phrase: key.trap is kept for future form cards). Tiles are lower case.
+ */
+function Tiles({ p, settings, extra = [], onNext }: { p: Phrase; settings: Settings; extra?: string[]; onNext: (pass: boolean) => void }) {
   const pool = useMemo(
-    () => shuffle(p.tokens.map((tok) => ({ t: tok.s, tok }))).map((x, id) => ({ ...x, id })),
+    () =>
+      shuffle([...p.tokens.map((tok) => ({ t: tileText(tok.s, tok.lemma), tok: tok as Token | null })), ...extra.map((t) => ({ t, tok: null as Token | null }))]).map(
+        (x, id) => ({ ...x, id }),
+      ),
     [p.id],
   );
   const [picked, setPicked] = useState<number[]>([]);
@@ -279,13 +291,14 @@ function Tiles({ p, settings, onNext }: { p: Phrase; settings: Settings; onNext:
               disabled={picked.includes(x.id) || !!res}
               onClick={() => {
                 setPicked([...picked, x.id]);
-                if (settings.sound) playWord(settings.lang, wordKey(x.tok));
+                if (settings.sound && x.tok) playWord(settings.lang, wordKey(x.tok));
               }}
             >
               {x.t}
             </button>
           ))}
         </div>
+        {extra.length > 0 && !res && <p class="s-hint">Есть лишние слова — выбери только нужные</p>}
       </main>
       <footer class="s-actions">
         {res ? (
@@ -297,7 +310,7 @@ function Tiles({ p, settings, onNext }: { p: Phrase; settings: Settings; onNext:
             class="btn primary"
             disabled={!picked.length}
             onClick={() => {
-              setRes(picked.map(text).join(' ') === p.tokens.map((t) => t.s).join(' ') ? 'ok' : 'bad');
+              setRes(picked.map(text).join(' ').toLowerCase() === p.tokens.map((t) => t.s).join(' ').toLowerCase() ? 'ok' : 'bad');
               playPhrase(settings.lang, p.id);
             }}
           >
@@ -309,7 +322,14 @@ function Tiles({ p, settings, onNext }: { p: Phrase; settings: Settings; onNext:
   );
 }
 
-export interface Outcome { mode: 'type' | 'say'; result: CheckResult | null; hints: number; weak: number[] }
+export interface Outcome {
+  mode: 'type' | 'say';
+  result: CheckResult | null;
+  hints: number;
+  weak: number[];
+  /** typed with the keyboard of the answer's letters: counts as a hint */
+  keys?: boolean;
+}
 
 export function TypeCard({ p, cue = false, copy, noHints = false, freeKeys = false, eyebrow, settings, onSkip, onDone }: {
   p: Phrase; cue?: boolean;
@@ -324,7 +344,31 @@ export function TypeCard({ p, cue = false, copy, noHints = false, freeKeys = fal
   const [text, setText] = useState('');
   const [hints, setHints] = useState(0);
   const [weak, setWeak] = useState<Set<number>>(new Set());
-  const [kb, setKb] = useState(freeKeys ? 'system' : store.get('valoda-kb', 'phrase'));
+  const keep = (e: Event) => e.preventDefault(); // tapping a key must not move focus or open the system keyboard
+  // the phone keyboard by default; the keyboard of the answer's letters is a hint, opened on purpose
+  const [kb, setKb] = useState<'system' | 'phrase'>('system');
+  const [keysHint, setKeysHint] = useState(false);
+  const openKeys = () => {
+    setKb('phrase');
+    if (!copy) setKeysHint(true);
+  };
+  /** a Latvian letter at the cursor (works with either keyboard) */
+  const putLetter = (l: string) => {
+    const el = ta.current!;
+    const s = el.selectionStart ?? text.length;
+    const v = text.slice(0, s) + l + text.slice(el.selectionEnd ?? s);
+    setText(v);
+    requestAnimationFrame(() => el.setSelectionRange(s + 1, s + 1));
+  };
+  const marks = (
+    <div class="letters">
+      {LETTERS.map((l) => (
+        <button key={l} onPointerDown={keep} onClick={() => putLetter(l)}>
+          {l}
+        </button>
+      ))}
+    </div>
+  );
   const ta = useRef<HTMLTextAreaElement>(null);
   const keys = useMemo(() => phraseKeys(p.text), [p.id]);
 
@@ -346,8 +390,6 @@ export function TypeCard({ p, cue = false, copy, noHints = false, freeKeys = fal
     }
     setText(t.slice(0, j));
   };
-
-  const keep = (e: Event) => e.preventDefault(); // tapping a key must not move focus or open the system keyboard
 
   return (
     <>
@@ -389,6 +431,7 @@ export function TypeCard({ p, cue = false, copy, noHints = false, freeKeys = fal
           />
           {kb === 'phrase' ? (
             <>
+              {marks}
               <div class="keys">
                 {keys.map((l) => (
                   <button key={l} onPointerDown={keep} onClick={() => setText(text + l)}>
@@ -397,7 +440,7 @@ export function TypeCard({ p, cue = false, copy, noHints = false, freeKeys = fal
                 ))}
               </div>
               <div class="keys-row">
-                <button aria-label="Клавиатура телефона" onClick={() => { setKb('system'); store.set('valoda-kb', 'system'); }}>
+                <button aria-label="Клавиатура телефона" onClick={() => setKb('system')}>
                   <Icon name="keyboard" />
                 </button>
                 <button class="k-space" onPointerDown={keep} onClick={() => setText(text + ' ')}>
@@ -410,26 +453,10 @@ export function TypeCard({ p, cue = false, copy, noHints = false, freeKeys = fal
             </>
           ) : (
             <>
-              <div class="letters">
-                {LETTERS.map((l) => (
-                  <button
-                    key={l}
-                    onPointerDown={keep}
-                    onClick={() => {
-                      const el = ta.current!;
-                      const s = el.selectionStart ?? text.length;
-                      const v = text.slice(0, s) + l + text.slice(el.selectionEnd ?? s);
-                      setText(v);
-                      requestAnimationFrame(() => el.setSelectionRange(s + 1, s + 1));
-                    }}
-                  >
-                    {l}
-                  </button>
-                ))}
-              </div>
-              {!freeKeys && (
-                <button class="s-link" onClick={() => { setKb('phrase'); store.set('valoda-kb', 'phrase'); }}>
-                  Буквы фразы
+              {marks}
+              {!freeKeys && !noHints && (
+                <button class="s-link" onClick={openKeys}>
+                  {copy ? 'Буквы фразы' : 'Подсказка: буквы фразы'}
                 </button>
               )}
             </>
@@ -456,7 +483,7 @@ export function TypeCard({ p, cue = false, copy, noHints = false, freeKeys = fal
           <button
             class="btn primary"
             disabled={!text.trim()}
-            onClick={() => onDone({ mode: 'type', result: checkAnswer(text, p.text, p.accept), hints, weak: [...weak] })}
+            onClick={() => onDone({ mode: 'type', result: checkAnswer(text, p.text, p.accept), hints, weak: [...weak], keys: keysHint })}
           >
             <Icon name="check" />
             Проверить
@@ -690,24 +717,13 @@ function SayCard({ p, card, settings, voice, onDone }: {
   );
 }
 
-const ORDER: Grade[] = ['again', 'hard', 'good', 'easy'];
-const worse = (a: Grade, b: Grade) => ORDER[Math.min(ORDER.indexOf(a), ORDER.indexOf(b))];
-
-/** Grade suggested by the checker and the hints; null when only the learner can judge (said aloud, no hints). */
-function suggested(o: Outcome, p: Phrase): Grade | null {
-  let g: Grade | null = o.result ? ({ ok: 'good', almost: 'hard', bad: 'again' } as const)[o.result.verdict] : null;
-  if (o.hints) {
-    const byHints: Grade = o.hints / letterCount(p.text) > 1 / 3 ? 'again' : 'hard';
-    g = g ? worse(g, byHints) : byHints;
-  }
-  return g;
-}
+const suggested = (o: Outcome, p: Phrase) => suggestedGrade(o, p.text);
 
 function Feedback({ p, card, o, settings, onGrade }: { p: Phrase; card: StoredCard; o: Outcome; settings: Settings; onGrade: (g: Grade) => void }) {
   const sug = suggested(o, p);
   const verdict = o.result?.verdict ?? 'self';
   const head = { ok: ['check', 'Верно'], almost: ['alert', 'Почти — проверь знаки'], bad: ['alert', 'Не совсем'], self: ['eye', 'Сравни с образцом'] } as const;
-  const second: [Grade, string] = o.hints ? ['hard', 'С подсказкой'] : sug === 'hard' ? ['hard', 'Почти'] : ['good', 'Вспомнил'];
+  const second: [Grade, string] = o.hints || o.keys ? ['hard', 'С подсказкой'] : sug === 'hard' ? ['hard', 'Почти'] : ['good', 'Вспомнил'];
   const now = new Date();
   const when = (g: Grade) => whenRu(review(card, g, now).card.fsrs.due, now);
   const weakWords = o.weak.map((i) => p.tokens[i]?.s).filter(Boolean);
@@ -734,6 +750,12 @@ function Feedback({ p, card, o, settings, onGrade }: { p: Phrase; card: StoredCa
             <span>
               Ты открыл {o.hints} {plural(o.hints, 'букву', 'буквы', 'букв')}. Эти слова вернутся раньше: <b>{weakWords.join(', ')}</b>
             </span>
+          </p>
+        )}
+        {o.keys && (
+          <p class="hint-note">
+            <Icon name="keyboard" />
+            <span>Ты набирал на клавиатуре из букв фразы — засчитываю как подсказку</span>
           </p>
         )}
         <div class="rates">
@@ -888,6 +910,17 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
   const now = () => new Date();
   const lang = settings.lang;
 
+  // S2 of a short phrase: extra tiles from phrases met so far; without enough of them the stage is skipped
+  const extra = useMemo(() => {
+    if (!p || item?.kind !== 'stage' || item.stage !== 2 || !isShort(p)) return [];
+    const seenIds = new Set([...deck.keys(), ...meet.keys(), ...lesson.shown.map((x) => x.id)]);
+    return tileDistractors(p, [...seenIds].map((id) => byId.get(id)).filter((x): x is Phrase => !!x));
+  }, [stageKey(item), lesson.shown.length]);
+  const skipTiles = !!p && item?.kind === 'stage' && item.stage === 2 && isShort(p) && extra.length < MIN_DISTRACTORS;
+  useEffect(() => {
+    if (skipTiles) setLesson((l) => skipStage(l));
+  }, [skipTiles, stageKey(item)]);
+
   // S1 options: the right meaning and two from phrases of other topics, in random order (fixed per card).
   const options = useMemo(() => {
     if (!p || item?.kind !== 'stage' || item.stage !== 1) return [];
@@ -931,7 +964,7 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
   const graduateNow = (o: Outcome) => {
     const t = now();
     const a = meet.get(item!.id);
-    const g = graduationGrade({ verdict: o.result!.verdict, hints: o.hints });
+    const g = graduationGrade({ verdict: o.result!.verdict, hints: o.hints + (o.keys ? 1 : 0) });
     const { card, log } = review(newCard(item!.id, lang, t, a?.started ?? t.getTime()), g, t);
     const weak: Record<string, number> = {};
     const bad = new Set(o.weak);
@@ -1050,16 +1083,16 @@ export function Session({ phrases, cards, acquainted, input, settings, onExit }:
   const shown = lesson.shown.length;
   return (
     <div class="session" key={`${shown}-${stageKey(item)}`}>
-      <TopBar pos={shown} total={shown + lesson.queue.length} onClose={() => (shown ? setStopped(true) : onExit())} />
+      <TopBar {...lessonProgress(lesson, input)} onClose={() => (shown ? setStopped(true) : onExit())} />
       {copyThen ? (
-        <TypeCard key="copy" p={p} copy={settings} onDone={() => copyThen()} />
+        <TypeCard key={`copy-${shown}-${p.id}`} p={p} copy={settings} onDone={() => copyThen()} />
       ) : (
       <>
       {item.kind === 'stage' && item.stage === 0 && (
         <Intro p={p} settings={settings} onNext={() => stageStep({ pass: true })} onKnown={() => stageStep({ known: true })} />
       )}
       {item.kind === 'stage' && item.stage === 1 && <ListenChoose p={p} options={options} settings={settings} onDone={(pass) => stageStep(pass ? { pass: true } : { pass: false })} />}
-      {item.kind === 'stage' && item.stage === 2 && <Tiles p={p} settings={settings} onNext={(pass) => stageStep(pass ? { pass: true } : { pass: false })} />}
+      {item.kind === 'stage' && item.stage === 2 && !skipTiles && <Tiles p={p} settings={settings} extra={extra} onNext={(pass) => stageStep(pass ? { pass: true } : { pass: false })} />}
       {item.kind === 'stage' && item.stage >= 3 && <TypeCard p={p} cue={item.stage === 3} settings={settings} onDone={typedDone} />}
       {item.kind === 'review' && item.mode === 'type' && <TypeCard p={p} settings={settings} onDone={setOutcome} />}
       {item.kind === 'review' && item.mode === 'say' && deck.get(p.id) && (

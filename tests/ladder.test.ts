@@ -213,3 +213,41 @@ describe('place', () => {
     expect(place([s('x')], s('p'), 0).map((x) => x.id)).toEqual(['x', 'p']);
   });
 });
+
+describe('lesson progress by phrases', () => {
+  it('counts phrases, not cards: stages passed for new phrases, answered reviews', async () => {
+    const { lessonProgress } = await import('../src/core/ladder');
+    const input: LessonInput = { reviews: [{ id: 'r', mode: 'type' }], acquainted: [], fresh: ['p'] };
+    let l = startLesson(input);
+    expect(lessonProgress(l, input)).toEqual({ done: 0, total: 2, share: 0 });
+    const shares: number[] = [];
+    while (!finished(l)) {
+      const it = current(l)!;
+      l = it.kind === 'stage' ? answerStage(l, { pass: true }, seq(0)).lesson : answerReview(l, false).lesson;
+      shares.push(lessonProgress(l, input).share);
+    }
+    // the bar only moves forward and ends full, with both phrases done
+    expect(shares.every((x, i) => i === 0 || x >= shares[i - 1])).toBe(true);
+    expect(lessonProgress(l, input)).toEqual({ done: 2, total: 2, share: 1 });
+  });
+
+  it('a failed stage that comes back does not move the bar back', async () => {
+    const { lessonProgress } = await import('../src/core/ladder');
+    const input: LessonInput = { reviews: [{ id: 'r1', mode: 'type' }, { id: 'r2', mode: 'type' }], acquainted: [], fresh: ['p'] };
+    let l = startLesson(input);
+    l = answerStage(l, { pass: true }, seq(0)).lesson; // S0
+    const before = lessonProgress(l, input).share;
+    l = answerReview(l, false).lesson;
+    l = answerStage(l, { pass: false }, seq(0)).lesson; // S1 failed: comes back later
+    expect(lessonProgress(l, input).share).toBeGreaterThanOrEqual(before);
+    expect(l.queue.length).toBeGreaterThan(0);
+  });
+
+  it('a phrase met before starts from S2: three stages to go', async () => {
+    const { lessonProgress } = await import('../src/core/ladder');
+    const input: LessonInput = { reviews: [], acquainted: ['a'], fresh: [] };
+    let l = startLesson(input);
+    l = answerStage(l, { pass: true }, seq(0)).lesson; // S2
+    expect(lessonProgress(l, input).share).toBeCloseTo(1 / 3);
+  });
+});

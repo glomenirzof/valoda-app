@@ -1,5 +1,6 @@
 import { openDB, type DBSchema, type IDBPDatabase } from 'idb';
 import type { ControlResult } from '../core/progress';
+import type { BackupData } from './backup';
 import type { Acquaintance } from '../core/session';
 import type { StoredCard, StoredLog } from '../core/srs';
 import { DEFAULT_SETTINGS, type Lang, type Settings } from '../core/types';
@@ -105,6 +106,38 @@ export async function loadControl(lang: Lang): Promise<ControlResult[]> {
 
 export async function saveControl(r: ControlResult) {
   await (await db()).put('control', r);
+}
+
+/** Everything the learner did, for the backup file. */
+export async function dumpAll(): Promise<BackupData> {
+  const d = await db();
+  return {
+    settings: (await d.get('settings', 'main')) ?? null,
+    cards: await d.getAll('cards'),
+    logs: await d.getAll('logs'),
+    acquaint: await d.getAll('acquaint'),
+    control: await d.getAll('control'),
+  };
+}
+
+/** Replaces all progress with a backup, in one transaction: either everything is restored or nothing changes. */
+export async function restoreAll(b: BackupData) {
+  const tx = (await db()).transaction(['settings', 'cards', 'logs', 'acquaint', 'control'], 'readwrite');
+  for (const s of ['cards', 'logs', 'acquaint', 'control'] as const) await tx.objectStore(s).clear();
+  if (b.settings) await tx.objectStore('settings').put(b.settings, 'main');
+  for (const c of b.cards) await tx.objectStore('cards').put(c);
+  for (const l of b.logs) await tx.objectStore('logs').add(l);
+  for (const a of b.acquaint) await tx.objectStore('acquaint').put(a);
+  for (const r of b.control) await tx.objectStore('control').put(r);
+  await tx.done;
+}
+
+export async function storagePersisted(): Promise<boolean | null> {
+  try {
+    return navigator.storage?.persisted ? await navigator.storage.persisted() : null;
+  } catch {
+    return null;
+  }
 }
 
 /** Ask iOS not to evict IndexedDB under storage pressure (granted for home-screen apps). */

@@ -31,7 +31,7 @@ const skipGoogle = process.argv.includes('--no-google');
 const recheckDoubtful = process.argv.includes('--recheck-doubtful');
 const CORPUS = 'LVK2022';
 const CORPUS_API = 'https://nosketch.korpuss.lv/bonito/run.cgi/view';
-const PAIR_MIN = 3; // a word pair seen at least this often counts as an attested construction
+const PAIR_MIN = 3; // pairs are kept as evidence for a human; they are not a source on their own
 
 interface Token { s: string; lemma: string; pos: string; feats: string }
 interface Phrase { id: string; text: string; ru: string; tokens: Token[] }
@@ -46,6 +46,10 @@ interface Result {
     exactUrl: string;
     /** neighbour word pairs; `lemmaHits` — the same two words in any forms (the construction), searched when the exact forms are rare */
     pairs: { pair: string; hits: number; url: string; lemmaHits?: number; lemmaUrl?: string }[];
+    /** the whole phrase as a sequence of lemmas (the same construction in any forms, a comma allowed between words) */
+    phraseLemmas?: { hits: number; url: string; example?: string };
+    /** the whole phrase in corpora of everyday language (web, news comments, subtitles, blogs); null — searched, not found */
+    wider?: { corpus: string; kind: 'exact' | 'lemmas'; hits: number; url: string; example?: string } | null;
     example?: string;
   };
   tatoeba: { id: number; text: string }[];
@@ -110,6 +114,49 @@ async function corpusLemmaHits(ls: string[]): Promise<number> {
   const j = await getJson(`${CORPUS_API}?corpname=${CORPUS}&q=${encodeURIComponent(`q${cqlLemma(ls)}`)}&format=json&pagesize=1`);
   await sleep(300);
   return Number(j.concsize ?? 0);
+}
+
+/**
+ * LVK2022 is written text (press, books, law): everyday phrases are often missing there. These korpuss.lv corpora
+ * hold everyday language; a phrase found whole in one of them is a source too.
+ */
+const WIDER = [
+  ['CommonCrawl', 'Tīmeklis 2020 (веб)'],
+  ['barometrs', 'Barometrs (комментарии на порталах)'],
+  ['subtitri', 'Subtitri (субтитры ТВ)'],
+  ['emuari', 'Emuāri (блоги)'],
+] as const;
+
+async function corpusQuery(corpus: string, q: string): Promise<{ hits: number; url: string; example?: string }> {
+  const j = await getJson(`${CORPUS_API}?corpname=${corpus}&q=${encodeURIComponent(`q${q}`)}&format=json&pagesize=1`);
+  await sleep(300);
+  if (j.error) throw new Error(j.error);
+  const line = j.Lines?.[0];
+  const example = line
+    ? [line.Left, line.Kwic, line.Right].map((part: { str: string }[]) => part.map((x) => x.str).join(' ')).join(' ').replace(/\s+/g, ' ').trim()
+    : undefined;
+  return {
+    hits: Number(j.concsize ?? 0),
+    url: `https://nosketch.korpuss.lv/#concordance?corpname=${corpus}&tab=advanced&queryselector=cql&cql=${encodeURIComponent(q)}`,
+    example,
+  };
+}
+
+/** The whole phrase in any forms: «Es eju uz veikalu» also finds «es gāju uz veikalu». */
+const cqlPhraseLemmas = (ls: string[]) => ls.map((l) => `[lemma="${l.replace(/"/g, '')}"]`).join('[word=","]?');
+async function corpusPhraseLemmas(ls: string[]): Promise<{ hits: number; url: string; example?: string }> {
+  const q = cqlPhraseLemmas(ls);
+  const j = await getJson(`${CORPUS_API}?corpname=${CORPUS}&q=${encodeURIComponent(`q${q}`)}&format=json&pagesize=1`);
+  await sleep(300);
+  const line = j.Lines?.[0];
+  const example = line
+    ? [line.Left, line.Kwic, line.Right].map((part: { str: string }[]) => part.map((x) => x.str).join(' ')).join(' ').replace(/\s+/g, ' ').trim()
+    : undefined;
+  return {
+    hits: Number(j.concsize ?? 0),
+    url: `https://nosketch.korpuss.lv/#concordance?corpname=${CORPUS}&tab=advanced&queryselector=cql&cql=${encodeURIComponent(q)}`,
+    example,
+  };
 }
 
 async function corpusHits(ws: string[]): Promise<{ hits: number; example?: string }> {
@@ -278,6 +325,49 @@ for (const [n, p] of needGoogle.entries()) {
 }
 if (needGoogle.length) console.log(`Google: получено ${needGoogle.filter((p) => results[p.id].mt.google !== undefined).length} из ${needGoogle.length}`);
 
+// The whole phrase in other forms, for phrases not found as written (cached: asked once per text).
+const needLemmas = phrases.filter((p) => {
+  const r = results[p.id];
+  return r && r.corpus.exact === 0 && !r.tatoeba.length && r.corpus.phraseLemmas === undefined && p.tokens.length > 1;
+});
+if (needLemmas.length) console.log(`фраза целиком в других формах: ищу для ${needLemmas.length}`);
+for (const [i, p] of needLemmas.entries()) {
+  const found = await orMissing(() => corpusPhraseLemmas(p.tokens.map((t) => t.lemma)));
+  if (found) results[p.id].corpus.phraseLemmas = found;
+  if ((i + 1) % 25 === 0) {
+    console.log(`  ${i + 1}/${needLemmas.length}`);
+    writeFileSync(outPath, JSON.stringify({ ...prev, ...results }, null, 1) + '\n');
+  }
+}
+
+// Still no source: the whole phrase in corpora of everyday language, as written and then in other forms.
+const needWider = phrases.filter((p) => {
+  const r = results[p.id];
+  return r && r.corpus.exact === 0 && !r.tatoeba.length && !(r.corpus.phraseLemmas?.hits ?? 0) && r.corpus.wider === undefined;
+});
+if (needWider.length) console.log(`фраза целиком в корпусах живой речи: ищу для ${needWider.length}`);
+for (const [i, p] of needWider.entries()) {
+  const ws = p.text.replace(/[.!?…]+\s*$/u, '').match(/\p{L}+(?:-\p{L}+)*|,/gu) ?? [];
+  const lemmas = p.tokens.length > 1 ? cqlPhraseLemmas(p.tokens.map((t) => t.lemma)) : null;
+  let found: Result['corpus']['wider'] = null;
+  let failed = false;
+  for (const [corpus, name] of WIDER) {
+    for (const [kind, q] of [['exact', cql(ws)], ['lemmas', lemmas]] as const) {
+      if (!q || found) continue;
+      const r = await orMissing(() => corpusQuery(corpus, q));
+      if (r === undefined) failed = true;
+      else if (r.hits > 0) found = { corpus: name, kind, hits: r.hits, url: r.url, example: r.example };
+    }
+    if (found) break;
+  }
+  // a corpus that did not answer leaves the question open: asked again next run
+  if (found || !failed) results[p.id].corpus.wider = found;
+  if ((i + 1) % 20 === 0) {
+    console.log(`  ${i + 1}/${needWider.length}`);
+    writeFileSync(outPath, JSON.stringify({ ...prev, ...results }, null, 1) + '\n');
+  }
+}
+
 // Status from the evidence; a manual note may only decide what the evidence leaves open.
 for (const p of phrases) {
   const r = results[p.id];
@@ -286,11 +376,15 @@ for (const p of phrases) {
   // agreement is cheap: recompute it for every engine, so a changed translation or comparison rule counts at once
   for (const e of ['microsoft', 'google', 'tilde'] as const) r.mt.agree[e] = r.mt[e] === undefined ? undefined : agrees(r.mt[e]!, p.ru);
   const reasons: string[] = [];
-  const pairOk = (x: Result['corpus']['pairs'][number]) => x.hits >= PAIR_MIN || (x.lemmaHits ?? 0) >= PAIR_MIN;
-  const attested = r.corpus.exact > 0 || r.tatoeba.length > 0 || (r.corpus.pairs.length > 0 && r.corpus.pairs.every(pairOk));
+  // A source is the whole phrase: as written, in Tatoeba, or the same construction in other forms. Common word
+  // pairs («es esmu», «ir labi») say nothing about the phrase as a whole, so they no longer count.
+  const attested = r.corpus.exact > 0 || r.tatoeba.length > 0 || (r.corpus.phraseLemmas?.hits ?? 0) > 0 || !!r.corpus.wider;
   if (!attested) {
-    const weak = r.corpus.pairs.filter((x) => !pairOk(x)).map((x) => `«${x.pair}» (${x.hits}${x.lemmaHits !== undefined ? `, в любых формах ${x.lemmaHits}` : ''})`);
-    reasons.push(weak.length ? `в корпусе не нашлось фразы, редкие сочетания: ${weak.join(', ')}` : 'в корпусе и Tatoeba фраза не найдена');
+    reasons.push(
+      (r.corpus.phraseLemmas === undefined && words(p.text).length > 1) || r.corpus.wider === undefined
+        ? 'фраза целиком не найдена (часть корпусов не ответила — поиск повторится)'
+        : 'фраза целиком не найдена ни в одном корпусе (LVK2022, веб, комментарии, субтитры, блоги — как написано и в других формах), ни в Tatoeba',
+    );
   }
   const engines = [['Microsoft', 'microsoft'], ['Tilde', 'tilde'], ['Google', 'google']] as const;
   const have = engines.filter(([, k]) => r.mt[k] !== undefined);
