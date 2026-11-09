@@ -55,6 +55,10 @@ export interface Settings {
   font: FontPair;
   /** off in the gym or on transport: no sound at all, «узнай на слух» becomes «узнай по тексту» */
   sound: boolean;
+  /** the first-launch placement offer was answered (taken or skipped) */
+  onboarded?: boolean;
+  /** last placement test result */
+  placement?: { ts: number; level: string; vocab: number; pos: number; known: number; total: number };
 }
 
 export type Accent = 'terra' | 'amber';

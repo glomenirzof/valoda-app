@@ -64,6 +64,16 @@ export async function saveLog(log: StoredLog) {
   await (await db()).add('logs', log);
 }
 
+/** Cards from the placement test with their first logs, in one transaction. */
+export async function saveCards(items: { card: StoredCard; log: StoredLog }[]) {
+  const tx = (await db()).transaction(['cards', 'logs'], 'readwrite');
+  for (const { card, log } of items) {
+    await tx.objectStore('cards').put(card);
+    await tx.objectStore('logs').add(log);
+  }
+  await tx.done;
+}
+
 export async function loadAcquaint(lang: Lang): Promise<Acquaintance[]> {
   try {
     return (await (await db()).getAll('acquaint')).filter((a) => a.lang === lang);

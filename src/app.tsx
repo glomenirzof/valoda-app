@@ -8,6 +8,7 @@ import { setSound, unlockAudio } from './data/audio';
 import { loadPhrases } from './data/content';
 import { loadAcquaint, loadCards, loadControl, loadSettings, requestPersistence, saveSettings } from './data/db';
 import { Control } from './ui/Control';
+import { Placement } from './ui/Placement';
 import { Home } from './ui/Home';
 import { Icon, type IconName } from './ui/icons';
 import { applyLook } from './ui/look';
@@ -38,9 +39,16 @@ export function App() {
   const [control, setControl] = useState<ControlResult[]>([]);
   /** phrase ids of a running control test */
   const [test, setTest] = useState<string[] | null>(null);
+  /** placement test running */
+  const [placing, setPlacing] = useState(false);
+  /** settings and the learner's data are loaded: only then can the first-launch offer be decided */
+  const [loaded, setLoaded] = useState({ settings: false, data: false });
 
   useEffect(() => {
-    loadSettings().then(setSettings);
+    loadSettings().then((s) => {
+      setSettings(s);
+      setLoaded((l) => ({ ...l, settings: true }));
+    });
     requestPersistence();
     const on = () => setOnline(true);
     const off = () => setOnline(false);
@@ -68,8 +76,9 @@ export function App() {
     loadPhrases(settings.lang)
       .then((f) => setPhrases(f.phrases))
       .catch((e) => setError(String(e)));
-    loadCards(settings.lang).then(setCards);
-    loadAcquaint(settings.lang).then(setAcquaint);
+    Promise.all([loadCards(settings.lang).then(setCards), loadAcquaint(settings.lang).then(setAcquaint)]).then(() =>
+      setLoaded((l) => ({ ...l, data: true })),
+    );
     loadControl(settings.lang).then(setControl);
   }, [settings.lang]);
 
@@ -89,6 +98,49 @@ export function App() {
     const levels = levelMap(trainable(phrases), cards, acquaint);
     setTest(controlPick([...levels.entries()].filter(([, l]) => canSay(l)).map(([id]) => id)));
   };
+
+  if (placing && phrases) {
+    return (
+      <Placement
+        phrases={phrases}
+        cards={cards}
+        acquainted={acquaint}
+        settings={settings}
+        onExit={() => setPlacing(false)}
+        onDone={(r, placed) => {
+          update({
+            ...settings,
+            onboarded: true,
+            placement: { ts: Date.now(), level: r.level, vocab: r.vocab, pos: r.pos, known: placed, total: r.total },
+          });
+          loadCards(settings.lang).then(setCards);
+          setPlacing(false);
+          go('learn');
+        }}
+      />
+    );
+  }
+
+  // First launch: nothing learned yet and the offer not answered — offer the placement test.
+  if (loaded.settings && loaded.data && phrases && !settings.onboarded && cards.length === 0 && acquaint.length === 0) {
+    return (
+      <div class="session">
+        <main class="s-main summary">
+          <h1 class="title">Labdien!</h1>
+          <p class="subtitle">Уже немного знаешь латышский? Пройди тест уровня — около пяти минут. Фразы, которые ты знаешь, не будут попадаться как новые: я сразу отправлю их в повторения.</p>
+          <p class="note">Тест можно пройти позже в настройках</p>
+        </main>
+        <footer class="s-actions two">
+          <button class="btn ghost" onClick={() => update({ ...settings, onboarded: true })}>
+            Начать с нуля
+          </button>
+          <button class="btn primary" onClick={() => setPlacing(true)}>
+            Тест уровня <Icon name="arrow" />
+          </button>
+        </footer>
+      </div>
+    );
+  }
 
   if (test && phrases) {
     return (
@@ -160,7 +212,7 @@ export function App() {
         ) : tab === 'progress' ? (
           <Progress phrases={phrases} cards={cards} acquainted={acquaint} control={control} settings={settings} onControl={startControl} />
         ) : (
-          <Settings value={settings} onChange={update} />
+          <Settings value={settings} onChange={update} onPlacement={() => setPlacing(true)} />
         )}
       </main>
 

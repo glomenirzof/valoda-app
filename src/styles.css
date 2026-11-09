@@ -365,3 +365,10 @@ button.mic-ring.on { background: var(--primary); color: var(--on-primary); }
 .hint-note.soft { background: var(--surface-2); }
 .hint-note.soft .ic { color: var(--warn); }
 .sheet .s-link { display: block; margin: var(--s2) auto 0; }
+
+/* placement test */
+.test-rules { margin: var(--s4) 0 0; padding-left: 1.2em; display: grid; gap: var(--s2); text-align: left; color: var(--ink-2); }
+.yesno-word { margin-top: var(--s5); }
+.warn-note { padding: var(--s3); border-radius: 16px; background: var(--surface-2); color: var(--ink); }
+.summary .note { margin: var(--s3) 0 0; font-size: 14px; line-height: 1.4; color: var(--muted); }
+.summary .warn-note { color: var(--ink); }

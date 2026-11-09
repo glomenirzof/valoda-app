@@ -35,7 +35,7 @@ export function plan(phrases: Phrase[], cards: StoredCard[], s: Settings, now: D
   const due = cards.filter((c) => isDue(c, now)).sort((a, b) => a.fsrs.due.getTime() - b.fsrs.due.getTime());
   // a phrase counts against the day it was first shown, whether it already graduated or not
   const introducedToday =
-    cards.filter((c) => c.introduced >= startOfDay(now)).length + acquainted.filter((a) => a.started >= startOfDay(now)).length;
+    cards.filter((c) => !c.placed && c.introduced >= startOfDay(now)).length + acquainted.filter((a) => a.started >= startOfDay(now)).length;
   const paused = due.length >= BACKLOG_PAUSE;
   const newLeft = paused ? 0 : Math.max(0, s.newPerDay - introducedToday);
   // new phrases come in the i+1 order (each brings at most one unknown word); phrases without it go last

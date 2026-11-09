@@ -29,7 +29,7 @@ function Row({ icon, title, hint, value, onClick, children }: {
   );
 }
 
-export function Settings({ value, onChange }: { value: S; onChange: (s: S) => void }) {
+export function Settings({ value, onChange, onPlacement }: { value: S; onChange: (s: S) => void; onPlacement: () => void }) {
   const [picker, setPicker] = useState<Picker>(null);
   const set = (patch: Partial<S>) => onChange({ ...value, ...patch });
   const theme = effectiveTheme(value);
@@ -64,6 +64,16 @@ export function Settings({ value, onChange }: { value: S; onChange: (s: S) => vo
       <div class="rows">
         <Row icon="plus" title="Новых фраз в день" hint="При большом долге повторений новые встают на паузу сами" value={value.newPerDay} onClick={() => setPicker('newPerDay')} />
         <Row icon="shield" title="Какие фразы учим" hint="Проверенные автоматически (корпус и два переводчика) или репетитором" />
+        <Row
+          icon="progress"
+          title="Тест уровня"
+          hint={
+            value.placement
+              ? `${value.placement.level} · ≈${value.placement.vocab} слов · ${new Date(value.placement.ts).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' })}. Пройти заново — прогресс не сотрётся`
+              : 'Определю уровень, и знакомые фразы сразу пойдут в повторения'
+          }
+          onClick={onPlacement}
+        />
       </div>
 
       <h2 class="section-title">Звук</h2>

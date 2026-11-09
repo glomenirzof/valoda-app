@@ -102,3 +102,12 @@ describe('new phrase order', () => {
     expect(lessonInput(ps, [], S, now).fresh).toEqual(['lv-2', 'lv-3', 'lv-1', 'lv-4']);
   });
 });
+
+describe('placement test cards', () => {
+  it('phrases placed by the test do not use up the new phrases of the day', async () => {
+    const { placedCards } = await import('../src/core/placement');
+    const placed = placedCards(['lv-100', 'lv-101', 'lv-102'], new Set(), 'lv', now).map((x) => x.card);
+    expect(plan([phrase(1)], placed, S, now).introducedToday).toBe(0);
+    expect(lessonInput([phrase(1), phrase(2)], placed, S, now).fresh).toEqual(['lv-1', 'lv-2']);
+  });
+});

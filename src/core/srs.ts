@@ -27,14 +27,16 @@ export interface StoredCard {
   weak: Record<string, number>;
   /** card type of the last FSRS review: stable phrases alternate typing and saying */
   lastMode?: 'type' | 'say';
+  /** known by the placement test: never shown as new, so it does not count against a day's new phrases */
+  placed?: true;
 }
 
 export interface StoredLog {
   cardId: string;
   ts: number;
   grade: Grade;
-  /** which card type produced the grade; 'ladder' = the first grade, when a new phrase passes S4; 'tiles' = relearning */
-  mode: 'type' | 'say' | 'known' | 'ladder' | 'tiles';
+  /** which card type produced the grade; 'ladder' = the first grade, when a new phrase passes S4; 'tiles' = relearning; 'placement' = known by the placement test */
+  mode: 'type' | 'say' | 'known' | 'ladder' | 'tiles' | 'placement';
   hints: number;
   /** FSRS log; absent for learning answers */
   log?: ReviewLog;

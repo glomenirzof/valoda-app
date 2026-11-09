@@ -72,7 +72,7 @@ export function Control({ phrases, ids, settings, onExit }: { phrases: Phrase[];
           {i + 1}/{list.length}
         </span>
       </header>
-      <TypeCard p={p} noHints eyebrow="Контрольная · без подсказок" onDone={setOutcome} />
+      <TypeCard p={p} noHints freeKeys eyebrow="Контрольная · без подсказок" onDone={setOutcome} />
       {outcome && (
         <>
           <div class="scrim" />

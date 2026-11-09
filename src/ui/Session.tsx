@@ -281,17 +281,19 @@ function Tiles({ p, settings, onNext }: { p: Phrase; settings: Settings; onNext:
 
 export interface Outcome { mode: 'type' | 'say'; result: CheckResult | null; hints: number; weak: number[] }
 
-export function TypeCard({ p, cue = false, copy, noHints = false, eyebrow, onDone }: {
+export function TypeCard({ p, cue = false, copy, noHints = false, freeKeys = false, eyebrow, onSkip, onDone }: {
   p: Phrase; cue?: boolean;
   /** «Набери правильно»: sample shown, no grade */ copy?: Settings;
-  /** control test: no letter hints */ noHints?: boolean;
+  /** control and placement tests: no letter hints */ noHints?: boolean;
+  /** tests: the phone keyboard only — the phrase keyboard shows which letters the answer has */ freeKeys?: boolean;
   eyebrow?: string;
+  /** placement test: «Не знаю» instead of typing */ onSkip?: () => void;
   onDone: (o: Outcome) => void;
 }) {
   const [text, setText] = useState('');
   const [hints, setHints] = useState(0);
   const [weak, setWeak] = useState<Set<number>>(new Set());
-  const [kb, setKb] = useState(store.get('valoda-kb', 'phrase'));
+  const [kb, setKb] = useState(freeKeys ? 'system' : store.get('valoda-kb', 'phrase'));
   const ta = useRef<HTMLTextAreaElement>(null);
   const keys = useMemo(() => phraseKeys(p.text), [p.id]);
 
@@ -394,14 +396,21 @@ export function TypeCard({ p, cue = false, copy, noHints = false, eyebrow, onDon
                   </button>
                 ))}
               </div>
-              <button class="s-link" onClick={() => { setKb('phrase'); store.set('valoda-kb', 'phrase'); }}>
-                Буквы фразы
-              </button>
+              {!freeKeys && (
+                <button class="s-link" onClick={() => { setKb('phrase'); store.set('valoda-kb', 'phrase'); }}>
+                  Буквы фразы
+                </button>
+              )}
             </>
           )}
         </div>
       </main>
-      <footer class={`s-actions ${noHints ? '' : 'two'}`}>
+      <footer class={`s-actions ${noHints && !onSkip ? '' : 'two'}`}>
+        {onSkip && (
+          <button class="btn ghost" onPointerDown={keep} onClick={onSkip}>
+            Не знаю
+          </button>
+        )}
         {!noHints && (
           <button class="btn ghost" onPointerDown={keep} onClick={hint}>
             <Icon name="bulb" />

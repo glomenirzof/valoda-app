@@ -1,3 +1,4 @@
+import type { PlacementData } from '../core/placement';
 import type { Lang, PhraseFile } from '../core/types';
 
 const cache = new Map<Lang, Promise<PhraseFile>>();
@@ -15,3 +16,10 @@ export function loadPhrases(lang: Lang): Promise<PhraseFile> {
   }
   return cache.get(lang)!;
 }
+
+/** Data for the placement test (scripts/content/build_placement.py). */
+export const loadPlacement = (lang: Lang): Promise<PlacementData> =>
+  fetch(`${import.meta.env.BASE_URL}data/${lang}/placement.json`).then((r) => {
+    if (!r.ok) throw new Error(`placement.json: ${r.status}`);
+    return r.json();
+  });
